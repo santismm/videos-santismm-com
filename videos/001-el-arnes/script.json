@@ -1,0 +1,51 @@
+{
+  "id": "001-el-arnes",
+  "series": "EUREKA · IA en 60s",
+  "episode": 1,
+  "title": "Mismo modelo, 24 puntos más: el arnés",
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/the-stopwatch-and-the-exam",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Misma IA, mismo examen… y 24 puntos más de nota."
+    },
+    {
+      "id": "webarena",
+      "text": "Pasó en WebArena, un test donde la IA navega por webs reales. Mismo modelo: del 48 al 72%."
+    },
+    {
+      "id": "cerebro",
+      "text": "No le cambiaron el cerebro. Le cambiaron el arnés."
+    },
+    {
+      "id": "piezas",
+      "text": "El arnés es todo lo que rodea al modelo: herramientas, memoria, instrucciones, y un bucle para revisar y reintentar."
+    },
+    {
+      "id": "motor",
+      "text": "Piénsalo así: el modelo es el motor. Pero sin ruedas, volante ni frenos, no gana ninguna carrera. El arnés es el coche."
+    },
+    {
+      "id": "swebench",
+      "text": "Y no es un caso aislado: en otro test de programación, el mismo modelo saca un 80% con el arnés de su fabricante, y un 59% con uno neutral."
+    },
+    {
+      "id": "ranking",
+      "text": "Así que, cuando veas un ranking de IA, no preguntes solo qué modelo es. Pregunta: ¿con qué arnés?"
+    },
+    {
+      "id": "tesis",
+      "text": "Porque hoy, el cuello de botella no es el modelo. Es el arnés."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien elige la IA en tu empresa."
+    }
+  ],
+  "cover": "Mismo modelo.<br><span style=\"color:#22d3ee\">¿Por qué saca más nota?</span>",
+  "coverTime": 4.0
+}
