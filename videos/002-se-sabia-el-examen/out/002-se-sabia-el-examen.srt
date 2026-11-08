@@ -1,0 +1,124 @@
+1
+00:00:00,247 --> 00:00:03,210
+Del 75% al 7,5%…
+
+2
+00:00:03,218 --> 00:00:04,789
+en el mismo tipo de examen.
+
+3
+00:00:05,343 --> 00:00:06,299
+¿Qué ha pasado?
+
+4
+00:00:07,130 --> 00:00:08,405
+Se llama contaminación:
+
+5
+00:00:08,435 --> 00:00:10,126
+las preguntas del examen se cuelan en
+
+6
+00:00:09,937 --> 00:00:11,277
+los datos con los que se entrena
+
+7
+00:00:11,088 --> 00:00:11,848
+el modelo.
+
+8
+00:00:12,663 --> 00:00:13,959
+Es como el alumno que ya ha
+
+9
+00:00:13,770 --> 00:00:14,727
+visto el examen:
+
+10
+00:00:14,757 --> 00:00:16,251
+no sabes si entiende la materia…
+
+11
+00:00:16,292 --> 00:00:17,775
+o si se sabe las respuestas.
+
+12
+00:00:18,607 --> 00:00:20,013
+Y pasa más de lo que crees:
+
+13
+00:00:20,059 --> 00:00:22,792
+hay estudios que detectan hasta un 45%
+
+14
+00:00:22,603 --> 00:00:24,283
+de material de examen filtrado.
+
+15
+00:00:25,106 --> 00:00:26,984
+Por eso el Premio Konwinski solo usa
+
+16
+00:00:26,795 --> 00:00:29,571
+problemas de GitHub publicados después del entrenamiento.
+
+17
+00:00:30,122 --> 00:00:31,659
+Imposible haberlos visto.
+
+18
+00:00:32,213 --> 00:00:32,983
+El ganador:
+
+19
+00:00:32,937 --> 00:00:34,606
+un 7,5%.
+
+20
+00:00:35,442 --> 00:00:36,234
+La lección:
+
+21
+00:00:36,253 --> 00:00:38,065
+un examen saturado se arregla con uno
+
+22
+00:00:37,876 --> 00:00:38,778
+más difícil.
+
+23
+00:00:39,328 --> 00:00:41,338
+Uno contaminado, solo con uno que el
+
+24
+00:00:41,149 --> 00:00:42,577
+modelo nunca haya visto.
+
+25
+00:00:43,402 --> 00:00:46,179
+Así que, ante una nota espectacular, pregunta:
+
+26
+00:00:46,220 --> 00:00:48,262
+¿pudo estar este examen en su entrenamiento?
+
+27
+00:00:49,082 --> 00:00:50,817
+Porque una nota alta no siempre es
+
+28
+00:00:50,628 --> 00:00:51,607
+inteligencia.
+
+29
+00:00:52,154 --> 00:00:53,725
+A veces, es memoria.
+
+30
+00:00:54,543 --> 00:00:56,782
+Guárdalo, y compártelo con quien se cree
+
+31
+00:00:56,593 --> 00:00:57,747
+todos los rankings.
+

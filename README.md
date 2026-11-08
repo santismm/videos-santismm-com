@@ -3,8 +3,12 @@
 Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que convierte el contenido de [santismm.com](https://santismm.com) y sus subdominios en piezas de unos 60 segundos. Claude Code produce los vídeos de principio a fin: guion, voz, animación, música, mezcla, portada y subtítulos.
 
 - 📈 Estrategia, análisis de la web, tendencias y los 10 primeros vídeos: [`docs/estrategia.md`](docs/estrategia.md)
-- 🎬 Primer vídeo: [`videos/001-el-arnes/out/001-el-arnes.mp4`](videos/001-el-arnes/out/001-el-arnes.mp4)
-- 📝 Textos para publicarlo: [`videos/001-el-arnes/publicacion.md`](videos/001-el-arnes/publicacion.md)
+## Episodios
+
+| # | Título | Vídeo | Textos de publicación |
+|---|---|---|---|
+| 01 | Mismo modelo, 24 puntos más: el arnés | [mp4](videos/001-el-arnes/out/001-el-arnes.mp4) | [publicacion.md](videos/001-el-arnes/publicacion.md) |
+| 02 | Tu IA se sabía el examen: la contaminación | [mp4](videos/002-se-sabia-el-examen/out/002-se-sabia-el-examen.mp4) | [publicacion.md](videos/002-se-sabia-el-examen/publicacion.md) |
 
 ## Cómo se hace un vídeo
 
@@ -17,7 +21,7 @@ engine/make.sh videos/<id>
 | Paso | Archivo | Qué hace |
 |---|---|---|
 | 1 | `engine/tts.py` | Voz neuronal (edge-tts, es-ES Álvaro) por escena, con el tiempo de cada palabra → `build/voice.wav`, `build/timeline.json` |
-| 2 | `engine/render.mjs` + `engine/page.html` + `engine/lib.js` | Motor de motion graphics en HTML determinista: Chromium (Playwright) captura cada fotograma y ffmpeg codifica en paralelo → `build/video_silent.mp4` y `build/cues.json` (efectos de sonido) |
+| 2 | `engine/render.mjs` + `engine/page.html` + `engine/lib.js` + `engine/components.js` | Motor de motion graphics en HTML determinista: Chromium (Playwright) captura cada fotograma y ffmpeg codifica en paralelo → `build/video_silent.mp4` y `build/cues.json` (efectos de sonido) |
 | 3 | `engine/audio.py` | Música original (La menor, 100 BPM) y efectos sintetizados con numpy/scipy; ducking bajo la voz y normalización a -14 LUFS → `build/mix.wav` |
 | 4 | `engine/make.sh` | Montaje final MP4 (H.264 + AAC, faststart), portada PNG y subtítulos `.srt` en `out/` |
 
@@ -26,6 +30,8 @@ Revisión rápida de fotogramas sueltos:
 ```bash
 node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 ```
+
+**Qué incluye `components.js`:** componentes reutilizables entre episodios, como la hoja de examen corregida a mano, la tarjeta final, la tipografía cinética y un generador aleatorio con semilla para partículas.
 
 **Qué incluye `lib.js`:**
 

@@ -102,7 +102,7 @@ Variar de serie evita la penalización por plantilla repetitiva y crea citas fij
 | # | Título de trabajo | Gancho (0–3 s) | Fuente |
 |---|---|---|---|
 | 01 ✅ | **Mismo modelo, 24 puntos más: el arnés** | "Misma IA, mismo examen… y 24 puntos más" | El cronómetro y el examen |
-| 02 | **Tu IA se sabía el examen** (contaminación) | "75 % en un examen… 7,5 % en uno nuevo" | Konwinski Prize frente a SWE-bench Verified |
+| 02 ✅ | **Tu IA se sabía el examen** (contaminación) | "Del 75 % al 7,5 %… en el mismo tipo de examen" | Konwinski Prize frente a SWE-bench Verified |
 | 03 | **Funciona una vez ≠ funciona siempre** | "Acierta… y a la cuarta falla" | pass^k en tau-bench |
 | 04 | **La IA dobla su jornada cada 7 meses** | "Hace 6 años, segundos. Hoy, horas." | METR time horizon (con su intervalo de confianza) |
 | 05 | **Un email puede secuestrar a tu agente** | "Una línea oculta en un correo…" | El sistema inmunitario |

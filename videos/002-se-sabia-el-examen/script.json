@@ -1,0 +1,51 @@
+{
+  "id": "002-se-sabia-el-examen",
+  "series": "EUREKA · IA en 60s",
+  "episode": 2,
+  "title": "Tu IA se sabía el examen: la contaminación",
+  "cover": "¿Es lista…<br><span style=\"color:#f59e0b\">o se sabía el examen?</span>",
+  "coverTime": 4.6,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/el-cronometro-y-el-examen",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Del 75% al 7,5%… en el mismo tipo de examen. ¿Qué ha pasado?"
+    },
+    {
+      "id": "contamina",
+      "text": "Se llama contaminación: las preguntas del examen se cuelan en los datos con los que se entrena el modelo."
+    },
+    {
+      "id": "alumno",
+      "text": "Es como el alumno que ya ha visto el examen: no sabes si entiende la materia… o si se sabe las respuestas."
+    },
+    {
+      "id": "dato45",
+      "text": "Y pasa más de lo que crees: hay estudios que detectan hasta un 45% de material de examen filtrado."
+    },
+    {
+      "id": "kprize",
+      "text": "Por eso el Premio Konwinski solo usa problemas de GitHub publicados después del entrenamiento. Imposible haberlos visto. El ganador: un 7,5%."
+    },
+    {
+      "id": "remedio",
+      "text": "La lección: un examen saturado se arregla con uno más difícil. Uno contaminado, solo con uno que el modelo nunca haya visto."
+    },
+    {
+      "id": "pregunta",
+      "text": "Así que, ante una nota espectacular, pregunta: ¿pudo estar este examen en su entrenamiento?"
+    },
+    {
+      "id": "tesis",
+      "text": "Porque una nota alta no siempre es inteligencia. A veces, es memoria."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien se cree todos los rankings."
+    }
+  ]
+}
