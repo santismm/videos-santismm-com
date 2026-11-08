@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>EUREKA brand assets</title>
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url(../engine/fonts/SpaceGrotesk-latin.woff2) format('woff2'); font-weight: 300 700; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(../engine/fonts/JetBrainsMono-Bold.ttf); font-weight: 700; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(../engine/fonts/JetBrainsMono-Medium.ttf); font-weight: 500; }
+  :root { --bg:#070a13; --line:#1b2336; --ls:#2a3550; --ink:#f8fafc; --fg:#dbe2ee; --muted:#93a1b8; --faint:#5d6b85;
+          --cyan:#22d3ee; --blue:#3b82f6; --amber:#f59e0b; --green:#10b981; }
+  html, body { margin: 0; background: var(--bg); }
+  .art { position: relative; overflow: hidden; background: var(--bg); color: var(--ink); }
+  .grid { position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); }
+  .glow { position: absolute; border-radius: 50%; filter: blur(10px); }
+  .display { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .abs { position: absolute; }
+  .dot { border-radius: 50%; background: var(--cyan); }
+  [hidden] { display: none !important; }
+
+  /* ── Avatar 800×800 (se muestra en círculo) ── */
+  #avatar { width: 800px; height: 800px; }
+  #avatar .grid { background-size: 80px 80px; background-position: 40px 40px; opacity: .6;
+                  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 72%); }
+
+  /* ── Banner 2560×1440 (zona segura central 1546×423) ── */
+  #banner { width: 2560px; height: 1440px; }
+  #banner .grid { background-size: 96px 96px; background-position: 48px 48px; opacity: .55;
+                  -webkit-mask-image: radial-gradient(1600px 900px at 50% 50%, #000 35%, transparent 90%); }
+</style>
+</head>
+<body>
+
+<!-- AVATAR -->
+<div id="avatar" class="art" hidden>
+  <div class="grid"></div>
+  <div class="glow" style="left:120px;top:90px;width:560px;height:560px;background:radial-gradient(circle, rgba(34,211,238,.28), transparent 65%)"></div>
+  <div class="glow" style="left:260px;top:300px;width:520px;height:520px;background:radial-gradient(circle, rgba(59,130,246,.22), transparent 65%)"></div>
+  <!-- anillo: el "arnés" alrededor del núcleo -->
+  <svg class="abs" width="800" height="800" viewBox="0 0 800 800" style="left:0;top:0">
+    <circle cx="400" cy="400" r="292" fill="none" stroke="#22d3ee" stroke-width="10" stroke-dasharray="1300 535" transform="rotate(-140 400 400)" opacity=".9"/>
+    <circle cx="400" cy="400" r="292" fill="none" stroke="#f59e0b" stroke-width="10" stroke-dasharray="120 1715" transform="rotate(118 400 400)"/>
+  </svg>
+  <div class="abs display" style="left:0;right:0;top:182px;text-align:center;font-size:420px;line-height:1;letter-spacing:-.04em">E</div>
+  <div class="abs dot" style="left:532px;top:218px;width:86px;height:86px;box-shadow:0 0 60px #22d3ee, 0 0 120px rgba(34,211,238,.6)"></div>
+  <div class="abs mono" style="left:0;right:0;top:612px;text-align:center;font-size:40px;font-weight:700;letter-spacing:.2em;color:var(--muted)">IA·60s</div>
+</div>
+
+<!-- BANNER -->
+<div id="banner" class="art" hidden>
+  <div class="grid"></div>
+  <div class="glow" style="left:560px;top:240px;width:1100px;height:1100px;background:radial-gradient(circle, rgba(34,211,238,.20), transparent 62%)"></div>
+  <div class="glow" style="left:1250px;top:120px;width:1000px;height:1000px;background:radial-gradient(circle, rgba(59,130,246,.18), transparent 62%)"></div>
+
+  <!-- Decoración fuera de la zona segura (visible en TV / escritorio ancho) -->
+  <svg class="abs" width="2560" height="1440" style="left:0;top:0" opacity=".55">
+    <!-- barras (benchmarks) a la izquierda -->
+    <g transform="translate(150 470)">
+      <rect x="0" y="260" width="70" height="240" rx="12" fill="#5d6b85"/>
+      <rect x="100" y="140" width="70" height="360" rx="12" fill="#22d3ee"/>
+      <rect x="200" y="200" width="70" height="300" rx="12" fill="#3b82f6"/>
+      <line x1="-20" y1="502" x2="300" y2="502" stroke="#2a3550" stroke-width="6"/>
+    </g>
+    <!-- chip "modelo" con arnés a la derecha -->
+    <g transform="translate(2300 600)" fill="none">
+      <rect x="-150" y="-150" width="300" height="300" rx="56" stroke="#22d3ee" stroke-width="8" stroke-dasharray="20 14"/>
+      <rect x="-90" y="-90" width="180" height="180" rx="30" stroke="#22d3ee" stroke-width="8" fill="#0f1525"/>
+      <path d="M-130 -60v-70h70M60 -130h70v70M130 60v70h-70M-60 130h-70v-70" stroke="#f59e0b" stroke-width="12" stroke-linecap="round"/>
+    </g>
+  </svg>
+
+  <!-- Zona segura: 1546×423 centrada → x 507–2053, y 508–931 -->
+  <div class="abs" style="left:507px;top:508px;width:1546px;height:423px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px">
+    <div class="display" style="display:flex;align-items:center;gap:44px;font-size:200px;line-height:.9;letter-spacing:.05em">
+      <span class="dot" style="width:62px;height:62px;box-shadow:0 0 60px #22d3ee, 0 0 120px rgba(34,211,238,.6)"></span>EUREKA
+    </div>
+    <div class="display" style="font-size:64px;font-weight:600;color:var(--fg);letter-spacing:-.01em">IA compleja, explicada en <span style="color:var(--cyan)">60 segundos</span></div>
+    <div class="mono" style="font-size:30px;font-weight:700;letter-spacing:.14em;color:var(--muted);margin-top:6px">DATOS, NO HUMO · NUEVO VÍDEO LUN · MIÉ · VIE · SANTISMM.COM</div>
+  </div>
+  <!-- Guía de zona segura (solo en el modo de revisión) -->
+  <div id="safe" class="abs" hidden style="left:507px;top:508px;width:1546px;height:423px;outline:4px dashed #f59e0b"></div>
+</div>
+
+<script>
+  const p = new URLSearchParams(location.search);
+  document.getElementById(p.get('mode') || 'avatar').hidden = false;
+  if (p.get('guides')) document.getElementById('safe').hidden = false;
+</script>
+</body>
+</html>
