@@ -13,6 +13,16 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 03 | Funciona una vez ≠ funciona siempre (pass^k) | [mp4](videos/003-una-vez-no-es-siempre/out/003-una-vez-no-es-siempre.mp4) | [publicacion.md](videos/003-una-vez-no-es-siempre/publicacion.md) |
 | 04 | La IA dobla su jornada cada 7 meses (horizonte de METR) | [mp4](videos/004-la-jornada-de-la-ia/out/004-la-jornada-de-la-ia.mp4) | [publicacion.md](videos/004-la-jornada-de-la-ia/publicacion.md) |
 
+## Publicación automática
+
+- **Dónde se publica:** los vídeos se programan en Metricool (marca 7970471) para el canal de YouTube [@eureka-ia60](https://www.youtube.com/@eureka-ia60), los lunes, miércoles y viernes a las 13:00 (hora de Madrid).
+- **Qué sube a YouTube:** cada vídeo sale como Short público, marcado como contenido sintético de IA, con los textos de su `publicacion.md`.
+- **Regla del usuario:** cada vez que se confirma la publicación de un vídeo, se genera el siguiente del plan y se programa detrás del último programado.
+  - Lo ejecuta una tarea programada de Claude Code los lunes, miércoles y viernes a las 13:12.
+  - Primero comprueba la publicación del día.
+  - Si está confirmada, crea el siguiente episodio: fuentes verificadas, render, revisión y push.
+  - Después lo programa en Metricool y avisa.
+
 ## Cómo se hace un vídeo
 
 ```
