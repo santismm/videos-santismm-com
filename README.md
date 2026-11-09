@@ -10,6 +10,7 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 |---|---|---|---|
 | 01 | Mismo modelo, 24 puntos más: el arnés | [mp4](videos/001-el-arnes/out/001-el-arnes.mp4) | [publicacion.md](videos/001-el-arnes/publicacion.md) |
 | 02 | Tu IA se sabía el examen: la contaminación | [mp4](videos/002-se-sabia-el-examen/out/002-se-sabia-el-examen.mp4) | [publicacion.md](videos/002-se-sabia-el-examen/publicacion.md) |
+| 03 | Funciona una vez ≠ funciona siempre (pass^k) | [mp4](videos/003-una-vez-no-es-siempre/out/003-una-vez-no-es-siempre.mp4) | [publicacion.md](videos/003-una-vez-no-es-siempre/publicacion.md) |
 
 ## Cómo se hace un vídeo
 

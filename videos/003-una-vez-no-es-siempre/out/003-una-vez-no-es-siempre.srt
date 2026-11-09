@@ -1,0 +1,112 @@
+1
+00:00:00,250 --> 00:00:01,744
+Tu agente de IA acertó en la
+
+2
+00:00:01,555 --> 00:00:02,139
+demo.
+
+3
+00:00:02,689 --> 00:00:04,643
+¿Acertará las ocho veces siguientes?
+
+4
+00:00:05,471 --> 00:00:07,480
+Casi todos los rankings miden si acierta
+
+5
+00:00:07,291 --> 00:00:08,006
+una vez.
+
+6
+00:00:08,560 --> 00:00:10,460
+Pero en una empresa importa otra cosa:
+
+7
+00:00:10,512 --> 00:00:11,655
+que acierte siempre.
+
+8
+00:00:12,471 --> 00:00:13,340
+Haz la cuenta:
+
+9
+00:00:13,359 --> 00:00:15,324
+un agente que acierta el 90% de
+
+10
+00:00:15,135 --> 00:00:17,068
+las veces, si tiene que acertar ocho
+
+11
+00:00:16,879 --> 00:00:19,773
+seguidas, se queda en un 43%.
+
+12
+00:00:20,599 --> 00:00:21,632
+Y no es teoría:
+
+13
+00:00:21,630 --> 00:00:23,430
+en tau-bench, un test de atención al
+
+14
+00:00:23,241 --> 00:00:26,542
+cliente, los mejores agentes de 2024 acertaban
+
+15
+00:00:26,352 --> 00:00:27,868
+menos del 50%…
+
+16
+00:00:27,899 --> 00:00:30,902
+y ocho veces seguidas, menos del 25%.
+
+17
+00:00:31,730 --> 00:00:32,412
+¿Por qué?
+
+18
+00:00:32,963 --> 00:00:35,016
+Porque un agente no responde una pregunta:
+
+19
+00:00:35,013 --> 00:00:36,858
+recorre un camino de muchos pasos.
+
+20
+00:00:37,412 --> 00:00:39,048
+Un solo error lo tira todo.
+
+21
+00:00:39,879 --> 00:00:41,932
+Así que, antes de comprar un agente,
+
+22
+00:00:41,962 --> 00:00:43,401
+no preguntes cuánto acierta.
+
+23
+00:00:43,955 --> 00:00:45,931
+Pregunta cuántas veces seguidas acierta…
+
+24
+00:00:45,939 --> 00:00:47,269
+y qué pasa cuando falla.
+
+25
+00:00:48,106 --> 00:00:49,633
+Porque una demo es una vez.
+
+26
+00:00:50,180 --> 00:00:51,499
+Producción es siempre.
+
+27
+00:00:52,322 --> 00:00:54,463
+Guárdalo, y compártelo con quien está a
+
+28
+00:00:54,274 --> 00:00:55,801
+punto de comprar un agente.
+

@@ -1,0 +1,47 @@
+{
+  "id": "003-una-vez-no-es-siempre",
+  "series": "EUREKA · IA en 60s",
+  "episode": 3,
+  "title": "Funciona una vez ≠ funciona siempre",
+  "cover": "Funciona una vez…<br><span style=\"color:#f59e0b\">¿y siempre?</span>",
+  "coverTime": 4.4,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/el-cronometro-y-el-examen · arxiv.org/abs/2406.12045",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Tu agente de IA acertó en la demo. ¿Acertará las ocho veces siguientes?"
+    },
+    {
+      "id": "metricas",
+      "text": "Casi todos los rankings miden si acierta una vez. Pero en una empresa importa otra cosa: que acierte siempre."
+    },
+    {
+      "id": "cuenta",
+      "text": "Haz la cuenta: un agente que acierta el 90% de las veces, si tiene que acertar ocho seguidas, se queda en un 43%."
+    },
+    {
+      "id": "taubench",
+      "text": "Y no es teoría: en tau-bench, un test de atención al cliente, los mejores agentes de 2024 acertaban menos del 50%… y ocho veces seguidas, menos del 25%."
+    },
+    {
+      "id": "camino",
+      "text": "¿Por qué? Porque un agente no responde una pregunta: recorre un camino de muchos pasos. Un solo error lo tira todo."
+    },
+    {
+      "id": "compra",
+      "text": "Así que, antes de comprar un agente, no preguntes cuánto acierta. Pregunta cuántas veces seguidas acierta… y qué pasa cuando falla."
+    },
+    {
+      "id": "tesis",
+      "text": "Porque una demo es una vez. Producción es siempre."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien está a punto de comprar un agente."
+    }
+  ]
+}
