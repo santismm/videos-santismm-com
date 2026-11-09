@@ -59,7 +59,7 @@
 >
 > En τ-bench (atención al cliente con herramientas), los mejores agentes de 2024 acertaban menos del 50 % de las tareas, y 8 veces seguidas, menos del 25 % (escenario de tienda).
 >
-> Antes de comprar un agente, pregunta por pass^k y por qué pasa cuando falla.
+> Antes de comprar un agente, pregunta por pass^k y por lo que pasa cuando falla.
 >
 > 📖 Artículo: https://articles.santismm.com/el-cronometro-y-el-examen/
 > 📄 τ-bench: https://arxiv.org/abs/2406.12045
