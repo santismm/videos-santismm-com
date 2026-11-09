@@ -1,0 +1,51 @@
+{
+  "id": "004-la-jornada-de-la-ia",
+  "series": "EUREKA · IA en 60s",
+  "episode": 4,
+  "title": "La IA dobla su jornada cada 7 meses (horizonte temporal de METR)",
+  "cover": "De 3 segundos<br><span style=\"color:#22d3ee\">a 12 horas</span>",
+  "coverTime": 6.2,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "metr.org/time-horizons · articles.santismm.com/el-cronometro-y-el-examen",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "En 2019, la mejor IA hacía tareas de tres segundos. Hoy, de doce horas."
+    },
+    {
+      "id": "definicion",
+      "text": "Lo mide METR: cuánto tarda una persona experta en las tareas que la IA completa la mitad de las veces."
+    },
+    {
+      "id": "curva",
+      "text": "Esa duración se duplica cada siete meses, más o menos. Y desde 2023, cada cuatro."
+    },
+    {
+      "id": "jornada",
+      "text": "Segundos con GPT-2, minutos con GPT-4, una hora en 2025… y doce horas hoy."
+    },
+    {
+      "id": "letra",
+      "text": "Pero ojo: eso es acertando la mitad de las veces. Si pides un 80%, baja a poco más de una hora."
+    },
+    {
+      "id": "margen",
+      "text": "Y son tareas de software, más limpias que el trabajo real, con un margen enorme: de 5 a 60 horas."
+    },
+    {
+      "id": "pregunta",
+      "text": "Así que no preguntes si la IA puede hacer tu trabajo, sino qué tareas, de cuántas horas, y con qué fiabilidad."
+    },
+    {
+      "id": "tesis",
+      "text": "El cronómetro es el instrumento correcto. Pero no es un veredicto."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien cree que la IA se ha estancado."
+    }
+  ]
+}

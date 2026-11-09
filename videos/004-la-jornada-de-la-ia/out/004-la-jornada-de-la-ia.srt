@@ -1,0 +1,116 @@
+1
+00:00:00,250 --> 00:00:02,807
+En 2019, la mejor IA hacía tareas
+
+2
+00:00:02,618 --> 00:00:03,707
+de tres segundos.
+
+3
+00:00:04,257 --> 00:00:05,860
+Hoy, de doce horas.
+
+4
+00:00:06,695 --> 00:00:07,586
+Lo mide METR:
+
+5
+00:00:07,616 --> 00:00:09,395
+cuánto tarda una persona experta en las
+
+6
+00:00:09,206 --> 00:00:10,897
+tareas que la IA completa la mitad
+
+7
+00:00:10,708 --> 00:00:11,643
+de las veces.
+
+8
+00:00:12,471 --> 00:00:14,743
+Esa duración se duplica cada siete meses,
+
+9
+00:00:14,796 --> 00:00:15,763
+más o menos.
+
+10
+00:00:16,313 --> 00:00:18,685
+Y desde 2023, cada cuatro.
+
+11
+00:00:19,522 --> 00:00:23,242
+Segundos con GPT-2, minutos con GPT-4, una
+
+12
+00:00:23,053 --> 00:00:24,404
+hora en 2025…
+
+13
+00:00:24,434 --> 00:00:25,479
+y doce horas hoy.
+
+14
+00:00:26,306 --> 00:00:27,109
+Pero ojo:
+
+15
+00:00:27,128 --> 00:00:28,666
+eso es acertando la mitad de las
+
+16
+00:00:28,477 --> 00:00:29,203
+veces.
+
+17
+00:00:29,751 --> 00:00:32,155
+Si pides un 80%, baja a poco
+
+18
+00:00:31,966 --> 00:00:32,977
+más de una hora.
+
+19
+00:00:33,807 --> 00:00:35,893
+Y son tareas de software, más limpias
+
+20
+00:00:35,704 --> 00:00:37,570
+que el trabajo real, con un margen
+
+21
+00:00:37,382 --> 00:00:37,932
+enorme:
+
+22
+00:00:37,963 --> 00:00:39,478
+de 5 a 60 horas.
+
+23
+00:00:40,303 --> 00:00:41,830
+Así que no preguntes si la IA
+
+24
+00:00:41,641 --> 00:00:43,814
+puede hacer tu trabajo, sino qué tareas,
+
+25
+00:00:43,856 --> 00:00:45,887
+de cuántas horas, y con qué fiabilidad.
+
+26
+00:00:46,706 --> 00:00:48,880
+El cronómetro es el instrumento correcto.
+
+27
+00:00:49,430 --> 00:00:50,847
+Pero no es un veredicto.
+
+28
+00:00:51,663 --> 00:00:53,859
+Guárdalo, y compártelo con quien cree que
+
+29
+00:00:53,669 --> 00:00:55,010
+la IA se ha estancado.
+

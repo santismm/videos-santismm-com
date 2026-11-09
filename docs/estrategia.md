@@ -104,7 +104,7 @@ Variar de serie evita la penalización por plantilla repetitiva y crea citas fij
 | 01 ✅ | **Mismo modelo, 24 puntos más: el arnés** | "Misma IA, mismo examen… y 24 puntos más" | El cronómetro y el examen |
 | 02 ✅ | **Tu IA se sabía el examen** (contaminación) | "Del 75 % al 7,5 %… en el mismo tipo de examen" | Konwinski Prize frente a SWE-bench Verified |
 | 03 ✅ | **Funciona una vez ≠ funciona siempre** | "Tu agente acertó en la demo. ¿Y las 8 siguientes?" | pass^k en tau-bench |
-| 04 | **La IA dobla su jornada cada 7 meses** | "Hace 6 años, segundos. Hoy, horas." | METR time horizon (con su intervalo de confianza) |
+| 04 ✅ | **La IA dobla su jornada cada 7 meses** | "Hace 6 años, segundos. Hoy, horas." | METR time horizon (con su intervalo de confianza) |
 | 05 | **Un email puede secuestrar a tu agente** | "Una línea oculta en un correo…" | El sistema inmunitario |
 | 06 | **4 formas de enfermar de un agente** | "Tu agente puede enfermar así" | El sistema inmunitario |
 | 07 | **¿Cuánto cuesta una tarea de IA?** | "De 3 céntimos a 87 $… por lo mismo" | Coste por tarea (Kapoor y Narayanan) |
