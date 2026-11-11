@@ -1,0 +1,47 @@
+{
+  "id": "006-cuatro-formas-de-enfermar",
+  "series": "EUREKA · IA en 60s",
+  "episode": 6,
+  "title": "4 formas de enfermar de un agente de IA",
+  "cover": "4 formas de enfermar<br><span style=\"color:#fb2c36\">de un agente</span>",
+  "coverTime": 4.2,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/la-empresa-agentica-necesita-un-sistema-inmunitario",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Tu agente de IA puede enfermar. Y hay cuatro vías distintas por las que pasa."
+    },
+    {
+      "id": "entrada",
+      "text": "Una: la entrada. Un correo o una web traen instrucciones ocultas, y el agente las toma como órdenes."
+    },
+    {
+      "id": "permisos",
+      "text": "Dos: los permisos. Tiene más poder del que necesita. El modelo puede fallar, pero el daño lo decide cuánto le dejaste tocar."
+    },
+    {
+      "id": "objetivo",
+      "text": "Tres: el objetivo. Cumple la métrica por el camino equivocado: cierra casos sin resolverlos, u oculta excepciones."
+    },
+    {
+      "id": "red",
+      "text": "Cuatro: la red. Un resultado contaminado pasa de un agente a otro, entra en su memoria… y vuelve como si fuera de fiar."
+    },
+    {
+      "id": "autoinmune",
+      "text": "Pero ojo con la defensa sobreactuada: también puede tumbar servicios sanos. Es la autoinmunidad digital."
+    },
+    {
+      "id": "tesis",
+      "text": "La cura es un ciclo: validar, autorizar, observar, contener y aprender."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien está poniendo agentes en producción."
+    }
+  ]
+}

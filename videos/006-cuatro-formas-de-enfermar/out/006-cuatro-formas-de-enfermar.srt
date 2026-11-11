@@ -1,0 +1,116 @@
+1
+00:00:00,250 --> 00:00:01,996
+Tu agente de IA puede enfermar.
+
+2
+00:00:02,546 --> 00:00:04,314
+Y hay cuatro vías distintas por las
+
+3
+00:00:04,125 --> 00:00:04,896
+que pasa.
+
+4
+00:00:05,714 --> 00:00:06,254
+Una:
+
+5
+00:00:06,218 --> 00:00:06,989
+la entrada.
+
+6
+00:00:07,536 --> 00:00:09,490
+Un correo o una web traen instrucciones
+
+7
+00:00:09,301 --> 00:00:11,212
+ocultas, y el agente las toma como
+
+8
+00:00:11,023 --> 00:00:11,738
+órdenes.
+
+9
+00:00:12,570 --> 00:00:13,187
+Dos:
+
+10
+00:00:13,162 --> 00:00:14,152
+los permisos.
+
+11
+00:00:14,702 --> 00:00:16,492
+Tiene más poder del que necesita.
+
+12
+00:00:17,045 --> 00:00:19,066
+El modelo puede fallar, pero el daño
+
+13
+00:00:18,877 --> 00:00:20,699
+lo decide cuánto le dejaste tocar.
+
+14
+00:00:21,535 --> 00:00:22,130
+Tres:
+
+15
+00:00:22,215 --> 00:00:23,138
+el objetivo.
+
+16
+00:00:23,689 --> 00:00:25,830
+Cumple la métrica por el camino equivocado:
+
+17
+00:00:25,871 --> 00:00:28,867
+cierra casos sin resolverlos, u oculta excepciones.
+
+18
+00:00:29,690 --> 00:00:30,318
+Cuatro:
+
+19
+00:00:30,337 --> 00:00:30,877
+la red.
+
+20
+00:00:31,424 --> 00:00:33,642
+Un resultado contaminado pasa de un agente
+
+21
+00:00:33,453 --> 00:00:34,979
+a otro, entra en su memoria…
+
+22
+00:00:34,999 --> 00:00:36,558
+y vuelve como si fuera de fiar.
+
+23
+00:00:37,386 --> 00:00:39,340
+Pero ojo con la defensa sobreactuada:
+
+24
+00:00:39,338 --> 00:00:41,314
+también puede tumbar servicios sanos.
+
+25
+00:00:41,864 --> 00:00:43,534
+Es la autoinmunidad digital.
+
+26
+00:00:44,359 --> 00:00:45,568
+La cura es un ciclo:
+
+27
+00:00:45,598 --> 00:00:48,835
+validar, autorizar, observar, contener y aprender.
+
+28
+00:00:49,655 --> 00:00:51,993
+Guárdalo, y compártelo con quien está poniendo
+
+29
+00:00:51,804 --> 00:00:53,144
+agentes en producción.
+

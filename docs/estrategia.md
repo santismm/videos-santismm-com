@@ -106,7 +106,7 @@ Variar de serie evita la penalización por plantilla repetitiva y crea citas fij
 | 03 ✅ | **Funciona una vez ≠ funciona siempre** | "Tu agente acertó en la demo. ¿Y las 8 siguientes?" | pass^k en tau-bench |
 | 04 ✅ | **La IA dobla su jornada cada 7 meses** | "Hace 6 años, segundos. Hoy, horas." | METR time horizon (con su intervalo de confianza) |
 | 05 ✅ | **Un email puede secuestrar a tu agente** | "Una línea oculta en un correo…" | El sistema inmunitario |
-| 06 | **4 formas de enfermar de un agente** | "Tu agente puede enfermar así" | El sistema inmunitario |
+| 06 ✅ | **4 formas de enfermar de un agente** | "Tu agente puede enfermar así" | El sistema inmunitario |
 | 07 | **¿Cuánto cuesta una tarea de IA?** | "De 3 céntimos a 87 $… por lo mismo" | Coste por tarea (Kapoor y Narayanan) |
 | 08 | **El dron que ahorró 79 minutos… o 19** | "¿79 minutos? Depende de con qué compares" | physicalai · Zipline Ruanda (evidencia A) |
 | 09 | **La IA frente a 44 profesiones** | "Gana o empata en el 41 % de las tareas" | GDPval en el tracker de benchmarks |
