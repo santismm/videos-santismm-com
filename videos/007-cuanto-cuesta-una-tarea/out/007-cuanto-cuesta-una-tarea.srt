@@ -1,0 +1,108 @@
+1
+00:00:00,250 --> 00:00:01,908
+Tu agente de IA cuesta poco más
+
+2
+00:00:01,719 --> 00:00:03,191
+de un céntimo por intento.
+
+3
+00:00:03,742 --> 00:00:05,093
+¿Seguro que es barato?
+
+4
+00:00:05,930 --> 00:00:07,632
+Hagamos la cuenta con el ejemplo de
+
+5
+00:00:07,443 --> 00:00:09,112
+soporte de la calculadora de Labs:
+
+6
+00:00:09,132 --> 00:00:10,516
+diez mil casos al mes.
+
+7
+00:00:11,063 --> 00:00:12,382
+Modelo y herramientas:
+
+8
+00:00:12,379 --> 00:00:14,136
+unos 133 euros.
+
+9
+00:00:14,970 --> 00:00:17,188
+Pero hay un 12% de reintentos.
+
+10
+00:00:17,735 --> 00:00:19,733
+Y acierta el 86%:
+
+11
+00:00:19,752 --> 00:00:22,463
+quedan 1.400 fallos que alguien tiene que rehacer.
+
+12
+00:00:23,287 --> 00:00:25,044
+Y una persona revisa uno de cada
+
+13
+00:00:24,855 --> 00:00:25,877
+cuatro casos.
+
+14
+00:00:26,431 --> 00:00:27,365
+Resultado:
+
+15
+00:00:27,385 --> 00:00:29,208
+el modelo es solo el 1% del
+
+16
+00:00:29,019 --> 00:00:29,701
+coste.
+
+17
+00:00:30,254 --> 00:00:32,724
+El 99% es trabajo humano.
+
+18
+00:00:33,551 --> 00:00:34,891
+Aun así sale a cuenta:
+
+19
+00:00:34,932 --> 00:00:38,449
+unos 10.200 euros al mes, frente a casi 51.000
+
+20
+00:00:38,260 --> 00:00:39,523
+del proceso manual.
+
+21
+00:00:40,359 --> 00:00:41,118
+La lección:
+
+22
+00:00:41,181 --> 00:00:42,840
+no compares precios por token.
+
+23
+00:00:43,393 --> 00:00:45,556
+Compara el coste por resultado correcto.
+
+24
+00:00:46,378 --> 00:00:48,365
+Porque el coste por resultado decidirá qué
+
+25
+00:00:48,176 --> 00:00:49,352
+agentes sobreviven.
+
+26
+00:00:50,159 --> 00:00:52,387
+Guárdalo, y compártelo con quien aprueba el
+
+27
+00:00:52,198 --> 00:00:53,363
+presupuesto de IA.
+

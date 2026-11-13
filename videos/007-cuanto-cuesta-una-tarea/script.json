@@ -1,0 +1,47 @@
+{
+  "id": "007-cuanto-cuesta-una-tarea",
+  "series": "EUREKA · IA en 60s",
+  "episode": 7,
+  "title": "¿Cuánto cuesta de verdad un agente de IA? (coste por resultado)",
+  "cover": "El modelo: 1%<br><span style=\"color:#f59e0b\">¿y el 99%?</span>",
+  "coverTime": 32.8,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "labs.santismm.com/agent-economics · santismm.com",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Tu agente de IA cuesta poco más de un céntimo por intento. ¿Seguro que es barato?"
+    },
+    {
+      "id": "intento",
+      "text": "Hagamos la cuenta con el ejemplo de soporte de la calculadora de Labs: diez mil casos al mes. Modelo y herramientas: unos 133 euros."
+    },
+    {
+      "id": "fallos",
+      "text": "Pero hay un 12% de reintentos. Y acierta el 86%: quedan 1.400 fallos que alguien tiene que rehacer."
+    },
+    {
+      "id": "iceberg",
+      "text": "Y una persona revisa uno de cada cuatro casos. Resultado: el modelo es solo el 1% del coste. El 99% es trabajo humano."
+    },
+    {
+      "id": "balanza",
+      "text": "Aun así sale a cuenta: unos 10.200 euros al mes, frente a casi 51.000 del proceso manual."
+    },
+    {
+      "id": "leccion",
+      "text": "La lección: no compares precios por token. Compara el coste por resultado correcto."
+    },
+    {
+      "id": "tesis",
+      "text": "Porque el coste por resultado decidirá qué agentes sobreviven."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien aprueba el presupuesto de IA."
+    }
+  ]
+}

@@ -10,10 +10,11 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 |---|---|---|---|---|
 | 01 | Mismo modelo, 24 puntos más: el arnés | [mp4](videos/001-el-arnes/out/001-el-arnes.mp4) | [publicacion.md](videos/001-el-arnes/publicacion.md) | [publicado 9 nov](https://www.youtube.com/shorts/eG4HuFDUEAk) |
 | 02 | Tu IA se sabía el examen: la contaminación | [mp4](videos/002-se-sabia-el-examen/out/002-se-sabia-el-examen.mp4) | [publicacion.md](videos/002-se-sabia-el-examen/publicacion.md) | [publicado 11 nov](https://www.youtube.com/shorts/qCMhh8aQpWg) |
-| 03 | Funciona una vez ≠ funciona siempre (pass^k) | [mp4](videos/003-una-vez-no-es-siempre/out/003-una-vez-no-es-siempre.mp4) | [publicacion.md](videos/003-una-vez-no-es-siempre/publicacion.md) | programado 13 nov |
+| 03 | Funciona una vez ≠ funciona siempre (pass^k) | [mp4](videos/003-una-vez-no-es-siempre/out/003-una-vez-no-es-siempre.mp4) | [publicacion.md](videos/003-una-vez-no-es-siempre/publicacion.md) | [publicado 13 nov](https://www.youtube.com/shorts/gx4Ww-_gmwE) |
 | 04 | La IA dobla su jornada cada 7 meses (horizonte de METR) | [mp4](videos/004-la-jornada-de-la-ia/out/004-la-jornada-de-la-ia.mp4) | [publicacion.md](videos/004-la-jornada-de-la-ia/publicacion.md) | programado 16 nov |
 | 05 | Un email puede secuestrar a tu agente (inyección de prompts) | [mp4](videos/005-email-secuestra-agente/out/005-email-secuestra-agente.mp4) | [publicacion.md](videos/005-email-secuestra-agente/publicacion.md) | programado 18 nov |
 | 06 | 4 formas de enfermar de un agente de IA | [mp4](videos/006-cuatro-formas-de-enfermar/out/006-cuatro-formas-de-enfermar.mp4) | [publicacion.md](videos/006-cuatro-formas-de-enfermar/publicacion.md) | programado 20 nov |
+| 07 | ¿Cuánto cuesta de verdad un agente? (coste por resultado) | [mp4](videos/007-cuanto-cuesta-una-tarea/out/007-cuanto-cuesta-una-tarea.mp4) | [publicacion.md](videos/007-cuanto-cuesta-una-tarea/publicacion.md) | programado 23 nov |
 
 ## Publicación automática
 
