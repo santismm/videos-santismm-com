@@ -6,6 +6,8 @@
 (function () {
   const E = EUREKA;
   const { C, S, add, Ease, lerp, prog, spring, appear, clamp01 } = E;
+  /** Texto según el idioma del vídeo: L('español', 'english'). */
+  const L = (es, en) => (E.lang === 'en' ? en : es);
 
   // El verde #0b6e4f es el acento de hispanic-legacy.com; el resto lo acompaña en clave "carta náutica nocturna".
   Object.assign(C, {
@@ -182,7 +184,8 @@
     const sc = S.tl.scenes.find((s) => s.id === id);
     if (!sc) throw new Error('escena desconocida: ' + id);
     if (!word) return sc.start;
-    const hits = sc.words.filter((w) => E.norm(w.w).startsWith(E.norm(word)));
+    let hits = sc.words.filter((w) => E.norm(w.w).startsWith(E.norm(word)));
+    if (!hits.length) hits = sc.words.filter((w) => E.norm(w.w).includes(E.norm(word)));
     if (!hits[n]) throw new Error(`palabra "${word}" no encontrada en ${id}`);
     return hits[n].s;
   }
@@ -191,14 +194,14 @@
   function endCard(x, { url = 'hispanic-legacy.com', tCompartir = 0.3 } = {}) {
     const r = x.root;
     const logo = add(r, `<div class="abs display" style="left:0;right:0;top:350px;text-align:center;font-size:104px;font-weight:900;line-height:.98;color:${C.ink};letter-spacing:.01em">HISPANIC<br><span style="color:${C.gold}">LEGACY</span></div>`);
-    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:590px;text-align:center;font-size:29px;font-weight:700;color:${C.muted};letter-spacing:.14em">HISTORIA CON FUENTES · EN 60s</div>`);
+    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:590px;text-align:center;font-size:29px;font-weight:700;color:${C.muted};letter-spacing:.14em">${L('HISTORIA CON FUENTES · EN 60s', 'SOURCED HISTORY · IN 60s')}</div>`);
     const btn = (icon, label, color, left) => add(r, `<div class="abs" style="left:${left}px;top:690px;width:390px;height:136px;border-radius:34px;background:${C.surface2};border:4px solid ${color};display:flex;align-items:center;justify-content:center;gap:20px;box-shadow:0 0 50px ${color}44">
         <div style="width:60px;height:60px;color:${color}">${icon}</div><span class="display" style="font-size:46px;font-weight:700;color:${C.ink}">${label}</span></div>`);
-    const b1 = btn(E.I.share, 'Compártelo', C.gold, 125);
-    const b2 = btn(E.I.bookmark, 'Sígueme', C.green, 565);
+    const b1 = btn(E.I.share, L('Compártelo', 'Share it'), C.gold, 125);
+    const b2 = btn(E.I.bookmark, L('Sígueme', 'Follow'), C.green, 565);
     const site = add(r, `<div class="abs display" style="left:0;right:0;top:900px;text-align:center;font-size:58px;font-weight:700;color:${C.gold}">hispanic-legacy.com</div>`);
     const subs = add(r, `<div class="abs mono" style="left:0;right:0;top:990px;text-align:center;font-size:25px;font-weight:500;color:${C.muted}">${url}</div>`);
-    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1090px;text-align:center;font-size:22px;line-height:1.5;font-weight:500;color:${C.muted}">Datos y fuentes: hispanic-legacy.com (CC BY 4.0)<br>Voz y animación generadas con IA</div>`);
+    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1090px;text-align:center;font-size:22px;line-height:1.5;font-weight:500;color:${C.muted}">${L('Datos y fuentes: hispanic-legacy.com (CC BY 4.0)<br>Voz y animación generadas con IA', 'Data and sources: hispanic-legacy.com (CC BY 4.0)<br>AI-generated voice and animation')}</div>`);
     x.cue(0.1, 'ding', 0.4); x.cue(tCompartir, 'pop', 0.8); x.cue(tCompartir + 0.9, 'pop', 0.8);
     return (lt) => {
       const l = spring(lt, 0.05, 0.5); logo.style.opacity = l > 0 ? 1 : 0; logo.style.transform = `scale(${lerp(0.7, 1, l)})`;
@@ -242,9 +245,9 @@
       <div class="mono tl" style="position:absolute;left:0;right:0;bottom:${size * 0.08}px;text-align:center;font-size:${size * 0.095}px;font-weight:700;letter-spacing:.1em;color:${C.ink}">${name}</div></div>`);
 
   E.theme = {
-    brand: { name: 'HISPANIC LEGACY', tagline: 'HISTORIA EN 60s' },
+    brand: { name: 'HISPANIC LEGACY', tagline: L('HISTORIA EN 60s', 'HISTORY IN 60s') },
     fonts: ['700 80px "Fraunces"', '900 80px "Fraunces"', '500 40px "Fraunces"'],
     buildBg, renderBg,
   };
-  E.hl = { map, curve, kf, T, endCard, SHIP, year, stamp, stampIn, plate, plateIn, tile, DARK };
+  E.hl = { L, map, curve, kf, T, endCard, SHIP, year, stamp, stampIn, plate, plateIn, tile, DARK };
 })();

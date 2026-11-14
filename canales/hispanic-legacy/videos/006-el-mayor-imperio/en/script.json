@@ -1,0 +1,47 @@
+{
+  "id": "006-the-largest-empire-en",
+  "lang": "en",
+  "series": "Hispanic Legacy · History in 60s",
+  "episode": 6,
+  "title": "“The largest empire in history” is a statement about maps",
+  "cover": "The largest empire?<br><span style=\"color:#f0b94a\">Depends on the map.</span>",
+  "coverTime": 12,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "animation": "../scenes.js",
+  "voice": "en-US-AvaNeural",
+  "rate": "+9%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/cartographic-extent-vs-effective-control",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "“The largest empire in history.” That phrase is not about governments. It is about maps."
+    },
+    {
+      "id": "atlas",
+      "text": "The numbers behind the rankings come from historical atlases: they measure the coloured patch the atlas paints for each empire."
+    },
+    {
+      "id": "cifras",
+      "text": "That way, the British Empire reaches about 35 million square kilometres around 1920. The Spanish, 13 to 14 million around 1780."
+    },
+    {
+      "id": "problema",
+      "text": "But painting a territory is not governing it. One colour can hide colonies, protectorates and mere claims."
+    },
+    {
+      "id": "alternativas",
+      "text": "And the alternative effective control figures going around? They don't hold up either: they don't say which year they measure, or by what rules."
+    },
+    {
+      "id": "leccion",
+      "text": "The useful question is not which one was bigger, but what each one really controlled, where and when."
+    },
+    {
+      "id": "cta",
+      "text": "Share it before your next argument about empires."
+    }
+  ]
+}

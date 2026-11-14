@@ -1,0 +1,47 @@
+{
+  "id": "004-the-queens-chess-en",
+  "lang": "en",
+  "series": "Hispanic Legacy · History in 60s",
+  "episode": 4,
+  "title": "For centuries the chess queen was the weakest piece on the board",
+  "cover": "The weakest piece<br><span style=\"color:#f0b94a\">on the board.</span>",
+  "coverTime": 5.6,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "animation": "../scenes.js",
+  "voice": "en-US-AvaNeural",
+  "rate": "+9%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/ajedrez-de-la-dama",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "The queen is the most powerful piece in chess. But for centuries it was the weakest on the board."
+    },
+    {
+      "id": "vieja",
+      "text": "In medieval chess it could move just one square diagonally. It was a counsellor, not a queen."
+    },
+    {
+      "id": "cambio",
+      "text": "In the late fifteenth century everything changes: the queen and the bishop gain the long moves they have today."
+    },
+    {
+      "id": "lucena",
+      "text": "The first printed book on that new game is written by Lucena, a student at Salamanca, in 1497 at the latest. He calls it the queen's chess."
+    },
+    {
+      "id": "rabiosa",
+      "text": "In Italy it got another name: alla rabiosa. The furious way."
+    },
+    {
+      "id": "matiz",
+      "text": "Did Spain invent it? Nobody knows who first moved the queen that way. What we do know is where it was first printed."
+    },
+    {
+      "id": "cta",
+      "text": "Share it with the person who always beats you at chess."
+    }
+  ]
+}

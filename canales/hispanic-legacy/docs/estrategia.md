@@ -51,9 +51,9 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 | 01 | El tornaviaje: para volver había que ir al norte ✅ | `/k/andres-de-urdaneta` |
 | 02 | El vanadio se descubrió dos veces (y la primera fue en México) ✅ | `/k/andres-manuel-del-rio` |
 | 03 | La epidural la describió un cirujano español en 1921 ✅ | `/k/fidel-pages-epidural-anaesthesia-1921` |
-| 04 | La reina del ajedrez no siempre fue la pieza más fuerte | `/k/ajedrez-de-la-dama` |
-| 05 | La vacuna que cruzó el océano en brazos de niños | `/k/balmis-expedition` |
-| 06 | "El mayor imperio de la historia" es una frase sobre mapas | `/k/cartographic-extent-vs-effective-control` |
+| 04 | La reina del ajedrez no siempre fue la pieza más fuerte ✅ | `/k/ajedrez-de-la-dama` |
+| 05 | La vacuna que cruzó el océano en brazos de niños ✅ | `/k/balmis-expedition` |
+| 06 | "El mayor imperio de la historia" es una frase sobre mapas ✅ | `/k/cartographic-extent-vs-effective-control` |
 | 07 | El platino: el metal que estorbaba en las minas de oro | `/k/antonio-de-ulloa-platinum` |
 | 08 | Un arca, tres llaves: así se guardaba el dinero de las flotas | Leyes de Indias, libro IX |
 | 09 | El examen de los pilotos: juramento y voto secreto con habas | Leyes de Indias, libro IX, título XXIII |
@@ -69,7 +69,9 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 
 ## 6. Decisiones
 
-- **Idioma:** solo español (decidido el 14-11-2026).
+- **Idioma:** español e inglés, con la misma animación (decidido el 14-11-2026; antes se había dicho solo español).
+- **Cadencia:** 4 vídeos por semana, con un buffer de 6. Ver [`calendario.md`](calendario.md).
+- **Plataformas:** Instagram, YouTube y TikTok, gestionadas con Metricool. Ver [`../brand/canales.md`](../brand/canales.md).
 
 Pendientes:
 

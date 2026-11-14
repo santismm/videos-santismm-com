@@ -33,6 +33,7 @@
   // El renderer inyecta el timeline y el script de escenas del vídeo.
   // `pre`: scripts que se cargan antes de las escenas (tema del canal y recursos del vídeo).
   window.__boot = async function (timeline, scenesSrc, pre = []) {
+    EUREKA.lang = timeline.lang || 'es'; // idioma del vídeo ("lang" en script.json)
     for (const src of [...pre, scenesSrc]) {
       await new Promise((res, rej) => {
         const s = document.createElement('script');

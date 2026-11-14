@@ -1,0 +1,43 @@
+{
+  "id": "002-vanadium-discovered-twice-en",
+  "lang": "en",
+  "series": "Hispanic Legacy · History in 60s",
+  "episode": 2,
+  "title": "Vanadium was discovered twice (and the first time was in Mexico)",
+  "cover": "Discovered<br><span style=\"color:#f0b94a\">twice.</span>",
+  "coverTime": 3.9,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "animation": "../scenes.js",
+  "voice": "en-US-AvaNeural",
+  "rate": "+9%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/andres-manuel-del-rio",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "The metal that hardens the steel in your tools was discovered twice. And the first time was in Mexico."
+    },
+    {
+      "id": "mexico",
+      "text": "The year is 1801. Andrés Manuel del Río, professor of mineralogy in Mexico City, analyzes a lead mineral… and finds a new element."
+    },
+    {
+      "id": "paris",
+      "text": "He sends a sample to Paris. The French chemists reply: it's not new, it's a chromium mineral. They were wrong, but the discovery was set aside."
+    },
+    {
+      "id": "suecia",
+      "text": "Thirty years later, the Swede Sefström finds it again, in cast iron. He proves it is new and names it: vanadium, after Vanadis, a Norse goddess."
+    },
+    {
+      "id": "hoy",
+      "text": "That is why Del Río's name is nowhere on the periodic table. But the Royal Society of Chemistry puts it in writing: discovered in 1801 by Andrés Manuel del Río."
+    },
+    {
+      "id": "cta",
+      "text": "Share it with someone who thinks science always gets it right the first time."
+    }
+  ]
+}

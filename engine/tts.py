@@ -89,7 +89,7 @@ async def main(vdir):
         f"amix=inputs={len(parts)}:normalize=0,atrim=0:{total}[out]"
     subprocess.check_call(["ffmpeg", "-y", "-v", "error", *inputs, "-filter_complex", filt,
                            "-map", "[out]", "-ac", "1", "-ar", str(SR), os.path.join(build, "voice.wav")])
-    tl = {"id": cfg["id"], "series": cfg["series"], "episode": cfg["episode"],
+    tl = {"id": cfg["id"], "lang": cfg.get("lang", "es"), "series": cfg["series"], "episode": cfg["episode"],
           "title": cfg["title"], "source": cfg.get("source", ""), "duration": total,
           "scenes": scenes}
     json.dump(tl, open(os.path.join(build, "timeline.json"), "w"), ensure_ascii=False, indent=1)

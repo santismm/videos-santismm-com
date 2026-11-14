@@ -15,9 +15,9 @@
 (function () {
   const { C, I, Ease, lerp, prog, spring, appear, add, scene } = EUREKA;
   const { pill, popIn } = EUREKA.ui;
-  const { endCard, year, stamp, stampIn, plate, plateIn, DARK } = EUREKA.hl;
+  const { endCard, year, stamp, stampIn, plate, plateIn, DARK, L } = EUREKA.hl;
 
-  EUREKA.video = { keywords: ['epidural', 'español', 'nombre', 'metamérica', 'franjas', 'planta', '37', 'sin', 'citarlo', 'reconoce', 'Pagés', '1921'] };
+  EUREKA.video = { keywords: L(['epidural', 'español', 'nombre', 'metamérica', 'franjas', 'planta', '37', 'sin', 'citarlo', 'reconoce', 'Pagés', '1921'], ['epidural', 'Spanish', 'name', 'metameric', 'bands', 'single', '37', 'without', 'crediting', 'acknowledges', 'Pagés', '1921']) };
   const row = (r, top, html, size = 30) => add(r, `<div class="abs" style="left:0;right:0;top:${top}px;text-align:center;font-size:${size}px">${html}</div>`);
   const PAPER = '#f8f0dc', INK = '#1a1814', SEPIA = '#4a4638';
 
@@ -34,9 +34,9 @@
     const word = add(r, `<div class="abs display" style="left:0;right:0;top:640px;text-align:center;font-size:150px;font-weight:900;color:${C.gold};text-shadow:0 10px 34px rgba(0,0,0,.85)">EPIDURAL</div>`);
     const who = add(r, `<div class="abs" style="left:150px;top:880px;width:780px;height:190px;border-radius:28px;background:${DARK};border:4px solid ${C.lineStrong};display:flex;align-items:center;gap:30px;padding:0 36px;box-sizing:border-box">
         <div style="width:110px;height:110px;border-radius:50%;background:${C.line};display:flex;align-items:center;justify-content:center;flex:none"><span class="display" style="font-size:84px;font-weight:900;color:${C.amber}">?</span></div>
-        <div style="flex:1"><div class="mono" style="font-size:25px;font-weight:700;letter-spacing:.12em;color:${C.muted}">DESCRITA POR PRIMERA VEZ POR</div>
+        <div style="flex:1"><div class="mono" style="font-size:25px;font-weight:700;letter-spacing:.12em;color:${C.muted}">${L('DESCRITA POR PRIMERA VEZ POR', 'FIRST DESCRIBED BY')}</div>
           <div style="display:flex;gap:16px;margin-top:18px"><div style="height:40px;width:170px;border-radius:10px;background:${C.lineStrong}"></div><div style="height:40px;width:230px;border-radius:10px;background:${C.lineStrong}"></div></div></div></div>`);
-    const tE = x.at('epidural'), tD = x.at('describió'), tN = x.at('nombre');
+    const tE = x.at('epidural'), tD = x.at(L('describió', 'described')), tN = x.at(L('nombre', 'name'));
     x.cue(0.1, 'rise', 0.5); x.cue(tE + 0.1, 'boom', 0.7); x.cue(tD - 0.1, 'swipe', 0.6); x.cue(tN, 'stamp', 0.9); x.shake(tN, 12);
     return (lt) => {
       const s = popIn(syr, lt, 0.05, 0.6, 0.5);
@@ -51,20 +51,20 @@
   // ───────────────────────── 2 · PAGÉS, 1921 ─────────────────────────
   scene('pages', (x) => {
     const r = x.root;
-    const pl = plate(r, 'Fidel Pagés', 'CIRUJANO MILITAR · HUESCA', 330);
+    const pl = plate(r, 'Fidel Pagés', L('CIRUJANO MILITAR · HUESCA', 'MILITARY SURGEON · HUESCA'), 330);
     const yr = add(r, `<div class="abs display" style="right:100px;top:336px;font-size:118px;font-weight:900;line-height:1;color:${C.gold};text-shadow:0 8px 30px rgba(0,0,0,.8)">1921</div>`);
-    const items = ['ANATOMÍA', 'TÉCNICA', 'CASOS', 'COMPLICACIONES'];
+    const items = L(['ANATOMÍA', 'TÉCNICA', 'CASOS', 'COMPLICACIONES'], ['ANATOMY', 'TECHNIQUE', 'CASES', 'COMPLICATIONS']);
     const paper = add(r, `<div class="abs" style="left:150px;top:540px;width:780px;height:620px;border-radius:14px;background:${PAPER};box-shadow:0 30px 70px rgba(0,0,0,.65);transform-origin:50% 0">
         <div class="mono" style="padding:26px 44px 0;font-size:23px;font-weight:700;letter-spacing:.16em;color:${SEPIA};text-align:center">REVISTA ESPAÑOLA DE CIRUGÍA · 1921</div>
         <div style="margin:14px 44px 0;height:3px;background:${SEPIA}"></div>
         <div class="display" style="padding:22px 44px 0;font-size:68px;font-weight:900;color:${INK};text-align:center;line-height:1.05">Anestesia metamérica</div>
-        <div class="mono" style="text-align:center;font-size:24px;font-weight:500;color:${SEPIA};margin-top:8px">por Fidel Pagés</div>
+        <div class="mono" style="text-align:center;font-size:24px;font-weight:500;color:${SEPIA};margin-top:8px">${L('por', 'by')} Fidel Pagés</div>
         <div style="margin:26px 60px 0;display:flex;flex-direction:column;gap:20px">
           ${items.map((t) => `<div class="it" style="display:flex;align-items:center;gap:22px"><div style="width:58px;height:58px;border-radius:12px;background:${C.brand};color:${PAPER};padding:9px;box-sizing:border-box;flex:none">${I.check}</div><span class="mono" style="font-size:38px;font-weight:700;letter-spacing:.06em;color:${INK}">${t}</span></div>`).join('')}
         </div></div>`);
     const its = [...paper.querySelectorAll('.it')];
-    const tw = [x.at('anatomía'), x.at('método'), x.at('casos'), x.at('complicaciones')];
-    const tY = x.at('1921'), tP = x.at('publica');
+    const tw = L(['anatomía', 'método', 'casos', 'complicaciones'], ['anatomy', 'method', 'cases', 'complications']).map((w) => x.at(w));
+    const tY = x.at('1921'), tP = x.at(L('publica', 'publishes'));
     x.cue(0.2, 'swipe', 0.6); x.cue(tY, 'ding', 0.7); x.cue(tP - 0.1, 'whoosh', 0.8); tw.forEach((t) => x.cue(t, 'pop', 0.7));
     return (lt) => {
       plateIn(pl, lt, 0.15);
@@ -78,29 +78,29 @@
   // ───────────────────────── 3 · METAMÉRICA: POR FRANJAS ─────────────────────────
   scene('metamerica', (x) => {
     const r = x.root;
-    const head = row(r, 330, pill('«ANESTESIA METAMÉRICA»', C.gold), 32);
+    const head = row(r, 330, pill(L('«ANESTESIA METAMÉRICA»', '“METAMERIC ANAESTHESIA”'), C.gold), 32);
     const N = 9, ON = [3, 4]; // franjas dormidas / planta apagada (contando desde arriba)
     // Cuerpo: cabeza + franjas horizontales (tronco y piernas)
     const widths = [150, 190, 200, 196, 186, 180, 150, 136, 124];
     const body = add(r, `<div class="abs" style="left:120px;top:430px;width:360px;height:700px">
         <div style="width:112px;height:112px;border-radius:50%;background:${C.parch};margin:0 auto 14px"></div>
         ${widths.map((w, i) => `<div class="seg" style="height:45px;margin:0 auto 8px;width:${w}px;border-radius:${i < 6 ? 14 : 12}px;background:${C.parch};${i >= 6 ? `box-shadow:inset 0 0 0 0 transparent;` : ''}"></div>`).join('')}
-        <div class="mono" style="text-align:center;font-size:26px;font-weight:700;letter-spacing:.12em;color:${C.muted};margin-top:10px">EL CUERPO</div></div>`);
+        <div class="mono" style="text-align:center;font-size:26px;font-weight:700;letter-spacing:.12em;color:${C.muted};margin-top:10px">${L('EL CUERPO', 'THE BODY')}</div></div>`);
     const segs = [...body.querySelectorAll('.seg')];
     // Edificio: plantas con ventanas
     const bld = add(r, `<div class="abs" style="left:600px;top:450px;width:360px;height:680px">
         <div style="width:330px;margin:0 auto;border-radius:16px 16px 0 0;background:#22362f;border:4px solid ${C.lineStrong};padding:16px 16px 6px;box-sizing:border-box">
           ${Array.from({ length: N }, () => `<div class="fl" style="display:flex;gap:12px;margin-bottom:11px">${Array.from({ length: 5 }, () => `<div class="w" style="flex:1;height:42px;border-radius:6px;background:${C.gold}"></div>`).join('')}</div>`).join('')}
         </div>
-        <div class="mono" style="text-align:center;font-size:26px;font-weight:700;letter-spacing:.12em;color:${C.muted};margin-top:14px">EL EDIFICIO</div></div>`);
+        <div class="mono" style="text-align:center;font-size:26px;font-weight:700;letter-spacing:.12em;color:${C.muted};margin-top:14px">${L('EL EDIFICIO', 'THE BUILDING')}</div></div>`);
     const floors = [...bld.querySelectorAll('.fl')];
     const zz = add(r, `<div class="abs display" style="left:455px;top:650px;font-size:70px;font-weight:900;color:${C.teal};text-shadow:0 6px 18px rgba(0,0,0,.8)">zZ</div>`);
-    const no = stamp(r, 'NO TODO LO DE ABAJO', 1095, C.amber, 46);
-    const tF = x.at('franjas'), tA = x.at('apagar'), tP = x.at('planta'), tNo = x.at('no'), tAb = x.at('abajo');
+    const no = stamp(r, L('NO TODO LO DE ABAJO', 'NOT EVERYTHING BELOW'), 1095, C.amber, 46);
+    const tF = x.at(L('franjas', 'bands')), tA = x.at(L('apagar', 'switching')), tP = x.at(L('planta', 'floor')), tNo = x.at(L('no', 'not')), tAb = x.at(L('abajo', 'below'));
     x.cue(0.2, 'pop', 0.7); x.cue(tF - 0.05, 'ding', 0.8); x.cue(tA - 0.2, 'swipe', 0.6); x.cue(tP, 'pop', 0.9); x.cue(tNo, 'buzz', 0.5); x.cue(tAb, 'stamp', 0.8);
     return (lt) => {
       popIn(head, lt, 0.2, 0.7);
-      body.style.opacity = appear(lt, x.at('duerme') - 0.3, 0.4);
+      body.style.opacity = appear(lt, x.at(L('duerme', 'numbs')) - 0.3, 0.4);
       const kS = Ease.outCubic(prog(lt, tF - 0.1, 0.4));
       segs.forEach((e, i) => {
         const on = ON.includes(i);
@@ -129,15 +129,15 @@
   // ───────────────────────── 4 · 1923 ─────────────────────────
   scene('muerte', (x) => {
     const r = x.root;
-    const y = year(r, '1923', 'ACCIDENTE DE TRÁFICO');
+    const y = year(r, '1923', L('ACCIDENTE DE TRÁFICO', 'ROAD ACCIDENT'));
     const life = add(r, `<div class="abs" style="left:120px;top:690px;width:840px;height:150px">
         <div style="position:absolute;left:0;top:60px;width:100%;height:8px;border-radius:4px;background:${C.line}"><div class="fill" style="height:100%;width:0;border-radius:4px;background:${C.parch}"></div></div>
         <div class="mono" style="position:absolute;left:0;top:90px;font-size:28px;font-weight:700;color:${C.ink};letter-spacing:.08em">1886</div>
-        <div class="mono m21" style="position:absolute;left:${(35 / 37) * 100}%;top:6px;transform:translateX(-50%);font-size:26px;font-weight:700;color:${C.gold};letter-spacing:.06em;white-space:nowrap">1921 · ARTÍCULO</div>
+        <div class="mono m21" style="position:absolute;left:${(35 / 37) * 100}%;top:6px;transform:translateX(-50%);font-size:26px;font-weight:700;color:${C.gold};letter-spacing:.06em;white-space:nowrap">1921 · ${L('ARTÍCULO', 'PAPER')}</div>
         <div class="d21" style="position:absolute;left:${(35 / 37) * 100}%;top:51px;width:26px;height:26px;margin-left:-13px;border-radius:50%;background:${C.gold};box-shadow:0 0 16px ${C.gold}"></div>
         <div class="mono e23" style="position:absolute;right:0;top:90px;font-size:28px;font-weight:700;color:${C.ink};letter-spacing:.08em">1923</div></div>`);
-    const age = add(r, `<div class="abs display" style="left:0;right:0;top:860px;text-align:center;font-size:190px;font-weight:900;line-height:1;color:${C.ink};text-shadow:0 10px 34px rgba(0,0,0,.85)">37 <span style="font-size:90px;color:${C.muted}">AÑOS</span></div>`);
-    const tD = x.at('dos'), tM = x.at('muere'), tT = x.at('37');
+    const age = add(r, `<div class="abs display" style="left:0;right:0;top:860px;text-align:center;font-size:190px;font-weight:900;line-height:1;color:${C.ink};text-shadow:0 10px 34px rgba(0,0,0,.85)">37 <span style="font-size:90px;color:${C.muted}">${L('AÑOS', 'YEARS')}</span></div>`);
+    const tD = x.at(L('dos', 'two')), tM = x.at(L('muere', 'dies')), tT = x.at('37');
     x.cue(0.2, 'ding', 0.5); x.cue(tM, 'boom', 0.9); x.shake(tM, 10); x.cue(tT, 'stamp', 0.7);
     return (lt) => {
       popIn(y, lt, 0.15, 0.7);
@@ -152,16 +152,16 @@
   // ───────────────────────── 5 · EL CRÉDITO PERDIDO Y RECUPERADO ─────────────────────────
   scene('olvido', (x) => {
     const r = x.root;
-    const dec = row(r, 330, pill('AÑOS 30', C.ink), 32);
-    const dg = plate(r, 'Dogliotti', 'CIRUJANO ITALIANO', 420);
+    const dec = row(r, 330, pill(L('AÑOS 30', 'THE 1930s'), C.ink), 32);
+    const dg = plate(r, 'Dogliotti', L('CIRUJANO ITALIANO', 'ITALIAN SURGEON'), 420);
     const box = add(r, `<div class="abs" style="left:150px;top:610px;width:780px;height:210px;border-radius:28px;background:${DARK};border:5px solid ${C.red};display:flex;align-items:center;justify-content:space-between;padding:0 44px;box-sizing:border-box">
-        <div><div class="mono" style="font-size:26px;font-weight:700;letter-spacing:.12em;color:${C.muted}">¿CITA A PAGÉS?</div>
+        <div><div class="mono" style="font-size:26px;font-weight:700;letter-spacing:.12em;color:${C.muted}">${L('¿CITA A PAGÉS?', 'CREDITS PAGÉS?')}</div>
           <div class="display ans" style="font-size:84px;font-weight:900;color:${C.red};line-height:1.1">No</div></div>
         <div class="ic" style="width:130px;height:130px;color:${C.red}">${I.cross}</div></div>`);
-    const gt = plate(r, 'Alberto Gutiérrez', 'CIRUJANO ARGENTINO', 1000, 96);
+    const gt = plate(r, 'Alberto Gutiérrez', L('CIRUJANO ARGENTINO', 'ARGENTINIAN SURGEON'), 1000, 96);
     const chev = [0, 1, 2].map((i) => add(r, `<svg class="abs" style="left:500px;top:${930 - i * 38}px" width="80" height="44" viewBox="0 0 80 44"><path d="M8 38L40 8l32 30" fill="none" stroke="${C.gold}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>`));
     const y39 = add(r, `<div class="abs display" style="right:110px;top:400px;font-size:150px;font-weight:900;line-height:1;color:${C.gold};text-shadow:0 8px 30px rgba(0,0,0,.8)">1939</div>`);
-    const tDg = x.at('dogliotti'), tS = x.at('sin'), tAr = x.at('cirujano'), tI = x.at('insiste'), tY = x.at('1939'), tR = x.at('reconoce');
+    const tDg = x.at('dogliotti'), tS = x.at(L('sin', 'without')), tAr = x.at(L('cirujano', 'argentinian')), tI = x.at(L('insiste', 'insists')), tY = x.at('1939'), tR = x.at(L('reconoce', 'acknowledges'));
     x.cue(0.2, 'pop', 0.6); x.cue(tDg - 0.15, 'swipe', 0.6); x.cue(tS, 'buzz', 0.7); x.cue(tAr - 0.15, 'swipe', 0.6);
     for (let i = 0; i < 4; i++) x.cue(tI + i * 0.2, 'pop', 0.6);
     x.cue(tY, 'ding', 0.8); x.cue(tR - 0.4, 'rise', 0.7); x.cue(tR, 'boom', 1); x.shake(tR, 12);
@@ -179,7 +179,7 @@
       box.style.borderColor = col; box.style.boxShadow = ok ? `0 0 60px ${C.green}66` : 'none';
       if (lt > tS - 0.15) box.style.transform = `scale(${1 + 0.08 * Math.sin(Math.PI * f)})`;
       const ans = box.querySelector('.ans'), ic = box.querySelector('.ic');
-      ans.textContent = ok ? 'Sí, en 1939' : 'No'; ans.style.color = col;
+      ans.textContent = ok ? L('Sí, en 1939', 'Yes, in 1939') : 'No'; ans.style.color = col;
       ic.style.color = col; ic.innerHTML = ok ? I.check : I.cross;
     };
   });
@@ -189,10 +189,10 @@
     const r = x.root;
     const top = add(r, `<div class="abs display" style="left:0;right:0;top:330px;text-align:center;font-size:74px;font-weight:900;line-height:1.08;color:${C.ink};text-shadow:0 8px 30px rgba(0,0,0,.85)">EPIDURAL<br><span style="color:${C.gold}">Fidel Pagés, 1921</span></div>`);
     const card = add(r, `<div class="abs" style="left:110px;top:600px;width:860px;height:440px;border-radius:24px;background:${PAPER};box-shadow:0 30px 70px rgba(0,0,0,.65);overflow:hidden">
-        <div class="mono" style="padding:16px 36px;background:#d8ccb0;color:${SEPIA};font-size:23px;font-weight:700;letter-spacing:.1em">BRITISH JOURNAL OF ANAESTHESIA · REVISIÓN, 2024</div>
+        <div class="mono" style="padding:16px 36px;background:#d8ccb0;color:${SEPIA};font-size:23px;font-weight:700;letter-spacing:.1em">BRITISH JOURNAL OF ANAESTHESIA · ${L('REVISIÓN', 'REVIEW')}, 2024</div>
         <div class="display" style="padding:34px 40px 0;font-size:50px;font-weight:500;line-height:1.3;color:${INK}">«Subarachnoid and epidural anaesthesia were first described by August Bier in 1898 and <span class="hl" style="font-weight:900;background:linear-gradient(${C.gold},${C.gold}) no-repeat 0 88%/0% 42%">Fidel Pagés in 1921</span>, respectively.»</div></div>`);
     const hl = card.querySelector('.hl');
-    const tL = x.at('literatura'), tE = x.at('epidural'), tF = x.at('fidel');
+    const tL = x.at(L('literatura', 'literature')), tE = x.at('epidural'), tF = x.at('fidel');
     x.cue(tL - 0.1, 'whoosh', 0.8); x.cue(tE, 'pop', 0.7); x.cue(tF - 0.35, 'rise', 0.7); x.cue(tF, 'boom', 1); x.shake(tF, 12); x.cue(x.at('1921'), 'ding', 0.8);
     return (lt) => {
       const k = Ease.outCubic(prog(lt, tL - 0.2, 0.5));

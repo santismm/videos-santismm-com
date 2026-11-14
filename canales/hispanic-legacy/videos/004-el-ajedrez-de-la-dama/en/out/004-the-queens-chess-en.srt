@@ -1,0 +1,96 @@
+1
+00:00:00,250 --> 00:00:02,400
+The queen is the most powerful piece
+
+2
+00:00:02,211 --> 00:00:02,939
+in chess.
+
+3
+00:00:03,067 --> 00:00:04,918
+But for centuries it was the weakest
+
+4
+00:00:04,730 --> 00:00:05,469
+on the board.
+
+5
+00:00:05,902 --> 00:00:07,799
+In medieval chess it could move just
+
+6
+00:00:07,611 --> 00:00:09,061
+one square diagonally.
+
+7
+00:00:09,189 --> 00:00:11,063
+It was a counsellor, not a queen.
+
+8
+00:00:11,482 --> 00:00:14,193
+In the late fifteenth century everything changes:
+
+9
+00:00:14,395 --> 00:00:16,086
+the queen and the bishop gain the
+
+10
+00:00:15,897 --> 00:00:17,382
+long moves they have today.
+
+11
+00:00:17,806 --> 00:00:19,589
+The first printed book on that new
+
+12
+00:00:19,400 --> 00:00:21,985
+game is written by Lucena, a student
+
+13
+00:00:21,797 --> 00:00:25,173
+at Salamanca, in 1497 at the latest.
+
+14
+00:00:25,302 --> 00:00:26,867
+He calls it the queen's chess.
+
+15
+00:00:27,298 --> 00:00:28,851
+In Italy it got another name:
+
+16
+00:00:29,018 --> 00:00:30,101
+alla rabiosa.
+
+17
+00:00:30,230 --> 00:00:31,542
+The furious way.
+
+18
+00:00:31,966 --> 00:00:33,141
+Did Spain invent it?
+
+19
+00:00:33,269 --> 00:00:35,327
+Nobody knows who first moved the queen
+
+20
+00:00:35,138 --> 00:00:35,763
+that way.
+
+21
+00:00:35,895 --> 00:00:37,299
+What we do know is where it
+
+22
+00:00:37,111 --> 00:00:38,240
+was first printed.
+
+23
+00:00:38,674 --> 00:00:40,411
+Share it with the person who always
+
+24
+00:00:40,222 --> 00:00:41,236
+beats you at chess.
+

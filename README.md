@@ -21,18 +21,29 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 Canal de divulgación histórica basado en [hispanic-legacy.com](https://hispanic-legacy.com). Usa el mismo motor con un tema propio (`engine/themes/hispanic-legacy.js`: paleta, tipografía Fraunces, mapa del Pacífico con cámara) y música propia (`"music": "galeon"`).
 
 - Estrategia, tendencias y plan de vídeos: [`canales/hispanic-legacy/docs/estrategia.md`](canales/hispanic-legacy/docs/estrategia.md)
+- Alta de canales (nombres, biografías, imágenes, Metricool): [`canales/hispanic-legacy/brand/canales.md`](canales/hispanic-legacy/brand/canales.md)
+- Calendario de publicación (4 por semana): [`canales/hispanic-legacy/docs/calendario.md`](canales/hispanic-legacy/docs/calendario.md)
 
-| # | Título | Vídeo | Textos de publicación |
+| # | Título | Español | English |
 |---|---|---|---|
-| 01 | El tornaviaje: para volver de Asia había que poner rumbo al norte | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) | [publicacion.md](canales/hispanic-legacy/videos/001-el-tornaviaje/publicacion.md) |
-| 02 | El vanadio se descubrió dos veces (y la primera fue en México) | [mp4](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/out/002-el-vanadio-dos-veces.mp4) | [publicacion.md](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/publicacion.md) |
-| 03 | La epidural la describió un cirujano español en 1921 | [mp4](canales/hispanic-legacy/videos/003-la-epidural-de-pages/out/003-la-epidural-de-pages.mp4) | [publicacion.md](canales/hispanic-legacy/videos/003-la-epidural-de-pages/publicacion.md) |
+| 01 | El tornaviaje | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) · [textos](canales/hispanic-legacy/videos/001-el-tornaviaje/publicacion.md) | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/en/out/001-the-tornaviaje-en.mp4) · [texts](canales/hispanic-legacy/videos/001-el-tornaviaje/en/publicacion.md) |
+| 02 | El vanadio se descubrió dos veces | [mp4](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/out/002-el-vanadio-dos-veces.mp4) · [textos](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/publicacion.md) | [mp4](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/en/out/002-vanadium-discovered-twice-en.mp4) · [texts](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/en/publicacion.md) |
+| 03 | La epidural de Pagés | [mp4](canales/hispanic-legacy/videos/003-la-epidural-de-pages/out/003-la-epidural-de-pages.mp4) · [textos](canales/hispanic-legacy/videos/003-la-epidural-de-pages/publicacion.md) | [mp4](canales/hispanic-legacy/videos/003-la-epidural-de-pages/en/out/003-the-epidural-of-pages-en.mp4) · [texts](canales/hispanic-legacy/videos/003-la-epidural-de-pages/en/publicacion.md) |
+| 04 | La dama del ajedrez | [mp4](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/out/004-el-ajedrez-de-la-dama.mp4) · [textos](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/publicacion.md) | [mp4](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/en/out/004-the-queens-chess-en.mp4) · [texts](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/en/publicacion.md) |
+| 05 | La cadena de Balmis | [mp4](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/out/005-la-cadena-de-balmis.mp4) · [textos](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/publicacion.md) | [mp4](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/en/out/005-the-balmis-chain-en.mp4) · [texts](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/en/publicacion.md) |
+| 06 | «El mayor imperio de la historia» | [mp4](canales/hispanic-legacy/videos/006-el-mayor-imperio/out/006-el-mayor-imperio.mp4) · [textos](canales/hispanic-legacy/videos/006-el-mayor-imperio/publicacion.md) | [mp4](canales/hispanic-legacy/videos/006-el-mayor-imperio/en/out/006-the-largest-empire-en.mp4) · [texts](canales/hispanic-legacy/videos/006-el-mayor-imperio/en/publicacion.md) |
 
 ```bash
 engine/make.sh canales/hispanic-legacy/videos/001-el-tornaviaje
 ```
 
 Un vídeo elige canal en su `script.json`: `"theme"` carga `engine/themes/<tema>.js`, `"music"` elige la banda sonora y `"assets"` carga recursos propios (por ejemplo, el mapa).
+
+**Dos idiomas, una animación.** La versión inglesa vive en `videos/<id>/en/script.json`, con `"lang": "en"` y `"animation": "../scenes.js"`. Las escenas eligen texto y palabra de sincronía con `L('español', 'english')`.
+
+```bash
+engine/make.sh canales/hispanic-legacy/videos/001-el-tornaviaje/en
+```
 
 ## Publicación automática
 

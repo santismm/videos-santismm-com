@@ -1,0 +1,47 @@
+{
+  "id": "005-the-balmis-chain-en",
+  "lang": "en",
+  "series": "Hispanic Legacy · History in 60s",
+  "episode": 5,
+  "title": "The vaccine that crossed the ocean arm to arm",
+  "cover": "A vaccine,<br><span style=\"color:#f0b94a\">no refrigerators.</span>",
+  "coverTime": 4.5,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "animation": "../scenes.js",
+  "voice": "en-US-AvaNeural",
+  "rate": "+9%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/balmis-expedition",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "1803. Refrigerators don't exist. How do you carry a vaccine across the ocean without it spoiling?"
+    },
+    {
+      "id": "idea",
+      "text": "The Balmis expedition's answer: inside an arm. Twenty-two boys from the foundling home in Corunna form a living chain."
+    },
+    {
+      "id": "cadena",
+      "text": "One child is vaccinated. Days later, the vaccine passes from his arm to the next. And so on, arm to arm, for the whole voyage."
+    },
+    {
+      "id": "zendal",
+      "text": "They are cared for by Isabel Zendal, head of the foundling home."
+    },
+    {
+      "id": "ruta",
+      "text": "The Canaries, Puerto Rico, Venezuela, Cuba, Mexico, the Philippines… all the way to China. In Venezuela alone, more than twelve thousand people vaccinated in under a month."
+    },
+    {
+      "id": "legado",
+      "text": "And when they left, they set up vaccination boards to carry on. Medical historians call it the first international vaccination campaign in history."
+    },
+    {
+      "id": "cta",
+      "text": "Share it with someone who thinks logistics is boring."
+    }
+  ]
+}

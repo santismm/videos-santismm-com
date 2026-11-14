@@ -2,3 +2,4 @@ videos/*/build/
 canales/*/videos/*/build/
 node_modules/
 __pycache__/
+canales/*/videos/*/en/build/

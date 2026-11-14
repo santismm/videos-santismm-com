@@ -1,0 +1,54 @@
+{
+  "id": "001-the-tornaviaje-en",
+  "lang": "en",
+  "series": "Hispanic Legacy · History in 60s",
+  "episode": 1,
+  "title": "The tornaviaje: to sail back from Asia, you had to head north",
+  "cover": "They could go.<br><span style=\"color:#f0b94a\">Nobody could get back.</span>",
+  "coverTime": 33.2,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "animation": "../scenes.js",
+  "assets": [
+    "../../../assets/pacific-map.js"
+  ],
+  "voice": "en-US-AvaNeural",
+  "rate": "+9%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/andres-de-urdaneta",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "In 1521, Spain already knew how to cross the Pacific. What nobody knew… was how to get back."
+    },
+    {
+      "id": "vientos",
+      "text": "The culprit: the wind. In the tropics, the trade winds always blow west. Sailing back that way was like walking up a down escalator."
+    },
+    {
+      "id": "intentos",
+      "text": "For more than forty years, everyone who tried it failed."
+    },
+    {
+      "id": "urdaneta",
+      "text": "Until 1565, when the friar Andrés de Urdaneta did something that seemed absurd: to go east, he headed north."
+    },
+    {
+      "id": "norte",
+      "text": "He climbed to the 39th parallel, level with Japan. Up there the wind blows the other way, and the Kuroshio current pushes toward America."
+    },
+    {
+      "id": "llegada",
+      "text": "He left Cebu on June 1st. Four months later, he reached Acapulco."
+    },
+    {
+      "id": "galeon",
+      "text": "That route, the tornaviaje, was sailed by the Manila Galleon for 250 years: American silver for Chinese silk and porcelain. According to historians Flynn and Giráldez, that is how global trade was born."
+    },
+    {
+      "id": "cta",
+      "text": "Share it with someone who thinks globalization is a modern invention."
+    }
+  ]
+}

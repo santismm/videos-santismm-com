@@ -1,0 +1,46 @@
+{
+  "id": "005-la-cadena-de-balmis",
+  "lang": "es",
+  "series": "Hispanic Legacy · Historia en 60s",
+  "episode": 5,
+  "title": "La vacuna que cruzó el océano de brazo en brazo",
+  "cover": "Una vacuna,<br><span style=\"color:#f0b94a\">sin neveras.</span>",
+  "coverTime": 4.5,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+13%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/balmis-expedition",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "1803. No existen las neveras. ¿Cómo llevas una vacuna al otro lado del océano sin que se estropee?"
+    },
+    {
+      "id": "idea",
+      "text": "La respuesta de la expedición Balmis: dentro de un brazo. Veintidós niños de la inclusa de La Coruña forman una cadena viva."
+    },
+    {
+      "id": "cadena",
+      "text": "Se vacuna a uno. Días después, de su brazo se pasa al siguiente. Y así, brazo a brazo, durante toda la travesía."
+    },
+    {
+      "id": "zendal",
+      "text": "Los cuida Isabel Zendal, rectora de la inclusa."
+    },
+    {
+      "id": "ruta",
+      "text": "Canarias, Puerto Rico, Venezuela, Cuba, México, Filipinas… hasta China. Solo en Venezuela, más de doce mil vacunados en menos de un mes."
+    },
+    {
+      "id": "legado",
+      "text": "Y al marcharse dejaban juntas de vacunación para continuar. La literatura médica la considera la primera campaña internacional de vacunación de la historia."
+    },
+    {
+      "id": "cta",
+      "text": "Compártelo con quien crea que la logística es aburrida."
+    }
+  ]
+}

@@ -174,7 +174,8 @@
         root: inner, words, start: sc.start, end: sc.end, dur: sc.end - sc.start, text: sc.text,
         at(word, n = 0) {
           const q = norm(word);
-          const hits = words.filter((w) => norm(w.w).startsWith(q));
+          let hits = words.filter((w) => norm(w.w).startsWith(q));
+          if (!hits.length) hits = words.filter((w) => norm(w.w).includes(q));
           if (!hits[n]) throw new Error(`palabra "${word}" no encontrada en escena ${sc.id}`);
           return hits[n].ls;
         },

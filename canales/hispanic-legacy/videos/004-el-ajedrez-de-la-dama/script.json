@@ -1,0 +1,46 @@
+{
+  "id": "004-el-ajedrez-de-la-dama",
+  "lang": "es",
+  "series": "Hispanic Legacy · Historia en 60s",
+  "episode": 4,
+  "title": "La dama del ajedrez fue durante siglos la pieza más débil",
+  "cover": "La más débil<br><span style=\"color:#f0b94a\">del tablero.</span>",
+  "coverTime": 5.6,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+13%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/ajedrez-de-la-dama",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "La dama es la pieza más poderosa del ajedrez. Pero durante siglos fue la más débil del tablero."
+    },
+    {
+      "id": "vieja",
+      "text": "En el ajedrez medieval solo podía dar un paso en diagonal. Era una consejera, no una reina."
+    },
+    {
+      "id": "cambio",
+      "text": "A finales del siglo quince todo cambia: la dama y el alfil ganan los movimientos largos que tienen hoy."
+    },
+    {
+      "id": "lucena",
+      "text": "El primer libro impreso sobre ese juego nuevo lo escribe Lucena, un estudiante de Salamanca, como muy tarde en 1497. Lo llama ajedrez de la dama."
+    },
+    {
+      "id": "rabiosa",
+      "text": "En Italia le pusieron otro nombre: alla rabiosa. A la rabiosa."
+    },
+    {
+      "id": "matiz",
+      "text": "¿Lo inventó España? No se sabe quién movió primero la dama así. Lo que sí sabemos es dónde se imprimió por primera vez."
+    },
+    {
+      "id": "cta",
+      "text": "Compártelo con quien te gana siempre al ajedrez."
+    }
+  ]
+}

@@ -21,10 +21,11 @@ const workers = +opt('workers', 3);
 const stills = opt('stills', null);
 const build = path.join(vdir, 'build');
 const timeline = JSON.parse(fs.readFileSync(path.join(build, 'timeline.json'), 'utf8'));
-const scenesSrc = pathToFileURL(path.join(vdir, 'scenes.js')).href;
 const pageUrl = pathToFileURL(path.join(here, 'page.html')).href;
 // Tema del canal y recursos opcionales declarados en script.json ("theme", "assets").
 const script = JSON.parse(fs.readFileSync(path.join(vdir, 'script.json'), 'utf8'));
+// "animation" permite que una versión en otro idioma reutilice la animación de otra carpeta.
+const scenesSrc = pathToFileURL(path.resolve(vdir, script.animation || 'scenes.js')).href;
 const pre = [
   ...(script.theme ? [path.join(here, 'themes', script.theme + '.js')] : []),
   ...(script.assets || []).map((a) => path.resolve(vdir, a)),
