@@ -13,6 +13,32 @@
     rose: '#ff667f', violet: '#a685ff', sky: '#77d4ff',
   };
 
+  // Marcas: cada canal redefine paleta, tipografías, cabecera y fondo. 'eureka' es el valor por defecto.
+  const BRANDS = {
+    eureka: { name: 'EUREKA', series: 'IA EN 60s', bg: 'grid', caption: { font: 'Space Grotesk', size: 82, hi: 'cyan', key: 'amber' } },
+    mythos: {
+      name: 'MYTHOS', series: { es: 'MITO VS TEXTO', en: 'MYTH VS TEXT' }, bg: 'papyrus',
+      C: { bg: '#0f0b08', surface: '#1a140f', surface2: '#221a13', line: '#33281d', lineStrong: '#4a3a29',
+           fg: '#efe6d4', ink: '#fbf8f1', muted: '#b3a48c', faint: '#7d6f5b',
+           cyan: '#d9a94a', blue: '#4f7fd1', green: '#3fb8a8', amber: '#e3b75a', red: '#d0452c',
+           rose: '#e8806a', violet: '#9a7fd1', sky: '#7fb7d9',
+           gold: '#d9a94a', oxblood: '#8a2d1c', blood: '#b3261e', papyrus: '#f2ecdd', parchment: '#fbf8f1',
+           lapis: '#2f5fa8', turquoise: '#3fb8a8', silver: '#c9cfd6' },
+      fonts: { display: "'Cinzel', serif", body: "'EB Garamond', serif" },
+      caption: { font: 'Cinzel', size: 78, hi: 'gold', key: 'red', weight: 900 },
+    },
+  };
+  function setBrand(id) {
+    const b = BRANDS[id || 'eureka'];
+    if (!b) throw new Error('marca desconocida: ' + id);
+    S.brand = b;
+    if (b.C) Object.assign(C, b.C);
+    const st = document.getElementById('stage');
+    if (b.fonts) { st.style.setProperty('--f-display', b.fonts.display); st.style.setProperty('--f-body', b.fonts.body); }
+    st.style.background = C.bg; document.body.style.background = C.bg;
+    return b;
+  }
+
   // Zonas seguras (TikTok / Reels / Shorts): arriba ~290px, abajo ~480px, derecha ~160px.
   const SAFE = { top: 290, bottom: H - 500, left: 90, right: W - 150 };
 
@@ -59,13 +85,31 @@
   };
 
   // ---------- Estado global ----------
-  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {} };
+  const S = { brand: null, tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {} };
 
   function scene(id, build) { S.defs[id] = build; }
 
   // ---------- Fondo: rejilla del site + resplandores que respiran ----------
   function buildBg() {
     const bg = document.getElementById('bg');
+    if (S.brand.bg === 'papyrus') {
+      // Fondo cálido de tumba: resplandores de antorcha, textura de papiro con ruido y polvo dorado flotando.
+      bg.innerHTML = `
+      <div class="layer" id="glowA" style="background: radial-gradient(620px 620px at 50% 50%, rgba(217,169,74,.22), transparent 70%)"></div>
+      <div class="layer" id="glowB" style="background: radial-gradient(720px 720px at 50% 50%, rgba(138,45,28,.30), transparent 70%)"></div>
+      <svg class="layer" width="1080" height="1920" style="opacity:.16;mix-blend-mode:overlay"><filter id="pap"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.09" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .95  0 0 0 0 .85  0 0 0 0 .65  0 0 0 1.2 -.2"/></filter><rect width="1080" height="1920" filter="url(#pap)"/></svg>
+      <div class="layer" id="dust"></div>
+      <div class="layer" style="background: radial-gradient(1100px 1500px at 50% 45%, transparent 50%, rgba(0,0,0,.65) 100%)"></div>`;
+      const dust = document.getElementById('dust');
+      let a = 99;
+      const r = () => { a = (a * 16807) % 2147483647; return a / 2147483647; };
+      S.dust = Array.from({ length: 46 }, () => {
+        const sz = 2 + r() * 5;
+        const e = add(dust, `<div class="abs" style="width:${sz}px;height:${sz}px;border-radius:50%;background:#f3d58e;box-shadow:0 0 ${sz * 3}px #f3d58e"></div>`);
+        return { e, x: r() * 1080, y: r() * 1920, v: 12 + r() * 30, ph: r() * 6.28, o: 0.15 + r() * 0.45 };
+      });
+      return;
+    }
     bg.innerHTML = `
       <div class="layer" id="glowA" style="background: radial-gradient(600px 600px at 50% 50%, rgba(34,211,238,.20), transparent 70%)"></div>
       <div class="layer" id="glowB" style="background: radial-gradient(700px 700px at 50% 50%, rgba(59,130,246,.18), transparent 70%)"></div>
@@ -79,6 +123,11 @@
     const a = document.getElementById('glowA'), b = document.getElementById('glowB');
     a.style.transform = `translate(${Math.sin(t * 0.35) * 220 - 160}px, ${Math.cos(t * 0.27) * 260 - 300}px)`;
     b.style.transform = `translate(${Math.cos(t * 0.3) * 240 + 180}px, ${Math.sin(t * 0.22) * 300 + 320}px)`;
+    if (S.dust) S.dust.forEach((d) => {
+      const y = ((d.y - t * d.v) % 1920 + 1920) % 1920;
+      d.e.style.transform = `translate(${d.x + Math.sin(t * 0.6 + d.ph) * 30}px, ${y}px)`;
+      d.e.style.opacity = (d.o * (0.6 + 0.4 * Math.sin(t * 1.3 + d.ph))).toFixed(3);
+    });
     const tint = S.video.tint ? S.video.tint(t) : null;
     if (tint) a.style.filter = `hue-rotate(${tint}deg)`;
   }
@@ -90,8 +139,8 @@
     ch.innerHTML = `
       <div class="abs mono" id="hdr" style="left:${SAFE.left + 6}px; top:196px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; letter-spacing:.14em;">
         <span style="display:flex;align-items:center;gap:12px;padding:12px 20px;border:2px solid ${C.lineStrong};border-radius:999px;background:rgba(11,15,25,.75);color:${C.ink}">
-          <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>EUREKA</span>
-        <span style="color:${C.muted}">IA EN 60s · #${String(tl.episode).padStart(2, '0')}</span>
+          <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>${S.brand.name}</span>
+        <span style="color:${C.muted}">${typeof S.brand.series === 'object' ? (S.brand.series[EUREKA.lang] || S.brand.series.es) : S.brand.series} · #${String(tl.episode).padStart(2, '0')}</span>
       </div>
       <div class="abs" id="prog" style="left:${SAFE.left + 6}px; top:268px; width:${SAFE.right - SAFE.left - 6}px; height:6px; display:flex; gap:8px;"></div>`;
     const prog = document.getElementById('prog');
@@ -130,7 +179,8 @@
     });
     S.chunks = chunks;
     const cap = document.getElementById('captions');
-    S.capBox = add(cap, `<div class="abs display" style="left:${SAFE.left}px; width:${SAFE.right - SAFE.left}px; top:1210px; text-align:center; font-weight:700; font-size:82px; line-height:1.12; letter-spacing:-.01em; text-transform:uppercase; color:${C.ink}"></div>`);
+    const cb = S.brand.caption;
+    S.capBox = add(cap, `<div class="abs" style="font-family:'${cb.font}', sans-serif; left:${SAFE.left}px; width:${SAFE.right - SAFE.left}px; top:1210px; text-align:center; font-weight:${cb.weight || 700}; font-size:${cb.size}px; line-height:1.12; letter-spacing:-.01em; text-transform:uppercase; color:${C.ink}"></div>`);
     S.capCache = -1;
   }
   function renderCaptions(t) {
@@ -153,8 +203,9 @@
       const shown = t >= w.s - 0.06;
       sp.style.opacity = shown ? 1 : 0.18;
       sp.style.transform = `scale(${active ? 1.08 : 1})`;
-      sp.style.background = active ? (w.key ? C.amber : C.cyan) : 'transparent';
-      sp.style.color = active ? C.bg : (w.key ? C.amber : C.ink);
+      const cb = S.brand.caption;
+      sp.style.background = active ? (w.key ? C[cb.key] : C[cb.hi]) : 'transparent';
+      sp.style.color = active ? C.bg : (w.key ? C[cb.key] : C.ink);
       sp.style.textShadow = active ? 'none' : '0 6px 28px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.9)';
     });
   }
@@ -214,6 +265,7 @@
 
   function init(timeline) {
     S.tl = timeline;
+    if (!S.brand) setBrand(timeline.brand);
     buildBg();
     buildScenes();
     buildChrome();
@@ -237,7 +289,7 @@
     render(t);
   }
 
-  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
+  window.EUREKA = { lang: 'es', W, H, C, SAFE, BRANDS, setBrand, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
     set video(v) { S.video = v; }, get video() { return S.video; } };
   window.__render = render;
 })();

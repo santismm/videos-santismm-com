@@ -108,7 +108,99 @@ def sfx(kind):
         sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 2.6)
         air = lp(rng.standard_normal(len(t)), 1200) * np.exp(-t * 5)
         return 0.95 * sub + 0.25 * air
+    if kind == "gong":
+        d = 3.0; t = t_axis(d)
+        x = sum(a * np.sin(2 * np.pi * 98 * r * t + 0.8 * np.sin(2 * np.pi * 3.1 * t)) * np.exp(-t * k)
+                for a, r, k in [(1, 1, 1.1), (0.6, 1.47, 1.6), (0.45, 2.09, 2.2), (0.3, 2.76, 3), (0.2, 3.9, 4.5)])
+        strike = lp(rng.standard_normal(len(t)), 2500) * np.exp(-t * 40)
+        return 0.42 * x * np.minimum(1, t / 0.01) + 0.15 * strike
+    if kind == "drum":  # golpe grave de tambor ceremonial
+        d = 1.0; t = t_axis(d)
+        f = 75 * np.exp(-t * 6) + 42
+        body = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 4.5)
+        skin = bp(rng.standard_normal(len(t)), 120, 900) * np.exp(-t * 22)
+        return 0.9 * body + 0.3 * skin
+    if kind == "pour":  # líquido derramándose
+        d = 1.4; t = t_axis(d)
+        noise = bp(rng.standard_normal(len(t)), 300, 2600)
+        bub = 0.6 + 0.4 * np.sin(2 * np.pi * (9 + 5 * np.sin(2 * np.pi * 1.3 * t)) * t)
+        x = noise * bub * np.sin(np.pi * t / d) ** 0.7
+        return 0.5 * x / (np.abs(x).max() + 1e-9)
     raise ValueError(kind)
+
+
+def pluck(f, d, bright=0.5):
+    """Cuerda pulsada (Karplus-Strong), timbre parecido a un laúd."""
+    n = int(d * SR); p = max(2, int(SR / f))
+    buf = lp(rng.standard_normal(p), 2000 + 6000 * bright, 1)
+    out = np.zeros(n)
+    ring = buf.copy()
+    i = 0
+    while i < n:
+        L = min(p, n - i)
+        out[i:i + L] = ring[:L]
+        ring = 0.996 * 0.5 * (ring + np.roll(ring, -1))
+        i += p
+    return out * np.exp(-np.arange(n) / SR * 2.2)
+
+
+# ───────────── Música "egipcia" (D frigio dominante, 92 BPM, tambor maqsum, laúd y bordón) ─────────────
+def music_egypt(dur, accents):
+    bpm = 92; beat = 60 / bpm
+    n = int(dur * SR); t = np.arange(n) / SR
+    scale = [50, 51, 54, 55, 57, 58, 60, 62, 63, 66, 67, 69]  # D frigio dominante (D3…A4)
+    # Bordón: D y A con sierras desafinadas y filtro que respira
+    drone = np.zeros(n)
+    for m, g in [(38, 1), (45, 0.7), (50, 0.4)]:
+        for det in (-0.08, 0.08):
+            drone += g * (2 * ((midi(m + det) * t) % 1) - 1)
+    lfo = 0.5 + 0.5 * np.sin(2 * np.pi * t / 7.5)
+    drone = 0.6 * lp(drone, 500, 2) + 0.4 * lp(drone, 1400, 2) * lfo
+    drone *= 0.05
+    # Tambor maqsum: D T . T D . T .
+    drums = np.zeros(n)
+    dt_ = t_axis(0.5); doum = np.sin(2 * np.pi * np.cumsum(95 * np.exp(-dt_ * 18) + 62) / SR) * np.exp(-dt_ * 7)
+    tt_ = t_axis(0.12); tek = bp(rng.standard_normal(len(tt_)), 1800, 6000) * np.exp(-tt_ * 45)
+    pat = ['D', 'T', '', 'T', 'D', '', 'T', '']
+    eighth = beat / 2
+    for k in range(int(dur / eighth) + 1):
+        sym = pat[k % 8]
+        if not sym:
+            continue
+        a = int(k * eighth * SR)
+        sig, g = (doum, 0.55) if sym == 'D' else (tek, 0.16 * (1.15 if k % 16 == 1 else 1))
+        if a + len(sig) < n:
+            drums[a:a + len(sig)] += sig * g
+    # Laúd: frase modal determinista, una nota por negra con adornos
+    melody = [7, 8, 9, 8, 7, 5, 4, 5, 7, -1, 9, 10, 11, 10, 9, 8, 7, 8, 7, 5, 4, 3, 4, -1]
+    oud = np.zeros(n)
+    for k in range(int(dur / beat)):
+        idx = melody[k % len(melody)]
+        if idx < 0:
+            continue
+        a = int(k * beat * SR); L = int(min(1.2, beat * 1.6) * SR)
+        if a + L > n:
+            break
+        oud[a:a + L] += pluck(midi(scale[idx]), L / SR, 0.55)
+        if k % 4 == 3 and a + L + int(beat / 2 * SR) < n:  # adorno en contratiempo
+            b = a + int(beat / 2 * SR)
+            oud[b:b + L] += 0.6 * pluck(midi(scale[min(11, idx + 1)]), L / SR, 0.4)
+    oud = hp(oud, 140) * 0.22
+    # Eco simple para dar espacio de "templo"
+    def echo(x, delay, g, taps=3):
+        y = x.copy()
+        for i in range(1, taps + 1):
+            dsm = int(delay * i * SR)
+            y[dsm:] += x[:-dsm] * (g ** i)
+        return y
+    out = drone + echo(drums * 0.6, 0.23, 0.25) + echo(oud, 0.33, 0.35)
+    gain = np.ones(n)
+    for ta in accents:
+        a, b = int((ta - 0.45) * SR), int(ta * SR)
+        if 0 <= a < b <= n:
+            gain[a:b] = np.minimum(gain[a:b], np.linspace(1, 0.25, b - a))
+    gain *= np.minimum(1, t / 0.4) * np.minimum(1, (dur - t) / 1.5)
+    return out * gain
 
 
 # ───────────── Música (Am – F – C – G, 100 BPM) ─────────────
@@ -199,7 +291,7 @@ def main(vdir):
     voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
     voice = voice / (np.abs(voice).max() + 1e-9) * 0.9
     accents = [c["t"] for c in cues if c["type"] == "boom"]
-    mus = music(dur, accents)
+    mus = music_egypt(dur, accents) if tl.get("music") == "egypt" else music(dur, accents)
     # Ducking: la música baja cuando habla la voz
     envv = np.abs(voice)
     envv = lp(envv, 6, 1)

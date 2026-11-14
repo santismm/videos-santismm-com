@@ -92,5 +92,101 @@
     return s;
   }
 
-  EUREKA.ui = { rng, pill, examPaper, endCard, popText, popIn };
+  // ───────────── Canal MYTHOS (mythosdata.dev) ─────────────
+  let eyeN = 0;
+  /** Ojo de Ra (udjat) con párpado. set({draw, iris, lid, glow, tilt}) */
+  function eye(parent, { x, y, w = 600, color = C.gold, iris = C.red }) {
+    const id = 'eyeclip' + (eyeN++);
+    const el = add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${w * 0.65}px">
+      <svg viewBox="0 0 200 130" width="${w}" height="${w * 0.65}" style="overflow:visible">
+        <defs><clipPath id="${id}"><path d="M28 58 Q100 8 172 58 Q100 98 28 58 Z"/></clipPath>
+          <radialGradient id="${id}g"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".35" stop-color="currentColor"/><stop offset="1" stop-color="currentColor" stop-opacity=".9"/></radialGradient></defs>
+        <g class="glow" style="filter:drop-shadow(0 0 0px ${iris})">
+          <path class="d" d="M22 30 Q100 -6 182 26" fill="none" stroke="${color}" stroke-width="9" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <path class="d white" d="M28 58 Q100 8 172 58 Q100 98 28 58 Z" fill="${C.parchment}" fill-opacity="0" stroke="${color}" stroke-width="7" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <g clip-path="url(#${id})">
+            <circle class="iris" cx="100" cy="56" r="22" fill="url(#${id}g)" style="color:${iris}" opacity="0"/>
+            <circle class="pupil" cx="100" cy="56" r="8" fill="#140d08" opacity="0"/>
+            <rect class="lid" x="0" y="0" width="200" height="0" fill="${C.surface2}"/>
+            <rect class="lidline" x="0" y="0" width="200" height="5" fill="${color}" opacity="0"/>
+          </g>
+          <path class="d" d="M172 58 L198 60" fill="none" stroke="${color}" stroke-width="7" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <path class="d" d="M96 84 L88 126" fill="none" stroke="${color}" stroke-width="8" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <path class="d" d="M116 84 Q126 120 156 113 Q173 106 163 94 Q156 87 149 96" fill="none" stroke="${color}" stroke-width="7" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+        </g></svg></div>`);
+    const ds = el.querySelectorAll('.d'), ir = el.querySelector('.iris'), pu = el.querySelector('.pupil');
+    const lid = el.querySelector('.lid'), ll = el.querySelector('.lidline'), white = el.querySelector('.white'), g = el.querySelector('.glow');
+    return {
+      el,
+      set({ draw = 1, iris: ic = null, lid: lk = 0, glow = 0, look = 0 } = {}) {
+        ds.forEach((d, i) => d.setAttribute('stroke-dashoffset', 1 - Ease.outCubic(Math.max(0, Math.min(1, draw * 1.6 - i * 0.12)))));
+        const on = draw >= 0.6 ? 1 : 0;
+        white.setAttribute('fill-opacity', (0.12 * on).toFixed(2));
+        ir.setAttribute('opacity', on); pu.setAttribute('opacity', on);
+        if (ic) ir.style.color = ic;
+        ir.setAttribute('cx', 100 + look * 18); pu.setAttribute('cx', 100 + look * 18);
+        const hgt = 30 + lk * 52;
+        lid.setAttribute('height', lk > 0.001 ? hgt : 0);
+        ll.setAttribute('y', hgt - 3); ll.setAttribute('opacity', lk > 0.001 ? 1 : 0);
+        g.style.filter = `drop-shadow(0 0 ${glow * 40}px ${ic || iris})`;
+      },
+    };
+  }
+
+  /** Jeroglífico de persona (de pie, brazos en alto). */
+  const human = (color, up = true) => `<svg viewBox="0 0 40 80" fill="none" stroke="${color}" stroke-width="5" stroke-linecap="round"><circle cx="20" cy="10" r="7" fill="${color}"/><path d="M20 19v31M20 50l-10 27M20 50l10 27${up ? 'M20 29L6 15M20 29l14-14' : 'M20 29L8 44M20 29l12 15'}"/></svg>`;
+  /** Jarra de cerveza egipcia con nivel de líquido (0..1). */
+  let jarN = 0;
+  function jar(parent, { x, y, w = 80, liquid = C.amber }) {
+    const id = 'jar' + (jarN++);
+    const el = add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${w * 1.5}px;transform-origin:50% 90%">
+      <svg viewBox="0 0 60 90" width="${w}" height="${w * 1.5}"><defs><clipPath id="${id}"><path d="M20 12c-10 6-15 18-15 32 0 24 11 40 25 40s25-16 25-40c0-14-5-26-15-32z"/></clipPath></defs>
+        <g clip-path="url(#${id})"><rect class="liq" x="0" y="90" width="60" height="90" fill="${liquid}"/></g>
+        <path d="M20 12c-10 6-15 18-15 32 0 24 11 40 25 40s25-16 25-40c0-14-5-26-15-32z" fill="none" stroke="${C.papyrus}" stroke-width="4"/>
+        <path d="M17 4h26v8H17z" fill="${C.papyrus}"/><path d="M14 40h32" stroke="${C.papyrus}" stroke-width="2.5" opacity=".5"/></svg></div>`);
+    const liq = el.querySelector('.liq');
+    return { el, fill(k, color) { liq.setAttribute('y', 90 - 76 * k); if (color) liq.setAttribute('fill', color); } };
+  }
+  /** Ficha de cita: el texto primario del que sale cada afirmación. */
+  const citation = (title, lines, color = C.gold, label = EUREKA.lang === 'en' ? 'PRIMARY SOURCE' : 'FUENTE PRIMARIA') => `<div style="background:${C.papyrus};border-radius:22px;padding:30px 36px;box-shadow:0 30px 70px rgba(0,0,0,.55);border-left:12px solid ${color}">
+      <div class="mono" style="font-size:22px;font-weight:700;letter-spacing:.14em;color:${C.oxblood}">${label}</div>
+      <div class="serif" style="font-size:50px;font-weight:700;color:#1d1a17;line-height:1.08;margin-top:8px">${title}</div>
+      ${lines.map((l) => `<div class="mono" style="font-size:24px;font-weight:500;color:#6b6259;margin-top:10px">${l}</div>`).join('')}</div>`;
+
+  const END = {
+    es: { tag: 'MITOS CON FUENTE', save: 'Guárdalo', share: 'Compártelo', aSave: 'guárdalo', aShare: 'compártelo',
+          sub: 'griegos · romanos · nórdicos · egipcios', note: 'Basado en mythosdata.dev (CC BY 4.0) · voz y animación generadas con IA' },
+    en: { tag: 'MYTHS, SOURCED', save: 'Save it', share: 'Send it', aSave: 'save', aShare: 'send',
+          sub: 'Greek · Roman · Norse · Egyptian', note: 'Based on mythosdata.dev (CC BY 4.0) · voice and animation generated with AI' },
+  };
+  function mythosEndCard(x, opts = {}) {
+    const L = { ...END[EUREKA.lang] || END.es, ...opts };
+    const { site = 'mythosdata.dev', sub, note } = L;
+    const r = x.root;
+    const mark = eye(r, { x: 390, y: 330, w: 300, iris: C.gold });
+    const logo = add(r, `<div class="abs display" style="left:0;right:0;top:540px;text-align:center;font-size:140px;font-weight:900;color:${C.ink};letter-spacing:.1em">MYTHOS</div>`);
+    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:710px;text-align:center;font-size:30px;font-weight:700;color:${C.gold};letter-spacing:.16em">${L.tag}</div>`);
+    const btn = (icon, label, color, left) => add(r, `<div class="abs" style="left:${left}px;top:790px;width:390px;height:130px;border-radius:30px;background:${C.surface2};border:4px solid ${color};display:flex;align-items:center;justify-content:center;gap:22px;box-shadow:0 0 50px ${color}44">
+        <div style="width:60px;height:60px;color:${color}">${icon}</div><span class="display" style="font-size:40px;font-weight:700;color:${C.ink}">${label}</span></div>`);
+    const b1 = btn(I.bookmark, L.save, C.gold, 125);
+    const b2 = btn(I.share, L.share, C.turquoise, 565);
+    const siteEl = add(r, `<div class="abs display" style="left:0;right:0;top:965px;text-align:center;font-size:66px;font-weight:700;color:${C.gold}">${site}</div>`);
+    const subs = add(r, `<div class="abs mono" style="left:0;right:0;top:1055px;text-align:center;font-size:26px;font-weight:500;color:${C.muted}">${sub}</div>`);
+    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1110px;text-align:center;font-size:20px;font-weight:500;color:${C.faint}">${note}</div>`);
+    const tG = x.at(L.aSave), tC = x.at(L.aShare);
+    x.cue(tG, 'pop', 0.8); x.cue(tC, 'pop', 0.8); x.cue(0.05, 'gong', 0.5);
+    return (lt) => {
+      mark.set({ draw: prog(lt, 0, 0.8), iris: C.gold, glow: 0.4 + 0.2 * Math.sin(lt * 3) });
+      const l = spring(lt, 0.25, 0.5); logo.style.opacity = l > 0 ? 1 : 0; logo.style.transform = `scale(${lerp(0.7, 1, l)})`;
+      tag.style.opacity = appear(lt, 0.5, 0.4);
+      [[b1, tG], [b2, tC]].forEach(([b, t]) => {
+        const s = spring(lt, t - 0.05, 0.4);
+        b.style.opacity = s > 0 ? 1 : 0; b.style.transform = `scale(${lerp(0.5, 1, s) * (1 + 0.025 * Math.sin((lt - t) * 7) * (s >= 1 ? 1 : 0))})`;
+      });
+      siteEl.style.opacity = appear(lt, tC + 0.3, 0.4); subs.style.opacity = appear(lt, tC + 0.5, 0.4);
+      disc.style.opacity = appear(lt, 0.8, 0.5);
+    };
+  }
+
+  EUREKA.ui = { rng, pill, examPaper, endCard, popText, popIn, eye, human, jar, citation, mythosEndCard };
 })();

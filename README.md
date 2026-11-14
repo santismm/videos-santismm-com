@@ -16,6 +16,17 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 06 | 4 formas de enfermar de un agente de IA | [mp4](videos/006-cuatro-formas-de-enfermar/out/006-cuatro-formas-de-enfermar.mp4) | [publicacion.md](videos/006-cuatro-formas-de-enfermar/publicacion.md) | programado 20 nov |
 | 07 | ¿Cuánto cuesta de verdad un agente? (coste por resultado) | [mp4](videos/007-cuanto-cuesta-una-tarea/out/007-cuanto-cuesta-una-tarea.mp4) | [publicacion.md](videos/007-cuanto-cuesta-una-tarea/publicacion.md) | programado 23 nov |
 
+## Canal MYTHOS · Mitos con fuente (mythosdata.dev)
+
+Segundo canal producido con el mismo motor (`"brand": "mythos"` en `script.json`): mitología griega, romana, nórdica y egipcia contrastada con sus textos originales a partir de [mythosdata.dev](https://mythosdata.dev).
+
+- 📈 Estrategia, análisis de la web, tendencias y los 10 primeros vídeos: [`docs/mythos-estrategia.md`](docs/mythos-estrategia.md)
+
+| # | Título | Vídeo | Textos de publicación |
+|---|---|---|---|
+| 01 | La diosa que casi extermina a la humanidad… y la pararon con cerveza | [mp4](videos/mythos-001-hathor-cerveza/out/mythos-001-hathor-cerveza.mp4) | [publicacion.md](videos/mythos-001-hathor-cerveza/publicacion.md) |
+| 01 EN | The goddess who almost wiped out humanity… and they stopped her with beer | [mp4](videos/mythos-001-hathor-beer-en/out/mythos-001-hathor-beer-en.mp4) | [publicacion.md](videos/mythos-001-hathor-beer-en/publicacion.md) |
+
 ## Publicación automática
 
 - **Dónde se publica:** los vídeos se programan en Metricool (marca 7970471) para el canal de YouTube [@eureka-ia60](https://www.youtube.com/@eureka-ia60), los lunes, miércoles y viernes a las 13:00 (hora de Madrid).
@@ -47,7 +58,11 @@ Revisión rápida de fotogramas sueltos:
 node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 ```
 
-**Qué incluye `components.js`:** componentes reutilizables entre episodios, como la hoja de examen corregida a mano, la tarjeta final, la tipografía cinética y un generador aleatorio con semilla para partículas.
+**Qué incluye `components.js`:** componentes reutilizables entre episodios, como la hoja de examen corregida a mano, la tarjeta final, la tipografía cinética y un generador aleatorio con semilla para partículas. Para MYTHOS: Ojo de Ra con párpado, jeroglífico de persona, jarra con líquido, ficha de fuente primaria y tarjeta final.
+
+**Idiomas:** `"lang"` en `script.json` (`es` por defecto, `en`) llega a las escenas como `EUREKA.lang`. Con `"scenesFile"` una versión en otro idioma reutiliza el `scenes.js` de la original, que guarda textos y palabras de sincronización en un diccionario por idioma.
+
+**Marcas:** `lib.js` define `eureka` (por defecto) y `mythos`. Cada marca fija su paleta, tipografías, cabecera, fondo y estilo de subtítulos. `audio.py` elige la música con `"music"` (`eureka` o `egypt`).
 
 **Qué incluye `lib.js`:**
 
@@ -66,7 +81,7 @@ node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 
 ## Licencias y transparencia
 
-- **Tipografías:** Space Grotesk, Inter y JetBrains Mono, todas con licencia SIL OFL.
+- **Tipografías:** Space Grotesk, Inter, JetBrains Mono, Cinzel, EB Garamond y Noto Sans Egyptian Hieroglyphs, todas con licencia SIL OFL.
 - **Música y efectos:** generados por código en este repositorio.
-- **Contenido:** basado en los artículos de santismm.com (CC BY 4.0).
+- **Contenido:** basado en los artículos de santismm.com y en mythosdata.dev (ambos CC BY 4.0).
 - **Etiquetado:** cada vídeo se marca como contenido generado con IA en las plataformas, y la tarjeta final también lo indica.
