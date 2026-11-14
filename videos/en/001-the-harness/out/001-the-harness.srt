@@ -7,7 +7,7 @@ Same AI, same exam…
 and a score 24 points higher.
 
 3
-00:00:04,220 --> 00:00:06,425
+00:00:04,220 --> 00:00:06,357
 It happened on WebArena, a test where
 
 4
@@ -35,7 +35,7 @@ They changed its harness.
 The harness is everything around the model:
 
 10
-00:00:17,545 --> 00:00:20,740
+00:00:17,545 --> 00:00:20,542
 tools, memory, instructions, and a loop to
 
 11
@@ -51,7 +51,7 @@ Think of it like this:
 the model is the engine.
 
 14
-00:00:25,184 --> 00:00:27,742
+00:00:25,184 --> 00:00:27,544
 But without wheels, steering or brakes, it
 
 15
@@ -67,11 +67,11 @@ The harness is the car.
 And it's not a one-off:
 
 18
-00:00:32,339 --> 00:00:34,579
+00:00:32,339 --> 00:00:34,381
 on another coding test, the same model
 
 19
-00:00:34,391 --> 00:00:37,126
+00:00:34,391 --> 00:00:36,928
 scores 80% with its vendor's harness, and
 
 20
@@ -87,7 +87,7 @@ So when you see an AI leaderboard,
 don't just ask which model it is.
 
 23
-00:00:43,148 --> 00:00:43,631
+00:00:43,148 --> 00:00:43,456
 Ask:
 
 24
@@ -103,7 +103,7 @@ Because today, the bottleneck isn't the model.
 It's the harness.
 
 27
-00:00:48,792 --> 00:00:50,643
+00:00:48,792 --> 00:00:50,445
 Save it, and share it with whoever
 
 28

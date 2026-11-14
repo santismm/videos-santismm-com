@@ -3,7 +3,7 @@
 Your AI agent can get sick.
 
 2
-00:00:02,049 --> 00:00:03,416
+00:00:02,049 --> 00:00:03,218
 And there are four different ways it
 
 3
@@ -11,7 +11,7 @@ And there are four different ways it
 happens.
 
 4
-00:00:04,376 --> 00:00:04,788
+00:00:04,376 --> 00:00:04,602
 One:
 
 5
@@ -19,11 +19,11 @@ One:
 input.
 
 6
-00:00:05,426 --> 00:00:07,748
+00:00:05,426 --> 00:00:07,550
 An email or a website carries hidden
 
 7
-00:00:07,560 --> 00:00:09,906
+00:00:07,560 --> 00:00:09,708
 instructions, and the agent takes them as
 
 8
@@ -31,7 +31,7 @@ instructions, and the agent takes them as
 orders.
 
 9
-00:00:10,800 --> 00:00:11,177
+00:00:10,800 --> 00:00:11,026
 Two:
 
 10
@@ -43,11 +43,11 @@ permission.
 It has more power than it needs.
 
 12
-00:00:13,795 --> 00:00:15,729
+00:00:13,795 --> 00:00:15,531
 The model may fail, but the damage
 
 13
-00:00:15,541 --> 00:00:16,896
+00:00:15,541 --> 00:00:16,698
 depends on how much you let it
 
 14
@@ -67,7 +67,7 @@ objective.
 It meets the metric the wrong way:
 
 18
-00:00:21,302 --> 00:00:24,120
+00:00:21,302 --> 00:00:23,922
 closing cases without solving them, or hiding
 
 19
@@ -75,7 +75,7 @@ closing cases without solving them, or hiding
 exceptions.
 
 20
-00:00:25,268 --> 00:00:25,680
+00:00:25,268 --> 00:00:25,670
 Four:
 
 21
@@ -83,7 +83,7 @@ Four:
 the network.
 
 22
-00:00:26,624 --> 00:00:29,229
+00:00:26,624 --> 00:00:29,031
 A contaminated result passes from one agent
 
 23
@@ -115,7 +115,7 @@ The cure is a cycle:
 validate, authorize, observe, contain, and learn.
 
 30
-00:00:45,776 --> 00:00:47,780
+00:00:45,776 --> 00:00:47,582
 Save it, and share it with anyone
 
 31

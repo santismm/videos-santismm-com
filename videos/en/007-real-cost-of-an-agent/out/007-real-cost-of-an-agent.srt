@@ -1,5 +1,5 @@
 1
-00:00:00,244 --> 00:00:02,555
+00:00:00,244 --> 00:00:02,357
 Your AI agent costs just over one
 
 2
@@ -11,7 +11,7 @@ cent per attempt.
 Are you sure that's cheap?
 
 4
-00:00:04,988 --> 00:00:06,556
+00:00:04,988 --> 00:00:06,358
 Let's do the math with the support
 
 5
@@ -35,7 +35,7 @@ But there are 12% retries.
 And it gets 86% right:
 
 10
-00:00:17,786 --> 00:00:20,722
+00:00:17,786 --> 00:00:20,524
 that leaves 1,400 failures someone has to
 
 11
@@ -43,7 +43,7 @@ that leaves 1,400 failures someone has to
 redo.
 
 12
-00:00:21,532 --> 00:00:23,230
+00:00:21,532 --> 00:00:23,032
 And a person reviews one in four
 
 13
@@ -55,7 +55,7 @@ cases.
 The result:
 
 15
-00:00:24,787 --> 00:00:26,673
+00:00:24,787 --> 00:00:26,475
 the model is just 1% of the
 
 16
@@ -71,7 +71,7 @@ cost.
 It still pays off:
 
 19
-00:00:30,863 --> 00:00:35,980
+00:00:30,863 --> 00:00:35,782
 about €10,200 a month, versus almost €51,000
 
 20
@@ -91,7 +91,7 @@ don't compare price per token.
 Compare the cost per correct outcome.
 
 24
-00:00:42,376 --> 00:00:44,475
+00:00:42,376 --> 00:00:44,394
 Because cost per outcome will decide which
 
 25
@@ -99,7 +99,7 @@ Because cost per outcome will decide which
 agents survive.
 
 26
-00:00:45,872 --> 00:00:47,829
+00:00:45,872 --> 00:00:47,631
 Save it, and share it with whoever
 
 27
