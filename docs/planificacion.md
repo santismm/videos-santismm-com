@@ -40,8 +40,8 @@ Se ejecuta lunes, miércoles, viernes y domingo a las 18:22 (hora de Madrid).
 | mié 18 nov | #05 Email que secuestra | programado | cuando se conecten |
 | vie 20 nov | #06 4 formas de enfermar | programado | cuando se conecten |
 | **dom 22 nov** | #07 Coste por resultado (adelantado desde el lun 23) | programado | cuando se conecten |
-| lun 23 nov | #08 El dron de los 79 minutos | se programa tras la revisión | cuando se conecten |
-| mié 25 nov | #09 La IA frente a 44 profesiones | se programa tras la revisión | cuando se conecten |
+| lun 23 nov | #08 El dron de los 79 minutos | programado | cuando se conecten |
+| mié 25 nov | #09 La IA frente a 44 profesiones | programado | cuando se conecten |
 | vie 27 nov → | #10 en adelante | los genera la tarea programada | |
 
 **Instagram y TikTok en español:** los vídeos ya publicados en YouTube (#01–#03) pueden estrenarse en esas redes los primeros días. Propuesta: conectar las cuentas y publicar #01, #02 y #03 en los tres primeros huecos libres, y seguir con el mismo calendario que YouTube.
