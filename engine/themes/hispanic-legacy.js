@@ -45,6 +45,10 @@
       <div class="layer" id="backdrop"></div>
       <div class="layer" style="background: radial-gradient(1100px 1500px at 50% 42%, transparent 55%, rgba(0,0,0,.6) 100%)"></div>`;
     if (S.video.backdrop) S.backdropUpdate = S.video.backdrop(document.getElementById('backdrop'));
+    else document.getElementById('backdrop').innerHTML = `<div class="layer" style="background-image:
+        linear-gradient(rgba(226,209,166,.07) 2px, transparent 2px), linear-gradient(90deg, rgba(226,209,166,.07) 2px, transparent 2px);
+        background-size: 90px 90px; background-position: 45px 20px;
+        -webkit-mask-image: radial-gradient(900px 1300px at 50% 40%, #000 25%, transparent 85%);"></div>`;
   }
   function renderBg(t) {
     document.getElementById('glowA').style.transform = `translate(${Math.sin(t * 0.35) * 220 - 160}px, ${Math.cos(t * 0.27) * 260 + 500}px)`;
@@ -208,10 +212,39 @@
     };
   }
 
+  // ---------- Piezas reutilizables entre episodios ----------
+  const DARK = 'rgba(8,19,16,.86)';
+  /** Año grande con rótulo debajo (arriba a la izquierda). */
+  const year = (r, txt, sub) => add(r, `<div class="abs" style="left:96px;top:318px">
+      <div class="display" style="font-size:170px;font-weight:900;line-height:.95;color:${C.gold};text-shadow:0 8px 30px rgba(0,0,0,.8);font-variant-numeric:tabular-nums">${txt}</div>
+      <div class="mono" style="font-size:27px;font-weight:700;letter-spacing:.12em;color:${C.ink};margin-top:10px;display:inline-block;padding:6px 14px;border-radius:10px;background:${DARK}">${sub}</div></div>`);
+  /** Sello inclinado; se anima con stampIn. */
+  const stamp = (r, txt, top, color = C.amber, size = 120) => add(r, `<div class="abs display" style="left:0;right:0;top:${top}px;text-align:center;"><span style="display:inline-block;padding:14px 44px;border:9px solid ${color};border-radius:26px;color:${color};font-size:${size}px;font-weight:900;background:${DARK};letter-spacing:.02em">${txt}</span></div>`);
+  const stampIn = (el, lt, t, rot = -6) => {
+    const s = spring(lt, t, 0.35);
+    el.style.opacity = s > 0 ? 1 : 0; el.style.transform = `rotate(${rot}deg) scale(${lerp(2.4, 1, s)})`;
+    return s;
+  };
+  /** Placa con nombre y cargo; entra deslizándose con plateIn. */
+  const plate = (r, name, role, top, left = 96) => add(r, `<div class="abs" style="left:${left}px;top:${top}px;padding:20px 30px;border-left:8px solid ${C.gold};background:${DARK};border-radius:0 18px 18px 0">
+      <div class="display" style="font-size:58px;font-weight:700;color:${C.ink};line-height:1.05;white-space:nowrap">${name}</div>
+      <div class="mono" style="font-size:25px;font-weight:700;letter-spacing:.12em;color:${C.muted};margin-top:8px;white-space:nowrap">${role}</div></div>`);
+  const plateIn = (el, lt, t) => {
+    const k = Ease.outCubic(prog(lt, t, 0.45));
+    el.style.opacity = k; el.style.transform = `translateX(${(1 - k) * -80}px)`;
+    return k;
+  };
+  /** Casilla de la tabla periódica. */
+  const tile = (r, { x, y, size = 360, sym, num = '', name = '', mass = '', color = C.gold }) => add(r, `<div class="abs" style="left:${x}px;top:${y}px;width:${size}px;height:${size * 1.14}px;border-radius:${size * 0.09}px;background:linear-gradient(160deg, ${C.surface2}, ${C.bg});border:${Math.max(4, size * 0.02)}px solid ${color};box-shadow:0 0 ${size * 0.25}px ${color}55, 0 30px 70px rgba(0,0,0,.6)">
+      <div class="mono tn" style="position:absolute;left:${size * 0.08}px;top:${size * 0.06}px;font-size:${size * 0.13}px;font-weight:700;color:${C.ink}">${num}</div>
+      <div class="mono tm" style="position:absolute;right:${size * 0.08}px;top:${size * 0.075}px;font-size:${size * 0.075}px;font-weight:500;color:${C.muted}">${mass}</div>
+      <div class="display ts" style="position:absolute;left:0;right:0;top:${size * 0.2}px;text-align:center;font-size:${size * 0.56}px;font-weight:900;line-height:1;color:${color}">${sym}</div>
+      <div class="mono tl" style="position:absolute;left:0;right:0;bottom:${size * 0.08}px;text-align:center;font-size:${size * 0.095}px;font-weight:700;letter-spacing:.1em;color:${C.ink}">${name}</div></div>`);
+
   E.theme = {
     brand: { name: 'HISPANIC LEGACY', tagline: 'HISTORIA EN 60s' },
     fonts: ['700 80px "Fraunces"', '900 80px "Fraunces"', '500 40px "Fraunces"'],
     buildBg, renderBg,
   };
-  E.hl = { map, curve, kf, T, endCard, SHIP };
+  E.hl = { map, curve, kf, T, endCard, SHIP, year, stamp, stampIn, plate, plateIn, tile, DARK };
 })();

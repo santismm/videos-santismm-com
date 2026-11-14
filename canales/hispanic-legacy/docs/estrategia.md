@@ -49,7 +49,7 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 | # | Título de trabajo | Ficha |
 |---|---|---|
 | 01 | El tornaviaje: para volver había que ir al norte ✅ | `/k/andres-de-urdaneta` |
-| 02 | El vanadio se descubrió dos veces (y la primera fue en México) | `/k/andres-manuel-del-rio` |
+| 02 | El vanadio se descubrió dos veces (y la primera fue en México) ✅ | `/k/andres-manuel-del-rio` |
 | 03 | La epidural la describió un cirujano español en 1921 | `/k/fidel-pages-epidural-anaesthesia-1921` |
 | 04 | La reina del ajedrez no siempre fue la pieza más fuerte | `/k/ajedrez-de-la-dama` |
 | 05 | La vacuna que cruzó el océano en brazos de niños | `/k/balmis-expedition` |
@@ -67,9 +67,12 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 4. Los mapas son esquemáticos y así se indica en la descripción.
 5. Cada vídeo se etiqueta como contenido generado con IA.
 
-## 6. Decisiones pendientes
+## 6. Decisiones
+
+- **Idioma:** solo español (decidido el 14-11-2026).
+
+Pendientes:
 
 - Nombre y cuentas del canal en cada plataforma.
-- Idioma: solo español, o también versión en inglés (la web está en inglés; el motor puede generar ambas con la misma animación).
 - Voz: el piloto usa una voz neuronal femenina de España (Elvira).
 - Frecuencia de publicación y si se programa con Metricool como el canal EUREKA.

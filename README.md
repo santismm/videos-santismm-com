@@ -25,6 +25,7 @@ Canal de divulgación histórica basado en [hispanic-legacy.com](https://hispani
 | # | Título | Vídeo | Textos de publicación |
 |---|---|---|---|
 | 01 | El tornaviaje: para volver de Asia había que poner rumbo al norte | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) | [publicacion.md](canales/hispanic-legacy/videos/001-el-tornaviaje/publicacion.md) |
+| 02 | El vanadio se descubrió dos veces (y la primera fue en México) | [mp4](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/out/002-el-vanadio-dos-veces.mp4) | [publicacion.md](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/publicacion.md) |
 
 ```bash
 engine/make.sh canales/hispanic-legacy/videos/001-el-tornaviaje
