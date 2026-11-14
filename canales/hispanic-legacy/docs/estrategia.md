@@ -50,7 +50,7 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 |---|---|---|
 | 01 | El tornaviaje: para volver había que ir al norte ✅ | `/k/andres-de-urdaneta` |
 | 02 | El vanadio se descubrió dos veces (y la primera fue en México) ✅ | `/k/andres-manuel-del-rio` |
-| 03 | La epidural la describió un cirujano español en 1921 | `/k/fidel-pages-epidural-anaesthesia-1921` |
+| 03 | La epidural la describió un cirujano español en 1921 ✅ | `/k/fidel-pages-epidural-anaesthesia-1921` |
 | 04 | La reina del ajedrez no siempre fue la pieza más fuerte | `/k/ajedrez-de-la-dama` |
 | 05 | La vacuna que cruzó el océano en brazos de niños | `/k/balmis-expedition` |
 | 06 | "El mayor imperio de la historia" es una frase sobre mapas | `/k/cartographic-extent-vs-effective-control` |

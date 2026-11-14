@@ -1,0 +1,24 @@
+{
+  "id": "003-la-epidural-de-pages",
+  "series": "Hispanic Legacy · Historia en 60s",
+  "episode": 3,
+  "title": "La epidural la describió un cirujano español en 1921",
+  "cover": "¿Quién describió<br><span style=\"color:#f0b94a\">la epidural?</span>",
+  "coverTime": 2.6,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+13%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/fidel-pages-epidural-anaesthesia-1921",
+  "scenes": [
+    { "id": "hook", "text": "La epidural, la anestesia que todos asociamos al parto, la describió por primera vez un cirujano español. Y casi nadie conoce su nombre." },
+    { "id": "pages", "text": "Fidel Pagés, cirujano militar nacido en Huesca. En 1921 publica su técnica en una revista española: anatomía, método, casos y complicaciones." },
+    { "id": "metamerica", "text": "La llamó anestesia metamérica, porque duerme el cuerpo por franjas. Es como apagar la luz de una sola planta del edificio, y no la de todas las de abajo." },
+    { "id": "muerte", "text": "Dos años después, Pagés muere en un accidente de tráfico. Tenía 37 años." },
+    { "id": "olvido", "text": "En los años treinta, el italiano Dogliotti populariza su propia versión sin citarlo. Hasta que un cirujano argentino, Alberto Gutiérrez, insiste… y en 1939 Dogliotti lo reconoce." },
+    { "id": "hoy", "text": "Hoy la literatura médica lo dice claro: la epidural fue descrita por Fidel Pagés en 1921." },
+    { "id": "cta", "text": "Compártelo con alguien que haya pasado por una." }
+  ]
+}
