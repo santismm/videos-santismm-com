@@ -38,6 +38,8 @@
 <script>
   // El renderer inyecta el timeline y el script de escenas del vídeo.
   window.__boot = async function (timeline, scenesSrc) {
+    EUREKA.lang = timeline.lang || 'es';
+    document.documentElement.lang = EUREKA.lang;
     EUREKA.setBrand(timeline.brand);
     await new Promise((res, rej) => {
       const s = document.createElement('script');

@@ -148,24 +148,32 @@
     return { el, fill(k, color) { liq.setAttribute('y', 90 - 76 * k); if (color) liq.setAttribute('fill', color); } };
   }
   /** Ficha de cita: el texto primario del que sale cada afirmación. */
-  const citation = (title, lines, color = C.gold) => `<div style="background:${C.papyrus};border-radius:22px;padding:30px 36px;box-shadow:0 30px 70px rgba(0,0,0,.55);border-left:12px solid ${color}">
-      <div class="mono" style="font-size:22px;font-weight:700;letter-spacing:.14em;color:${C.oxblood}">FUENTE PRIMARIA</div>
+  const citation = (title, lines, color = C.gold, label = EUREKA.lang === 'en' ? 'PRIMARY SOURCE' : 'FUENTE PRIMARIA') => `<div style="background:${C.papyrus};border-radius:22px;padding:30px 36px;box-shadow:0 30px 70px rgba(0,0,0,.55);border-left:12px solid ${color}">
+      <div class="mono" style="font-size:22px;font-weight:700;letter-spacing:.14em;color:${C.oxblood}">${label}</div>
       <div class="serif" style="font-size:50px;font-weight:700;color:#1d1a17;line-height:1.08;margin-top:8px">${title}</div>
       ${lines.map((l) => `<div class="mono" style="font-size:24px;font-weight:500;color:#6b6259;margin-top:10px">${l}</div>`).join('')}</div>`;
 
-  function mythosEndCard(x, { site = 'mythosdata.dev', sub = 'griegos · romanos · nórdicos · egipcios', note = 'Basado en mythosdata.dev (CC BY 4.0) · voz y animación generadas con IA' } = {}) {
+  const END = {
+    es: { tag: 'MITOS CON FUENTE', save: 'Guárdalo', share: 'Compártelo', aSave: 'guárdalo', aShare: 'compártelo',
+          sub: 'griegos · romanos · nórdicos · egipcios', note: 'Basado en mythosdata.dev (CC BY 4.0) · voz y animación generadas con IA' },
+    en: { tag: 'MYTHS, SOURCED', save: 'Save it', share: 'Send it', aSave: 'save', aShare: 'send',
+          sub: 'Greek · Roman · Norse · Egyptian', note: 'Based on mythosdata.dev (CC BY 4.0) · voice and animation generated with AI' },
+  };
+  function mythosEndCard(x, opts = {}) {
+    const L = { ...END[EUREKA.lang] || END.es, ...opts };
+    const { site = 'mythosdata.dev', sub, note } = L;
     const r = x.root;
     const mark = eye(r, { x: 390, y: 330, w: 300, iris: C.gold });
     const logo = add(r, `<div class="abs display" style="left:0;right:0;top:540px;text-align:center;font-size:140px;font-weight:900;color:${C.ink};letter-spacing:.1em">MYTHOS</div>`);
-    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:710px;text-align:center;font-size:30px;font-weight:700;color:${C.gold};letter-spacing:.16em">MITOS CON FUENTE</div>`);
+    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:710px;text-align:center;font-size:30px;font-weight:700;color:${C.gold};letter-spacing:.16em">${L.tag}</div>`);
     const btn = (icon, label, color, left) => add(r, `<div class="abs" style="left:${left}px;top:790px;width:390px;height:130px;border-radius:30px;background:${C.surface2};border:4px solid ${color};display:flex;align-items:center;justify-content:center;gap:22px;box-shadow:0 0 50px ${color}44">
         <div style="width:60px;height:60px;color:${color}">${icon}</div><span class="display" style="font-size:40px;font-weight:700;color:${C.ink}">${label}</span></div>`);
-    const b1 = btn(I.bookmark, 'Guárdalo', C.gold, 125);
-    const b2 = btn(I.share, 'Compártelo', C.turquoise, 565);
+    const b1 = btn(I.bookmark, L.save, C.gold, 125);
+    const b2 = btn(I.share, L.share, C.turquoise, 565);
     const siteEl = add(r, `<div class="abs display" style="left:0;right:0;top:965px;text-align:center;font-size:66px;font-weight:700;color:${C.gold}">${site}</div>`);
     const subs = add(r, `<div class="abs mono" style="left:0;right:0;top:1055px;text-align:center;font-size:26px;font-weight:500;color:${C.muted}">${sub}</div>`);
     const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1110px;text-align:center;font-size:20px;font-weight:500;color:${C.faint}">${note}</div>`);
-    const tG = x.at('guárdalo'), tC = x.at('compártelo');
+    const tG = x.at(L.aSave), tC = x.at(L.aShare);
     x.cue(tG, 'pop', 0.8); x.cue(tC, 'pop', 0.8); x.cue(0.05, 'gong', 0.5);
     return (lt) => {
       mark.set({ draw: prog(lt, 0, 0.8), iris: C.gold, glow: 0.4 + 0.2 * Math.sin(lt * 3) });

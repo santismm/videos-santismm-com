@@ -17,7 +17,7 @@
   const BRANDS = {
     eureka: { name: 'EUREKA', series: 'IA EN 60s', bg: 'grid', caption: { font: 'Space Grotesk', size: 82, hi: 'cyan', key: 'amber' } },
     mythos: {
-      name: 'MYTHOS', series: 'MITO VS TEXTO', bg: 'papyrus',
+      name: 'MYTHOS', series: { es: 'MITO VS TEXTO', en: 'MYTH VS TEXT' }, bg: 'papyrus',
       C: { bg: '#0f0b08', surface: '#1a140f', surface2: '#221a13', line: '#33281d', lineStrong: '#4a3a29',
            fg: '#efe6d4', ink: '#fbf8f1', muted: '#b3a48c', faint: '#7d6f5b',
            cyan: '#d9a94a', blue: '#4f7fd1', green: '#3fb8a8', amber: '#e3b75a', red: '#d0452c',
@@ -140,7 +140,7 @@
       <div class="abs mono" id="hdr" style="left:${SAFE.left + 6}px; top:196px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; letter-spacing:.14em;">
         <span style="display:flex;align-items:center;gap:12px;padding:12px 20px;border:2px solid ${C.lineStrong};border-radius:999px;background:rgba(11,15,25,.75);color:${C.ink}">
           <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>${S.brand.name}</span>
-        <span style="color:${C.muted}">${S.brand.series} · #${String(tl.episode).padStart(2, '0')}</span>
+        <span style="color:${C.muted}">${typeof S.brand.series === 'object' ? (S.brand.series[EUREKA.lang] || S.brand.series.es) : S.brand.series} · #${String(tl.episode).padStart(2, '0')}</span>
       </div>
       <div class="abs" id="prog" style="left:${SAFE.left + 6}px; top:268px; width:${SAFE.right - SAFE.left - 6}px; height:6px; display:flex; gap:8px;"></div>`;
     const prog = document.getElementById('prog');
@@ -289,7 +289,7 @@
     render(t);
   }
 
-  window.EUREKA = { W, H, C, SAFE, BRANDS, setBrand, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
+  window.EUREKA = { lang: 'es', W, H, C, SAFE, BRANDS, setBrand, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
     set video(v) { S.video = v; }, get video() { return S.video; } };
   window.__render = render;
 })();

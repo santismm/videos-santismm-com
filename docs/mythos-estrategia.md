@@ -32,12 +32,14 @@
 ## 3. Propuesta de canal
 
 - **Nombre:** **MYTHOS · Mitos con fuente**. Tiene el mismo nombre raíz que la web y una promesa clara.
-- **Idioma:** español (castellano) en el lanzamiento. Como la web está en inglés, la versión en inglés sale con el mismo motor cambiando la voz y los textos.
+- **Idiomas:** español e inglés desde el primer vídeo. Ambas versiones comparten la animación (`scenesFile` + diccionario por idioma en `scenes.js`).
+  - Español: narradora es-ES Elvira, serie «Mito vs Texto», lema «Mitos con fuente».
+  - Inglés: narradora en-GB Sonia, serie «Myth vs Text», lema «Myths, sourced». Es el idioma de la web, y el mercado en inglés es el más grande en mitología.
 - **Identidad visual:** la de la web, llevada a fondo oscuro de tumba.
   - Papiro `#f2ecdd`, tinta `#1d1a17`, granate `#8a2d1c`.
   - Oro `#d9a94a`, lapislázuli `#2f5fa8` y turquesa `#3fb8a8` como acentos.
   - Tipografías: Cinzel (inscripción romana) para titulares y subtítulos, EB Garamond para citas y JetBrains Mono para referencias. Todas con licencia SIL OFL.
-- **Voz:** narradora neuronal es-ES Elvira al +19 %. Así se distingue de EUREKA, que usa una voz masculina.
+- **Voz:** narradoras neuronales (es-ES Elvira al +19 %, en-GB Sonia al +14 %). Así se distingue de EUREKA, que usa una voz masculina.
 - **Música:** original y generada por código para cada panteón. Para Egipto: modo frigio dominante, tambor *maqsum*, laúd sintetizado (Karplus-Strong) y bordón.
 
 ### Series
@@ -66,7 +68,7 @@
 
 | # | Título de trabajo | Gancho (0–3 s) | Ficha |
 |---|---|---|---|
-| 01 ✅ | **La diosa que casi extermina a la humanidad** | «La pararon… con cerveza» | /k/hathor · /k/flood-myths-compared |
+| 01 ✅ ES/EN | **La diosa que casi extermina a la humanidad** | «La pararon… con cerveza» | /k/hathor · /k/flood-myths-compared |
 | 02 | **¿Zeus y Júpiter son el mismo dios?** | «En el mito, sí. En Roma, no.» | /k/zeus-vs-jupiter |
 | 03 | **Solo una mitología cuenta el fin del mundo** | «Los griegos no tienen apocalipsis» | /k/end-of-the-world-myths-compared |
 | 04 | **Hestia: la diosa sin historias que en Roma lo era todo** | «No tiene mitos… y tenía el fuego de Roma» | /k/hestia-vs-vesta |

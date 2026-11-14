@@ -25,6 +25,7 @@ Segundo canal producido con el mismo motor (`"brand": "mythos"` en `script.json`
 | # | Título | Vídeo | Textos de publicación |
 |---|---|---|---|
 | 01 | La diosa que casi extermina a la humanidad… y la pararon con cerveza | [mp4](videos/mythos-001-hathor-cerveza/out/mythos-001-hathor-cerveza.mp4) | [publicacion.md](videos/mythos-001-hathor-cerveza/publicacion.md) |
+| 01 EN | The goddess who almost wiped out humanity… and they stopped her with beer | [mp4](videos/mythos-001-hathor-beer-en/out/mythos-001-hathor-beer-en.mp4) | [publicacion.md](videos/mythos-001-hathor-beer-en/publicacion.md) |
 
 ## Publicación automática
 
@@ -58,6 +59,8 @@ node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 ```
 
 **Qué incluye `components.js`:** componentes reutilizables entre episodios, como la hoja de examen corregida a mano, la tarjeta final, la tipografía cinética y un generador aleatorio con semilla para partículas. Para MYTHOS: Ojo de Ra con párpado, jeroglífico de persona, jarra con líquido, ficha de fuente primaria y tarjeta final.
+
+**Idiomas:** `"lang"` en `script.json` (`es` por defecto, `en`) llega a las escenas como `EUREKA.lang`. Con `"scenesFile"` una versión en otro idioma reutiliza el `scenes.js` de la original, que guarda textos y palabras de sincronización en un diccionario por idioma.
 
 **Marcas:** `lib.js` define `eureka` (por defecto) y `mythos`. Cada marca fija su paleta, tipografías, cabecera, fondo y estilo de subtítulos. `audio.py` elige la música con `"music"` (`eureka` o `egypt`).
 
