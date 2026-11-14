@@ -1,0 +1,57 @@
+{
+  "id": "mythos-006-dioses-del-sol",
+  "brand": "mythos",
+  "music": "greek",
+  "series": "MYTHOS · Mito vs Texto",
+  "episode": 6,
+  "title": "4 dioses del sol… y solo 3 son el sol",
+  "cover": "<span style=\"font-size:80px;font-weight:900\">4 dioses del sol.<br><span style=\"color:#e3b75a\">Solo 3 son el sol</span></span>",
+  "coverTime": 4.6,
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+19%",
+  "pitch": "-3Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/sun-gods-compared · /k/apollo · /k/helios · /k/sol · /k/ra",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Cuatro dioses del sol. Y según los textos, solo tres son el sol."
+    },
+    {
+      "id": "quiz",
+      "text": "Si preguntas por el dios griego del sol, te dirán: Apolo."
+    },
+    {
+      "id": "apolo",
+      "text": "Pero en Homero y en los Himnos, Apolo es el arquero de Delos y el dios de Delfos. No es el sol."
+    },
+    {
+      "id": "helios",
+      "text": "El sol griego es Helios, hijo de Hiperión: cruza el cielo en su carro, y lo ve y lo oye todo."
+    },
+    {
+      "id": "vacas",
+      "text": "Cuando los hombres de Odiseo se comen sus vacas, amenaza con bajar a brillar entre los muertos."
+    },
+    {
+      "id": "febo",
+      "text": "Sol es Helios en latín. Pero Ovidio llama Febo al Sol, el nombre que Homero da a Apolo. Ahí se mezclan."
+    },
+    {
+      "id": "ra",
+      "text": "Ra es el sol, y además el rey de los dioses. Y cada noche cruza el inframundo en su barca."
+    },
+    {
+      "id": "regla",
+      "text": "Para recordarlo: ¿quién lo ve todo? Helios y Sol. ¿Quién lo gobierna todo? Ra. Apolo, ninguno."
+    },
+    {
+      "id": "moraleja",
+      "text": "Antes de creerte un mito, pregunta: ¿qué texto lo dice?"
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien diga que Apolo es el dios del sol."
+    }
+  ]
+}
