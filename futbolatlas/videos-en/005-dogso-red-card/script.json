@@ -1,0 +1,27 @@
+{
+  "id": "005-dogso-red-card",
+  "brand": "futbolatlas",
+  "lang": "en",
+  "scenes_js": "../../videos/005-ocasion-manifiesta-roja/scenes.js",
+  "series": "FOOTBALL ATLAS · The law in 60s",
+  "episode": 5,
+  "title": "\"Last man\" is not a law: when it's a red card (DOGSO)",
+  "cover": "\"Last man\"<br><span style=\"color:#caf300\">is not the law</span>",
+  "coverTime": 4.0,
+  "voice": "en-GB-RyanNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/dogso · futbolatlas.app/k/law-12-fouls-and-misconduct",
+  "scenes": [
+    { "id": "hook", "text": "\"He was the last man: red card.\" The law doesn't say that." },
+    { "id": "regla", "text": "Law 12 gives a red card for denying a goal or an obvious goal-scoring opportunity. A deliberate handball counts too." },
+    { "id": "cuenta", "text": "And from this edition, the referee weighs where the defenders and attackers are, and how many." },
+    { "id": "area", "text": "But inside the box it changes. If it's a penalty and the defender was trying to play the ball, it's only a yellow." },
+    { "id": "resto", "text": "Holding, pulling, pushing, or no chance of playing the ball? Red card and penalty." },
+    { "id": "ventaja", "text": "And if the referee plays advantage and the move ends in a goal? Since this year, no card." },
+    { "id": "tesis", "text": "It doesn't matter who is last. What matters is the chance you take away." },
+    { "id": "cta", "text": "Save it, and share it with whoever screams red card at every foul." }
+  ]
+}
