@@ -191,7 +191,7 @@
     const whoTxt = [L('GPT-5.2 Thinking · OpenAI · dic. 2025', 'GPT-5.2 Thinking · OpenAI · Dec 2025'), L('GPT-5.5 · OpenAI · abr. 2026', 'GPT-5.5 · OpenAI · Apr 2026')];
     const who = add(r, `<div class="abs mono" style="left:0;right:0;top:${RY + 265}px;text-align:center;font-size:26px;font-weight:700;color:${C.fg}">${whoTxt[0]}</div>`);
     const stamp = add(r, `<div class="abs display" style="left:170px;top:${RY + 330}px;width:740px;padding:10px 0;text-align:center;white-space:nowrap;border:6px solid ${C.amber};border-radius:18px;color:${C.amber};font-size:40px;font-weight:700;letter-spacing:.04em;background:rgba(11,15,25,.85)">${L('DATOS DEL PROPIO FABRICANTE', "THE MAKER'S OWN NUMBERS")}</div>`);
-    const t71 = x.at('71'), t85 = x.at('85'), tO = x.at(L('ojo', 'careful'));
+    const t71 = x.at('71'), t85 = x.at('85'), tO = x.at(L('datos', 'numbers'));
     x.cue(t71 - 0.3, 'rise', 0.6); x.cue(t71, 'ding', 0.8); x.cue(t85 - 0.3, 'rise', 0.6); x.cue(t85, 'boom', 0.9); x.shake(t85 + 0.05, 16);
     x.cue(tO + 0.1, 'stamp', 0.9); x.shake(tO + 0.1, 10);
     return (lt) => {

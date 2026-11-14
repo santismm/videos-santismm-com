@@ -4,7 +4,7 @@
   "episode": 9,
   "title": "La IA frente a 44 profesiones: ¿gana o empata a un experto? (GDPval)",
   "cover": "IA vs 44 profesiones<br><span style=\"color:#f59e0b\">¿quién gana?</span>",
-  "coverTime": 6.9,
+  "coverTime": 6.2,
   "voice": "es-ES-AlvaroNeural",
   "rate": "+14%",
   "pitch": "-2Hz",
@@ -13,7 +13,7 @@
   "scenes": [
     {
       "id": "hook",
-      "text": "La IA contra 44 profesiones: abogados, enfermeras, contables. ¿Quién lo hace mejor?"
+      "text": "La IA contra 44 profesiones: abogados, enfermeras, contables. ¿Quién gana?"
     },
     {
       "id": "tareas",
@@ -29,7 +29,7 @@
     },
     {
       "id": "salto",
-      "text": "Luego, OpenAI anunció el 71%, y en 2026, casi el 85%. Ojo: datos del fabricante."
+      "text": "Después, OpenAI anunció el 71%, y en 2026, casi el 85%: datos del fabricante, ojo."
     },
     {
       "id": "puzle",
@@ -45,7 +45,7 @@
     },
     {
       "id": "cta",
-      "text": "Guárdalo, y compártelo con quien todavía mide la IA con exámenes."
+      "text": "Guárdalo, y compártelo con quien aún mide la IA con exámenes."
     }
   ]
 }
