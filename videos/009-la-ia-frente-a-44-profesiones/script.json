@@ -9,11 +9,11 @@
   "rate": "+14%",
   "pitch": "-2Hz",
   "gap": 0.16,
-  "source": "OpenAI, GDPval (arXiv 2510.04374) · articles.santismm.com/el-cronometro-y-el-examen",
+  "source": "OpenAI, GDPval (arXiv 2510.04374; anuncios de GPT-5.2 y GPT-5.5) · articles.santismm.com/el-cronometro-y-el-examen",
   "scenes": [
     {
       "id": "hook",
-      "text": "La IA contra 44 profesiones: abogados, enfermeras, contables. ¿Quién hace mejor el trabajo?"
+      "text": "La IA contra 44 profesiones: abogados, enfermeras, contables. ¿Quién lo hace mejor?"
     },
     {
       "id": "tareas",
@@ -29,7 +29,7 @@
     },
     {
       "id": "salto",
-      "text": "Meses después, OpenAI ya hablaba de cerca del 70%. Ojo: dato del propio fabricante."
+      "text": "Luego, OpenAI anunció el 71%, y en 2026, casi el 85%. Ojo: datos del fabricante."
     },
     {
       "id": "puzle",

@@ -2,11 +2,15 @@
  * Fuente: physicalai.santismm.com · caso CS-06 "Zipline en Ruanda" (evidencia A), verificado el 14-11-2026
  * contra el texto completo de Nisingizwe et al., The Lancet Global Health 2022;10:e564–69 (copia de acceso abierto, UGent):
  *  - 12.733 pedidos por dron a 20 centros, 17-03-2017 → 31-12-2019; media 49,6 min (IC 95 % 49,1–50,2) con preparación.
+ *  - "Muhanga was the Zipline site for all hospitals" (tablas 1 y 2): el mapa muestra un único centro de drones.
  *  - Mediana del dron 41 min (sin preparación) frente a 120 min por carretera (ida y vuelta, tiempo ESTIMADO) → 79 min.
  *  - Análisis de sensibilidad, mejor caso (cada centro de transfusión con su vehículo, solo ida): 60 min → 19 min.
- *  - Caducidades: −7,1 unidades por centro y mes, −67 % a 12 meses; series temporales interrumpidas, sin grupo de control.
+ *  - Caducidades: −67 % a 12 meses; series temporales interrumpidas, sin grupo de control. El −7,1 unidades/mes NO se
+ *    muestra: el texto de resultados dice "por centro y mes", pero el resumen dice "per month" y los totales del propio
+ *    artículo (334 caducadas antes en los 20 centros; 140 menos después) sólo cuadran con el total de los 20.
  *  - Tiempos por carretera estimados (la recogida de datos reales se suspendió por la COVID-19); sin análisis de costes.
  * Niveles de evidencia A–D: physicalai.santismm.com/es/methodology.
+ * Revisión 14-11-2026: x.at('A') casaba con «Ante» (inicio de escena) → se busca la palabra exacta «A».
  * Los textos usan L('es', 'en') para que la versión inglesa sólo cambie el guion.
  */
 (function () {
@@ -87,7 +91,7 @@
     const r = x.root;
     const head = add(r, `<div class="abs" style="left:0;right:0;top:322px;text-align:center;font-size:22px">${pill(L('THE LANCET GLOBAL HEALTH · 2022 · REVISADO POR PARES', 'THE LANCET GLOBAL HEALTH · 2022 · PEER-REVIEWED'), C.green)}</div>`);
     const rand = rng(8);
-    const hubs = [[430, 640], [690, 590]];
+    const hubs = [[560, 620]]; // Muhanga: el centro de Zipline de los 20 hospitales del estudio
     const pins = [];
     while (pins.length < 20) {
       const p = [130 + rand() * 800, 470 + rand() * 330];
@@ -101,7 +105,7 @@
         ${pins.map((p, i) => { const h = near(p); const mx = (h[0] + p[0]) / 2, my = (h[1] + p[1]) / 2 - 60; return `<path class="arc" data-i="${i}" d="M${h[0]} ${h[1]} Q${mx} ${my} ${p[0]} ${p[1]}" stroke="${C.cyan}" stroke-width="3" fill="none" stroke-dasharray="8 8" opacity="0"/>`; }).join('')}
         ${pins.map((p, i) => `<g class="pin" data-i="${i}" transform="translate(${p[0]} ${p[1]})" opacity="0"><circle r="20" fill="${C.surface}" stroke="${C.red}" stroke-width="4"/><rect x="-9" y="-3" width="18" height="6" fill="${C.red}"/><rect x="-3" y="-9" width="6" height="18" fill="${C.red}"/></g>`).join('')}
         ${hubs.map((h) => `<g transform="translate(${h[0]} ${h[1]})"><circle r="30" fill="${C.cyan}" opacity=".25"/><circle r="16" fill="${C.cyan}"/></g>`).join('')}</svg>`);
-    const hubL = add(r, `<div class="abs mono" style="left:470px;top:676px;font-size:20px;font-weight:700;color:${C.cyan}">${L('centros de drones', 'drone hubs')}</div>`);
+    const hubL = add(r, `<div class="abs mono" style="left:410px;width:300px;top:658px;text-align:center;font-size:22px;font-weight:700;line-height:1.2;color:${C.cyan};text-shadow:0 2px 10px ${C.bg}, 0 0 4px ${C.bg}">${L('centro de drones<br>de Muhanga', 'Muhanga<br>drone hub')}</div>`);
     const cnt = add(r, `<div class="abs" style="left:110px;width:860px;top:840px;height:190px;border-radius:30px;background:${C.surface};border:3px solid ${C.red};display:flex;align-items:center;justify-content:space-around">
         <div style="text-align:center"><div class="v display" style="font-size:96px;font-weight:700;color:${C.ink};line-height:1;font-variant-numeric:tabular-nums">0</div><div class="mono" style="font-size:24px;font-weight:700;color:${C.muted};letter-spacing:.08em;margin-top:8px">${L('PEDIDOS POR DRON', 'DRONE ORDERS')}</div></div>
         <div style="width:3px;height:120px;background:${C.line}"></div>
@@ -163,7 +167,7 @@
     valD.textContent = '41 min'; valR.textContent = '120 min';
 
     if (!best) {
-      const tDr = x.at(L('dron', 'drone')), t41 = x.at('41'), tC = x.at(L('coche', 'hospital')), t120 = x.at('120');
+      const tDr = x.at(L('dron', 'drone')), t41 = x.at('41'), tC = x.at(L('ambulancia', 'ambulance')), t120 = x.at('120');
       const tIda = x.at(L('iba', 'drive')), tV = x.at(L('volvía', 'back')), tVen = x.at(L('ventaja', 'gap')), t79 = x.at('79');
       x.cue(t41, 'ding', 0.6); x.cue(t120, 'buzz', 0.5); x.cue(tVen, 'swipe', 0.5); x.cue(t79, 'stamp', 0.9); x.shake(t79, 14);
       note.innerHTML = L('Dron: mediana sin preparación (con preparación, media de 49,6 min).<br>Carretera: tiempo estimado, no medido.', 'Drone: median without preparation (mean with preparation: 49.6 min).<br>Road: estimated time, not measured.');
@@ -254,7 +258,7 @@
     const bags = [0, 1, 2].map((i) => add(r, `<div class="abs" style="left:${130 + i * 165}px;top:340px;width:150px;height:210px">${BAG(150)}
         <div class="st abs display" style="left:-14px;top:110px;padding:4px 10px;border:4px solid ${C.amber};border-radius:8px;color:${C.amber};font-size:24px;font-weight:700;transform:rotate(-14deg);background:rgba(7,10,19,.75);opacity:0">${L('CADUCADA', 'EXPIRED')}</div></div>`));
     const big = add(r, `<div class="abs display" style="left:640px;top:330px;font-size:150px;font-weight:700;color:${C.green};line-height:1;text-shadow:0 0 50px rgba(16,185,129,.5)">−67%</div>`);
-    const sub = add(r, `<div class="abs mono" style="left:640px;width:330px;top:490px;font-size:22px;font-weight:700;color:${C.muted};line-height:1.35">${L('sangre caducada a los 12 meses<br>(−7,1 unidades por hospital y mes)', 'expired blood at 12 months<br>(−7.1 units per hospital per month)')}</div>`);
+    const sub = add(r, `<div class="abs mono" style="left:640px;width:330px;top:490px;font-size:22px;font-weight:700;color:${C.muted};line-height:1.35">${L('unidades de sangre caducadas,<br>a los 12 meses del inicio', 'expired blood units,<br>12 months after launch')}</div>`);
     const ill = add(r, `<div class="abs mono" style="left:130px;top:570px;font-size:18px;font-weight:500;color:${C.faint}">${L('bolsas: ilustración de "dos tercios menos"', 'bags: illustration of "two-thirds fewer"')}</div>`);
     // Letra pequeña con lupa
     const fine = add(r, `<div class="abs" style="left:110px;width:860px;top:640px;height:430px;border-radius:30px;background:${C.surface};border:3px dashed ${C.lineStrong}"></div>`);
@@ -293,15 +297,18 @@
     const r = x.root;
     const q = popText(r, L('¿COMPARADO<br>CON QUÉ?', 'COMPARED<br>TO WHAT?'), `top:330px;font-size:104px;line-height:1.02;color:${C.amber};text-shadow:0 0 50px rgba(245,158,11,.45)`);
     const levels = L(
-      [['A', 'Documentada', 'revisada por pares u oficial', C.green], ['B', 'Fabricante / operador', 'lo dice quien lo vende', C.sky], ['C', 'Terceros sin revisión', 'medios, analistas', C.amber], ['D', 'Estimación editorial', 'supuesto o modelo', C.red]],
-      [['A', 'Documented', 'peer-reviewed or official', C.green], ['B', 'Manufacturer / operator', 'says the seller', C.sky], ['C', 'Third party, not reviewed', 'media, analysts', C.amber], ['D', 'Editorial estimate', 'assumption or model', C.red]]);
+      [['A', 'Documentada', 'revisada por pares u oficial', C.green], ['B', 'Fabricante / operador', 'sobre su propio producto', C.sky], ['C', 'Terceros sin revisión', 'medios, analistas', C.amber], ['D', 'Estimación editorial', 'supuesto o modelo', C.red]],
+      [['A', 'Documented', 'peer-reviewed or official', C.green], ['B', 'Manufacturer / operator', 'about its own product', C.sky], ['C', 'Third party, not reviewed', 'media, analysts', C.amber], ['D', 'Editorial estimate', 'assumption or model', C.red]]);
     const bars = levels.map(([k, a, b, col], i) => add(r, `<div class="abs" style="left:110px;top:${570 + i * 120}px;height:100px;width:${560 + i * 70}px;display:flex;align-items:center;transform-origin:0 50%">
         <div style="flex:1;height:100%;background:${col};clip-path:polygon(0 0, calc(100% - 50px) 0, 100% 50%, calc(100% - 50px) 100%, 0 100%);display:flex;align-items:center;gap:22px;padding-left:26px;box-sizing:border-box">
           <span class="display" style="font-size:66px;font-weight:700;color:${C.bg};width:50px">${k}</span>
           <span><span class="display" style="display:block;font-size:34px;font-weight:700;color:${C.bg};line-height:1.05;white-space:nowrap">${a}</span><span class="mono" style="display:block;font-size:20px;font-weight:700;color:rgba(7,10,19,.75)">${b}</span></span></div></div>`));
     const mark = add(r, `<div class="abs mono" style="left:700px;top:598px;font-size:26px;font-weight:700;color:${C.green};display:flex;align-items:center;gap:10px;white-space:nowrap">◆ ${L('este estudio', 'this study')}</div>`);
     const src = add(r, `<div class="abs mono" style="left:0;right:0;top:1070px;text-align:center;font-size:22px;font-weight:700;color:${C.faint}">${L('niveles de evidencia de physicalai.santismm.com', 'evidence levels from physicalai.santismm.com')}</div>`);
-    const tCo = x.at(L('comparado', 'compared')), tEv = x.at(L('evidencia', 'evidence')), tA = x.at('A');
+    const tCo = x.at(L('comparado', 'compared')), tEv = x.at(L('evidencia', 'evidence'));
+    const wA = x.words.find((w) => w.w.replace(/[^A-Za-z]/g, '') === 'A'); // exacta: x.at('A') casaría con «Ante»
+    if (!wA) throw new Error('palabra exacta "A" no encontrada');
+    const tA = wA.ls;
     x.cue(tCo, 'stamp', 0.8); x.shake(tCo, 10); x.cue(tEv, 'swipe', 0.5); x.cue(tA, 'ding', 0.8);
     return (lt) => {
       popIn(q, lt, tCo - 0.15, 0.6);

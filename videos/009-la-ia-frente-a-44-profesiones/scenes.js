@@ -6,8 +6,9 @@
  * tareas). Fig. 5: ganan o empatan GPT-4o 12,4 %, GPT-5 high 38,8 %, Claude Opus 4.1 47,6 %; línea de paridad al 50 %.
  * Limitaciones: "precisely-specified and one-shot, not interactive"; fuera de alcance el conocimiento tácito y la
  * comunicación entre personas; "most jobs are more than just a collection of tasks that can be written down".
- * Después: OpenAI, "Ending the Capability Overhang" (enero 2026): GPT-5.2 completa "approximately 70%" de las tareas
- * al nivel de los expertos (70,9 % en el anuncio de GPT-5.2, dic. 2025). Dato del propio fabricante.
+ * Después (datos del propio fabricante): anuncio de GPT-5.2 (11-12-2025): GPT-5.2 Thinking "beats or ties top industry
+ * professionals on 70.9% of comparisons on GDPval knowledge work tasks, according to expert human judges"; anuncio de
+ * GPT-5.5 (23-4-2026): "GPT-5.5 scores 84.9%" (fila "GDPval (wins or ties)" de su tabla; GPT-5.4: 83,0 %).
  * Tesis: articles.santismm.com/el-cronometro-y-el-examen: "El benchmark más honesto es el trabajo por el que se paga
  * a un profesional."
  */
@@ -16,7 +17,7 @@
   const { pill, endCard, popText, popIn } = EUREKA.ui;
   const L = EUREKA.L;
 
-  EUREKA.video = { keywords: ['44', 'ciegas', '48%', '50%', '70%', 'fabricante', 'experto', 'honesto', 'paridad', 'tus'] };
+  EUREKA.video = { keywords: ['44', 'ciegas', '48%', '50%', '71%', '85%', 'fabricante', 'experto', 'honesto', 'paridad', 'tus'] };
   const PERSON = `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><circle cx="32" cy="20" r="11"/><path d="M12 58c0-12 9-20 20-20s20 8 20 20"/></svg>`;
   const CHIP = `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="32" height="32" rx="5"/><rect x="25" y="25" width="14" height="14" rx="2"/><path d="M24 6v10M32 6v10M40 6v10M24 48v10M32 48v10M40 48v10M6 24h10M6 32h10M6 40h10M48 24h10M48 32h10M48 40h10"/></svg>`;
   const int = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, L('.', ','));
@@ -153,7 +154,7 @@
     add(r, `<div class="abs mono" style="right:${1080 - X1}px;top:${RY + 205}px;font-size:23px;font-weight:700;color:${C.cyan};text-align:right">${L('LA IA GANA O EMPATA →', 'AI WINS OR TIES →')}</div>`);
     const knot = add(r, `<div class="abs" style="left:0;top:${RY - 34}px;width:68px;height:68px;border-radius:50%;background:${C.cyan};border:6px solid ${C.ink};box-shadow:0 0 40px ${C.cyan}"></div>`);
     const val = add(r, `<div class="abs display" style="left:0;top:${RY - 175}px;width:300px;text-align:center;font-size:96px;font-weight:700;color:${C.cyan};text-shadow:0 0 40px rgba(34,211,238,.5)">0%</div>`);
-    return { par, parL, knot, val, place(v, txt) { knot.style.transform = `translateX(${px(v) - 34}px)`; val.style.transform = `translateX(${Math.min(Math.max(px(v) - 150, 60), 1020 - 300)}px)`; val.textContent = txt; } };
+    return { par, parL, knot, val, place(v, txt) { knot.style.transform = `translateX(${px(v) - 34}px)`; val.style.transform = `translateX(${Math.min(Math.max(px(v) - 150, 90), 930 - 300)}px)`; val.textContent = txt; } };
   }
 
   // ───────────────────────── 4 · MARCADOR: 47,6 % ─────────────────────────
@@ -161,7 +162,7 @@
     const r = x.root;
     const head = add(r, `<div class="abs" style="left:0;right:0;top:310px;text-align:center;font-size:26px">${pill(L('% DE TAREAS EN QUE LA IA GANA O EMPATA', '% OF TASKS WHERE AI WINS OR TIES'), C.ink)}</div>`);
     const R = rope(r);
-    const ghosts = [['GPT-4o', 12.4], ['GPT-5', 38.8]].map(([n, v]) => add(r, `<div class="abs mono" style="left:${px(v) - 90}px;width:180px;top:${RY + 40}px;text-align:center;font-size:20px;font-weight:700;color:${C.muted}"><div style="width:4px;height:26px;background:${C.muted};margin:0 auto 6px"></div>${n}<br>${pct(v)}</div>`));
+    const ghosts = [['GPT-4o', 12.4], ['GPT-5 high', 38.8]].map(([n, v]) => add(r, `<div class="abs mono" style="left:${px(v) - 90}px;width:180px;top:${RY + 40}px;text-align:center;font-size:20px;font-weight:700;color:${C.muted};background:${C.bg};border-radius:8px;padding-bottom:4px"><div style="width:4px;height:26px;background:${C.muted};margin:0 auto 6px"></div>${n}<br>${pct(v)}</div>`));
     const who = add(r, `<div class="abs mono" style="left:0;right:0;top:${RY + 265}px;text-align:center;font-size:26px;font-weight:700;color:${C.fg}">${L('Mejor modelo: Claude Opus 4.1 · sept. 2025', 'Best model: Claude Opus 4.1 · Sept 2025')}</div>`);
     const src = add(r, `<div class="abs mono" style="left:0;right:0;top:${RY + 310}px;text-align:center;font-size:21px;font-weight:700;color:${C.faint}">${L('OpenAI · GDPval · 220 tareas evaluadas por expertos', 'OpenAI · GDPval · 220 tasks graded by experts')}</div>`);
     const t48 = x.at('48'), tPa = x.at(L('paridad', 'parity')), tM = x.at(L('mejor', 'best'));
@@ -180,24 +181,30 @@
     };
   });
 
-  // ───────────────────────── 5 · EL SALTO: ~70 % (dato del fabricante) ─────────────────────────
+  // ───────────────────────── 5 · EL SALTO: 70,9 % → 84,9 % (datos del fabricante) ─────────────────────────
   scene('salto', (x) => {
     const r = x.root;
     const head = add(r, `<div class="abs" style="left:0;right:0;top:310px;text-align:center;font-size:26px">${pill(L('% DE TAREAS EN QUE LA IA GANA O EMPATA', '% OF TASKS WHERE AI WINS OR TIES'), C.ink)}</div>`);
     const R = rope(r);
-    const ghost = add(r, `<div class="abs mono" style="left:${px(47.6) - 90}px;width:180px;top:${RY + 40}px;text-align:center;font-size:20px;font-weight:700;color:${C.muted}"><div style="width:4px;height:26px;background:${C.muted};margin:0 auto 6px"></div>${L('sept. 2025', 'Sept 2025')}<br>${pct(47.6)}</div>`);
-    const who = add(r, `<div class="abs mono" style="left:0;right:0;top:${RY + 265}px;text-align:center;font-size:26px;font-weight:700;color:${C.fg}">${L('GPT-5.2 · OpenAI · dic. 2025', 'GPT-5.2 · OpenAI · Dec 2025')}</div>`);
-    const stamp = add(r, `<div class="abs display" style="left:170px;top:${RY + 330}px;width:740px;padding:10px 0;text-align:center;white-space:nowrap;border:6px solid ${C.amber};border-radius:18px;color:${C.amber};font-size:40px;font-weight:700;letter-spacing:.04em;background:rgba(11,15,25,.85)">${L('DATO DEL PROPIO FABRICANTE', "THE MAKER'S OWN NUMBER")}</div>`);
-    const tA = x.at(L('despues', 'later')), t70 = x.at('70'), tO = x.at(L('ojo', 'careful'));
-    x.cue(tA, 'rise', 0.6); x.cue(t70, 'boom', 0.9); x.shake(t70 + 0.05, 16); x.cue(tO + 0.1, 'stamp', 0.9); x.shake(tO + 0.1, 10);
+    const mark = (v, when) => add(r, `<div class="abs mono" style="left:${px(v) - 80}px;width:160px;top:${RY + 40}px;text-align:center;font-size:20px;font-weight:700;color:${C.muted};background:${C.bg};border-radius:8px;padding-bottom:4px"><div style="width:4px;height:26px;background:${C.muted};margin:0 auto 6px"></div>${when}<br>${pct(v)}</div>`);
+    const g1 = mark(47.6, L('sept. 2025', 'Sept 2025')), g2 = mark(70.9, L('dic. 2025', 'Dec 2025'));
+    const whoTxt = [L('GPT-5.2 Thinking · OpenAI · dic. 2025', 'GPT-5.2 Thinking · OpenAI · Dec 2025'), L('GPT-5.5 · OpenAI · abr. 2026', 'GPT-5.5 · OpenAI · Apr 2026')];
+    const who = add(r, `<div class="abs mono" style="left:0;right:0;top:${RY + 265}px;text-align:center;font-size:26px;font-weight:700;color:${C.fg}">${whoTxt[0]}</div>`);
+    const stamp = add(r, `<div class="abs display" style="left:170px;top:${RY + 330}px;width:740px;padding:10px 0;text-align:center;white-space:nowrap;border:6px solid ${C.amber};border-radius:18px;color:${C.amber};font-size:40px;font-weight:700;letter-spacing:.04em;background:rgba(11,15,25,.85)">${L('DATOS DEL PROPIO FABRICANTE', "THE MAKER'S OWN NUMBERS")}</div>`);
+    const t71 = x.at('71'), t85 = x.at('85'), tO = x.at(L('ojo', 'careful'));
+    x.cue(t71 - 0.3, 'rise', 0.6); x.cue(t71, 'ding', 0.8); x.cue(t85 - 0.3, 'rise', 0.6); x.cue(t85, 'boom', 0.9); x.shake(t85 + 0.05, 16);
+    x.cue(tO + 0.1, 'stamp', 0.9); x.shake(tO + 0.1, 10);
     return (lt) => {
       head.style.opacity = 1;
-      const k = Ease.outBack(prog(lt, t70 - 0.6, 0.8));
-      const v = lerp(47.6, 70, k);
-      R.place(v, lt < t70 - 0.6 ? pct(47.6) : (k > 0.97 ? '~70%' : pct(Math.min(v, 70), 0)));
+      const k1 = Ease.outBack(prog(lt, t71 - 0.5, 0.7)), k2 = Ease.outBack(prog(lt, t85 - 0.5, 0.7));
+      const v = lt < t85 - 0.5 ? lerp(47.6, 70.9, k1) : lerp(70.9, 84.9, k2);
+      const shown = lt < t71 - 0.5 ? 47.6 : lt < t85 - 0.5 ? (k1 > 0.97 ? 70.9 : Math.min(v, 70.9)) : (k2 > 0.97 ? 84.9 : Math.min(v, 84.9));
+      R.place(v, pct(shown));
       R.knot.style.background = v > 50 ? C.green : C.cyan; R.val.style.color = v > 50 ? C.green : C.cyan;
-      ghost.style.opacity = appear(lt, t70 - 0.3, 0.3);
-      who.style.opacity = appear(lt, t70 + 0.2, 0.4);
+      g1.style.opacity = appear(lt, t71 - 0.3, 0.3);
+      g2.style.opacity = appear(lt, t85 - 0.3, 0.3);
+      who.style.opacity = appear(lt, t71 + 0.1, 0.3);
+      who.textContent = lt < t85 - 0.2 ? whoTxt[0] : whoTxt[1];
       const s = spring(lt, tO + 0.05, 0.35);
       stamp.style.opacity = s > 0 ? 1 : 0; stamp.style.transform = `rotate(-4deg) scale(${lerp(1.8, 1, s)})`;
     };

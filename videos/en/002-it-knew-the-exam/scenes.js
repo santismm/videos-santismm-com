@@ -9,7 +9,7 @@
 
   EUREKA.video = { keywords: ['contamination', '75%', '7.5%', '45%', 'memory', 'Konwinski'] };
 
-  // ───────────────────────── 1 · HOOK: dos exámenes, dos notas ─────────────────────────
+  // ───────────────────────── 1 · HOOK: two exams, two scores ─────────────────────────
   scene('hook', (x) => {
     const r = x.root;
     const top = add(r, `<div class="abs" style="left:0;right:0;top:330px;text-align:center;font-size:30px">${pill('SAME KIND OF EXAM: CODING', C.ink)}</div>`);
@@ -18,7 +18,9 @@
     const noteA = add(r, `<div class="abs mono" style="left:120px;width:380px;top:965px;text-align:center;font-size:22px;font-weight:500;color:${C.muted}">~75% · comparable systems</div>`);
     const noteB = add(r, `<div class="abs mono" style="left:545px;width:380px;top:965px;text-align:center;font-size:22px;font-weight:500;color:${C.muted}">7.5% · winner</div>`);
     const badge = add(r, `<div class="abs display" style="left:390px;top:610px;width:300px;padding:6px 0;text-align:center;border-radius:28px;background:${C.amber};color:${C.bg};font-size:110px;font-weight:700;box-shadow:0 20px 70px rgba(245,158,11,.55)">÷10</div>`);
-    const tA = x.at('75'), tB = x.at('75', 1), tM = x.at('same'), tQ = x.at('what');
+    // edge-tts returns "75% to 7.5%" as a single word boundary: place 7.5% at the midpoint of that span.
+    const w75 = x.words.find((w) => EUREKA.norm(w.w).startsWith('75'));
+    const tA = w75.ls, tB = w75.ls + (w75.le - w75.ls) * 0.5, tM = x.at('same'), tQ = x.at('what');
     x.cue(tA + 0.05, 'swipe', 0.7); x.cue(tB + 0.05, 'swipe', 0.7);
     x.cue(tM, 'pop', 0.5); x.cue(tQ - 0.1, 'stamp', 1); x.shake(tQ - 0.1, 24);
     return (lt) => {
@@ -34,7 +36,7 @@
     };
   });
 
-  // ───────────────────────── 2 · CONTAMINACIÓN ─────────────────────────
+  // ───────────────────────── 2 · CONTAMINATION ─────────────────────────
   scene('contamina', (x) => {
     const r = x.root;
     const title = popText(r, 'CONTAMINATION', `top:320px;font-size:96px;color:${C.amber};text-shadow:0 0 50px rgba(245,158,11,.5)`);
@@ -56,7 +58,7 @@
     x.cue(tC, 'stamp', 0.6); x.shake(tC, 10);
     qs.forEach((_, i) => { x.cue(tP + i * 0.08, 'tick', 0.4); x.cue(tCu + 0.15 + i * 0.12 + 0.45, 'pop', 0.45); });
     x.cue(tE, 'swipe', 0.6);
-    // Posición de cada "?" en la hoja del examen (coordenadas de escenario)
+    // Position of each "?" on the exam sheet (stage coordinates)
     const start = qs.map((_, i) => ({ x: 700 + (i % 2) * 110, y: 610 + Math.floor(i / 2) * 75 }));
     return (lt) => {
       popIn(title, lt, tC - 0.1, 0.5);
@@ -89,7 +91,7 @@
     };
   });
 
-  // ───────────────────────── 3 · EL ALUMNO QUE VIO EL EXAMEN ─────────────────────────
+  // ───────────────────────── 3 · THE STUDENT WHO SAW THE EXAM ─────────────────────────
   scene('alumno', (x) => {
     const r = x.root;
     const stu = add(r, `<svg class="abs" width="260" height="300" viewBox="0 0 200 290" style="left:250px;top:330px">
@@ -128,7 +130,7 @@
     };
   });
 
-  // ───────────────────────── 4 · HASTA UN 45 % (waffle 10×10) ─────────────────────────
+  // ───────────────────────── 4 · UP TO 45% (10×10 waffle) ─────────────────────────
   scene('dato45', (x) => {
     const r = x.root;
     const head = add(r, `<div class="abs" style="left:0;right:0;top:318px;display:flex;align-items:baseline;justify-content:center;gap:24px">
@@ -136,7 +138,7 @@
         <span class="num display" style="font-size:150px;font-weight:700;color:${C.amber};line-height:1;text-shadow:0 0 50px rgba(245,158,11,.5)">0%</span></div>`);
     const S = 44, G = 9, N = 10, W0 = N * S + (N - 1) * G, x0 = (1080 - W0) / 2, y0 = 515;
     const cells = [];
-    // Orden de relleno en espiral suave (más orgánico que fila a fila)
+    // Random fill order (more organic than row by row)
     const rand = rng(45);
     const order = Array.from({ length: 100 }, (_, i) => i).sort(() => rand() - 0.5);
     const amberSet = new Set(order.slice(0, 45));
@@ -166,7 +168,7 @@
     };
   });
 
-  // ───────────────────────── 5 · PREMIO KONWINSKI: línea temporal ─────────────────────────
+  // ───────────────────────── 5 · KONWINSKI PRIZE: timeline ─────────────────────────
   scene('kprize', (x) => {
     const r = x.root;
     const title = popText(r, 'KONWINSKI PRIZE', `top:320px;font-size:76px;color:${C.ink}`);
@@ -210,7 +212,7 @@
     };
   });
 
-  // ───────────────────────── 6 · DIAGNÓSTICO → REMEDIO ─────────────────────────
+  // ───────────────────────── 6 · DIAGNOSIS → REMEDY ─────────────────────────
   scene('remedio', (x) => {
     const r = x.root;
     const head = add(r, `<div class="abs" style="left:0;right:0;top:325px;text-align:center;font-size:30px">${pill('THE LESSON', C.ink)}</div>`);
@@ -241,7 +243,7 @@
     };
   });
 
-  // ───────────────────────── 7 · "¡NUEVO RÉCORD!" → ¿ESTABA EN SU ENTRENAMIENTO? ─────────────────────────
+  // ───────────────────────── 7 · "NEW RECORD!" → WAS IT IN ITS TRAINING DATA? ─────────────────────────
   scene('pregunta', (x) => {
     const r = x.root;
     const card = add(r, `<div class="abs" style="left:150px;width:780px;top:420px;height:430px;border-radius:34px;background:${C.surface};border:3px solid ${C.lineStrong};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)">
@@ -266,7 +268,7 @@
         p.el.style.opacity = Math.max(0, 1 - dt / 2.2);
         p.el.style.transform = `translate(${p.x + p.vx * dt}px, ${p.y + p.vy * dt + 1100 * dt * dt}px) rotate(${p.rot + dt * 600}deg)`;
       });
-      // La lupa inspecciona la nota
+      // The magnifier inspects the score
       const lk = prog(lt, tP - 0.1, 1.6);
       lens.style.opacity = lk > 0 && lt < tEn + 0.1 ? 1 : 0;
       lens.style.transform = `translate(${lerp(820, 470, Ease.inOutCubic(lk)) + Math.sin(lk * 9) * 30}px, ${640 + Math.cos(lk * 7) * 40}px)`;
@@ -276,7 +278,7 @@
     };
   });
 
-  // ───────────────────────── 8 · TESIS ─────────────────────────
+  // ───────────────────────── 8 · THESIS ─────────────────────────
   scene('tesis', (x) => {
     const r = x.root;
     const l1 = popText(r, 'A HIGH SCORE', `top:360px;font-size:104px;color:${C.ink}`);
