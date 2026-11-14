@@ -1,0 +1,116 @@
+1
+00:00:00,247 --> 00:00:02,355
+La IA contra 44 profesiones:
+
+2
+00:00:02,363 --> 00:00:04,723
+abogados, enfermeras, contables.
+
+3
+00:00:05,277 --> 00:00:06,771
+¿Quién hace mejor el trabajo?
+
+4
+00:00:07,586 --> 00:00:09,376
+OpenAI lo midió con GDPval:
+
+5
+00:00:09,395 --> 00:00:13,493
+1.320 tareas reales, creadas por expertos con unos 14 años
+
+6
+00:00:13,304 --> 00:00:14,096
+de oficio.
+
+7
+00:00:14,919 --> 00:00:17,345
+Otro experto compara dos entregables sin firma,
+
+8
+00:00:17,375 --> 00:00:18,606
+el humano y el de la IA,
+
+9
+00:00:18,647 --> 00:00:19,790
+y elige a ciegas.
+
+10
+00:00:20,599 --> 00:00:22,915
+En 2025 el mejor modelo ganaba o
+
+11
+00:00:22,726 --> 00:00:25,075
+empataba en casi el 48%.
+
+12
+00:00:25,626 --> 00:00:27,701
+La paridad es el 50%.
+
+13
+00:00:28,535 --> 00:00:30,961
+Meses después, OpenAI ya hablaba de cerca
+
+14
+00:00:30,772 --> 00:00:32,112
+del 70%.
+
+15
+00:00:32,666 --> 00:00:33,249
+Ojo:
+
+16
+00:00:33,291 --> 00:00:34,817
+dato del propio fabricante.
+
+17
+00:00:35,631 --> 00:00:37,761
+Pero son tareas bien definidas, con todo
+
+18
+00:00:37,572 --> 00:00:39,405
+el contexto y de un solo intento.
+
+19
+00:00:39,959 --> 00:00:41,530
+Un trabajo es mucho más.
+
+20
+00:00:42,343 --> 00:00:43,124
+La lección:
+
+21
+00:00:43,143 --> 00:00:44,681
+no preguntes si la IA aprueba un
+
+22
+00:00:44,492 --> 00:00:45,262
+examen.
+
+23
+00:00:45,816 --> 00:00:47,408
+Pregunta si gana o empata a un
+
+24
+00:00:47,219 --> 00:00:48,636
+experto en tus tareas.
+
+25
+00:00:49,466 --> 00:00:51,190
+Porque el benchmark más honesto es el
+
+26
+00:00:51,001 --> 00:00:52,330
+trabajo por el que se paga a
+
+27
+00:00:52,141 --> 00:00:53,164
+un profesional.
+
+28
+00:00:53,991 --> 00:00:56,439
+Guárdalo, y compártelo con quien todavía mide
+
+29
+00:00:56,250 --> 00:00:57,546
+la IA con exámenes.
+

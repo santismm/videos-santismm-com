@@ -1,0 +1,877 @@
+{
+ "id": "006-four-ways-agents-get-sick",
+ "lang": "en",
+ "series": "EUREKA · AI in 60s",
+ "episode": 6,
+ "title": "4 ways an AI agent gets sick",
+ "source": "articles.santismm.com/the-agentic-enterprise-needs-an-immune-system",
+ "duration": 50.102,
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Your AI agent can get sick. And there are four different ways it happens.",
+   "voStart": 0.15,
+   "voEnd": 4.11,
+   "words": [
+    {
+     "w": "Your",
+     "s": 0.244,
+     "e": 0.398,
+     "t": "Your"
+    },
+    {
+     "w": "AI",
+     "s": 0.409,
+     "e": 0.704,
+     "t": "AI"
+    },
+    {
+     "w": "agent",
+     "s": 0.716,
+     "e": 1.011,
+     "t": "agent"
+    },
+    {
+     "w": "can",
+     "s": 1.023,
+     "e": 1.129,
+     "t": "can"
+    },
+    {
+     "w": "get",
+     "s": 1.141,
+     "e": 1.294,
+     "t": "get"
+    },
+    {
+     "w": "sick",
+     "s": 1.306,
+     "e": 1.659,
+     "t": "sick."
+    },
+    {
+     "w": "And",
+     "s": 2.049,
+     "e": 2.108,
+     "t": "And"
+    },
+    {
+     "w": "there",
+     "s": 2.119,
+     "e": 2.249,
+     "t": "there"
+    },
+    {
+     "w": "are",
+     "s": 2.261,
+     "e": 2.355,
+     "t": "are"
+    },
+    {
+     "w": "four",
+     "s": 2.367,
+     "e": 2.65,
+     "t": "four"
+    },
+    {
+     "w": "different",
+     "s": 2.662,
+     "e": 2.945,
+     "t": "different"
+    },
+    {
+     "w": "ways",
+     "s": 2.957,
+     "e": 3.145,
+     "t": "ways"
+    },
+    {
+     "w": "it",
+     "s": 3.157,
+     "e": 3.216,
+     "t": "it"
+    },
+    {
+     "w": "happens",
+     "s": 3.228,
+     "e": 3.747,
+     "t": "happens."
+    }
+   ],
+   "start": 0.0,
+   "end": 4.13
+  },
+  {
+   "id": "entrada",
+   "text": "One: input. An email or a website carries hidden instructions, and the agent takes them as orders.",
+   "voStart": 4.27,
+   "voEnd": 10.534,
+   "words": [
+    {
+     "w": "One",
+     "s": 4.376,
+     "e": 4.588,
+     "t": "One:"
+    },
+    {
+     "w": "input",
+     "s": 4.612,
+     "e": 5.037,
+     "t": "input."
+    },
+    {
+     "w": "An",
+     "s": 5.426,
+     "e": 5.544,
+     "t": "An"
+    },
+    {
+     "w": "email",
+     "s": 5.555,
+     "e": 6.086,
+     "t": "email"
+    },
+    {
+     "w": "or",
+     "s": 6.157,
+     "e": 6.263,
+     "t": "or"
+    },
+    {
+     "w": "a",
+     "s": 6.275,
+     "e": 6.345,
+     "t": "a"
+    },
+    {
+     "w": "website",
+     "s": 6.357,
+     "e": 6.9,
+     "t": "website"
+    },
+    {
+     "w": "carries",
+     "s": 6.912,
+     "e": 7.289,
+     "t": "carries"
+    },
+    {
+     "w": "hidden",
+     "s": 7.301,
+     "e": 7.548,
+     "t": "hidden"
+    },
+    {
+     "w": "instructions",
+     "s": 7.56,
+     "e": 8.291,
+     "t": "instructions,"
+    },
+    {
+     "w": "and",
+     "s": 8.574,
+     "e": 8.669,
+     "t": "and"
+    },
+    {
+     "w": "the",
+     "s": 8.68,
+     "e": 8.775,
+     "t": "the"
+    },
+    {
+     "w": "agent",
+     "s": 8.822,
+     "e": 9.187,
+     "t": "agent"
+    },
+    {
+     "w": "takes",
+     "s": 9.199,
+     "e": 9.459,
+     "t": "takes"
+    },
+    {
+     "w": "them",
+     "s": 9.47,
+     "e": 9.588,
+     "t": "them"
+    },
+    {
+     "w": "as",
+     "s": 9.6,
+     "e": 9.706,
+     "t": "as"
+    },
+    {
+     "w": "orders",
+     "s": 9.718,
+     "e": 10.178,
+     "t": "orders."
+    }
+   ],
+   "start": 4.13,
+   "end": 10.554
+  },
+  {
+   "id": "permisos",
+   "text": "Two: permission. It has more power than it needs. The model may fail, but the damage depends on how much you let it touch.",
+   "voStart": 10.694,
+   "voEnd": 17.51,
+   "words": [
+    {
+     "w": "Two",
+     "s": 10.8,
+     "e": 10.977,
+     "t": "Two:"
+    },
+    {
+     "w": "permission",
+     "s": 11.036,
+     "e": 11.508,
+     "t": "permission."
+    },
+    {
+     "w": "It",
+     "s": 11.897,
+     "e": 11.956,
+     "t": "It"
+    },
+    {
+     "w": "has",
+     "s": 11.968,
+     "e": 12.121,
+     "t": "has"
+    },
+    {
+     "w": "more",
+     "s": 12.133,
+     "e": 12.31,
+     "t": "more"
+    },
+    {
+     "w": "power",
+     "s": 12.321,
+     "e": 12.675,
+     "t": "power"
+    },
+    {
+     "w": "than",
+     "s": 12.687,
+     "e": 12.805,
+     "t": "than"
+    },
+    {
+     "w": "it",
+     "s": 12.817,
+     "e": 12.899,
+     "t": "it"
+    },
+    {
+     "w": "needs",
+     "s": 12.911,
+     "e": 13.395,
+     "t": "needs."
+    },
+    {
+     "w": "The",
+     "s": 13.795,
+     "e": 13.831,
+     "t": "The"
+    },
+    {
+     "w": "model",
+     "s": 13.843,
+     "e": 14.114,
+     "t": "model"
+    },
+    {
+     "w": "may",
+     "s": 14.126,
+     "e": 14.267,
+     "t": "may"
+    },
+    {
+     "w": "fail",
+     "s": 14.279,
+     "e": 14.715,
+     "t": "fail,"
+    },
+    {
+     "w": "but",
+     "s": 14.963,
+     "e": 15.081,
+     "t": "but"
+    },
+    {
+     "w": "the",
+     "s": 15.093,
+     "e": 15.175,
+     "t": "the"
+    },
+    {
+     "w": "damage",
+     "s": 15.187,
+     "e": 15.529,
+     "t": "damage"
+    },
+    {
+     "w": "depends",
+     "s": 15.541,
+     "e": 15.93,
+     "t": "depends"
+    },
+    {
+     "w": "on",
+     "s": 15.942,
+     "e": 16.024,
+     "t": "on"
+    },
+    {
+     "w": "how",
+     "s": 16.036,
+     "e": 16.178,
+     "t": "how"
+    },
+    {
+     "w": "much",
+     "s": 16.189,
+     "e": 16.378,
+     "t": "much"
+    },
+    {
+     "w": "you",
+     "s": 16.39,
+     "e": 16.472,
+     "t": "you"
+    },
+    {
+     "w": "let",
+     "s": 16.484,
+     "e": 16.602,
+     "t": "let"
+    },
+    {
+     "w": "it",
+     "s": 16.614,
+     "e": 16.696,
+     "t": "it"
+    },
+    {
+     "w": "touch",
+     "s": 16.708,
+     "e": 17.156,
+     "t": "touch."
+    }
+   ],
+   "start": 10.554,
+   "end": 17.53
+  },
+  {
+   "id": "objetivo",
+   "text": "Three: objective. It meets the metric the wrong way: closing cases without solving them, or hiding exceptions.",
+   "voStart": 17.67,
+   "voEnd": 24.966,
+   "words": [
+    {
+     "w": "Three",
+     "s": 17.8,
+     "e": 18.047,
+     "t": "Three:"
+    },
+    {
+     "w": "objective",
+     "s": 18.271,
+     "e": 18.802,
+     "t": "objective."
+    },
+    {
+     "w": "It",
+     "s": 19.191,
+     "e": 19.286,
+     "t": "It"
+    },
+    {
+     "w": "meets",
+     "s": 19.297,
+     "e": 19.569,
+     "t": "meets"
+    },
+    {
+     "w": "the",
+     "s": 19.58,
+     "e": 19.663,
+     "t": "the"
+    },
+    {
+     "w": "metric",
+     "s": 19.675,
+     "e": 20.158,
+     "t": "metric"
+    },
+    {
+     "w": "the",
+     "s": 20.17,
+     "e": 20.241,
+     "t": "the"
+    },
+    {
+     "w": "wrong",
+     "s": 20.253,
+     "e": 20.595,
+     "t": "wrong"
+    },
+    {
+     "w": "way",
+     "s": 20.606,
+     "e": 20.889,
+     "t": "way:"
+    },
+    {
+     "w": "closing",
+     "s": 21.302,
+     "e": 21.691,
+     "t": "closing"
+    },
+    {
+     "w": "cases",
+     "s": 21.703,
+     "e": 22.116,
+     "t": "cases"
+    },
+    {
+     "w": "without",
+     "s": 22.128,
+     "e": 22.446,
+     "t": "without"
+    },
+    {
+     "w": "solving",
+     "s": 22.458,
+     "e": 22.906,
+     "t": "solving"
+    },
+    {
+     "w": "them",
+     "s": 22.918,
+     "e": 23.106,
+     "t": "them,"
+    },
+    {
+     "w": "or",
+     "s": 23.507,
+     "e": 23.578,
+     "t": "or"
+    },
+    {
+     "w": "hiding",
+     "s": 23.59,
+     "e": 23.92,
+     "t": "hiding"
+    },
+    {
+     "w": "exceptions",
+     "s": 23.932,
+     "e": 24.616,
+     "t": "exceptions."
+    }
+   ],
+   "start": 17.53,
+   "end": 24.986
+  },
+  {
+   "id": "red",
+   "text": "Four: the network. A contaminated result passes from one agent to another, enters its memory… and comes back looking trustworthy.",
+   "voStart": 25.126,
+   "voEnd": 33.022,
+   "words": [
+    {
+     "w": "Four",
+     "s": 25.268,
+     "e": 25.48,
+     "t": "Four:"
+    },
+    {
+     "w": "the",
+     "s": 25.68,
+     "e": 25.751,
+     "t": "the"
+    },
+    {
+     "w": "network",
+     "s": 25.763,
+     "e": 26.234,
+     "t": "network."
+    },
+    {
+     "w": "A",
+     "s": 26.624,
+     "e": 26.683,
+     "t": "A"
+    },
+    {
+     "w": "contaminated",
+     "s": 26.694,
+     "e": 27.414,
+     "t": "contaminated"
+    },
+    {
+     "w": "result",
+     "s": 27.426,
+     "e": 27.779,
+     "t": "result"
+    },
+    {
+     "w": "passes",
+     "s": 27.791,
+     "e": 28.275,
+     "t": "passes"
+    },
+    {
+     "w": "from",
+     "s": 28.286,
+     "e": 28.475,
+     "t": "from"
+    },
+    {
+     "w": "one",
+     "s": 28.487,
+     "e": 28.687,
+     "t": "one"
+    },
+    {
+     "w": "agent",
+     "s": 28.699,
+     "e": 29.029,
+     "t": "agent"
+    },
+    {
+     "w": "to",
+     "s": 29.041,
+     "e": 29.159,
+     "t": "to"
+    },
+    {
+     "w": "another",
+     "s": 29.171,
+     "e": 29.548,
+     "t": "another,"
+    },
+    {
+     "w": "enters",
+     "s": 29.926,
+     "e": 30.209,
+     "t": "enters"
+    },
+    {
+     "w": "its",
+     "s": 30.22,
+     "e": 30.338,
+     "t": "its"
+    },
+    {
+     "w": "memory",
+     "s": 30.35,
+     "e": 30.822,
+     "t": "memory…"
+    },
+    {
+     "w": "and",
+     "s": 31.105,
+     "e": 31.211,
+     "t": "and"
+    },
+    {
+     "w": "comes",
+     "s": 31.223,
+     "e": 31.482,
+     "t": "comes"
+    },
+    {
+     "w": "back",
+     "s": 31.494,
+     "e": 31.824,
+     "t": "back"
+    },
+    {
+     "w": "looking",
+     "s": 31.836,
+     "e": 32.084,
+     "t": "looking"
+    },
+    {
+     "w": "trustworthy",
+     "s": 32.095,
+     "e": 32.673,
+     "t": "trustworthy."
+    }
+   ],
+   "start": 24.986,
+   "end": 33.042
+  },
+  {
+   "id": "autoinmune",
+   "text": "But watch out for an overreacting defense: it can take down healthy services too. That's digital autoimmunity.",
+   "voStart": 33.182,
+   "voEnd": 39.59,
+   "words": [
+    {
+     "w": "But",
+     "s": 33.288,
+     "e": 33.382,
+     "t": "But"
+    },
+    {
+     "w": "watch",
+     "s": 33.394,
+     "e": 33.665,
+     "t": "watch"
+    },
+    {
+     "w": "out",
+     "s": 33.677,
+     "e": 33.842,
+     "t": "out"
+    },
+    {
+     "w": "for",
+     "s": 33.854,
+     "e": 34.019,
+     "t": "for"
+    },
+    {
+     "w": "an",
+     "s": 34.031,
+     "e": 34.137,
+     "t": "an"
+    },
+    {
+     "w": "overreacting",
+     "s": 34.196,
+     "e": 34.88,
+     "t": "overreacting"
+    },
+    {
+     "w": "defense",
+     "s": 34.892,
+     "e": 35.446,
+     "t": "defense:"
+    },
+    {
+     "w": "it",
+     "s": 35.788,
+     "e": 35.847,
+     "t": "it"
+    },
+    {
+     "w": "can",
+     "s": 35.859,
+     "e": 35.953,
+     "t": "can"
+    },
+    {
+     "w": "take",
+     "s": 35.965,
+     "e": 36.165,
+     "t": "take"
+    },
+    {
+     "w": "down",
+     "s": 36.177,
+     "e": 36.413,
+     "t": "down"
+    },
+    {
+     "w": "healthy",
+     "s": 36.425,
+     "e": 36.708,
+     "t": "healthy"
+    },
+    {
+     "w": "services",
+     "s": 36.72,
+     "e": 37.203,
+     "t": "services"
+    },
+    {
+     "w": "too",
+     "s": 37.215,
+     "e": 37.51,
+     "t": "too."
+    },
+    {
+     "w": "That's",
+     "s": 37.911,
+     "e": 38.099,
+     "t": "That's"
+    },
+    {
+     "w": "digital",
+     "s": 38.111,
+     "e": 38.548,
+     "t": "digital"
+    },
+    {
+     "w": "autoimmunity",
+     "s": 38.559,
+     "e": 39.243,
+     "t": "autoimmunity."
+    }
+   ],
+   "start": 33.042,
+   "end": 39.61
+  },
+  {
+   "id": "tesis",
+   "text": "The cure is a cycle: validate, authorize, observe, contain, and learn.",
+   "voStart": 39.75,
+   "voEnd": 45.51,
+   "words": [
+    {
+     "w": "The",
+     "s": 39.856,
+     "e": 39.915,
+     "t": "The"
+    },
+    {
+     "w": "cure",
+     "s": 39.927,
+     "e": 40.281,
+     "t": "cure"
+    },
+    {
+     "w": "is",
+     "s": 40.351,
+     "e": 40.446,
+     "t": "is"
+    },
+    {
+     "w": "a",
+     "s": 40.458,
+     "e": 40.516,
+     "t": "a"
+    },
+    {
+     "w": "cycle",
+     "s": 40.528,
+     "e": 40.988,
+     "t": "cycle:"
+    },
+    {
+     "w": "validate",
+     "s": 41.33,
+     "e": 41.802,
+     "t": "validate,"
+    },
+    {
+     "w": "authorize",
+     "s": 42.144,
+     "e": 42.816,
+     "t": "authorize,"
+    },
+    {
+     "w": "observe",
+     "s": 43.158,
+     "e": 43.724,
+     "t": "observe,"
+    },
+    {
+     "w": "contain",
+     "s": 43.925,
+     "e": 44.455,
+     "t": "contain,"
+    },
+    {
+     "w": "and",
+     "s": 44.738,
+     "e": 44.844,
+     "t": "and"
+    },
+    {
+     "w": "learn",
+     "s": 44.856,
+     "e": 45.163,
+     "t": "learn."
+    }
+   ],
+   "start": 39.61,
+   "end": 45.53
+  },
+  {
+   "id": "cta",
+   "text": "Save it, and share it with anyone putting agents into production.",
+   "voStart": 45.67,
+   "voEnd": 49.342,
+   "words": [
+    {
+     "w": "Save",
+     "s": 45.776,
+     "e": 46.024,
+     "t": "Save"
+    },
+    {
+     "w": "it",
+     "s": 46.036,
+     "e": 46.177,
+     "t": "it,"
+    },
+    {
+     "w": "and",
+     "s": 46.46,
+     "e": 46.519,
+     "t": "and"
+    },
+    {
+     "w": "share",
+     "s": 46.531,
+     "e": 46.79,
+     "t": "share"
+    },
+    {
+     "w": "it",
+     "s": 46.802,
+     "e": 46.861,
+     "t": "it"
+    },
+    {
+     "w": "with",
+     "s": 46.873,
+     "e": 47.026,
+     "t": "with"
+    },
+    {
+     "w": "anyone",
+     "s": 47.156,
+     "e": 47.58,
+     "t": "anyone"
+    },
+    {
+     "w": "putting",
+     "s": 47.592,
+     "e": 47.946,
+     "t": "putting"
+    },
+    {
+     "w": "agents",
+     "s": 47.958,
+     "e": 48.335,
+     "t": "agents"
+    },
+    {
+     "w": "into",
+     "s": 48.347,
+     "e": 48.488,
+     "t": "into"
+    },
+    {
+     "w": "production",
+     "s": 48.5,
+     "e": 48.984,
+     "t": "production."
+    }
+   ],
+   "start": 45.53,
+   "end": 50.102
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "007-real-cost-of-an-agent",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 7,
+  "title": "What does an AI agent really cost? (cost per outcome)",
+  "cover": "The model: 1%<br><span style=\"color:#f59e0b\">and the 99%?</span>",
+  "coverTime": 29.1,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "labs.santismm.com/agent-economics · santismm.com",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Your AI agent costs just over one cent per attempt. Are you sure that's cheap?"
+    },
+    {
+      "id": "intento",
+      "text": "Let's do the math with the support example from the Labs calculator: ten thousand cases a month. Model and tools come to about €133."
+    },
+    {
+      "id": "fallos",
+      "text": "But there are 12% retries. And it gets 86% right: that leaves 1,400 failures someone has to redo."
+    },
+    {
+      "id": "iceberg",
+      "text": "And a person reviews one in four cases. The result: the model is just 1% of the cost. 99% is human work."
+    },
+    {
+      "id": "balanza",
+      "text": "It still pays off: about €10,200 a month, versus almost €51,000 for the manual process."
+    },
+    {
+      "id": "leccion",
+      "text": "So the lesson: don't compare price per token. Compare the cost per correct outcome."
+    },
+    {
+      "id": "tesis",
+      "text": "Because cost per outcome will decide which agents survive."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and share it with whoever approves your AI budget."
+    }
+  ]
+}

@@ -10,6 +10,7 @@
   :root { --bg:#070a13; --line:#1b2336; --ls:#2a3550; --ink:#f8fafc; --fg:#dbe2ee; --muted:#93a1b8; --faint:#5d6b85;
           --cyan:#22d3ee; --blue:#3b82f6; --amber:#f59e0b; --green:#10b981; }
   html, body { margin: 0; background: var(--bg); }
+  #highlight { width: 1080px; height: 1920px; }
   .art { position: relative; overflow: hidden; background: var(--bg); color: var(--ink); }
   .grid { position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); }
   .glow { position: absolute; border-radius: 50%; filter: blur(10px); }
@@ -44,7 +45,7 @@
   </svg>
   <div class="abs display" style="left:0;right:0;top:182px;text-align:center;font-size:420px;line-height:1;letter-spacing:-.04em">E</div>
   <div class="abs dot" style="left:532px;top:218px;width:86px;height:86px;box-shadow:0 0 60px #22d3ee, 0 0 120px rgba(34,211,238,.6)"></div>
-  <div class="abs mono" style="left:0;right:0;top:612px;text-align:center;font-size:40px;font-weight:700;letter-spacing:.2em;color:var(--muted)">IA·60s</div>
+  <div class="abs mono" style="left:0;right:0;top:612px;text-align:center;font-size:40px;font-weight:700;letter-spacing:.2em;color:var(--muted)" data-es="IA·60s" data-en="AI·60s"></div>
 </div>
 
 <!-- BANNER -->
@@ -75,15 +76,34 @@
     <div class="display" style="display:flex;align-items:center;gap:44px;font-size:200px;line-height:.9;letter-spacing:.05em">
       <span class="dot" style="width:62px;height:62px;box-shadow:0 0 60px #22d3ee, 0 0 120px rgba(34,211,238,.6)"></span>EUREKA
     </div>
-    <div class="display" style="font-size:64px;font-weight:600;color:var(--fg);letter-spacing:-.01em">IA compleja, explicada en <span style="color:var(--cyan)">60 segundos</span></div>
-    <div class="mono" style="font-size:30px;font-weight:700;letter-spacing:.14em;color:var(--muted);margin-top:6px">DATOS, NO HUMO · NUEVO VÍDEO LUN · MIÉ · VIE · SANTISMM.COM</div>
+    <div class="display" style="font-size:64px;font-weight:600;color:var(--fg);letter-spacing:-.01em" data-es="IA compleja, explicada en &lt;span style='color:var(--cyan)'&gt;60 segundos&lt;/span&gt;" data-en="Complex AI, explained in &lt;span style='color:var(--cyan)'&gt;60 seconds&lt;/span&gt;"></div>
+    <div class="mono" style="font-size:30px;font-weight:700;letter-spacing:.14em;color:var(--muted);margin-top:6px" data-es="DATOS, NO HUMO · NUEVO VÍDEO LUN · MIÉ · VIE · DOM · SANTISMM.COM" data-en="DATA, NOT HYPE · NEW VIDEOS MON · WED · FRI · SUN · SANTISMM.COM"></div>
   </div>
   <!-- Guía de zona segura (solo en el modo de revisión) -->
   <div id="safe" class="abs" hidden style="left:507px;top:508px;width:1546px;height:423px;outline:4px dashed #f59e0b"></div>
 </div>
 
+<!-- PORTADA DE DESTACADA (Instagram) -->
+<div id="highlight" class="art" hidden style="width:1080px;height:1920px">
+  <div class="grid" style="background-size:90px 90px;opacity:.5;-webkit-mask-image:radial-gradient(circle at 50% 50%, #000 20%, transparent 60%)"></div>
+  <div class="glow" style="left:240px;top:660px;width:600px;height:600px;background:radial-gradient(circle, rgba(34,211,238,.25), transparent 65%)"></div>
+  <div class="abs" id="hlring" style="left:290px;top:710px;width:500px;height:500px;border-radius:50%;border:10px solid #22d3ee;box-sizing:border-box"></div>
+  <div class="abs" id="hlicon" style="left:400px;top:820px;width:280px;height:280px;color:#f8fafc"></div>
+</div>
+
 <script>
   const p = new URLSearchParams(location.search);
+  const lang = p.get('lang') || 'es';
+  document.querySelectorAll('[data-es]').forEach((e) => { e.innerHTML = e.getAttribute('data-' + lang); });
+  const HL = {
+    agentes: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><rect x="12" y="18" width="40" height="34" rx="10"/><path d="M32 18V8"/><circle cx="32" cy="7" r="3" fill="currentColor"/><circle cx="24" cy="34" r="4" fill="currentColor"/><circle cx="40" cy="34" r="4" fill="currentColor"/><path d="M24 44h16"/></svg>',
+    benchmarks: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><rect x="10" y="34" width="10" height="20" rx="2"/><rect x="27" y="18" width="10" height="36" rx="2"/><rect x="44" y="26" width="10" height="28" rx="2"/><path d="M6 58h52"/></svg>',
+    robots: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 56h22M21 56V44l10-14 14 6"/><circle cx="31" cy="30" r="4"/><path d="M45 36l8-8M45 36l9 3"/><rect x="14" y="40" width="14" height="6" rx="2"/></svg>',
+    seguridad: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"><path d="M32 6l22 8v16c0 14-10 24-22 28C20 54 10 44 10 30V14z"/><path d="M22 32l7 7 13-14" stroke-linecap="round"/></svg>',
+    coste: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><circle cx="32" cy="32" r="24"/><path d="M40 22c-2-3-5-4-8-4-6 0-10 5-10 14s4 14 10 14c3 0 6-1 8-4M18 29h16M18 35h16"/></svg>',
+  };
+  const COL = { agentes: '#22d3ee', benchmarks: '#3b82f6', robots: '#10b981', seguridad: '#f59e0b', coste: '#a685ff' };
+  if (p.get('hl')) { document.getElementById('hlicon').innerHTML = HL[p.get('hl')]; document.getElementById('hlring').style.borderColor = COL[p.get('hl')]; }
   document.getElementById(p.get('mode') || 'avatar').hidden = false;
   if (p.get('guides')) document.getElementById('safe').hidden = false;
 </script>

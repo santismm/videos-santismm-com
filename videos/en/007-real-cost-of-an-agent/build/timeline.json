@@ -1,0 +1,859 @@
+{
+ "id": "007-real-cost-of-an-agent",
+ "lang": "en",
+ "series": "EUREKA · AI in 60s",
+ "episode": 7,
+ "title": "What does an AI agent really cost? (cost per outcome)",
+ "source": "labs.santismm.com/agent-economics · santismm.com",
+ "duration": 50.03,
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Your AI agent costs just over one cent per attempt. Are you sure that's cheap?",
+   "voStart": 0.15,
+   "voEnd": 4.734,
+   "words": [
+    {
+     "w": "Your",
+     "s": 0.244,
+     "e": 0.421,
+     "t": "Your"
+    },
+    {
+     "w": "AI",
+     "s": 0.433,
+     "e": 0.751,
+     "t": "AI"
+    },
+    {
+     "w": "agent",
+     "s": 0.763,
+     "e": 1.07,
+     "t": "agent"
+    },
+    {
+     "w": "costs",
+     "s": 1.082,
+     "e": 1.577,
+     "t": "costs"
+    },
+    {
+     "w": "just",
+     "s": 1.648,
+     "e": 1.907,
+     "t": "just"
+    },
+    {
+     "w": "over",
+     "s": 1.919,
+     "e": 2.119,
+     "t": "over"
+    },
+    {
+     "w": "one",
+     "s": 2.131,
+     "e": 2.355,
+     "t": "one"
+    },
+    {
+     "w": "cent",
+     "s": 2.367,
+     "e": 2.603,
+     "t": "cent"
+    },
+    {
+     "w": "per",
+     "s": 2.615,
+     "e": 2.756,
+     "t": "per"
+    },
+    {
+     "w": "attempt",
+     "s": 2.768,
+     "e": 3.192,
+     "t": "attempt."
+    },
+    {
+     "w": "Are",
+     "s": 3.582,
+     "e": 3.641,
+     "t": "Are"
+    },
+    {
+     "w": "you",
+     "s": 3.652,
+     "e": 3.711,
+     "t": "you"
+    },
+    {
+     "w": "sure",
+     "s": 3.723,
+     "e": 3.9,
+     "t": "sure"
+    },
+    {
+     "w": "that's",
+     "s": 3.912,
+     "e": 4.065,
+     "t": "that's"
+    },
+    {
+     "w": "cheap",
+     "s": 4.077,
+     "e": 4.383,
+     "t": "cheap?"
+    }
+   ],
+   "start": 0.0,
+   "end": 4.754
+  },
+  {
+   "id": "intento",
+   "text": "Let's do the math with the support example from the Labs calculator: ten thousand cases a month. Model and tools come to about €133.",
+   "voStart": 4.894,
+   "voEnd": 13.534,
+   "words": [
+    {
+     "w": "Let's",
+     "s": 4.988,
+     "e": 5.142,
+     "t": "Let's"
+    },
+    {
+     "w": "do",
+     "s": 5.153,
+     "e": 5.26,
+     "t": "do"
+    },
+    {
+     "w": "the",
+     "s": 5.271,
+     "e": 5.354,
+     "t": "the"
+    },
+    {
+     "w": "math",
+     "s": 5.366,
+     "e": 5.696,
+     "t": "math"
+    },
+    {
+     "w": "with",
+     "s": 5.708,
+     "e": 5.837,
+     "t": "with"
+    },
+    {
+     "w": "the",
+     "s": 5.849,
+     "e": 5.92,
+     "t": "the"
+    },
+    {
+     "w": "support",
+     "s": 5.932,
+     "e": 6.356,
+     "t": "support"
+    },
+    {
+     "w": "example",
+     "s": 6.368,
+     "e": 6.828,
+     "t": "example"
+    },
+    {
+     "w": "from",
+     "s": 6.84,
+     "e": 6.981,
+     "t": "from"
+    },
+    {
+     "w": "the",
+     "s": 6.993,
+     "e": 7.064,
+     "t": "the"
+    },
+    {
+     "w": "Labs",
+     "s": 7.076,
+     "e": 7.382,
+     "t": "Labs"
+    },
+    {
+     "w": "calculator",
+     "s": 7.394,
+     "e": 7.972,
+     "t": "calculator:"
+    },
+    {
+     "w": "ten",
+     "s": 8.337,
+     "e": 8.573,
+     "t": "ten"
+    },
+    {
+     "w": "thousand",
+     "s": 8.585,
+     "e": 8.974,
+     "t": "thousand"
+    },
+    {
+     "w": "cases",
+     "s": 8.986,
+     "e": 9.304,
+     "t": "cases"
+    },
+    {
+     "w": "a",
+     "s": 9.316,
+     "e": 9.352,
+     "t": "a"
+    },
+    {
+     "w": "month",
+     "s": 9.363,
+     "e": 9.788,
+     "t": "month."
+    },
+    {
+     "w": "Model",
+     "s": 10.177,
+     "e": 10.543,
+     "t": "Model"
+    },
+    {
+     "w": "and",
+     "s": 10.554,
+     "e": 10.637,
+     "t": "and"
+    },
+    {
+     "w": "tools",
+     "s": 10.649,
+     "e": 10.955,
+     "t": "tools"
+    },
+    {
+     "w": "come",
+     "s": 10.967,
+     "e": 11.156,
+     "t": "come"
+    },
+    {
+     "w": "to",
+     "s": 11.168,
+     "e": 11.285,
+     "t": "to"
+    },
+    {
+     "w": "about",
+     "s": 11.297,
+     "e": 11.58,
+     "t": "about"
+    },
+    {
+     "w": "€133",
+     "s": 11.592,
+     "e": 13.184,
+     "t": "€133."
+    }
+   ],
+   "start": 4.754,
+   "end": 13.554
+  },
+  {
+   "id": "fallos",
+   "text": "But there are 12% retries. And it gets 86% right: that leaves 1,400 failures someone has to redo.",
+   "voStart": 13.694,
+   "voEnd": 21.278,
+   "words": [
+    {
+     "w": "But",
+     "s": 13.8,
+     "e": 13.871,
+     "t": "But"
+    },
+    {
+     "w": "there",
+     "s": 13.883,
+     "e": 14.001,
+     "t": "there"
+    },
+    {
+     "w": "are",
+     "s": 14.012,
+     "e": 14.083,
+     "t": "are"
+    },
+    {
+     "w": "12%",
+     "s": 14.095,
+     "e": 14.732,
+     "t": "12%"
+    },
+    {
+     "w": "retries",
+     "s": 14.744,
+     "e": 15.321,
+     "t": "retries."
+    },
+    {
+     "w": "And",
+     "s": 15.711,
+     "e": 15.769,
+     "t": "And"
+    },
+    {
+     "w": "it",
+     "s": 15.781,
+     "e": 15.864,
+     "t": "it"
+    },
+    {
+     "w": "gets",
+     "s": 15.876,
+     "e": 16.111,
+     "t": "gets"
+    },
+    {
+     "w": "86%",
+     "s": 16.253,
+     "e": 17.173,
+     "t": "86%"
+    },
+    {
+     "w": "right",
+     "s": 17.185,
+     "e": 17.42,
+     "t": "right:"
+    },
+    {
+     "w": "that",
+     "s": 17.786,
+     "e": 17.939,
+     "t": "that"
+    },
+    {
+     "w": "leaves",
+     "s": 17.951,
+     "e": 18.175,
+     "t": "leaves"
+    },
+    {
+     "w": "1,400",
+     "s": 18.187,
+     "e": 19.449,
+     "t": "1,400"
+    },
+    {
+     "w": "failures",
+     "s": 19.46,
+     "e": 19.909,
+     "t": "failures"
+    },
+    {
+     "w": "someone",
+     "s": 19.92,
+     "e": 20.18,
+     "t": "someone"
+    },
+    {
+     "w": "has",
+     "s": 20.192,
+     "e": 20.416,
+     "t": "has"
+    },
+    {
+     "w": "to",
+     "s": 20.428,
+     "e": 20.522,
+     "t": "to"
+    },
+    {
+     "w": "redo",
+     "s": 20.534,
+     "e": 20.935,
+     "t": "redo."
+    }
+   ],
+   "start": 13.554,
+   "end": 21.298
+  },
+  {
+   "id": "iceberg",
+   "text": "And a person reviews one in four cases. The result: the model is just 1% of the cost. 99% is human work.",
+   "voStart": 21.438,
+   "voEnd": 29.382,
+   "words": [
+    {
+     "w": "And",
+     "s": 21.532,
+     "e": 21.591,
+     "t": "And"
+    },
+    {
+     "w": "a",
+     "s": 21.603,
+     "e": 21.65,
+     "t": "a"
+    },
+    {
+     "w": "person",
+     "s": 21.662,
+     "e": 22.016,
+     "t": "person"
+    },
+    {
+     "w": "reviews",
+     "s": 22.028,
+     "e": 22.488,
+     "t": "reviews"
+    },
+    {
+     "w": "one",
+     "s": 22.499,
+     "e": 22.712,
+     "t": "one"
+    },
+    {
+     "w": "in",
+     "s": 22.723,
+     "e": 22.794,
+     "t": "in"
+    },
+    {
+     "w": "four",
+     "s": 22.806,
+     "e": 23.03,
+     "t": "four"
+    },
+    {
+     "w": "cases",
+     "s": 23.042,
+     "e": 23.572,
+     "t": "cases."
+    },
+    {
+     "w": "The",
+     "s": 23.973,
+     "e": 24.021,
+     "t": "The"
+    },
+    {
+     "w": "result",
+     "s": 24.032,
+     "e": 24.433,
+     "t": "result:"
+    },
+    {
+     "w": "the",
+     "s": 24.787,
+     "e": 24.858,
+     "t": "the"
+    },
+    {
+     "w": "model",
+     "s": 24.87,
+     "e": 25.188,
+     "t": "model"
+    },
+    {
+     "w": "is",
+     "s": 25.2,
+     "e": 25.318,
+     "t": "is"
+    },
+    {
+     "w": "just",
+     "s": 25.33,
+     "e": 25.636,
+     "t": "just"
+    },
+    {
+     "w": "1%",
+     "s": 25.648,
+     "e": 26.32,
+     "t": "1%"
+    },
+    {
+     "w": "of",
+     "s": 26.332,
+     "e": 26.391,
+     "t": "of"
+    },
+    {
+     "w": "the",
+     "s": 26.403,
+     "e": 26.473,
+     "t": "the"
+    },
+    {
+     "w": "cost",
+     "s": 26.485,
+     "e": 26.957,
+     "t": "cost."
+    },
+    {
+     "w": "99%",
+     "s": 27.346,
+     "e": 28.23,
+     "t": "99%"
+    },
+    {
+     "w": "is",
+     "s": 28.313,
+     "e": 28.396,
+     "t": "is"
+    },
+    {
+     "w": "human",
+     "s": 28.407,
+     "e": 28.69,
+     "t": "human"
+    },
+    {
+     "w": "work",
+     "s": 28.702,
+     "e": 29.032,
+     "t": "work."
+    }
+   ],
+   "start": 21.298,
+   "end": 29.402
+  },
+  {
+   "id": "balanza",
+   "text": "It still pays off: about €10,200 a month, versus almost €51,000 for the manual process.",
+   "voStart": 29.542,
+   "voEnd": 37.294,
+   "words": [
+    {
+     "w": "It",
+     "s": 29.636,
+     "e": 29.719,
+     "t": "It"
+    },
+    {
+     "w": "still",
+     "s": 29.731,
+     "e": 29.978,
+     "t": "still"
+    },
+    {
+     "w": "pays",
+     "s": 29.99,
+     "e": 30.261,
+     "t": "pays"
+    },
+    {
+     "w": "off",
+     "s": 30.273,
+     "e": 30.58,
+     "t": "off:"
+    },
+    {
+     "w": "about",
+     "s": 30.863,
+     "e": 31.122,
+     "t": "about"
+    },
+    {
+     "w": "€10,200",
+     "s": 31.134,
+     "e": 32.62,
+     "t": "€10,200"
+    },
+    {
+     "w": "a",
+     "s": 32.632,
+     "e": 32.667,
+     "t": "a"
+    },
+    {
+     "w": "month",
+     "s": 32.679,
+     "e": 33.056,
+     "t": "month,"
+    },
+    {
+     "w": "versus",
+     "s": 33.398,
+     "e": 33.705,
+     "t": "versus"
+    },
+    {
+     "w": "almost",
+     "s": 33.717,
+     "e": 34.07,
+     "t": "almost"
+    },
+    {
+     "w": "€51,000",
+     "s": 34.082,
+     "e": 35.78,
+     "t": "€51,000"
+    },
+    {
+     "w": "for",
+     "s": 35.792,
+     "e": 35.886,
+     "t": "for"
+    },
+    {
+     "w": "the",
+     "s": 35.898,
+     "e": 35.957,
+     "t": "the"
+    },
+    {
+     "w": "manual",
+     "s": 35.969,
+     "e": 36.323,
+     "t": "manual"
+    },
+    {
+     "w": "process",
+     "s": 36.334,
+     "e": 36.948,
+     "t": "process."
+    }
+   ],
+   "start": 29.402,
+   "end": 37.314
+  },
+  {
+   "id": "leccion",
+   "text": "So the lesson: don't compare price per token. Compare the cost per correct outcome.",
+   "voStart": 37.454,
+   "voEnd": 42.11,
+   "words": [
+    {
+     "w": "So",
+     "s": 37.56,
+     "e": 37.666,
+     "t": "So"
+    },
+    {
+     "w": "the",
+     "s": 37.678,
+     "e": 37.761,
+     "t": "the"
+    },
+    {
+     "w": "lesson",
+     "s": 37.772,
+     "e": 38.15,
+     "t": "lesson:"
+    },
+    {
+     "w": "don't",
+     "s": 38.468,
+     "e": 38.657,
+     "t": "don't"
+    },
+    {
+     "w": "compare",
+     "s": 38.669,
+     "e": 38.999,
+     "t": "compare"
+    },
+    {
+     "w": "price",
+     "s": 39.011,
+     "e": 39.27,
+     "t": "price"
+    },
+    {
+     "w": "per",
+     "s": 39.282,
+     "e": 39.412,
+     "t": "per"
+    },
+    {
+     "w": "token",
+     "s": 39.423,
+     "e": 39.789,
+     "t": "token."
+    },
+    {
+     "w": "Compare",
+     "s": 40.178,
+     "e": 40.426,
+     "t": "Compare"
+    },
+    {
+     "w": "the",
+     "s": 40.438,
+     "e": 40.532,
+     "t": "the"
+    },
+    {
+     "w": "cost",
+     "s": 40.544,
+     "e": 40.874,
+     "t": "cost"
+    },
+    {
+     "w": "per",
+     "s": 40.886,
+     "e": 41.003,
+     "t": "per"
+    },
+    {
+     "w": "correct",
+     "s": 41.015,
+     "e": 41.369,
+     "t": "correct"
+    },
+    {
+     "w": "outcome",
+     "s": 41.381,
+     "e": 41.746,
+     "t": "outcome."
+    }
+   ],
+   "start": 37.314,
+   "end": 42.13
+  },
+  {
+   "id": "tesis",
+   "text": "Because cost per outcome will decide which agents survive.",
+   "voStart": 42.27,
+   "voEnd": 45.606,
+   "words": [
+    {
+     "w": "Because",
+     "s": 42.376,
+     "e": 42.647,
+     "t": "Because"
+    },
+    {
+     "w": "cost",
+     "s": 42.659,
+     "e": 42.954,
+     "t": "cost"
+    },
+    {
+     "w": "per",
+     "s": 42.966,
+     "e": 43.119,
+     "t": "per"
+    },
+    {
+     "w": "outcome",
+     "s": 43.131,
+     "e": 43.485,
+     "t": "outcome"
+    },
+    {
+     "w": "will",
+     "s": 43.496,
+     "e": 43.603,
+     "t": "will"
+    },
+    {
+     "w": "decide",
+     "s": 43.614,
+     "e": 44.074,
+     "t": "decide"
+    },
+    {
+     "w": "which",
+     "s": 44.086,
+     "e": 44.275,
+     "t": "which"
+    },
+    {
+     "w": "agents",
+     "s": 44.404,
+     "e": 44.711,
+     "t": "agents"
+    },
+    {
+     "w": "survive",
+     "s": 44.723,
+     "e": 45.242,
+     "t": "survive."
+    }
+   ],
+   "start": 42.13,
+   "end": 45.626
+  },
+  {
+   "id": "cta",
+   "text": "Save it, and share it with whoever approves your AI budget.",
+   "voStart": 45.766,
+   "voEnd": 49.27,
+   "words": [
+    {
+     "w": "Save",
+     "s": 45.872,
+     "e": 46.12,
+     "t": "Save"
+    },
+    {
+     "w": "it",
+     "s": 46.132,
+     "e": 46.249,
+     "t": "it,"
+    },
+    {
+     "w": "and",
+     "s": 46.662,
+     "e": 46.721,
+     "t": "and"
+    },
+    {
+     "w": "share",
+     "s": 46.733,
+     "e": 47.016,
+     "t": "share"
+    },
+    {
+     "w": "it",
+     "s": 47.028,
+     "e": 47.087,
+     "t": "it"
+    },
+    {
+     "w": "with",
+     "s": 47.099,
+     "e": 47.216,
+     "t": "with"
+    },
+    {
+     "w": "whoever",
+     "s": 47.228,
+     "e": 47.629,
+     "t": "whoever"
+    },
+    {
+     "w": "approves",
+     "s": 47.641,
+     "e": 48.077,
+     "t": "approves"
+    },
+    {
+     "w": "your",
+     "s": 48.089,
+     "e": 48.242,
+     "t": "your"
+    },
+    {
+     "w": "AI",
+     "s": 48.254,
+     "e": 48.514,
+     "t": "AI"
+    },
+    {
+     "w": "budget",
+     "s": 48.525,
+     "e": 48.915,
+     "t": "budget."
+    }
+   ],
+   "start": 45.626,
+   "end": 50.03
+  }
+ ]
+}
