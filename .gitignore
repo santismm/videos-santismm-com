@@ -1,3 +1,4 @@
 videos/*/build/
 node_modules/
 __pycache__/
+videos/**/build/
