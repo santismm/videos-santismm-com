@@ -16,6 +16,22 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 06 | 4 formas de enfermar de un agente de IA | [mp4](videos/006-cuatro-formas-de-enfermar/out/006-cuatro-formas-de-enfermar.mp4) | [publicacion.md](videos/006-cuatro-formas-de-enfermar/publicacion.md) | programado 20 nov |
 | 07 | ¿Cuánto cuesta de verdad un agente? (coste por resultado) | [mp4](videos/007-cuanto-cuesta-una-tarea/out/007-cuanto-cuesta-una-tarea.mp4) | [publicacion.md](videos/007-cuanto-cuesta-una-tarea/publicacion.md) | programado 23 nov |
 
+## Segundo canal: Hispanic Legacy · Historia en 60s
+
+Canal de divulgación histórica basado en [hispanic-legacy.com](https://hispanic-legacy.com). Usa el mismo motor con un tema propio (`engine/themes/hispanic-legacy.js`: paleta, tipografía Fraunces, mapa del Pacífico con cámara) y música propia (`"music": "galeon"`).
+
+- Estrategia, tendencias y plan de vídeos: [`canales/hispanic-legacy/docs/estrategia.md`](canales/hispanic-legacy/docs/estrategia.md)
+
+| # | Título | Vídeo | Textos de publicación |
+|---|---|---|---|
+| 01 | El tornaviaje: para volver de Asia había que poner rumbo al norte | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) | [publicacion.md](canales/hispanic-legacy/videos/001-el-tornaviaje/publicacion.md) |
+
+```bash
+engine/make.sh canales/hispanic-legacy/videos/001-el-tornaviaje
+```
+
+Un vídeo elige canal en su `script.json`: `"theme"` carga `engine/themes/<tema>.js`, `"music"` elige la banda sonora y `"assets"` carga recursos propios (por ejemplo, el mapa).
+
 ## Publicación automática
 
 - **Dónde se publica:** los vídeos se programan en Metricool (marca 7970471) para el canal de YouTube [@eureka-ia60](https://www.youtube.com/@eureka-ia60), los lunes, miércoles y viernes a las 13:00 (hora de Madrid).
@@ -66,7 +82,8 @@ node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 
 ## Licencias y transparencia
 
-- **Tipografías:** Space Grotesk, Inter y JetBrains Mono, todas con licencia SIL OFL.
+- **Tipografías:** Space Grotesk, Inter, JetBrains Mono y Fraunces, todas con licencia SIL OFL.
+- **Mapa:** Natural Earth (dominio público).
 - **Música y efectos:** generados por código en este repositorio.
 - **Contenido:** basado en los artículos de santismm.com (CC BY 4.0).
 - **Etiquetado:** cada vídeo se marca como contenido generado con IA en las plataformas, y la tarjeta final también lo indica.
