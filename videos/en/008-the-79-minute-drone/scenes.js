@@ -1,4 +1,5 @@
-/* EUREKA #08 · "El dron que ahorró 79 minutos… o 19" (¿comparado con qué?)
+/* EUREKA #08 (EN) · "The drone that saved 79 minutes… or 19" (compared to what?)
+ * English version of videos/008-el-dron-de-los-79-minutos: same scenes, on-screen strings via L('es', 'en').
  * Fuente: physicalai.santismm.com · caso CS-06 "Zipline en Ruanda" (evidencia A), verificado el 14-11-2026
  * contra el texto completo de Nisingizwe et al., The Lancet Global Health 2022;10:e564–69 (copia de acceso abierto, UGent):
  *  - 12.733 pedidos por dron a 20 centros, 17-03-2017 → 31-12-2019; media 49,6 min (IC 95 % 49,1–50,2) con preparación.
@@ -19,7 +20,7 @@
 
   EUREKA.video = {
     keywords: L(['79 minutos', '79', '19', 'mediana', 'volvía', 'ida', '67%', 'comparado', 'evidencia', 'media'],
-      ['79 minutes', '79', '19', 'median', 'back', 'one-way', '67%', 'compared', 'evidence', 'half']),
+      ['79', '19', 'median', 'back', 'hour', '67%', 'compared', 'evidence', 'half']),
   };
   const intFmt = (n) => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, L('.', ','));
 
@@ -61,7 +62,7 @@
     const T1 = tile(70), T2 = tile(290);
     T2.querySelector('.d').textContent = '9';
     const unit = add(board, `<div class="abs display" style="left:520px;top:200px;font-size:96px;font-weight:700;color:${C.ink}">min</div>`);
-    const q = add(board, `<div class="abs display" style="left:520px;top:80px;font-size:120px;font-weight:700;color:${C.amber};line-height:1">¿?</div>`);
+    const q = add(board, `<div class="abs display" style="left:520px;top:80px;font-size:120px;font-weight:700;color:${C.amber};line-height:1">${L('¿?', '?')}</div>`);
     const same = add(r, `<div class="abs" style="left:0;right:0;top:1070px;text-align:center;font-size:26px">${pill(L('MISMO ESTUDIO · THE LANCET GLOBAL HEALTH 2022', 'SAME STUDY · THE LANCET GLOBAL HEALTH 2022'), C.ink)}</div>`);
     const t79 = x.at('79'), t19 = x.at('19'), tE = x.at(L('estudio', 'study'));
     x.cue(t79, 'ding', 0.7); x.cue(t19 - 0.1, 'swipe', 0.7); x.cue(t19 + 0.15, 'stamp', 0.9); x.shake(t19 + 0.15, 14); x.cue(tE, 'pop', 0.6);
@@ -202,7 +203,7 @@
     // Mejor caso: el coche sólo hace la ida (60 min) → la ventaja cae de 79 a 19
     const tM = x.at(L('mejor', 'best')), tIda = x.at(L('ida', 'one')), tH = x.at(L('hora', 'hour')), tVen = x.at(L('ventaja', 'gap')), t19 = x.at('19');
     x.cue(tM, 'whoosh', 0.6); x.cue(tIda + 0.1, 'swipe', 0.7); x.cue(tH, 'pop', 0.6); x.cue(t19, 'buzz', 0.8); x.shake(t19, 12);
-    note.innerHTML = L('Análisis de sensibilidad del estudio: cada centro de sangre<br>con su propio vehículo, que sólo hace la ida.', 'The study\'s sensitivity analysis: each blood centre<br>has its own vehicle, so the trip is one-way only.');
+    note.innerHTML = L('Análisis de sensibilidad del estudio: cada centro de sangre<br>con su propio vehículo, que sólo hace la ida.', 'The study\'s sensitivity analysis: each blood center<br>has its own vehicle, so the trip is one-way only.');
     return (lt) => {
       const isBest = lt > tM - 0.1;
       setHead(isBest ? L('MEJOR CASO POR CARRETERA', 'BEST CASE BY ROAD') : L('MEDIANA POR ENTREGA', 'MEDIAN PER DELIVERY'), isBest ? C.amber : C.cyan);
@@ -347,5 +348,5 @@
   });
 
   // ───────────────────────── 9 · CTA ─────────────────────────
-  scene('cta', (x) => endCard(x, { links: ['physicalai.santismm.com'], sub: L('casos reales, cada cifra con su nivel de evidencia', 'real cases, every figure with its evidence level') }));
+  scene('cta', (x) => endCard(x, { links: [L('physicalai.santismm.com', 'physicalai.santismm.com/en')], sub: L('casos reales, cada cifra con su nivel de evidencia', 'real cases, every figure with its evidence level') }));
 })();
