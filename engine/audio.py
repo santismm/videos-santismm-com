@@ -144,35 +144,53 @@ def pluck(f, d, bright=0.5):
     return out * np.exp(-np.arange(n) / SR * 2.2)
 
 
-# ───────────── Música "egipcia" (D frigio dominante, 92 BPM, tambor maqsum, laúd y bordón) ─────────────
-def music_egypt(dur, accents):
-    bpm = 92; beat = 60 / bpm
+# ───────────── Música modal por panteón (MYTHOS) ─────────────
+# egypt: D frigio dominante, 92 BPM, tambor maqsum, laúd y bordón.
+# greek: D dórico, 84 BPM, lira arpegiada y tambor de marco suave (sirve también para Roma).
+# norse: D eólico, 72 BPM, tambores de guerra graves, bordón oscuro y arpa nórdica.
+STYLES = {
+    "egypt": dict(bpm=92, scale=[50, 51, 54, 55, 57, 58, 60, 62, 63, 66, 67, 69], drone=[(38, 1), (45, 0.7), (50, 0.4)],
+                  pat=['D', 'T', '', 'T', 'D', '', 'T', ''], doum=(95, 62, 0.55), tek=0.16, bright=0.55, lead=0.22, drone_g=0.05,
+                  melody=[7, 8, 9, 8, 7, 5, 4, 5, 7, -1, 9, 10, 11, 10, 9, 8, 7, 8, 7, 5, 4, 3, 4, -1]),
+    "greek": dict(bpm=84, scale=[50, 52, 53, 55, 57, 59, 60, 62, 64, 65, 67, 69], drone=[(38, 0.8), (45, 0.6), (57, 0.25)],
+                  pat=['D', '', 'T', '', 'D', 'T', 'T', ''], doum=(110, 70, 0.4), tek=0.10, bright=0.75, lead=0.26, drone_g=0.035,
+                  melody=[7, 9, 11, 9, 8, 7, 4, -1, 5, 7, 8, 7, 5, 4, 2, -1, 4, 5, 7, 8, 9, 8, 7, -1], arp=True),
+    "norse": dict(bpm=72, scale=[50, 52, 53, 55, 57, 58, 60, 62, 64, 65, 67, 69], drone=[(26, 1), (33, 0.8), (38, 0.6)],
+                  pat=['D', '', '', '', 'D', '', 'T', ''], doum=(70, 40, 0.9), tek=0.12, bright=0.35, lead=0.2, drone_g=0.06,
+                  melody=[7, -1, 5, 4, 2, -1, 4, 5, 7, -1, 8, 7, 5, -1, 4, 2, 0, -1, 2, 4, 5, 4, 2, -1]),
+}
+
+
+def music_egypt(dur, accents, style="egypt"):
+    P = STYLES[style]
+    bpm = P["bpm"]; beat = 60 / bpm
     n = int(dur * SR); t = np.arange(n) / SR
-    scale = [50, 51, 54, 55, 57, 58, 60, 62, 63, 66, 67, 69]  # D frigio dominante (D3…A4)
-    # Bordón: D y A con sierras desafinadas y filtro que respira
+    scale = P["scale"]
+    # Bordón con sierras desafinadas y filtro que respira
     drone = np.zeros(n)
-    for m, g in [(38, 1), (45, 0.7), (50, 0.4)]:
+    for m, g in P["drone"]:
         for det in (-0.08, 0.08):
             drone += g * (2 * ((midi(m + det) * t) % 1) - 1)
     lfo = 0.5 + 0.5 * np.sin(2 * np.pi * t / 7.5)
     drone = 0.6 * lp(drone, 500, 2) + 0.4 * lp(drone, 1400, 2) * lfo
-    drone *= 0.05
+    drone *= P["drone_g"]
     # Tambor maqsum: D T . T D . T .
     drums = np.zeros(n)
-    dt_ = t_axis(0.5); doum = np.sin(2 * np.pi * np.cumsum(95 * np.exp(-dt_ * 18) + 62) / SR) * np.exp(-dt_ * 7)
+    f0, f1, dg = P["doum"]
+    dt_ = t_axis(0.6); doum = np.sin(2 * np.pi * np.cumsum(f0 * np.exp(-dt_ * 18) + f1) / SR) * np.exp(-dt_ * (5 if style == "norse" else 7))
     tt_ = t_axis(0.12); tek = bp(rng.standard_normal(len(tt_)), 1800, 6000) * np.exp(-tt_ * 45)
-    pat = ['D', 'T', '', 'T', 'D', '', 'T', '']
+    pat = P["pat"]
     eighth = beat / 2
     for k in range(int(dur / eighth) + 1):
         sym = pat[k % 8]
         if not sym:
             continue
         a = int(k * eighth * SR)
-        sig, g = (doum, 0.55) if sym == 'D' else (tek, 0.16 * (1.15 if k % 16 == 1 else 1))
+        sig, g = (doum, dg) if sym == 'D' else (tek, P["tek"] * (1.15 if k % 16 == 1 else 1))
         if a + len(sig) < n:
             drums[a:a + len(sig)] += sig * g
     # Laúd: frase modal determinista, una nota por negra con adornos
-    melody = [7, 8, 9, 8, 7, 5, 4, 5, 7, -1, 9, 10, 11, 10, 9, 8, 7, 8, 7, 5, 4, 3, 4, -1]
+    melody = P["melody"]
     oud = np.zeros(n)
     for k in range(int(dur / beat)):
         idx = melody[k % len(melody)]
@@ -181,11 +199,16 @@ def music_egypt(dur, accents):
         a = int(k * beat * SR); L = int(min(1.2, beat * 1.6) * SR)
         if a + L > n:
             break
-        oud[a:a + L] += pluck(midi(scale[idx]), L / SR, 0.55)
+        oud[a:a + L] += pluck(midi(scale[idx]), L / SR, P["bright"])
+        if P.get("arp"):  # lira: tercera y quinta arpegiadas
+            for j, off in enumerate((2, 4)):
+                b = a + int((j + 1) * beat / 3 * SR)
+                if b + L < n:
+                    oud[b:b + L] += 0.45 * pluck(midi(scale[min(11, idx + off)]), L / SR, P["bright"])
         if k % 4 == 3 and a + L + int(beat / 2 * SR) < n:  # adorno en contratiempo
             b = a + int(beat / 2 * SR)
             oud[b:b + L] += 0.6 * pluck(midi(scale[min(11, idx + 1)]), L / SR, 0.4)
-    oud = hp(oud, 140) * 0.22
+    oud = hp(oud, 140) * P["lead"]
     # Eco simple para dar espacio de "templo"
     def echo(x, delay, g, taps=3):
         y = x.copy()
@@ -291,7 +314,7 @@ def main(vdir):
     voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
     voice = voice / (np.abs(voice).max() + 1e-9) * 0.9
     accents = [c["t"] for c in cues if c["type"] == "boom"]
-    mus = music_egypt(dur, accents) if tl.get("music") == "egypt" else music(dur, accents)
+    mus = music_egypt(dur, accents, tl["music"]) if tl.get("music") in STYLES else music(dur, accents)
     # Ducking: la música baja cuando habla la voz
     envv = np.abs(voice)
     envv = lp(envv, 6, 1)
