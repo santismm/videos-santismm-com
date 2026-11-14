@@ -1,6 +1,6 @@
 # EUREKA #02 (EN): Your AI already knew the exam (contamination)
 
-- **Video:** `out/002-it-knew-the-exam.mp4` (1080×1920, 30 fps, DURATION s, -14 LUFS)
+- **Video:** `out/002-it-knew-the-exam.mp4` (1080×1920, 30 fps, 55.3 s, -14 LUFS)
 - **Cover:** `out/002-it-knew-the-exam-portada.png` (frame at 5.4 s)
 - **Subtitles:** `out/002-it-knew-the-exam.srt` (English)
 - **Spanish original:** `videos/002-se-sabia-el-examen/`
