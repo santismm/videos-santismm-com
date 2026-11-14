@@ -1,0 +1,27 @@
+{
+  "id": "004-what-var-can-review",
+  "brand": "futbolatlas",
+  "lang": "en",
+  "scenes_js": "../../videos/004-var-que-puede-revisar/scenes.js",
+  "series": "FOOTBALL ATLAS · The law in 60s",
+  "episode": 4,
+  "title": "What VAR can't review",
+  "cover": "What VAR<br><span style=\"color:#caf300\">can't review</span>",
+  "coverTime": 2.4,
+  "voice": "en-GB-RyanNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/var-misconceptions · futbolatlas.app/k/var · futbolatlas.app/k/var-vs-goal-line-technology",
+  "scenes": [
+    { "id": "hook", "text": "VAR can't review everything. It only steps in for four kinds of decision." },
+    { "id": "lista", "text": "Goal or no goal. Penalty or no penalty. Direct red card. And mistaken identity: when the referee books the wrong player." },
+    { "id": "fuera", "text": "A foul in midfield that leads to nothing? Not reviewable, however wrong the call." },
+    { "id": "umbral", "text": "And even then, it has to be a clear and obvious error." },
+    { "id": "pedir", "text": "Players can't ask for it. Only the referee can start a review, and making the screen gesture risks a yellow card." },
+    { "id": "decide", "text": "And VAR doesn't decide: it recommends. The final decision always belongs to the referee." },
+    { "id": "nuevo", "text": "New this edition: a clearly incorrect second yellow can now be reviewed." },
+    { "id": "cta", "text": "Save it, and share it with whoever screams for VAR every week." }
+  ]
+}

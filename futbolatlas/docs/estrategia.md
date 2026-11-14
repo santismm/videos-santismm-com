@@ -43,6 +43,7 @@ Casi todo lo relativo a plataformas procede de blogs de terceros y no de documen
 - **Nombre:** FÚTBOL ATLAS · La regla en 60s. Lema: "El fútbol, con el reglamento en la mano".
 - **Visual:** la de la web. Fondo `#121414`, césped `#0a2a12`, acento lima `#caf300`. Tipografías Source Serif 4 (titulares), Hanken Grotesk (subtítulos) y JetBrains Mono (datos).
 - **Voz:** narrador neuronal es-ES (Álvaro) al +14 %.
+- **Inglés:** marca "Football Atlas · The law in 60s", narrador en-GB (Ryan) al +8 %.
 - **Música y efectos:** sintetizados por código (Re mayor, 112 BPM, silbato, golpeo de balón, obturador).
 
 ## 5. Estructura de guion (≈ 55 s)
@@ -55,22 +56,25 @@ Casi todo lo relativo a plataformas procede de blogs de terceros y no de documen
 | 46–52 s | Tesis para recordar | "No es solo dónde estás: es cuándo, con qué y qué haces" |
 | 52–57 s | CTA de envío | "Compártelo con quien lo pita todo desde el sofá" |
 
-## 6. Primeros 10 vídeos
+## 6. Plan de vídeos
 
-| # | Título de trabajo | Gancho | Fuente en la web |
-|---|---|---|---|
-| 01 ✅ | 4 mitos del fuera de juego | "Cuatro reglas que no existen" | `/k/offside-misconceptions` |
-| 02 ✅ | 5 cambios del reglamento 2026/27 | "5 segundos… o es córner" | `/k/what-changed-in-2026-27` |
-| 03 ✅ | ¿Es mano? Las 3 preguntas de la Regla 12 | "Eso de 'mano es mano' no existe" | `/k/handball-misconceptions` |
-| 04 | Lo que el VAR no puede revisar | "El VAR no puede tocar esto" | `/k/var-misconceptions` |
-| 05 | DOGSO: cuándo es roja y cuándo no | "Último hombre no es una regla" | `/k/dogso` |
-| 06 | Libre directo vs indirecto | "El brazo arriba del árbitro significa algo" | `/k/direct-vs-indirect-free-kick` |
-| 07 | Cómo funciona el Mundial de 48 | "104 partidos, explicado en 60 s" | `/k/how-the-48-team-world-cup-works` |
-| 08 | La Panenka es legal (y esto otro no) | "Un penalti inventado por una chocolatina" | `/k/panenka` |
-| 09 | Juego brusco grave vs conducta violenta | "Las dos son roja, pero no son lo mismo" | `/k/serious-foul-play-vs-violent-conduct` |
-| 10 | Estambul 2005 en 60 s | "3-0 al descanso" | `/k/champions-league-2005-final` |
+Los seis primeros están producidos en español e inglés. El plan completo de las cuatro primeras semanas, con fechas, está en [`../brand/calendario.md`](../brand/calendario.md).
+
+| # | Título | Fuente en la web |
+|---|---|---|
+| 01 ✅ | 4 mitos del fuera de juego | `/k/offside-misconceptions` |
+| 02 ✅ | 5 cambios del reglamento 2026/27 | `/k/what-changed-in-2026-27` |
+| 03 ✅ | ¿Es mano? Las 3 preguntas de la Regla 12 | `/k/how-handball-actually-works` |
+| 04 ✅ | Lo que el VAR puede revisar | `/k/var-misconceptions` |
+| 05 ✅ | «Último hombre» no es la regla: cuándo es roja | `/k/dogso` |
+| 06 ✅ | Libre directo vs indirecto | `/k/direct-vs-indirect-free-kick` |
+| 07 | Cómo funciona la tanda de penaltis | `/k/how-a-penalty-shootout-works` |
+| 08 | La Panenka es legal (y de dónde sale) | `/k/panenka` |
+| 09 | Juego brusco grave vs conducta violenta | `/k/serious-foul-play-vs-violent-conduct` |
+| 10 | La ley de la ventaja | `/k/advantage` |
 
 ## 7. Decisiones abiertas
 
-- **Cuentas:** hace falta crear o indicar las cuentas de TikTok, YouTube e Instagram del canal y conectarlas a Metricool si se quiere programación automática.
-- **Ritmo:** propuesta de 3 vídeos por semana, alternando reglas e historia.
+- **Cuentas:** pendientes de crear y conectar a Metricool; el kit está en [`../brand/canales.md`](../brand/canales.md).
+- **Una cuenta por idioma o una sola:** recomendación, cuentas separadas para español e inglés.
+- **Ritmo:** 4 vídeos por semana (lunes, miércoles, viernes y domingo), con un buffer de 6 vídeos revisados.

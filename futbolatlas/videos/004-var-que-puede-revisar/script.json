@@ -1,0 +1,25 @@
+{
+  "id": "004-var-que-puede-revisar",
+  "brand": "futbolatlas",
+  "series": "FÚTBOL ATLAS · La regla en 60s",
+  "episode": 4,
+  "title": "Lo que el VAR no puede revisar",
+  "cover": "Lo que el VAR<br><span style=\"color:#caf300\">no puede revisar</span>",
+  "coverTime": 2.4,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/var-misconceptions · futbolatlas.app/k/var · futbolatlas.app/k/var-vs-goal-line-technology",
+  "scenes": [
+    { "id": "hook", "text": "El VAR no puede revisarlo todo. Solo entra en cuatro tipos de jugada." },
+    { "id": "lista", "text": "Gol o no gol. Penalti o no penalti. Roja directa. Y confusión de identidad: cuando se amonesta al jugador equivocado." },
+    { "id": "fuera", "text": "¿Una falta en el centro del campo que no acaba en nada? No es revisable, por muy mal pitada que esté." },
+    { "id": "umbral", "text": "Y ni siquiera eso basta: tiene que ser un error claro y manifiesto." },
+    { "id": "pedir", "text": "Los jugadores no pueden pedirlo. Solo el árbitro inicia una revisión, y hacer el gesto de la pantalla puede costar amarilla." },
+    { "id": "decide", "text": "Además, el VAR no manda: recomienda. La decisión final es siempre del árbitro." },
+    { "id": "nuevo", "text": "Novedad de esta edición: ya se puede revisar una segunda amarilla claramente errónea." },
+    { "id": "cta", "text": "Guárdalo, y compártelo con quien pide VAR en cada jugada." }
+  ]
+}
