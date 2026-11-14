@@ -96,6 +96,7 @@
     while (pins.length < 20) {
       const p = [130 + rand() * 800, 470 + rand() * 330];
       if (hubs.some((h) => Math.hypot(h[0] - p[0], h[1] - p[1]) < 90)) continue;
+      if (Math.abs(p[0] - 560) < 190 && p[1] > 630 && p[1] < 740) continue; // deja libre la etiqueta del centro
       if (pins.some((q) => Math.hypot(q[0] - p[0], q[1] - p[1]) < 70)) continue;
       pins.push(p);
     }
@@ -311,7 +312,8 @@
     const tA = wA.ls;
     x.cue(tCo, 'stamp', 0.8); x.shake(tCo, 10); x.cue(tEv, 'swipe', 0.5); x.cue(tA, 'ding', 0.8);
     return (lt) => {
-      popIn(q, lt, tCo - 0.15, 0.6);
+      popIn(q, lt, 0.15, 0.6); // visible desde el inicio («Ante una cifra, pregunta…»), con golpe en «comparado»
+      q.style.scale = lt > tCo ? 1 + 0.12 * Math.sin(Math.min(1, (lt - tCo) / 0.35) * Math.PI) : 1;
       bars.forEach((b, i) => {
         const k = Ease.outCubic(prog(lt, tEv - 0.3 + i * 0.12, 0.45));
         b.style.opacity = k > 0 ? 1 : 0; b.style.transform = `scaleX(${k})`;
