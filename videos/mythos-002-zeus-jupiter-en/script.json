@@ -1,0 +1,63 @@
+{
+  "id": "mythos-002-zeus-jupiter-en",
+  "brand": "mythos",
+  "lang": "en",
+  "music": "greek",
+  "scenesFile": "../mythos-002-zeus-jupiter/scenes.js",
+  "series": "MYTHOS · Myth vs Text",
+  "episode": 2,
+  "title": "Are Zeus and Jupiter the same god? In myth, yes. In Rome, no.",
+  "cover": "<span style=\"font-size:80px;font-weight:900\">Zeus = Jupiter?<br><span style=\"color:#e3b75a\">In myth, yes.<br>In Rome, no.</span></span>",
+  "coverTime": 5.4,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+19%",
+  "pitch": "-2Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/zeus-vs-jupiter · /k/jupiter · /k/zeus",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Are Zeus and Jupiter the same god? In myth, yes. In Rome, no."
+    },
+    {
+      "id": "mito",
+      "text": "Ovid tells the stories of Zeus under Latin names: the son of Saturn, the thunderbolt controller."
+    },
+    {
+      "id": "mismo",
+      "text": "Birth, thunderbolt, kingship, love affairs: it's Hesiod and Homer in Roman dress."
+    },
+    {
+      "id": "nombre",
+      "text": "And the name only travels one way: Greek texts never call Zeus Jupiter."
+    },
+    {
+      "id": "templo",
+      "text": "But in cult, he's a different god. Rome's first temple was his: Jupiter Feretrius, where Romulus hung the spoils of the king he killed."
+    },
+    {
+      "id": "stator",
+      "text": "As his army flees, Romulus vows him another temple: Jupiter Stator, the Stayer."
+    },
+    {
+      "id": "imperio",
+      "text": "And in Virgil, Jupiter promises Rome an empire without end."
+    },
+    {
+      "id": "zeus",
+      "text": "Hesiod's Zeus rules because the gods asked him to. And he promises no city anything."
+    },
+    {
+      "id": "regla",
+      "text": "Rule of thumb: in the stories, Jupiter is the Roman Zeus. In religion, he's the god of Rome."
+    },
+    {
+      "id": "fuente",
+      "text": "Which text says so? Ovid and Hesiod for the myth; Livy and Virgil for Rome."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and send it to anyone who says Jupiter is just Zeus with a new name."
+    }
+  ]
+}

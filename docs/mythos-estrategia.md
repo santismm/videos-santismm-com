@@ -69,13 +69,13 @@
 | # | Título de trabajo | Gancho (0–3 s) | Ficha |
 |---|---|---|---|
 | 01 ✅ ES/EN | **La diosa que casi extermina a la humanidad** | «La pararon… con cerveza» | /k/hathor · /k/flood-myths-compared |
-| 02 | **¿Zeus y Júpiter son el mismo dios?** | «En el mito, sí. En Roma, no.» | /k/zeus-vs-jupiter |
-| 03 | **Solo una mitología cuenta el fin del mundo** | «Los griegos no tienen apocalipsis» | /k/end-of-the-world-myths-compared |
-| 04 | **Hestia: la diosa sin historias que en Roma lo era todo** | «No tiene mitos… y tenía el fuego de Roma» | /k/hestia-vs-vesta |
-| 05 | **El nombre secreto de Ra** | «Isis le robó su nombre secreto» | /k/ra · /k/isis |
-| 06 | **Odín vs Thor: el dios de los nobles y el de los esclavos** | «Padre e hijo… y se insultan» | /k/odin-vs-thor |
-| 07 | **¿Diluvio nórdico? Solo hay un gigante en un barco** | «Una estrofa. Ni agua.» | /k/flood-myths-compared |
-| 08 | **4 dioses del sol… y solo 3 son el sol** | «Apolo no es el sol en Homero» | /k/sun-gods-compared |
+| 02 ✅ ES/EN | **¿Zeus y Júpiter son el mismo dios?** | «En el mito, sí. En Roma, no.» | /k/zeus-vs-jupiter · /k/jupiter |
+| 03 ✅ ES/EN | **Solo una mitología cuenta el fin del mundo** | «Cuatro mitologías. Solo una cuenta cómo se acaba el mundo.» | /k/end-of-the-world-myths-compared · /k/ragnarok |
+| 04 ✅ ES/EN | **El nombre secreto de Ra** | «El dios más poderoso de Egipto tenía un punto débil: su nombre» | /k/ra · /k/isis |
+| 05 ✅ ES/EN | **Hestia: la diosa sin historias que en Roma lo era todo** | «Una diosa griega casi sin historias…» | /k/hestia-vs-vesta |
+| 06 ✅ ES/EN | **4 dioses del sol… y solo 3 son el sol** | «Apolo no es el sol en Homero» | /k/sun-gods-compared |
+| 07 | **Odín vs Thor: el dios de los nobles y el de los esclavos** | «Padre e hijo… y se insultan» | /k/odin-vs-thor |
+| 08 | **¿Diluvio nórdico? Solo hay un gigante en un barco** | «Una estrofa. Ni agua.» | /k/flood-myths-compared |
 | 09 | **Ares, el dios que hasta Zeus odiaba** | «"El más odioso de los dioses"» | /k/ares-vs-mars |
 | 10 | **Freyja se queda con la mitad de los muertos** | «No todos van al Valhalla» | /k/love-goddesses-compared |
 

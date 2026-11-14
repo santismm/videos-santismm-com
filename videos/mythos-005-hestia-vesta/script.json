@@ -1,0 +1,62 @@
+{
+  "id": "mythos-005-hestia-vesta",
+  "brand": "mythos",
+  "music": "greek",
+  "episode": 5,
+  "lang": "es",
+  "series": "MYTHOS · Mito vs Texto",
+  "title": "Hestia: la diosa sin historias que en Roma lo era todo",
+  "cover": "<div style=\"font-size:62px;font-weight:900;line-height:1.12\">Hestia: casi sin historias…<br><span style=\"color:#e3b75a\">y el fuego de Troya</span></div>",
+  "coverTime": 4.9,
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+21%",
+  "pitch": "-3Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/hestia-vs-vesta · /k/hestia · /k/vesta",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Una diosa griega casi sin historias. Y en Roma, guardiana del fuego de Troya."
+    },
+    {
+      "id": "primera",
+      "text": "Hestia es la primogénita de Cronos: la primera que se traga… y la última que vomita."
+    },
+    {
+      "id": "juramento",
+      "text": "Poseidón y Apolo la pretenden. Ella toca la cabeza de Zeus y jura ser doncella para siempre."
+    },
+    {
+      "id": "premio",
+      "text": "Su premio: el centro de la casa. Y en cada banquete se le ofrece vino, lo primero y lo último."
+    },
+    {
+      "id": "nada",
+      "text": "Y eso es casi todo. Los textos griegos no le dan más historia. Ni siquiera sacerdotes."
+    },
+    {
+      "id": "roma",
+      "text": "Ahora, Roma. Vesta tiene a las vírgenes vestales: Numa les da un sueldo público y las hace intocables."
+    },
+    {
+      "id": "troya",
+      "text": "Su fuego viene de Troya: el fantasma de Héctor se lo entrega a Eneas en la ciudad en llamas."
+    },
+    {
+      "id": "romulo",
+      "text": "Y la madre de Rómulo, Rea Silvia, era una vestal."
+    },
+    {
+      "id": "venn",
+      "text": "Son la misma diosa por su función: el hogar y la virginidad. Pero no comparten ni un solo mito."
+    },
+    {
+      "id": "moraleja",
+      "text": "Antes de decir que es la misma diosa, pregunta: ¿qué texto lo dice?"
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien crea que Vesta es solo la Hestia romana."
+    }
+  ]
+}

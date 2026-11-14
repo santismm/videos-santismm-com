@@ -27,6 +27,16 @@ Segundo canal producido con el mismo motor (`"brand": "mythos"` en `script.json`
 |---|---|---|---|
 | 01 | La diosa que casi extermina a la humanidad… y la pararon con cerveza | [mp4](videos/mythos-001-hathor-cerveza/out/mythos-001-hathor-cerveza.mp4) | [publicacion.md](videos/mythos-001-hathor-cerveza/publicacion.md) |
 | 01 EN | The goddess who almost wiped out humanity… and they stopped her with beer | [mp4](videos/mythos-001-hathor-beer-en/out/mythos-001-hathor-beer-en.mp4) | [publicacion.md](videos/mythos-001-hathor-beer-en/publicacion.md) |
+| 02 | ¿Zeus y Júpiter son el mismo dios? En el mito, sí. En Roma, no. | [mp4](videos/mythos-002-zeus-jupiter/out/mythos-002-zeus-jupiter.mp4) | [publicacion.md](videos/mythos-002-zeus-jupiter/publicacion.md) |
+| 02 EN | Are Zeus and Jupiter the same god? In myth, yes. In Rome, no. | [mp4](videos/mythos-002-zeus-jupiter-en/out/mythos-002-zeus-jupiter-en.mp4) | [publicacion.md](videos/mythos-002-zeus-jupiter-en/publicacion.md) |
+| 03 | Solo una mitología cuenta el fin del mundo | [mp4](videos/mythos-003-fin-del-mundo/out/mythos-003-fin-del-mundo.mp4) | [publicacion.md](videos/mythos-003-fin-del-mundo/publicacion.md) |
+| 03 EN | Only one mythology tells how the world ends | [mp4](videos/mythos-003-fin-del-mundo-en/out/mythos-003-fin-del-mundo-en.mp4) | [publicacion.md](videos/mythos-003-fin-del-mundo-en/publicacion.md) |
+| 04 | El nombre secreto de Ra: cómo Isis robó el poder del dios del sol | [mp4](videos/mythos-004-nombre-secreto-ra/out/mythos-004-nombre-secreto-ra.mp4) | [publicacion.md](videos/mythos-004-nombre-secreto-ra/publicacion.md) |
+| 04 EN | Ra's secret name: how Isis stole the sun god's power | [mp4](videos/mythos-004-nombre-secreto-ra-en/out/mythos-004-nombre-secreto-ra-en.mp4) | [publicacion.md](videos/mythos-004-nombre-secreto-ra-en/publicacion.md) |
+| 05 | Hestia: la diosa sin historias que en Roma lo era todo | [mp4](videos/mythos-005-hestia-vesta/out/mythos-005-hestia-vesta.mp4) | [publicacion.md](videos/mythos-005-hestia-vesta/publicacion.md) |
+| 05 EN | Hestia: the goddess with no stories who was everything in Rome | [mp4](videos/mythos-005-hestia-vesta-en/out/mythos-005-hestia-vesta-en.mp4) | [publicacion.md](videos/mythos-005-hestia-vesta-en/publicacion.md) |
+| 06 | 4 dioses del sol… y solo 3 son el sol | [mp4](videos/mythos-006-dioses-del-sol/out/mythos-006-dioses-del-sol.mp4) | [publicacion.md](videos/mythos-006-dioses-del-sol/publicacion.md) |
+| 06 EN | 4 sun gods… and only 3 are the sun | [mp4](videos/mythos-006-dioses-del-sol-en/out/mythos-006-dioses-del-sol-en.mp4) | [publicacion.md](videos/mythos-006-dioses-del-sol-en/publicacion.md) |
 
 ## Publicación automática
 

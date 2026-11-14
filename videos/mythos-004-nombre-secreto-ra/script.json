@@ -1,0 +1,61 @@
+{
+  "id": "mythos-004-nombre-secreto-ra",
+  "brand": "mythos",
+  "music": "egypt",
+  "episode": 4,
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/ra · /k/isis",
+  "series": "MYTHOS · Mito vs Texto",
+  "title": "El nombre secreto de Ra: cómo Isis robó el poder del dios del sol",
+  "cover": "<span style=\"font-size:82px;font-weight:900\">El nombre secreto de Ra.<br><span style=\"color:#e3b75a\">Isis se lo robó</span></span>",
+  "coverTime": 4.2,
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+12%",
+  "pitch": "-3Hz",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "El dios más poderoso de Egipto tenía un punto débil: su nombre. Y una diosa se lo robó."
+    },
+    {
+      "id": "nombres",
+      "text": "Ra lo dice él mismo: soy Khepera por la mañana, Ra al mediodía, y Temu por la tarde."
+    },
+    {
+      "id": "oculto",
+      "text": "Pero su nombre secreto lo escondieron sus padres dentro de su cuerpo, para que ningún hechizo pudiera dominarlo."
+    },
+    {
+      "id": "isis",
+      "text": "Isis conocía palabras de poder, y quería ser tan grande como Ra."
+    },
+    {
+      "id": "serpiente",
+      "text": "Recoge la saliva del viejo dios, la amasa con polvo… y crea una serpiente."
+    },
+    {
+      "id": "mordida",
+      "text": "La deja en su camino. Le muerde, y el fuego de la vida se le escapa del cuerpo."
+    },
+    {
+      "id": "trato",
+      "text": "Isis solo lo cura cuando Ra deja que su nombre pase de su cuerpo al de ella."
+    },
+    {
+      "id": "hechizo",
+      "text": "Y ella conjura: ¡sal, veneno! ¡Ra vive, el veneno muere!"
+    },
+    {
+      "id": "reina",
+      "text": "Desde entonces, Isis es la reina de los dioses que conoce a Ra por su propio nombre."
+    },
+    {
+      "id": "fuente",
+      "text": "¿Qué texto lo dice? Un papiro egipcio que se guarda en Turín."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien crea que Ra era invencible."
+    }
+  ]
+}
