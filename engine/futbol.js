@@ -24,7 +24,7 @@
     return { el, items, s, w, h, x, y, P: (mx, md) => [mx * s, md * s] };
   }
 
-  const TEAM = () => ({ atk: [C.cyan, '#171e00'], def: ['#ffffff', '#121414'], gk: [C.amber, '#121414'] });
+  const TEAM = () => ({ atk: [C.cyan, '#171e00'], def: ['#ffffff', '#121414'], gk: [C.amber, '#121414'], ref: ['#1b1b1b', '#ffd400'] });
 
   /** Ficha de jugador. Devuelve el elemento con .at(mx, md, escala=1). */
   function token(p, team, label = '') {
@@ -87,9 +87,9 @@
   }
 
   /** Barra de veredicto bajo el campo. */
-  function verdict(parent, html, { top = 1040, color = C.cyan, size = 54 } = {}) {
+  function verdict(parent, html, { top = 1040, color = C.cyan, size = 54, icon = I.check } = {}) {
     const el = add(parent, `<div class="abs caption" style="left:90px;width:840px;top:${top}px;height:128px;border-radius:24px;background:${color};color:#121414;display:flex;align-items:center;justify-content:center;gap:18px;font-size:${size}px;font-weight:900;letter-spacing:.01em;text-align:center;line-height:1.05;box-shadow:0 0 60px ${color}55">
-      <div style="width:58px;height:58px;flex:none">${I.check}</div><div>${html}</div></div>`);
+      <div style="width:58px;height:58px;flex:none">${icon}</div><div>${html}</div></div>`);
     el.set = (lt, t) => { const s = spring(lt, t, 0.45); el.style.opacity = s > 0 ? 1 : 0; el.style.transform = `scale(${lerp(0.7, 1, s)})`; };
     return el;
   }
@@ -122,5 +122,38 @@
     };
   }
 
-  EUREKA.fa = { pitch, token, ball, offsideLine, tag, myth, stamp, verdict, flagSvg, endCard };
+  /** Cabecera de la serie "Regla nueva": píldora CAMBIO n/total, referencia de la regla y titular. */
+  function change(x, n, total, law, title) {
+    const r = x.root;
+    const row = add(r, `<div class="abs mono" style="left:96px;top:318px;display:flex;align-items:center;gap:18px;font-size:27px;font-weight:700;letter-spacing:.12em;transform-origin:0 50%">
+      <span style="padding:10px 22px;border-radius:999px;background:${C.cyan};color:#121414">CAMBIO ${n}/${total}</span><span style="color:${C.muted}">${law}</span></div>`);
+    const t = add(r, `<div class="abs display" style="left:96px;width:834px;top:392px;font-size:58px;line-height:1.1;font-weight:700;color:${C.ink}">${title}</div>`);
+    return (lt) => {
+      const a = spring(lt, 0.05, 0.4); row.style.opacity = a > 0 ? 1 : 0; row.style.transform = `scale(${lerp(0.6, 1, a)})`;
+      const k = appear(lt, 0.2, 0.35); t.style.opacity = k; t.style.transform = `translateX(${(1 - k) * -40}px)`;
+    };
+  }
+
+  /** Anillo de cuenta atrás. set(k, color): k = 0 (lleno, muestra `from`) → 1 (vacío, muestra 0). */
+  function ring(parent, { x, y, size = 260, from = 5, unit = 's' }) {
+    const R = 44, L = 2 * Math.PI * R;
+    const el = add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${size}px;height:${size}px">
+      <svg viewBox="0 0 100 100" style="width:100%;height:100%;transform:rotate(-90deg)"><circle cx="50" cy="50" r="${R}" fill="rgba(10,42,18,.85)" stroke="${C.lineStrong}" stroke-width="7"/>
+        <circle class="arc" cx="50" cy="50" r="${R}" fill="none" stroke="${C.cyan}" stroke-width="7" stroke-linecap="round" stroke-dasharray="${L}" stroke-dashoffset="0"/></svg>
+      <div class="abs caption num" style="inset:0;display:flex;align-items:center;justify-content:center;font-size:${size * 0.5}px;font-weight:900;color:${C.ink};font-variant-numeric:tabular-nums;line-height:1">${from}</div>
+      <div class="abs mono" style="left:0;right:0;bottom:${size * 0.13}px;text-align:center;font-size:${size * 0.085}px;font-weight:700;color:${C.muted};letter-spacing:.1em">${unit}</div></div>`);
+    const arc = el.querySelector('.arc'), num = el.querySelector('.num');
+    el.set = (k, color = C.cyan) => {
+      arc.setAttribute('stroke-dashoffset', L * k); arc.setAttribute('stroke', color);
+      num.textContent = Math.ceil(from * (1 - k) - 1e-6); num.style.color = k >= 1 ? color : C.ink;
+    };
+    return el;
+  }
+
+  /** Tarjeta de árbitro. */
+  function card(parent, color, { x, y, w = 150, rot = 0 }) {
+    return add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${w * 1.4}px;border-radius:${w * 0.11}px;background:linear-gradient(160deg, ${color}, ${color}cc);box-shadow:0 18px 40px rgba(0,0,0,.55), inset 0 0 0 3px rgba(255,255,255,.25);transform:rotate(${rot}deg)"></div>`);
+  }
+
+  EUREKA.fa = { change, ring, card, pitch, token, ball, offsideLine, tag, myth, stamp, verdict, flagSvg, endCard };
 })();

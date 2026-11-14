@@ -5,7 +5,7 @@
 ## 1. Análisis de la web (14-11-2026)
 
 - **Qué es:** "Football Atlas", un atlas de las Reglas de Juego y de las grandes competiciones en el que cada afirmación cita una fuente primaria (IFAB, FIFA, UEFA, CONMEBOL). La portada declara 141 objetos de conocimiento, 596 afirmaciones con fuente y 132 fuentes primarias. Licencia CC BY 4.0.
-- **Idioma:** la web está en inglés. El canal se plantea en español (ver "Decisiones abiertas").
+- **Idioma:** la web está en inglés. El canal es en español de España (decidido el 14-11-2026).
 - **Contenido aprovechable para vídeo:**
 
 | Bloque de la web | Ejemplos | Serie de vídeo |
@@ -60,18 +60,17 @@ Casi todo lo relativo a plataformas procede de blogs de terceros y no de documen
 | # | Título de trabajo | Gancho | Fuente en la web |
 |---|---|---|---|
 | 01 ✅ | 4 mitos del fuera de juego | "Cuatro reglas que no existen" | `/k/offside-misconceptions` |
-| 02 | 10 segundos para irte: los cambios 2026/27 | "5 segundos… o es córner" | `/k/what-changed-in-2026-27` |
+| 02 ✅ | 5 cambios del reglamento 2026/27 | "5 segundos… o es córner" | `/k/what-changed-in-2026-27` |
 | 03 | Mano: lo que la regla dice de verdad | "No, 'mano es mano' no existe" | `/k/handball-misconceptions` |
 | 04 | Lo que el VAR no puede revisar | "El VAR no puede tocar esto" | `/k/var-misconceptions` |
 | 05 | DOGSO: cuándo es roja y cuándo no | "Último hombre no es una regla" | `/k/dogso` |
 | 06 | Libre directo vs indirecto | "El brazo arriba del árbitro significa algo" | `/k/direct-vs-indirect-free-kick` |
 | 07 | Cómo funciona el Mundial de 48 | "104 partidos, explicado en 60 s" | `/k/how-the-48-team-world-cup-works` |
 | 08 | La Panenka es legal (y esto otro no) | "Un penalti inventado por una chocolatina" | `/k/panenka` |
-| 09 | El VAR ya llega a la segunda amarilla | "El cambio más silencioso de 2026/27" | `/k/what-changed-in-2026-27` |
+| 09 | Juego brusco grave vs conducta violenta | "Las dos son roja, pero no son lo mismo" | `/k/serious-foul-play-vs-violent-conduct` |
 | 10 | Estambul 2005 en 60 s | "3-0 al descanso" | `/k/champions-league-2005-final` |
 
 ## 7. Decisiones abiertas
 
-- **Idioma:** español de España por defecto. El mismo guion se puede regenerar en inglés o en español neutro con otra voz.
 - **Cuentas:** hace falta crear o indicar las cuentas de TikTok, YouTube e Instagram del canal y conectarlas a Metricool si se quiere programación automática.
 - **Ritmo:** propuesta de 3 vídeos por semana, alternando reglas e historia.
