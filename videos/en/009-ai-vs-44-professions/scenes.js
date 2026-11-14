@@ -1,4 +1,6 @@
-/* EUREKA #09 · "La IA frente a 44 profesiones" (GDPval)
+/* EUREKA #09 (EN) · "AI vs 44 professions" (GDPval) — English version of videos/009-la-ia-frente-a-44-profesiones.
+ * Sources (see publicacion.md): the GDPval paper (arXiv 2510.04374), GPT-5.2 and GPT-5.5 announcements (vendor numbers).
+ * Original Spanish notes:
  * Fuente primaria: OpenAI, "GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks"
  * (arXiv 2510.04374, 5-10-2025) y el post "Measuring the performance of our models on real-world tasks" (25-9-2025):
  * 1.320 tareas (30 por ocupación) de 44 ocupaciones en los 9 sectores que más aportan al PIB de EE. UU.; expertos con
@@ -17,7 +19,7 @@
   const { pill, endCard, popText, popIn } = EUREKA.ui;
   const L = EUREKA.L;
 
-  EUREKA.video = { keywords: ['44', 'ciegas', '48%', '50%', '71%', '85%', 'fabricante', 'experto', 'honesto', 'paridad', 'tus'] };
+  EUREKA.video = { keywords: ['44', 'blind', '48%', '50%', '71%', '85%', 'maker', 'expert', 'honest', 'parity', 'your'] };
   const PERSON = `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><circle cx="32" cy="20" r="11"/><path d="M12 58c0-12 9-20 20-20s20 8 20 20"/></svg>`;
   const CHIP = `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="32" height="32" rx="5"/><rect x="25" y="25" width="14" height="14" rx="2"/><path d="M24 6v10M32 6v10M40 6v10M24 48v10M32 48v10M40 48v10M6 24h10M6 32h10M6 40h10M48 24h10M48 32h10M48 40h10"/></svg>`;
   const int = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, L('.', ','));
@@ -191,7 +193,7 @@
     const whoTxt = [L('GPT-5.2 Thinking · OpenAI · dic. 2025', 'GPT-5.2 Thinking · OpenAI · Dec 2025'), L('GPT-5.5 · OpenAI · abr. 2026', 'GPT-5.5 · OpenAI · Apr 2026')];
     const who = add(r, `<div class="abs mono" style="left:0;right:0;top:${RY + 265}px;text-align:center;font-size:26px;font-weight:700;color:${C.fg}">${whoTxt[0]}</div>`);
     const stamp = add(r, `<div class="abs display" style="left:170px;top:${RY + 330}px;width:740px;padding:10px 0;text-align:center;white-space:nowrap;border:6px solid ${C.amber};border-radius:18px;color:${C.amber};font-size:40px;font-weight:700;letter-spacing:.04em;background:rgba(11,15,25,.85)">${L('DATOS DEL PROPIO FABRICANTE', "THE MAKER'S OWN NUMBERS")}</div>`);
-    const t71 = x.at('71'), t85 = x.at('85'), tO = x.at(L('datos', 'numbers'));
+    const t71 = x.at('71'), t85 = x.at('85'), tO = x.at(L('datos', 'maker'));
     x.cue(t71 - 0.3, 'rise', 0.6); x.cue(t71, 'ding', 0.8); x.cue(t85 - 0.3, 'rise', 0.6); x.cue(t85, 'boom', 0.9); x.shake(t85 + 0.05, 16);
     x.cue(tO + 0.1, 'stamp', 0.9); x.shake(tO + 0.1, 10);
     return (lt) => {
@@ -257,8 +259,8 @@
         <div class="abs" style="${tail}:70px;bottom:-34px;width:60px;height:60px;background:${C.surface};border-right:5px solid ${color};border-bottom:5px solid ${color};transform:rotate(45deg)"></div></div>`);
     const A = bubble(360, L('¿Aprueba un examen?', 'Does it pass an exam?'), C.red, 'left');
     const strike = add(r, `<svg class="abs" width="1080" height="300" style="left:0;top:330px"><line x1="160" y1="230" x2="920" y2="60" stroke="${C.red}" stroke-width="14" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>`);
-    const B = bubble(680, L('¿Gana o empata a un experto…<br>en <span class="tus" style="color:' + C.amber + '">TUS</span> tareas?', 'Does it win or tie against an expert…<br>on <span class="tus" style="color:' + C.amber + '">YOUR</span> tasks?'), C.green, 'right');
-    const tEx = x.at(L('examen', 'exam')), tP = x.at(L('pregunta', 'ask')), tT = x.at(L('tus', 'your'));
+    const B = bubble(680, L('¿Gana o empata a un experto…<br>en <span class="tus" style="color:' + C.amber + '">TUS</span> tareas?', 'Does it win or tie<br>against an expert…<br>on <span class="tus" style="color:' + C.amber + '">YOUR</span> tasks?'), C.green, 'right');
+    const tEx = x.at(L('examen', 'exam')), tP = x.at(L('pregunta', 'ask'), L(0, 1)), tT = x.at(L('tus', 'your'));
     x.cue(tEx + 0.1, 'swipe', 0.7); x.cue(tP, 'pop', 0.6); x.cue(tT, 'ding', 0.8);
     return (lt) => {
       popIn(A, lt, 0.1, 0.7);
@@ -275,9 +277,9 @@
   scene('tesis', (x) => {
     const r = x.root;
     const l1 = popText(r, L('EL BENCHMARK<br>MÁS HONESTO', 'THE MOST HONEST<br>BENCHMARK'), `top:360px;font-size:104px;line-height:1.02;color:${C.ink}`);
-    const l2 = add(r, `<div class="abs mono" style="left:0;right:0;top:610px;text-align:center;font-size:36px;font-weight:700;letter-spacing:.06em;color:${C.muted}">${L('ES EL TRABAJO POR EL QUE SE PAGA', 'IS THE WORK YOU PAY')}</div>`);
-    const l3 = popText(r, L('A UN<br>PROFESIONAL', 'A PROFESSIONAL<br>TO DO'), `top:690px;font-size:130px;line-height:1;color:${C.amber};text-shadow:0 0 60px rgba(245,158,11,.6)`);
-    const tB = x.at('benchmark'), tTr = x.at(L('trabajo', 'work')), tPr = x.at(L('profesional', 'professional'));
+    const l2 = add(r, `<div class="abs mono" style="left:0;right:0;top:610px;text-align:center;font-size:36px;font-weight:700;letter-spacing:.06em;color:${C.muted}">${L('ES EL TRABAJO POR EL QUE SE PAGA', 'IS THE JOB')}</div>`);
+    const l3 = popText(r, L('A UN<br>PROFESIONAL', 'A PROFESSIONAL<br>GETS PAID TO DO'), `top:690px;font-size:${L(130, 100)}px;line-height:1;color:${C.amber};text-shadow:0 0 60px rgba(245,158,11,.6)`);
+    const tB = x.at('benchmark'), tTr = x.at(L('trabajo', 'job')), tPr = x.at(L('profesional', 'professional'));
     x.cue(tPr - 0.15, 'rise', 0.6); x.cue(tPr, 'boom', 1); x.shake(tPr, 20);
     return (lt) => {
       popIn(l1, lt, tB - 0.3, 0.7);

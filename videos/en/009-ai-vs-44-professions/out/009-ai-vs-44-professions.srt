@@ -1,0 +1,100 @@
+1
+00:00:00,244 --> 00:00:02,390
+AI versus 44 professions:
+
+2
+00:00:02,461 --> 00:00:04,607
+lawyers, nurses, accountants.
+
+3
+00:00:04,820 --> 00:00:05,503
+Who wins?
+
+4
+00:00:05,900 --> 00:00:08,140
+OpenAI measured it with GDPval:
+
+5
+00:00:08,247 --> 00:00:11,916
+1,320 real tasks, written by experts with
+
+6
+00:00:11,926 --> 00:00:13,706
+about 14 years on the job.
+
+7
+00:00:14,124 --> 00:00:17,051
+Another expert compares two unsigned deliverables, the
+
+8
+00:00:17,061 --> 00:00:19,831
+human's and the AI's, and picks blind.
+
+9
+00:00:20,236 --> 00:00:23,245
+In 2025, the best model won or tied
+
+10
+00:00:23,255 --> 00:00:25,672
+on almost 48% of tasks.
+
+11
+00:00:25,873 --> 00:00:27,417
+Parity is 50%.
+
+12
+00:00:27,812 --> 00:00:32,496
+Then OpenAI announced 71%, and in 2026, almost
+
+13
+00:00:32,506 --> 00:00:33,708
+85%.
+
+14
+00:00:33,909 --> 00:00:35,548
+But those are the maker's own numbers.
+
+15
+00:00:35,976 --> 00:00:38,242
+But these tasks are well-defined, with full
+
+16
+00:00:38,252 --> 00:00:39,844
+context, and one-shot.
+
+17
+00:00:40,033 --> 00:00:41,223
+A job is much more.
+
+18
+00:00:41,632 --> 00:00:42,280
+The lesson:
+
+19
+00:00:42,387 --> 00:00:44,521
+don't ask if AI passes an exam.
+
+20
+00:00:44,710 --> 00:00:46,422
+Ask if it wins or ties with
+
+21
+00:00:46,432 --> 00:00:47,941
+an expert on your tasks.
+
+22
+00:00:48,368 --> 00:00:50,174
+Because the most honest benchmark is the
+
+23
+00:00:50,184 --> 00:00:52,118
+job a professional gets paid to do.
+
+24
+00:00:52,524 --> 00:00:54,236
+Save it, and share it with anyone
+
+25
+00:00:54,246 --> 00:00:56,262
+who still measures AI with exams.
+
