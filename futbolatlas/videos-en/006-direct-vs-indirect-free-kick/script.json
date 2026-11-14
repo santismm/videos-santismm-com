@@ -1,0 +1,26 @@
+{
+  "id": "006-direct-vs-indirect-free-kick",
+  "brand": "futbolatlas",
+  "lang": "en",
+  "scenes_js": "../../videos/006-libre-directo-vs-indirecto/scenes.js",
+  "series": "FOOTBALL ATLAS · The law in 60s",
+  "episode": 6,
+  "title": "Direct vs indirect free kick: the referee's arm tells you",
+  "cover": "Direct vs<br><span style=\"color:#ffb627\">indirect</span>",
+  "coverTime": 2.0,
+  "voice": "en-GB-RyanNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/direct-vs-indirect-free-kick",
+  "scenes": [
+    { "id": "hook", "text": "If the referee raises an arm, that free kick cannot go straight in." },
+    { "id": "marcar", "text": "Difference one: scoring. A direct free kick can go straight into the net. An indirect one needs another player to touch the ball." },
+    { "id": "saque", "text": "And if an indirect kick flies in untouched, it is not a goal. It is a goal kick." },
+    { "id": "faltas", "text": "Difference two: the offence. Direct: contact, like trips, pushes or holding, plus handball. Indirect: dangerous play, offside or the back-pass to the keeper." },
+    { "id": "area", "text": "Difference three: the box. A direct free kick offence inside the area is a penalty. An indirect one stays an indirect free kick." },
+    { "id": "tesis", "text": "So watch the referee's arm. Arm up: indirect." },
+    { "id": "cta", "text": "Save it, and share it with whoever shoots at goal from every free kick." }
+  ]
+}
