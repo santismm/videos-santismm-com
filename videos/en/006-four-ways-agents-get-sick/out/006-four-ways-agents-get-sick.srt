@@ -1,0 +1,124 @@
+1
+00:00:00,244 --> 00:00:01,859
+Your AI agent can get sick.
+
+2
+00:00:02,049 --> 00:00:03,416
+And there are four different ways it
+
+3
+00:00:03,228 --> 00:00:03,947
+happens.
+
+4
+00:00:04,376 --> 00:00:04,788
+One:
+
+5
+00:00:04,612 --> 00:00:05,237
+input.
+
+6
+00:00:05,426 --> 00:00:07,748
+An email or a website carries hidden
+
+7
+00:00:07,560 --> 00:00:09,906
+instructions, and the agent takes them as
+
+8
+00:00:09,718 --> 00:00:10,378
+orders.
+
+9
+00:00:10,800 --> 00:00:11,177
+Two:
+
+10
+00:00:11,036 --> 00:00:11,708
+permission.
+
+11
+00:00:11,897 --> 00:00:13,595
+It has more power than it needs.
+
+12
+00:00:13,795 --> 00:00:15,729
+The model may fail, but the damage
+
+13
+00:00:15,541 --> 00:00:16,896
+depends on how much you let it
+
+14
+00:00:16,708 --> 00:00:17,356
+touch.
+
+15
+00:00:17,800 --> 00:00:18,247
+Three:
+
+16
+00:00:18,271 --> 00:00:19,002
+objective.
+
+17
+00:00:19,191 --> 00:00:21,089
+It meets the metric the wrong way:
+
+18
+00:00:21,302 --> 00:00:24,120
+closing cases without solving them, or hiding
+
+19
+00:00:23,932 --> 00:00:24,816
+exceptions.
+
+20
+00:00:25,268 --> 00:00:25,680
+Four:
+
+21
+00:00:25,680 --> 00:00:26,434
+the network.
+
+22
+00:00:26,624 --> 00:00:29,229
+A contaminated result passes from one agent
+
+23
+00:00:29,041 --> 00:00:31,022
+to another, enters its memory…
+
+24
+00:00:31,105 --> 00:00:32,873
+and comes back looking trustworthy.
+
+25
+00:00:33,288 --> 00:00:35,646
+But watch out for an overreacting defense:
+
+26
+00:00:35,788 --> 00:00:37,710
+it can take down healthy services too.
+
+27
+00:00:37,911 --> 00:00:39,443
+That's digital autoimmunity.
+
+28
+00:00:39,856 --> 00:00:41,188
+The cure is a cycle:
+
+29
+00:00:41,330 --> 00:00:45,363
+validate, authorize, observe, contain, and learn.
+
+30
+00:00:45,776 --> 00:00:47,780
+Save it, and share it with anyone
+
+31
+00:00:47,592 --> 00:00:49,184
+putting agents into production.
+
