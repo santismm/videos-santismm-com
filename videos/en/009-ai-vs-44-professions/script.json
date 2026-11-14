@@ -1,0 +1,25 @@
+{
+  "id": "009-ai-vs-44-professions",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 9,
+  "title": "AI vs 44 professions: does it win or tie against an expert? (GDPval)",
+  "cover": "AI vs 44 professions<br><span style=\"color:#f59e0b\">who wins?</span>",
+  "coverTime": 5.5,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "OpenAI, GDPval (arXiv 2510.04374; GPT-5.2 and GPT-5.5 announcements) · articles.santismm.com/the-stopwatch-and-the-exam",
+  "scenes": [
+    { "id": "hook", "text": "AI versus 44 professions: lawyers, nurses, accountants. Who wins?" },
+    { "id": "tareas", "text": "OpenAI measured it with GDPval: 1,320 real tasks, written by experts with about 14 years on the job." },
+    { "id": "cata", "text": "Another expert compares two unsigned deliverables, the human's and the AI's, and picks blind." },
+    { "id": "marcador", "text": "In 2025, the best model won or tied on almost 48% of tasks. Parity is 50%." },
+    { "id": "salto", "text": "Then OpenAI announced 71%, and in 2026, almost 85%. But those are the maker's own numbers." },
+    { "id": "puzle", "text": "But these tasks are well-defined, with full context, and one-shot. A job is much more." },
+    { "id": "leccion", "text": "The lesson: don't ask if AI passes an exam. Ask if it wins or ties with an expert on your tasks." },
+    { "id": "tesis", "text": "Because the most honest benchmark is the job a professional gets paid to do." },
+    { "id": "cta", "text": "Save it, and share it with anyone who still measures AI with exams." }
+  ]
+}
