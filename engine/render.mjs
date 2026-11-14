@@ -23,13 +23,19 @@ const build = path.join(vdir, 'build');
 const timeline = JSON.parse(fs.readFileSync(path.join(build, 'timeline.json'), 'utf8'));
 const scenesSrc = pathToFileURL(path.join(vdir, 'scenes.js')).href;
 const pageUrl = pathToFileURL(path.join(here, 'page.html')).href;
+// Tema del canal y recursos opcionales declarados en script.json ("theme", "assets").
+const script = JSON.parse(fs.readFileSync(path.join(vdir, 'script.json'), 'utf8'));
+const pre = [
+  ...(script.theme ? [path.join(here, 'themes', script.theme + '.js')] : []),
+  ...(script.assets || []).map((a) => path.resolve(vdir, a)),
+].map((f) => pathToFileURL(f).href);
 
 async function openPage(browser) {
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   page.on('pageerror', (e) => { console.error('[page]', e.message); process.exitCode = 1; });
   page.on('console', (m) => { if (m.type() === 'error') console.error('[console]', m.text()); });
   await page.goto(pageUrl);
-  const info = await page.evaluate(([tl, src]) => window.__boot(tl, src), [timeline, scenesSrc]);
+  const info = await page.evaluate(([tl, src, pre]) => window.__boot(tl, src, pre), [timeline, scenesSrc, pre]);
   return { page, info };
 }
 

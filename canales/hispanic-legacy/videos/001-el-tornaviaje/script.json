@@ -1,0 +1,52 @@
+{
+  "id": "001-el-tornaviaje",
+  "series": "Hispanic Legacy · Historia en 60s",
+  "episode": 1,
+  "title": "El tornaviaje: para volver de Asia había que poner rumbo al norte",
+  "cover": "Sabían ir.<br><span style=\"color:#f0b94a\">Nadie sabía volver.</span>",
+  "coverTime": 33.2,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "assets": [
+    "../../assets/pacific-map.js"
+  ],
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+13%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/andres-de-urdaneta",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "En 1521, España ya sabía cruzar el Pacífico. Lo que nadie sabía… era volver."
+    },
+    {
+      "id": "vientos",
+      "text": "El culpable: el viento. En el trópico, los alisios soplan siempre hacia el oeste. Volver por ahí era como subir una escalera mecánica que baja."
+    },
+    {
+      "id": "intentos",
+      "text": "Durante más de cuarenta años, todos los que lo intentaron fracasaron."
+    },
+    {
+      "id": "urdaneta",
+      "text": "Hasta que en 1565, el fraile Andrés de Urdaneta hizo algo que parecía absurdo: para ir al este, puso rumbo al norte."
+    },
+    {
+      "id": "norte",
+      "text": "Subió hasta el paralelo 39, a la altura de Japón. Allí el viento sopla al revés, y la corriente de Kuroshio empuja hacia América."
+    },
+    {
+      "id": "llegada",
+      "text": "Salió de Cebú el 1 de junio. Cuatro meses después, llegaba a Acapulco."
+    },
+    {
+      "id": "galeon",
+      "text": "Esa ruta, el tornaviaje, la usó el Galeón de Manila durante 250 años: plata americana por seda y porcelana de China. Según los historiadores Flynn y Giráldez, así nació el comercio global."
+    },
+    {
+      "id": "cta",
+      "text": "Compártelo con quien crea que la globalización es un invento moderno."
+    }
+  ]
+}

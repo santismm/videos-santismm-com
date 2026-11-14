@@ -59,13 +59,16 @@
   };
 
   // ---------- Estado global ----------
-  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {} };
+  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {},
+    // Tema del canal (engine/themes/<tema>.js): marca, fondo y fuentes propias. Por defecto, EUREKA.
+    theme: { brand: { name: 'EUREKA', tagline: 'IA EN 60s' } } };
 
   function scene(id, build) { S.defs[id] = build; }
 
   // ---------- Fondo: rejilla del site + resplandores que respiran ----------
   function buildBg() {
     const bg = document.getElementById('bg');
+    if (S.theme.buildBg) return S.theme.buildBg(bg);
     bg.innerHTML = `
       <div class="layer" id="glowA" style="background: radial-gradient(600px 600px at 50% 50%, rgba(34,211,238,.20), transparent 70%)"></div>
       <div class="layer" id="glowB" style="background: radial-gradient(700px 700px at 50% 50%, rgba(59,130,246,.18), transparent 70%)"></div>
@@ -76,6 +79,7 @@
       <div class="layer" style="background: radial-gradient(1100px 1500px at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%)"></div>`;
   }
   function renderBg(t) {
+    if (S.theme.renderBg) return S.theme.renderBg(t);
     const a = document.getElementById('glowA'), b = document.getElementById('glowB');
     a.style.transform = `translate(${Math.sin(t * 0.35) * 220 - 160}px, ${Math.cos(t * 0.27) * 260 - 300}px)`;
     b.style.transform = `translate(${Math.cos(t * 0.3) * 240 + 180}px, ${Math.sin(t * 0.22) * 300 + 320}px)`;
@@ -90,8 +94,8 @@
     ch.innerHTML = `
       <div class="abs mono" id="hdr" style="left:${SAFE.left + 6}px; top:196px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; letter-spacing:.14em;">
         <span style="display:flex;align-items:center;gap:12px;padding:12px 20px;border:2px solid ${C.lineStrong};border-radius:999px;background:rgba(11,15,25,.75);color:${C.ink}">
-          <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>EUREKA</span>
-        <span style="color:${C.muted}">IA EN 60s · #${String(tl.episode).padStart(2, '0')}</span>
+          <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>${S.theme.brand.name}</span>
+        <span style="color:${C.muted}">${S.theme.brand.tagline} · #${String(tl.episode).padStart(2, '0')}</span>
       </div>
       <div class="abs" id="prog" style="left:${SAFE.left + 6}px; top:268px; width:${SAFE.right - SAFE.left - 6}px; height:6px; display:flex; gap:8px;"></div>`;
     const prog = document.getElementById('prog');
@@ -238,6 +242,7 @@
   }
 
   window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
-    set video(v) { S.video = v; }, get video() { return S.video; } };
+    set video(v) { S.video = v; }, get video() { return S.video; },
+    set theme(v) { S.theme = { ...S.theme, ...v }; }, get theme() { return S.theme; } };
   window.__render = render;
 })();
