@@ -1,0 +1,52 @@
+{
+  "id": "002-it-knew-the-exam",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 2,
+  "title": "Your AI already knew the exam: contamination",
+  "cover": "Is it smart…<br><span style=\"color:#f59e0b\">or did it know the exam?</span>",
+  "coverTime": 4.6,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/the-stopwatch-and-the-exam",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "From 75% to 7.5%… on the same kind of exam. What happened?"
+    },
+    {
+      "id": "contamina",
+      "text": "It's called contamination: the exam questions leak into the data used to train the model."
+    },
+    {
+      "id": "alumno",
+      "text": "It's like a student who's already seen the exam: you can't tell if they understand the subject… or just know the answers."
+    },
+    {
+      "id": "dato45",
+      "text": "And it happens more than you think: surveys report up to 45% of test material leaked into training data."
+    },
+    {
+      "id": "kprize",
+      "text": "That's why the Konwinski Prize only uses GitHub issues filed after the training cutoff. Impossible to have seen them. The winner: 7.5%."
+    },
+    {
+      "id": "remedio",
+      "text": "The lesson: a saturated exam is fixed with a harder one. A contaminated one, only with an exam the model has never seen."
+    },
+    {
+      "id": "pregunta",
+      "text": "So when you see a spectacular score, ask: could this exam have been in its training data?"
+    },
+    {
+      "id": "tesis",
+      "text": "Because a high score isn't always intelligence. Sometimes, it's memory."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and share it with someone who believes every leaderboard."
+    }
+  ]
+}
