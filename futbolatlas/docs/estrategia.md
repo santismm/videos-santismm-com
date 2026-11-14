@@ -61,7 +61,7 @@ Casi todo lo relativo a plataformas procede de blogs de terceros y no de documen
 |---|---|---|---|
 | 01 ✅ | 4 mitos del fuera de juego | "Cuatro reglas que no existen" | `/k/offside-misconceptions` |
 | 02 ✅ | 5 cambios del reglamento 2026/27 | "5 segundos… o es córner" | `/k/what-changed-in-2026-27` |
-| 03 | Mano: lo que la regla dice de verdad | "No, 'mano es mano' no existe" | `/k/handball-misconceptions` |
+| 03 ✅ | ¿Es mano? Las 3 preguntas de la Regla 12 | "Eso de 'mano es mano' no existe" | `/k/handball-misconceptions` |
 | 04 | Lo que el VAR no puede revisar | "El VAR no puede tocar esto" | `/k/var-misconceptions` |
 | 05 | DOGSO: cuándo es roja y cuándo no | "Último hombre no es una regla" | `/k/dogso` |
 | 06 | Libre directo vs indirecto | "El brazo arriba del árbitro significa algo" | `/k/direct-vs-indirect-free-kick` |

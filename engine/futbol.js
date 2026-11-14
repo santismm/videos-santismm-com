@@ -123,10 +123,13 @@
   }
 
   /** Cabecera de la serie "Regla nueva": píldora CAMBIO n/total, referencia de la regla y titular. */
-  function change(x, n, total, law, title) {
+  function change(x, n, total, law, title) { return header(x, `CAMBIO ${n}/${total}`, law, title); }
+
+  /** Cabecera genérica: píldora de color, texto secundario y titular. Devuelve update(lt). */
+  function header(x, pillText, law, title, color = C.cyan) {
     const r = x.root;
     const row = add(r, `<div class="abs mono" style="left:96px;top:318px;display:flex;align-items:center;gap:18px;font-size:27px;font-weight:700;letter-spacing:.12em;transform-origin:0 50%">
-      <span style="padding:10px 22px;border-radius:999px;background:${C.cyan};color:#121414">CAMBIO ${n}/${total}</span><span style="color:${C.muted}">${law}</span></div>`);
+      <span style="padding:10px 22px;border-radius:999px;background:${color};color:#121414">${pillText}</span><span style="color:${C.muted}">${law}</span></div>`);
     const t = add(r, `<div class="abs display" style="left:96px;width:834px;top:392px;font-size:58px;line-height:1.1;font-weight:700;color:${C.ink}">${title}</div>`);
     return (lt) => {
       const a = spring(lt, 0.05, 0.4); row.style.opacity = a > 0 ? 1 : 0; row.style.transform = `scale(${lerp(0.6, 1, a)})`;
@@ -155,5 +158,5 @@
     return add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${w * 1.4}px;border-radius:${w * 0.11}px;background:linear-gradient(160deg, ${color}, ${color}cc);box-shadow:0 18px 40px rgba(0,0,0,.55), inset 0 0 0 3px rgba(255,255,255,.25);transform:rotate(${rot}deg)"></div>`);
   }
 
-  EUREKA.fa = { change, ring, card, pitch, token, ball, offsideLine, tag, myth, stamp, verdict, flagSvg, endCard };
+  EUREKA.fa = { header, change, ring, card, pitch, token, ball, offsideLine, tag, myth, stamp, verdict, flagSvg, endCard };
 })();

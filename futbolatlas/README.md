@@ -8,6 +8,7 @@ Canal de vídeo corto (TikTok, Shorts y Reels) que convierte el contenido de [fu
 |---|---|---|---|
 | 01 | 4 mitos del fuera de juego (Regla 11) | [mp4](videos/001-fuera-de-juego-4-mitos/out/001-fuera-de-juego-4-mitos.mp4) | [publicacion.md](videos/001-fuera-de-juego-4-mitos/publicacion.md) |
 | 02 | 5 cambios del reglamento 2026/27 | [mp4](videos/002-cambios-reglas-2026-27/out/002-cambios-reglas-2026-27.mp4) | [publicacion.md](videos/002-cambios-reglas-2026-27/publicacion.md) |
+| 03 | ¿Es mano? Las 3 preguntas de la Regla 12 | [mp4](videos/003-mano-tres-preguntas/out/003-mano-tres-preguntas.mp4) | [publicacion.md](videos/003-mano-tres-preguntas/publicacion.md) |
 
 ## Cómo se hace un vídeo
 
