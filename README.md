@@ -21,6 +21,7 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 Segundo canal producido con el mismo motor (`"brand": "mythos"` en `script.json`): mitología griega, romana, nórdica y egipcia contrastada con sus textos originales a partir de [mythosdata.dev](https://mythosdata.dev).
 
 - 📈 Estrategia, análisis de la web, tendencias y los 10 primeros vídeos: [`docs/mythos-estrategia.md`](docs/mythos-estrategia.md)
+- 📺 Dos canales de YouTube, uno en español y otro en inglés. Configuración, imágenes y conexión con Metricool: [`brand/canal-mythos.md`](brand/canal-mythos.md)
 
 | # | Título | Vídeo | Textos de publicación |
 |---|---|---|---|
