@@ -40,10 +40,13 @@
 <script>
   // El renderer inyecta el timeline y el script de escenas del vídeo.
   window.__boot = async function (timeline, scenesSrc) {
+    EUREKA.lang = timeline.lang || 'es';
+    document.documentElement.lang = EUREKA.lang;
     if (timeline.brand) {
       const b = EUREKA.brands[timeline.brand];
       if (!b) throw new Error('marca desconocida: ' + timeline.brand);
       EUREKA.applyBrand(b);
+      if (b.i18n && b.i18n[EUREKA.lang]) Object.assign(EUREKA.BRAND, b.i18n[EUREKA.lang]);
       for (const f of b.preload || []) await document.fonts.load(f);
     }
     await new Promise((res, rej) => {

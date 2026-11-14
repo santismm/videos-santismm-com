@@ -1,4 +1,5 @@
 videos/*/build/
 futbolatlas/videos/*/build/
+futbolatlas/videos-en/*/build/
 node_modules/
 __pycache__/

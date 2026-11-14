@@ -6,6 +6,9 @@
 (function () {
   const { C, I, Ease, lerp, prog, spring, appear, add } = EUREKA;
 
+  /** Texto según el idioma del vídeo ("lang" en script.json): tr('español', 'English'). */
+  const tr = (es, en) => (EUREKA.lang === 'en' ? en : es);
+
   function pitch(parent, { x = 90, y = 490, w = 840, h = 520 } = {}) {
     const s = w / 68, cx = w / 2;
     const L = `stroke="rgba(255,255,255,.55)" stroke-width="4" fill="none"`;
@@ -43,7 +46,7 @@
   }
 
   /** Línea de fuera de juego a md metros de la meta. set(k) la dibuja de 0 a 1. */
-  function offsideLine(p, md, color = C.cyan, text = 'LÍNEA DE FUERA DE JUEGO') {
+  function offsideLine(p, md, color = C.cyan, text = tr('LÍNEA DE FUERA DE JUEGO', 'OFFSIDE LINE')) {
     const y = md * p.s;
     const el = add(p.items, `<div class="abs" style="left:0;top:${y - 3}px;width:${p.w}px;height:6px;transform-origin:0 50%;background:repeating-linear-gradient(90deg, ${color} 0 22px, transparent 22px 36px);box-shadow:0 0 18px ${color}"></div>`);
     const lab = add(p.items, `<div class="abs mono" style="left:14px;top:${y - 34}px;font-size:19px;font-weight:700;letter-spacing:.08em;color:${color};text-shadow:0 2px 8px #000">${text}</div>`);
@@ -59,7 +62,7 @@
   /** Cabecera de mito: píldora "MITO n/4" + la frase entre comillas, que acaba tachada. */
   function myth(x, n, total, quote) {
     const r = x.root;
-    const pillEl = add(r, `<div class="abs mono" style="left:96px;top:318px;padding:10px 22px;border-radius:999px;background:${C.red};color:#fff;font-size:27px;font-weight:700;letter-spacing:.12em">MITO ${n}/${total}</div>`);
+    const pillEl = add(r, `<div class="abs mono" style="left:96px;top:318px;padding:10px 22px;border-radius:999px;background:${C.red};color:#fff;font-size:27px;font-weight:700;letter-spacing:.12em">${tr('MITO', 'MYTH')} ${n}/${total}</div>`);
     const q = add(r, `<div class="abs display" style="left:96px;width:830px;top:398px;font-size:48px;line-height:1.14;font-weight:600;font-style:italic;color:${C.ink}"><span style="position:relative;display:inline;background-image:linear-gradient(${C.red},${C.red});background-repeat:no-repeat;background-position:0 55%;background-size:0% 6px">«${quote}»</span></div>`);
     const span = q.firstElementChild;
     return {
@@ -97,18 +100,18 @@
   /** Banderín de árbitro asistente (cuadros rojos y amarillos). */
   const flagSvg = `<svg viewBox="0 0 200 240"><rect x="14" y="6" width="12" height="230" rx="6" fill="#d9d9d9"/><g class="cloth"><rect x="26" y="10" width="75" height="60" fill="#ffd400"/><rect x="101" y="10" width="75" height="60" fill="#ff3b30"/><rect x="26" y="70" width="75" height="60" fill="#ff3b30"/><rect x="101" y="70" width="75" height="60" fill="#ffd400"/></g></svg>`;
 
-  /** Tarjeta final del canal. El texto debe contener «guárdalo» y «compártelo». */
-  function endCard(x, { ref = 'Regla 11 · Reglas de Juego 2026/27 (IFAB)' } = {}) {
+  /** Tarjeta final del canal. El texto debe contener «guárdalo» y «compártelo» (en inglés, «save» y «share»). */
+  function endCard(x, { ref = tr('Regla 11 · Reglas de Juego 2026/27 (IFAB)', 'Law 11 · Laws of the Game 2026/27 (IFAB)') } = {}) {
     const r = x.root;
-    const logo = add(r, `<div class="abs display" style="left:0;right:0;top:350px;text-align:center;font-size:132px;font-weight:700;color:${C.ink};line-height:1">Fútbol <span style="color:${C.cyan};font-style:italic">Atlas</span></div>`);
-    const tagl = add(r, `<div class="abs mono" style="left:0;right:0;top:520px;text-align:center;font-size:27px;font-weight:700;color:${C.muted};letter-spacing:.12em">EL FÚTBOL, CON EL REGLAMENTO EN LA MANO</div>`);
+    const logo = add(r, `<div class="abs display" style="left:0;right:0;top:350px;text-align:center;font-size:132px;font-weight:700;color:${C.ink};line-height:1">${tr('Fútbol', 'Football')} <span style="color:${C.cyan};font-style:italic">Atlas</span></div>`);
+    const tagl = add(r, `<div class="abs mono" style="left:0;right:0;top:520px;text-align:center;font-size:27px;font-weight:700;color:${C.muted};letter-spacing:.12em">${tr('EL FÚTBOL, CON EL REGLAMENTO EN LA MANO', 'FOOTBALL, BY THE BOOK')}</div>`);
     const btn = (icon, label, color, left) => add(r, `<div class="abs" style="left:${left}px;top:630px;width:390px;height:140px;border-radius:34px;background:${C.surface};border:4px solid ${color};display:flex;align-items:center;justify-content:center;gap:22px;box-shadow:0 0 50px ${color}44">
         <div style="width:64px;height:64px;color:${color}">${icon}</div><span class="caption" style="font-size:44px;font-weight:800;color:${C.ink}">${label}</span></div>`);
-    const b1 = btn(I.bookmark, 'Guárdalo', C.amber, 125), b2 = btn(I.share, 'Compártelo', C.cyan, 565);
+    const b1 = btn(I.bookmark, tr('Guárdalo', 'Save it'), C.amber, 125), b2 = btn(I.share, tr('Compártelo', 'Share it'), C.cyan, 565);
     const site = add(r, `<div class="abs caption" style="left:0;right:0;top:845px;text-align:center;font-size:74px;font-weight:800;color:${C.cyan}">futbolatlas.app</div>`);
-    const src = add(r, `<div class="abs mono" style="left:0;right:0;top:960px;text-align:center;font-size:25px;font-weight:500;color:${C.muted}">Fuente: ${ref}</div>`);
-    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1070px;text-align:center;font-size:21px;font-weight:500;color:${C.faint}">Guion basado en futbolatlas.app · voz y animación generadas con IA</div>`);
-    const tG = x.at('guardalo'), tC = x.at('compartelo');
+    const src = add(r, `<div class="abs mono" style="left:0;right:0;top:960px;text-align:center;font-size:25px;font-weight:500;color:${C.muted}">${tr('Fuente', 'Source')}: ${ref}</div>`);
+    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1070px;text-align:center;font-size:21px;font-weight:500;color:${C.faint}">${tr('Guion basado en futbolatlas.app · voz y animación generadas con IA', 'Script based on futbolatlas.app · AI-generated voice and animation')}</div>`);
+    const tG = x.at(tr('guardalo', 'save')), tC = x.at(tr('compartelo', 'share'));
     x.cue(tG, 'pop', 0.8); x.cue(tC, 'pop', 0.8); x.cue(0.1, 'ding', 0.4);
     return (lt) => {
       const l = spring(lt, 0.05, 0.5); logo.style.opacity = l > 0 ? 1 : 0; logo.style.transform = `scale(${lerp(0.7, 1, l)})`;
@@ -123,7 +126,7 @@
   }
 
   /** Cabecera de la serie "Regla nueva": píldora CAMBIO n/total, referencia de la regla y titular. */
-  function change(x, n, total, law, title) { return header(x, `CAMBIO ${n}/${total}`, law, title); }
+  function change(x, n, total, law, title) { return header(x, `${tr('CAMBIO', 'CHANGE')} ${n}/${total}`, law, title); }
 
   /** Cabecera genérica: píldora de color, texto secundario y titular. Devuelve update(lt). */
   function header(x, pillText, law, title, color = C.cyan) {
@@ -158,5 +161,5 @@
     return add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${w * 1.4}px;border-radius:${w * 0.11}px;background:linear-gradient(160deg, ${color}, ${color}cc);box-shadow:0 18px 40px rgba(0,0,0,.55), inset 0 0 0 3px rgba(255,255,255,.25);transform:rotate(${rot}deg)"></div>`);
   }
 
-  EUREKA.fa = { header, change, ring, card, pitch, token, ball, offsideLine, tag, myth, stamp, verdict, flagSvg, endCard };
+  EUREKA.fa = { tr, header, change, ring, card, pitch, token, ball, offsideLine, tag, myth, stamp, verdict, flagSvg, endCard };
 })();

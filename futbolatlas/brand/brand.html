@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fútbol Atlas · recursos de marca</title>
+<style>
+  @font-face { font-family: 'Source Serif 4'; src: url(../../engine/fonts/SourceSerif4-latin.woff2) format('woff2'); font-weight: 200 900; }
+  @font-face { font-family: 'Source Serif 4'; font-style: italic; src: url(../../engine/fonts/SourceSerif4-latin-italic.woff2) format('woff2'); font-weight: 200 900; }
+  @font-face { font-family: 'Hanken Grotesk'; src: url(../../engine/fonts/HankenGrotesk-latin.woff2) format('woff2'); font-weight: 100 900; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(../../engine/fonts/JetBrainsMono-Bold.ttf); font-weight: 700; }
+  :root { --bg:#121414; --pitch:#0d3a1a; --pitch2:#0f4420; --ink:#fff; --fg:#e2e2e2; --muted:#a3a78c; --lime:#caf300; }
+  html, body { margin: 0; background: var(--bg); }
+  .art { position: relative; overflow: hidden; background: var(--bg); color: var(--ink); }
+  .abs { position: absolute; }
+  .serif { font-family: 'Source Serif 4', serif; font-weight: 700; }
+  .sans { font-family: 'Hanken Grotesk', sans-serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+  .lime { color: var(--lime); font-style: italic; }
+  [hidden] { display: none !important; }
+  #avatar { width: 800px; height: 800px; }
+  #banner { width: 2560px; height: 1440px; }
+  .stripes { position: absolute; inset: 0; background: repeating-linear-gradient(180deg, var(--pitch) 0 100px, var(--pitch2) 100px 200px); }
+</style>
+</head>
+<body>
+
+<!-- AVATAR 800×800 (se recorta en círculo en las tres plataformas; el contenido queda dentro de r=300) -->
+<div id="avatar" class="art" hidden>
+  <div class="stripes"></div>
+  <div class="abs" style="inset:0;background:radial-gradient(circle at 50% 45%, transparent 30%, rgba(0,0,0,.55) 100%)"></div>
+  <svg class="abs" width="800" height="800" style="left:0;top:0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="8">
+    <line x1="0" y1="400" x2="800" y2="400"/><circle cx="400" cy="400" r="250"/>
+  </svg>
+  <div class="abs serif" style="left:24px;right:0;top:170px;text-align:center;font-size:400px;line-height:1;letter-spacing:-.04em;text-shadow:0 14px 40px rgba(0,0,0,.6)">F<span class="lime">A</span></div>
+  <div class="abs" style="left:372px;top:372px;width:56px;height:56px;border-radius:50%;background:var(--lime);box-shadow:0 0 50px var(--lime);display:none"></div>
+</div>
+
+<!-- BANNER 2560×1440 (zona segura central 1546×423 → x 507–2053, y 508–931) -->
+<div id="banner" class="art" hidden>
+  <div class="abs" style="inset:0;background:radial-gradient(1500px 800px at 50% 50%, rgba(202,243,0,.10), transparent 70%)"></div>
+  <!-- Decoración fuera de la zona segura: dos áreas de penalti -->
+  <svg class="abs" width="2560" height="1440" style="left:0;top:0" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="8">
+    <rect x="-10" y="270" width="2580" height="900" rx="0" fill="#0d3a1a" stroke="none" opacity=".55"/>
+    <g opacity=".9">
+      <rect x="-10" y="400" width="380" height="640"/><rect x="-10" y="560" width="140" height="320"/>
+      <path d="M370 610 A 150 150 0 0 1 370 830"/><circle cx="270" cy="720" r="7" fill="rgba(255,255,255,.5)"/>
+      <rect x="2190" y="400" width="380" height="640"/><rect x="2430" y="560" width="140" height="320"/>
+      <path d="M2190 610 A 150 150 0 0 0 2190 830"/><circle cx="2290" cy="720" r="7" fill="rgba(255,255,255,.5)"/>
+      <line x1="1280" y1="270" x2="1280" y2="470"/><line x1="1280" y1="970" x2="1280" y2="1170"/>
+    </g>
+  </svg>
+  <div class="abs" style="left:507px;top:508px;width:1546px;height:423px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;white-space:nowrap">
+    <div class="serif" id="b-name" style="font-size:210px;line-height:.95"></div>
+    <div class="sans" id="b-tag" style="font-size:62px;font-weight:700;color:var(--fg)"></div>
+    <div class="mono" id="b-line" style="font-size:29px;letter-spacing:.13em;color:var(--muted);margin-top:10px"></div>
+  </div>
+  <div id="safe" class="abs" hidden style="left:507px;top:508px;width:1546px;height:423px;outline:4px dashed #ffb627"></div>
+</div>
+
+<script>
+  const p = new URLSearchParams(location.search), en = p.get('lang') === 'en';
+  document.getElementById(p.get('mode') || 'avatar').hidden = false;
+  if (p.get('guides')) document.getElementById('safe').hidden = false;
+  document.getElementById('b-name').innerHTML = (en ? 'Football' : 'Fútbol') + ' <span class="lime">Atlas</span>';
+  document.getElementById('b-tag').innerHTML = en ? 'Football, by the book, in <span style="color:var(--lime)">60 seconds</span>' : 'El reglamento en la mano, en <span style="color:var(--lime)">60 segundos</span>';
+  document.getElementById('b-line').textContent = en ? 'LAWS · VAR · HISTORY · MON · WED · FRI · SUN · FUTBOLATLAS.APP' : 'REGLAS · VAR · HISTORIA · LUN · MIÉ · VIE · DOM · FUTBOLATLAS.APP';
+</script>
+</body>
+</html>

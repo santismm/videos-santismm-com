@@ -92,6 +92,7 @@ async def main(vdir):
     tl = {"id": cfg["id"], "series": cfg["series"], "episode": cfg["episode"],
           "title": cfg["title"], "source": cfg.get("source", ""), "duration": total,
           "brand": cfg.get("brand"), "music": cfg.get("music"),
+          "lang": cfg.get("lang", "es"), "scenes_js": cfg.get("scenes_js"),
           "scenes": scenes}
     json.dump(tl, open(os.path.join(build, "timeline.json"), "w"), ensure_ascii=False, indent=1)
     print(f"duración total: {total:.2f}s")
