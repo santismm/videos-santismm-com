@@ -1,0 +1,25 @@
+{
+  "id": "001-fuera-de-juego-4-mitos",
+  "brand": "futbolatlas",
+  "series": "FÚTBOL ATLAS · La regla en 60s",
+  "episode": 1,
+  "title": "4 mitos del fuera de juego (Regla 11)",
+  "cover": "4 mitos del<br><span style=\"color:#caf300\">fuera de juego</span>",
+  "coverTime": 9.0,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/offside-misconceptions · futbolatlas.app/k/how-offside-actually-works",
+  "scenes": [
+    { "id": "hook", "text": "Llevas años discutiendo el fuera de juego con cuatro reglas que no existen." },
+    { "id": "mito1", "text": "Mito uno: estaba en línea, así que es fuera de juego. Falso. En línea con el penúltimo rival, la posición es legal." },
+    { "id": "mito2", "text": "Mito dos: tenía el brazo adelantado. Tampoco. Manos y brazos no cuentan nunca: solo cabeza, cuerpo y pies." },
+    { "id": "mito3", "text": "Mito tres: cuando recibió estaba solo. Da igual. La foto se hace cuando su compañero toca el balón, no cuando le llega." },
+    { "id": "mito4", "text": "Mito cuatro: estar en fuera de juego ya es falta. No. La posición sola no se sanciona: tiene que participar en la jugada." },
+    { "id": "bonus", "text": "Y un extra: si el balón te llega directo de un saque de banda, de puerta o de córner, no hay fuera de juego." },
+    { "id": "tesis", "text": "El fuera de juego no es solo dónde estás. Es cuándo, con qué, y qué haces." },
+    { "id": "cta", "text": "Guárdalo, y compártelo con quien lo pita todo desde el sofá." }
+  ]
+}

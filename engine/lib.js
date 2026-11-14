@@ -13,6 +13,19 @@
     rose: '#ff667f', violet: '#a685ff', sky: '#77d4ff',
   };
 
+  // Marca del canal. Por defecto, EUREKA; otros canales la cambian con applyBrand() (ver brands.js).
+  const BRAND = { name: 'EUREKA', tag: 'IA EN 60s', glowA: '34,211,238', glowB: '59,130,246', bgHtml: null };
+  function applyBrand(b) {
+    if (!b) return;
+    Object.assign(C, b.colors || {});
+    Object.assign(BRAND, b);
+    const root = document.documentElement.style;
+    for (const k in (b.fonts || {})) root.setProperty('--font-' + k, b.fonts[k]);
+    document.body.style.background = C.bg;
+    document.getElementById('stage').style.background = C.bg;
+    document.getElementById('stage').style.color = C.fg;
+  }
+
   // Zonas seguras (TikTok / Reels / Shorts): arriba ~290px, abajo ~480px, derecha ~160px.
   const SAFE = { top: 290, bottom: H - 500, left: 90, right: W - 150 };
 
@@ -67,12 +80,12 @@
   function buildBg() {
     const bg = document.getElementById('bg');
     bg.innerHTML = `
-      <div class="layer" id="glowA" style="background: radial-gradient(600px 600px at 50% 50%, rgba(34,211,238,.20), transparent 70%)"></div>
-      <div class="layer" id="glowB" style="background: radial-gradient(700px 700px at 50% 50%, rgba(59,130,246,.18), transparent 70%)"></div>
-      <div class="layer" style="background-image:
+      <div class="layer" id="glowA" style="background: radial-gradient(600px 600px at 50% 50%, rgba(${BRAND.glowA},.20), transparent 70%)"></div>
+      <div class="layer" id="glowB" style="background: radial-gradient(700px 700px at 50% 50%, rgba(${BRAND.glowB},.18), transparent 70%)"></div>
+      ${BRAND.bgHtml ? BRAND.bgHtml(C) : `<div class="layer" style="background-image:
           linear-gradient(${C.line} 1px, transparent 1px), linear-gradient(90deg, ${C.line} 1px, transparent 1px);
           background-size: 72px 72px; background-position: 36px 24px; opacity:.55;
-          -webkit-mask-image: radial-gradient(900px 1300px at 50% 45%, #000 30%, transparent 85%);"></div>
+          -webkit-mask-image: radial-gradient(900px 1300px at 50% 45%, #000 30%, transparent 85%);"></div>`}
       <div class="layer" style="background: radial-gradient(1100px 1500px at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%)"></div>`;
   }
   function renderBg(t) {
@@ -90,10 +103,11 @@
     ch.innerHTML = `
       <div class="abs mono" id="hdr" style="left:${SAFE.left + 6}px; top:196px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; letter-spacing:.14em;">
         <span style="display:flex;align-items:center;gap:12px;padding:12px 20px;border:2px solid ${C.lineStrong};border-radius:999px;background:rgba(11,15,25,.75);color:${C.ink}">
-          <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>EUREKA</span>
-        <span style="color:${C.muted}">IA EN 60s · #${String(tl.episode).padStart(2, '0')}</span>
+          <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>${BRAND.name}</span>
+        <span style="color:${C.muted}">${BRAND.tag} · #${String(tl.episode).padStart(2, '0')}</span>
       </div>
       <div class="abs" id="prog" style="left:${SAFE.left + 6}px; top:268px; width:${SAFE.right - SAFE.left - 6}px; height:6px; display:flex; gap:8px;"></div>`;
+    if (S.video.footer) add(ch, `<div class="abs mono" style="left:${SAFE.left}px;width:${SAFE.right - SAFE.left}px;top:1452px;text-align:center;font-size:21px;font-weight:500;color:${C.faint}">${S.video.footer}</div>`);
     const prog = document.getElementById('prog');
     S.progSegs = S.scenes.map((sc) => {
       const seg = add(prog, `<div style="flex:${(sc.end - sc.start).toFixed(3)}; background:${C.line}; border-radius:3px; overflow:hidden;"><div style="height:100%; width:0; background:${C.cyan}; box-shadow:0 0 10px ${C.cyan}"></div></div>`);
@@ -130,7 +144,7 @@
     });
     S.chunks = chunks;
     const cap = document.getElementById('captions');
-    S.capBox = add(cap, `<div class="abs display" style="left:${SAFE.left}px; width:${SAFE.right - SAFE.left}px; top:1210px; text-align:center; font-weight:700; font-size:82px; line-height:1.12; letter-spacing:-.01em; text-transform:uppercase; color:${C.ink}"></div>`);
+    S.capBox = add(cap, `<div class="abs display caption" style="left:${SAFE.left}px; width:${SAFE.right - SAFE.left}px; top:1210px; text-align:center; font-weight:700; font-size:82px; line-height:1.12; letter-spacing:-.01em; text-transform:uppercase; color:${C.ink}"></div>`);
     S.capCache = -1;
   }
   function renderCaptions(t) {
@@ -233,11 +247,11 @@
   function cover(t, title) {
     S.video.hideCaptions = () => true;
     const cap = document.getElementById('captions');
-    add(cap, `<div class="abs display" style="left:${SAFE.left}px;width:${SAFE.right - SAFE.left}px;top:1180px;text-align:center;font-weight:700;font-size:96px;line-height:1.05;text-transform:uppercase;color:${C.ink};text-shadow:0 8px 30px rgba(0,0,0,.8)">${title}</div>`);
+    add(cap, `<div class="abs display caption" style="left:${SAFE.left}px;width:${SAFE.right - SAFE.left}px;top:1180px;text-align:center;font-weight:700;font-size:96px;line-height:1.05;text-transform:uppercase;color:${C.ink};text-shadow:0 8px 30px rgba(0,0,0,.8)">${title}</div>`);
     render(t);
   }
 
-  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
+  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S, BRAND, applyBrand,
     set video(v) { S.video = v; }, get video() { return S.video; } };
   window.__render = render;
 })();

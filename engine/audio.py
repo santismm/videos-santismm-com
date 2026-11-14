@@ -108,16 +108,39 @@ def sfx(kind):
         sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 2.6)
         air = lp(rng.standard_normal(len(t)), 1200) * np.exp(-t * 5)
         return 0.95 * sub + 0.25 * air
+    if kind == "whistle":  # silbato de árbitro: dos tonos cercanos con trino de la bolita
+        d = 0.55; t = t_axis(d)
+        trill = 1 + 0.35 * np.sin(2 * np.pi * 38 * t)
+        x = (np.sin(2 * np.pi * 2850 * t) + 0.8 * np.sin(2 * np.pi * 3120 * t)) * trill
+        x += 0.25 * hp(rng.standard_normal(len(t)), 5000)
+        e = np.minimum(1, t / 0.02) * np.minimum(1, (d - t) / 0.06)
+        return 0.16 * x * e
+    if kind == "kick":  # golpeo de balón
+        d = 0.22; t = t_axis(d)
+        f = 210 * np.exp(-t * 40) + 70
+        body = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 22)
+        slap = bp(rng.standard_normal(len(t)), 1200, 5000) * np.exp(-t * 90)
+        return 0.8 * body + 0.3 * slap
+    if kind == "shutter":  # obturador de cámara
+        d = 0.16; t = t_axis(d)
+        n1 = hp(rng.standard_normal(len(t)), 3000) * (np.exp(-t * 120) + 0.8 * np.exp(-np.maximum(0, t - 0.07) * 120) * (t > 0.07))
+        return 0.5 * n1
     raise ValueError(kind)
 
 
 # ───────────── Música (Am – F – C – G, 100 BPM) ─────────────
-def music(dur, accents):
-    bpm = 100; beat = 60 / bpm
+PROGS = {
+    "Am-F-C-G": [(57, [57, 60, 64]), (53, [53, 57, 60]), (48, [55, 60, 64]), (55, [55, 59, 62])],
+    "D-A-Bm-G": [(50, [57, 62, 66]), (57, [57, 61, 64]), (59, [59, 62, 66]), (55, [55, 59, 62])],
+}
+
+
+def music(dur, accents, bpm=100, prog_name="Am-F-C-G"):
+    beat = 60 / bpm
     n = int(dur * SR)
     out = np.zeros(n)
     t = np.arange(n) / SR
-    prog = [(57, [57, 60, 64]), (53, [53, 57, 60]), (48, [55, 60, 64]), (55, [55, 59, 62])]  # raíz, acorde
+    prog = PROGS[prog_name]  # raíz, acorde
     bar = 4 * beat
     # Pad: sierras desafinadas filtradas, cambio cada 2 compases
     pad = np.zeros(n)
@@ -199,7 +222,8 @@ def main(vdir):
     voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
     voice = voice / (np.abs(voice).max() + 1e-9) * 0.9
     accents = [c["t"] for c in cues if c["type"] == "boom"]
-    mus = music(dur, accents)
+    mcfg = tl.get("music") or {}
+    mus = music(dur, accents, mcfg.get("bpm", 100), mcfg.get("prog", "Am-F-C-G"))
     # Ducking: la música baja cuando habla la voz
     envv = np.abs(voice)
     envv = lp(envv, 6, 1)
