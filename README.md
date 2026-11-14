@@ -3,6 +3,7 @@
 Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que convierte el contenido de [santismm.com](https://santismm.com) y sus subdominios en piezas de unos 60 segundos. Claude Code produce los vídeos de principio a fin: guion, voz, animación, música, mezcla, portada y subtítulos.
 
 - 📈 Estrategia, análisis de la web, tendencias y los 10 primeros vídeos: [`docs/estrategia.md`](docs/estrategia.md)
+- ⚽ Segundo canal con el mismo motor, **FÚTBOL ATLAS · La regla en 60s** (futbolatlas.app): [`futbolatlas/`](futbolatlas/README.md)
 
 ## Episodios
 

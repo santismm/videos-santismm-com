@@ -1,0 +1,25 @@
+{
+  "id": "002-cambios-reglas-2026-27",
+  "brand": "futbolatlas",
+  "series": "FÚTBOL ATLAS · La regla en 60s",
+  "episode": 2,
+  "title": "5 cambios del reglamento 2026/27",
+  "cover": "5 reglas nuevas<br><span style=\"color:#caf300\">2026/27</span>",
+  "coverTime": 2.4,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/what-changed-in-2026-27",
+  "scenes": [
+    { "id": "hook", "text": "¿Pierdes tiempo en un saque de puerta? Cinco segundos, o córner para el rival." },
+    { "id": "saques", "text": "Cambio uno: si retrasas un saque de puerta o de banda, el árbitro pita una cuenta atrás de cinco segundos. El de puerta se convierte en córner. El de banda pasa al rival." },
+    { "id": "cambio", "text": "Dos: el sustituido tiene diez segundos para salir del campo. Si no, su relevo espera fuera al menos un minuto." },
+    { "id": "dogso", "text": "Tres: te frenan una ocasión manifiesta de gol, el árbitro da ventaja y marcas. Ya no hay tarjeta." },
+    { "id": "penalti", "text": "Cuatro: doble toque accidental en un penalti. Si entra, se repite." },
+    { "id": "var", "text": "Y cinco: el VAR ya puede corregir una segunda amarilla claramente errónea." },
+    { "id": "capitan", "text": "Y atento: desde julio de 2027, solo el capitán podrá acercarse al árbitro." },
+    { "id": "cta", "text": "Guárdalo, y compártelo con quien sigue protestando con las reglas viejas." }
+  ]
+}
