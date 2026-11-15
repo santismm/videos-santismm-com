@@ -1,4 +1,4 @@
-/* FÚTBOL ATLAS #03 · "¿Es mano? Las 3 preguntas de la Regla 12"
+/* FÚTBOL EN 60s #03 · "¿Es mano? Las 3 preguntas de la Regla 12"
  * Fuente: futbolatlas.app/k/how-handball-actually-works y /k/handball-misconceptions (Regla 12, Reglas de Juego
  * 2026/27 de The IFAB; verificado en la web el 2026-08-08):
  *  - El límite superior del brazo está a la altura de la parte inferior de la axila; el hombro no es mano.

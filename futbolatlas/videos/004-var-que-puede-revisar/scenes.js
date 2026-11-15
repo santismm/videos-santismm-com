@@ -1,4 +1,4 @@
-/* FÚTBOL ATLAS #04 · "Lo que el VAR no puede revisar" (ES) / "What VAR can't review" (EN)
+/* FÚTBOL EN 60s #04 · "Lo que el VAR no puede revisar" (ES) / "What VAR can't review" (EN)
  * Fuente: futbolatlas.app/k/var-misconceptions, /k/var y /k/var-vs-goal-line-technology (Protocolo VAR, Reglas de
  * Juego 2026/27 de The IFAB; verificado en la web el 2026-08-08):
  *  - El VAR solo asiste ante un error claro y manifiesto o un incidente grave inadvertido en una lista cerrada:

@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS #02: 5 cambios del reglamento 2026/27
+# FÚTBOL EN 60s #02: 5 cambios del reglamento 2026/27
 
 - **Vídeo:** `out/002-cambios-reglas-2026-27.mp4` (1080×1920, 30 fps, 51,9 s, -14,4 LUFS)
 - **Portada:** `out/002-cambios-reglas-2026-27-portada.png`

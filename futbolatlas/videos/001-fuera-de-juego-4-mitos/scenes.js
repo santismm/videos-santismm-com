@@ -1,4 +1,4 @@
-/* FÚTBOL ATLAS #01 · "4 mitos del fuera de juego"
+/* FÚTBOL EN 60s #01 · "4 mitos del fuera de juego"
  * Fuente: futbolatlas.app/k/offside-misconceptions y /k/how-offside-actually-works (Regla 11, Reglas de Juego
  * 2026/27 de The IFAB; verificado en la web el 2026-08-08):
  *  - En línea con el penúltimo adversario (o con los dos últimos) NO es posición de fuera de juego.

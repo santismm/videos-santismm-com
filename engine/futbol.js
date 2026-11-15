@@ -103,8 +103,8 @@
   /** Tarjeta final del canal. El texto debe contener «guárdalo» y «compártelo» (en inglés, «save» y «share»). */
   function endCard(x, { ref = tr('Regla 11 · Reglas de Juego 2026/27 (IFAB)', 'Law 11 · Laws of the Game 2026/27 (IFAB)') } = {}) {
     const r = x.root;
-    const logo = add(r, `<div class="abs display" style="left:0;right:0;top:350px;text-align:center;font-size:132px;font-weight:700;color:${C.ink};line-height:1">${tr('Fútbol', 'Football')} <span style="color:${C.cyan};font-style:italic">Atlas</span></div>`);
-    const tagl = add(r, `<div class="abs mono" style="left:0;right:0;top:520px;text-align:center;font-size:27px;font-weight:700;color:${C.muted};letter-spacing:.12em">${tr('EL FÚTBOL, CON EL REGLAMENTO EN LA MANO', 'FOOTBALL, BY THE BOOK')}</div>`);
+    const logo = add(r, `<div class="abs display" style="left:0;right:0;top:350px;text-align:center;font-size:${tr(132, 116)}px;font-weight:700;color:${C.ink};line-height:1">${tr('Fútbol', 'Football')} <span style="color:${C.cyan};font-style:italic">${tr('en 60s', 'in 60s')}</span></div>`);
+    const tagl = add(r, `<div class="abs mono" style="left:0;right:0;top:520px;text-align:center;font-size:27px;font-weight:700;color:${C.muted};letter-spacing:.12em">${tr('REGLAS, HISTORIA Y DATOS · CON FUENTES', 'LAWS, HISTORY AND FACTS · WITH SOURCES')}</div>`);
     const btn = (icon, label, color, left) => add(r, `<div class="abs" style="left:${left}px;top:630px;width:390px;height:140px;border-radius:34px;background:${C.surface};border:4px solid ${color};display:flex;align-items:center;justify-content:center;gap:22px;box-shadow:0 0 50px ${color}44">
         <div style="width:64px;height:64px;color:${color}">${icon}</div><span class="caption" style="font-size:44px;font-weight:800;color:${C.ink}">${label}</span></div>`);
     const b1 = btn(I.bookmark, tr('Guárdalo', 'Save it'), C.amber, 125), b2 = btn(I.share, tr('Compártelo', 'Share it'), C.cyan, 565);

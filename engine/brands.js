@@ -3,8 +3,8 @@
   EUREKA.brands = {
     // Identidad de futbolatlas.app: fondo casi negro, verde césped oscuro y acento lima.
     futbolatlas: {
-      name: 'FÚTBOL ATLAS', tag: 'LA REGLA EN 60s',
-      i18n: { en: { name: 'FOOTBALL ATLAS', tag: 'THE LAW IN 60s' } },
+      name: 'FÚTBOL EN 60s', tag: 'FUTBOLATLAS.APP',
+      i18n: { en: { name: 'FOOTBALL IN 60s' } },
       glowA: '202,243,0', glowB: '20,120,50',
       colors: {
         bg: '#121414', surface: '#0a2a12', surface2: '#0f3418', line: '#22302a', lineStrong: '#3a5140',

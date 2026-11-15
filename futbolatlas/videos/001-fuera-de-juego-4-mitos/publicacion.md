@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS #01: 4 mitos del fuera de juego (Regla 11)
+# FÚTBOL EN 60s #01: 4 mitos del fuera de juego (Regla 11)
 
 - **Vídeo:** `out/001-fuera-de-juego-4-mitos.mp4` (1080×1920, 30 fps, 56,5 s, -14,5 LUFS)
 - **Portada:** `out/001-fuera-de-juego-4-mitos-portada.png`

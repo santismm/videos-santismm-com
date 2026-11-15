@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS #06: Libre directo vs indirecto: el brazo del árbitro te lo dice
+# FÚTBOL EN 60s #06: Libre directo vs indirecto: el brazo del árbitro te lo dice
 
 - **Vídeo:** `out/006-libre-directo-vs-indirecto.mp4` (1080×1920, 30 fps, 48,3 s, -14,6 LUFS)
 - **Portada:** `out/006-libre-directo-vs-indirecto-portada.png`

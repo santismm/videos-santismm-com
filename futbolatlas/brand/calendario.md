@@ -5,9 +5,9 @@
 | Día | Hora (Madrid) | Serie |
 |---|---|---|
 | Lunes | 20:30 | Regla (mitos, test, comparaciones) |
-| Miércoles | 20:30 | Regla |
+| Miércoles | 20:30 | Dato curioso (jugador, selección o equipo) |
 | Viernes | 20:30 | Regla, pensada para el fin de semana de liga |
-| Domingo | 12:00 | Historia o curiosidad ("La final en 60s", "El dato") |
+| Domingo | 12:00 | Partido histórico o palmarés |
 
 - **Mismo vídeo en las tres plataformas el mismo día,** subido de forma nativa en cada una y con su texto de `publicacion.md`.
 - **Canales en inglés:** mismo calendario, a las 19:00 de Madrid (18:00 en Reino Unido) entre semana y a las 12:00 los domingos.
@@ -27,17 +27,17 @@ Arranque propuesto el lunes 23 de noviembre de 2026, para dejar una semana de cr
 | Lun 30 nov | 05 | «Último hombre» no es una regla: cuándo es roja / DOGSO | Listo en ES y EN |
 | Mié 2 dic | 06 | Libre directo vs indirecto / Direct vs indirect free kick | Listo en ES y EN |
 | Vie 4 dic | 07 | Cómo funciona la tanda de penaltis | Por producir |
-| Dom 6 dic | 08 | La Panenka es legal (y de dónde sale) | Por producir |
-| Lun 7 dic | 09 | Juego brusco grave vs conducta violenta | Por producir |
-| Mié 9 dic | 10 | La ley de la ventaja | Por producir |
-| Vie 11 dic | 11 | VAR vs tecnología de gol | Por producir |
-| Dom 13 dic | 12 | Estambul 2005 en 60 s | Por producir |
-| Lun 14 dic | 13 | Simulación: qué castiga la regla | Por producir |
-| Mié 16 dic | 14 | Cómo funciona el Mundial de 48 selecciones | Por producir |
-| Vie 18 dic | 15 | Protestar al árbitro: qué es amarilla | Por producir |
-| Dom 20 dic | 16 | Quién ha ganado más Champions | Por producir |
+| Dom 6 dic | 08 | La Panenka: un penalti inventado apostando chocolatinas (jugador) | Por producir |
+| Lun 7 dic | 09 | Juego brusco grave vs conducta violenta (regla) | Por producir |
+| Mié 9 dic | 10 | La Eurocopa que se decidió a cara o cruz, 1968 (selección) | Por producir |
+| Vie 11 dic | 11 | La ley de la ventaja (regla) | Por producir |
+| Dom 13 dic | 12 | Estambul 2005 en 60 s (partido) | Por producir |
+| Lun 14 dic | 13 | VAR vs tecnología de gol (regla) | Por producir |
+| Mié 16 dic | 14 | Dinamarca 1992: campeona sin haberse clasificado (selección) | Por producir |
+| Vie 18 dic | 15 | Simulación: qué castiga la regla (regla) | Por producir |
+| Dom 20 dic | 16 | 7-3: la final con diez goles, 1960 (equipo) | Por producir |
 
-Todos los temas existen ya como página en futbolatlas.app. El orden prioriza reglas entre semana e historia el domingo; el #04 cae en domingo solo en la primera semana para no dejar hueco.
+Todos los temas existen ya como página en futbolatlas.app. Los seis primeros son de reglas porque ya estaban producidos; desde el #08 se alternan reglas, datos curiosos y partidos según el ritmo de arriba.
 
 ## Rutina semanal
 

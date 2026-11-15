@@ -1,4 +1,4 @@
-# FOOTBALL ATLAS #01: 4 offside myths (Law 11)
+# FOOTBALL IN 60s #01: 4 offside myths (Law 11)
 
 - **Video:** `out/001-offside-4-myths.mp4` (1080×1920, 30 fps, 58.6 s)
 - **Cover:** `out/001-offside-4-myths-portada.png`

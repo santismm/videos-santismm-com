@@ -1,6 +1,6 @@
-# Estrategia del canal FÚTBOL ATLAS · La regla en 60s
+# Estrategia del canal FÚTBOL EN 60s
 
-> Objetivo: llevar el conocimiento de [futbolatlas.app](https://futbolatlas.app) a TikTok, YouTube Shorts e Instagram Reels en vídeos de menos de 60 s que expliquen el reglamento y la historia del fútbol de forma sencilla, útil y entretenida. Los produce Claude Code de principio a fin.
+> Objetivo: llevar el conocimiento de [futbolatlas.app](https://futbolatlas.app) a TikTok, YouTube Shorts e Instagram Reels en vídeos de menos de 60 s que expliquen todo el conocimiento del fútbol (reglas, historia y datos curiosos de partidos, jugadores, selecciones y equipos) de forma sencilla, útil y entretenida. Los produce Claude Code de principio a fin.
 
 ## 1. Análisis de la web (14-11-2026)
 
@@ -17,6 +17,24 @@
 | Historia de competiciones | Mundiales 1930–2026, Eurocopas, finales de Champions, palmarés | **La final en 60s** / **El dato** |
 
 - **Ventaja diferencial:** en español abundan la opinión arbitral y la polémica, pero casi nadie enseña la regla citando el texto. La web aporta justo eso: el veredicto con el artículo en la mano. Además detecta discrepancias entre fuentes oficiales (por ejemplo, UEFA da dos minutos distintos para el gol de Van Basten en 1988), que son ganchos naturales.
+
+## 1 bis. Alcance del contenido (ampliado el 15-11-2026)
+
+El canal cubre todo el fútbol, no solo el reglamento. Cuatro series, una por día de publicación:
+
+| Serie | Qué cuenta | Ejemplos ya disponibles en la web |
+|---|---|---|
+| **Reglas** | Una regla, un mito o una comparación | Fuera de juego, manos, VAR, tanda de penaltis, ventaja |
+| **Datos curiosos** | Un dato sorprendente de un jugador, una selección o un equipo | Italia llegó a la final de 1968 a cara o cruz · Dinamarca ganó la Euro 1992 sin haberse clasificado · Grecia 2004 pagaba 80 a 1 · Platini marcó 9 goles en una Euro |
+| **Partidos históricos** | Un partido contado en 60 s | Estambul 2005 · Real Madrid 7-3 Eintracht (1960) · United-Bayern 1999 · Chelsea campeón en casa del Bayern (2012) |
+| **Palmarés y récords** | Quién ha ganado más y por qué la cifra se discute | Champions por club · Argentina 16 Copas América frente a 15 de Uruguay · máximos goleadores de los Mundiales |
+
+**Regla de fuentes.** Hoy la web cubre las Reglas de Juego, Mundiales, Eurocopas, Copa América, finales de Champions y Europa League, ligas 2025/26 y premios. Para temas que aún no están en la web (por ejemplo, historia de clubes concretos o biografías de jugadores) hay dos caminos:
+
+1. **Preferido:** añadir primero el contenido a futbolatlas.app con su fuente primaria y hacer el vídeo después. Así el vídeo siempre enlaza a una página propia.
+2. **Alternativo:** verificar cada dato en la fuente oficial (FIFA, UEFA, federación o club) al escribir el guion y anotarlo en `publicacion.md`.
+
+En ningún caso se usan datos de memoria sin verificar. Los jugadores se nombran, pero no se muestran sus caras ni imágenes reales.
 
 ## 2. Tendencias (búsqueda del 14-11-2026)
 
@@ -40,10 +58,10 @@ Casi todo lo relativo a plataformas procede de blogs de terceros y no de documen
 
 ## 4. Identidad
 
-- **Nombre:** FÚTBOL ATLAS · La regla en 60s. Lema: "El fútbol, con el reglamento en la mano".
+- **Nombre:** FÚTBOL EN 60s (decidido el 15-11-2026). En YouTube, `@futbol-atlas`. Lema: "Reglas, historia y datos, con fuentes". La web futbolatlas.app aparece en la cabecera y en la tarjeta final de cada vídeo.
 - **Visual:** la de la web. Fondo `#121414`, césped `#0a2a12`, acento lima `#caf300`. Tipografías Source Serif 4 (titulares), Hanken Grotesk (subtítulos) y JetBrains Mono (datos).
 - **Voz:** narrador neuronal es-ES (Álvaro) al +14 %.
-- **Inglés:** marca "Football Atlas · The law in 60s", narrador en-GB (Ryan) al +8 %.
+- **Inglés:** marca "Football in 60s", narrador en-GB (Ryan) al +8 %.
 - **Música y efectos:** sintetizados por código (Re mayor, 112 BPM, silbato, golpeo de balón, obturador).
 
 ## 5. Estructura de guion (≈ 55 s)
@@ -69,9 +87,15 @@ Los seis primeros están producidos en español e inglés. El plan completo de l
 | 05 ✅ | «Último hombre» no es la regla: cuándo es roja | `/k/dogso` |
 | 06 ✅ | Libre directo vs indirecto | `/k/direct-vs-indirect-free-kick` |
 | 07 | Cómo funciona la tanda de penaltis | `/k/how-a-penalty-shootout-works` |
-| 08 | La Panenka es legal (y de dónde sale) | `/k/panenka` |
+| 08 | La Panenka: un penalti inventado apostando chocolatinas | `/k/panenka` |
 | 09 | Juego brusco grave vs conducta violenta | `/k/serious-foul-play-vs-violent-conduct` |
-| 10 | La ley de la ventaja | `/k/advantage` |
+| 10 | La Eurocopa que se decidió a cara o cruz (1968) | `/k/euro-1968` |
+| 11 | La ley de la ventaja | `/k/advantage` |
+| 12 | Estambul 2005 en 60 s | `/k/champions-league-2005-final` |
+| 13 | VAR vs tecnología de gol | `/k/var-vs-goal-line-technology` |
+| 14 | Dinamarca 1992: campeona sin haberse clasificado | `/k/euro-1992` |
+| 15 | Simulación: qué castiga la regla | `/k/simulation` |
+| 16 | 7-3: la final con diez goles (1960) | `/k/champions-league-1960-final` |
 
 ## 7. Decisiones abiertas
 

@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS #04: Lo que el VAR no puede revisar
+# FÚTBOL EN 60s #04: Lo que el VAR no puede revisar
 
 - **Vídeo:** `out/004-var-que-puede-revisar.mp4` (1080×1920, 30 fps, 48,8 s, -14,4 LUFS)
 - **Portada:** `out/004-var-que-puede-revisar-portada.png`

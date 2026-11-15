@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS #03: ¿Es mano? Las 3 preguntas de la Regla 12
+# FÚTBOL EN 60s #03: ¿Es mano? Las 3 preguntas de la Regla 12
 
 - **Vídeo:** `out/003-mano-tres-preguntas.mp4` (1080×1920, 30 fps, 48,4 s, -14,6 LUFS)
 - **Portada:** `out/003-mano-tres-preguntas-portada.png`

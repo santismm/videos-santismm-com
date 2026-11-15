@@ -1,4 +1,4 @@
-# FOOTBALL ATLAS #06: Direct vs indirect free kick: the referee's arm tells you
+# FOOTBALL IN 60s #06: Direct vs indirect free kick: the referee's arm tells you
 
 - **Video:** `out/006-direct-vs-indirect-free-kick.mp4` (1080×1920, 30 fps, 51.8 s, -14.5 LUFS)
 - **Cover:** `out/006-direct-vs-indirect-free-kick-portada.png`

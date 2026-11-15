@@ -1,4 +1,4 @@
-/* FÚTBOL ATLAS #05 · "«Último hombre» no es una regla: cuándo es roja" (ES + EN)
+/* FÚTBOL EN 60s #05 · "«Último hombre» no es una regla: cuándo es roja" (ES + EN)
  * Fuente: futbolatlas.app/k/dogso y /k/law-12-fouls-and-misconduct (Regla 12, Reglas de Juego 2026/27 de The IFAB;
  * verificado en la web el 2026-08-08):
  *  - Evitar un gol o una ocasión manifiesta de gol, también con una mano deliberada, es expulsión.

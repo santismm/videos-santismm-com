@@ -1,4 +1,4 @@
-/* FÚTBOL ATLAS #02 · "5 cambios del reglamento 2026/27"
+/* FÚTBOL EN 60s #02 · "5 cambios del reglamento 2026/27"
  * Fuente: futbolatlas.app/k/what-changed-in-2026-27 (lista oficial de cambios de The IFAB; verificado en la web el 2026-08-08):
  *  - Reglas 15 y 16: retrasar un saque de banda o de meta activa una cuenta atrás pitada de 5 s; el saque de banda
  *    pasa al adversario y el de meta se convierte en saque de esquina.

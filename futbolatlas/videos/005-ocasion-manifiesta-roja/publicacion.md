@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS #05: «Último hombre» no es una regla: cuándo es roja
+# FÚTBOL EN 60s #05: «Último hombre» no es una regla: cuándo es roja
 
 - **Vídeo:** `out/005-ocasion-manifiesta-roja.mp4` (1080×1920, 30 fps, 45,5 s, -14,6 LUFS)
 - **Portada:** `out/005-ocasion-manifiesta-roja-portada.png`

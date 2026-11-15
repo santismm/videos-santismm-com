@@ -1,4 +1,4 @@
-# FÚTBOL ATLAS · La regla en 60s
+# FÚTBOL EN 60s
 
 Canal de vídeo corto (TikTok, Shorts y Reels) que convierte el contenido de [futbolatlas.app](https://futbolatlas.app) en piezas de menos de 60 segundos. Usa el mismo motor que EUREKA (`../engine`) con la marca `futbolatlas`.
 

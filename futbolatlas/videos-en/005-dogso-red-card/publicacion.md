@@ -1,4 +1,4 @@
-# FOOTBALL ATLAS #05: "Last man" is not a law: when it's a red card (DOGSO)
+# FOOTBALL IN 60s #05: "Last man" is not a law: when it's a red card (DOGSO)
 
 - **Video:** `out/005-dogso-red-card.mp4` (1080×1920, 30 fps, 49.0 s, -14.5 LUFS)
 - **Cover:** `out/005-dogso-red-card-portada.png`

@@ -1,4 +1,4 @@
-# FOOTBALL ATLAS #03: Is it handball? The 3 questions of Law 12
+# FOOTBALL IN 60s #03: Is it handball? The 3 questions of Law 12
 
 - **Video:** `out/003-handball-three-questions.mp4` (1080×1920, 30 fps, 50.6 s)
 - **Cover:** `out/003-handball-three-questions-portada.png`

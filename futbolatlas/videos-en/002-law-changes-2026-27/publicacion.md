@@ -1,4 +1,4 @@
-# FOOTBALL ATLAS #02: 5 law changes for 2026/27
+# FOOTBALL IN 60s #02: 5 law changes for 2026/27
 
 - **Video:** `out/002-law-changes-2026-27.mp4` (1080×1920, 30 fps, 54.4 s)
 - **Cover:** `out/002-law-changes-2026-27-portada.png`

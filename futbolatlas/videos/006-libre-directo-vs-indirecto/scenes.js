@@ -1,4 +1,4 @@
-/* FÚTBOL ATLAS #06 · "Libre directo vs indirecto" (ES + EN con el mismo archivo: tr('español', 'English'))
+/* FÚTBOL EN 60s #06 · "Libre directo vs indirecto" (ES + EN con el mismo archivo: tr('español', 'English'))
  * Fuente: futbolatlas.app/k/direct-vs-indirect-free-kick, /k/direct-free-kick y /k/indirect-free-kick
  * (Reglas 12 y 13, Reglas de Juego 2026/27 de The IFAB; verificado en la web el 2026-08-08):
  *  - Directo: se puede marcar directamente. Indirecto: solo vale si otro jugador (de cualquier equipo) toca el balón.

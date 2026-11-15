@@ -1,4 +1,4 @@
-# FOOTBALL ATLAS #04: What VAR can't review
+# FOOTBALL IN 60s #04: What VAR can't review
 
 - **Video:** `out/004-what-var-can-review.mp4` (1080×1920, 30 fps, 49.4 s, -14.3 LUFS)
 - **Cover:** `out/004-what-var-can-review-portada.png`
