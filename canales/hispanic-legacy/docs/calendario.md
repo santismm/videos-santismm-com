@@ -10,7 +10,8 @@
 | Domingo | 19:00 | El domingo por la tarde es de consumo alto de vídeo |
 
 - **Cuentas en inglés:** mismos días a las 21:00 de Madrid (tarde en Estados Unidos y Reino Unido aún despierto).
-- **Las horas son una hipótesis de partida**, no un dato. En cuanto las cuentas estén conectadas a Metricool, se ajustan con su informe de mejores horas por red.
+- **Las horas son una hipótesis de partida**, no un dato. Se ajustan con las estadísticas de cada plataforma tras las primeras semanas.
+- **Las fechas viven en [`../publicar/calendario.json`](../publicar/calendario.json)**, que es lo que lee el script de publicación.
 - **Cada vídeo sale el mismo día en las tres plataformas** (YouTube Shorts, Reels y TikTok), con el texto de su `publicacion.md`.
 
 ## Buffer inicial (6 vídeos, español e inglés)

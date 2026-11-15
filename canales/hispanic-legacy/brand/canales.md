@@ -1,6 +1,6 @@
 # Alta de canales: Hispanic Legacy · Historia en 60s
 
-Todo lo necesario para crear las cuentas de YouTube, Instagram y TikTok y conectarlas a Metricool.
+Todo lo necesario para crear las cuentas de YouTube, Instagram y TikTok y publicar en ellas con sus APIs oficiales.
 
 ## Decisión previa: un juego de cuentas por idioma
 
@@ -59,7 +59,7 @@ Para regenerarlas: `node canales/hispanic-legacy/brand/render.mjs`.
 
 ## Instagram
 
-- **Tipo de cuenta:** profesional (Creador o Empresa), que es lo que Metricool necesita para publicar Reels.
+- **Tipo de cuenta:** profesional (Creador o Empresa); es requisito para publicar Reels por API.
 - **Categoría:** Educación.
 - **Nombre:** Hispanic Legacy · Historia en 60s
 - **Biografía (ES):**
@@ -82,19 +82,16 @@ Para regenerarlas: `node canales/hispanic-legacy/brand/render.mjs`.
 
 ## TikTok
 
-- **Tipo de cuenta:** la que permita a Metricool la publicación directa (compruébalo al conectar).
+- **Tipo de cuenta:** cualquiera. Sin auditoría de la app, la API de TikTok solo deja el vídeo en tu bandeja para publicarlo con un toque.
 - **Nombre:** Hispanic Legacy
 - **Biografía (ES, 80 caracteres máx.):** `Historia con fuentes, en 60 s 🧭 Ciencia, exploración y cultura hispánica`
 - **Biografía (EN):** `History with sources, in 60s 🧭 Science, exploration, Hispanic culture`
 - **Enlace:** https://hispanic-legacy.com
 - **Al publicar:** activar "Contenido generado por IA".
 
-## Metricool
+## Publicación
 
-1. Crear una marca nueva por idioma: "Hispanic Legacy ES" y "Hispanic Legacy EN". No reutilizar la marca de EUREKA.
-2. Conectar en cada marca YouTube, Instagram y TikTok.
-3. Zona horaria de la marca: Europe/Madrid.
-4. Decirme el nombre o identificador de cada marca: a partir de ahí puedo programar el calendario de [`../docs/calendario.md`](../docs/calendario.md) directamente.
+Los vídeos se publican con las APIs oficiales de cada plataforma, sin intermediarios. Los pasos están en [`../publicar/README.md`](../publicar/README.md). De momento está hecho YouTube; Instagram y TikTok van después.
 
 ## Qué acompaña a cada vídeo
 

@@ -1,0 +1,12 @@
+{
+  "zona": "Europe/Madrid",
+  "hora": { "es": "19:00", "en": "21:00" },
+  "publicaciones": [
+    { "fecha": "2026-11-23", "video": "001-el-tornaviaje" },
+    { "fecha": "2026-11-25", "video": "002-el-vanadio-dos-veces" },
+    { "fecha": "2026-11-27", "video": "003-la-epidural-de-pages" },
+    { "fecha": "2026-11-29", "video": "004-el-ajedrez-de-la-dama" },
+    { "fecha": "2026-11-30", "video": "005-la-cadena-de-balmis" },
+    { "fecha": "2026-12-02", "video": "006-el-mayor-imperio" }
+  ]
+}

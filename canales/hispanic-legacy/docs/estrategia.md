@@ -71,10 +71,9 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 
 - **Idioma:** español e inglés, con la misma animación (decidido el 14-11-2026; antes se había dicho solo español).
 - **Cadencia:** 4 vídeos por semana, con un buffer de 6. Ver [`calendario.md`](calendario.md).
-- **Plataformas:** Instagram, YouTube y TikTok, gestionadas con Metricool. Ver [`../brand/canales.md`](../brand/canales.md).
+- **Plataformas:** Instagram, YouTube y TikTok, publicando con sus APIs oficiales, sin Metricool (decidido el 15-11-2026). Ver [`../publicar/README.md`](../publicar/README.md).
 
 Pendientes:
 
 - Nombre y cuentas del canal en cada plataforma.
 - Voz: el piloto usa una voz neuronal femenina de España (Elvira).
-- Frecuencia de publicación y si se programa con Metricool como el canal EUREKA.
