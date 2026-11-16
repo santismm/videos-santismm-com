@@ -9,8 +9,6 @@ YT_REFRESH_TOKEN_ES o YT_REFRESH_TOKEN_EN (ver README.md). No lo pegues en ning√
 """
 import http.server, json, secrets, sys, urllib.parse, urllib.request, webbrowser
 
-PORT = 8765
-REDIRECT = f"http://127.0.0.1:{PORT}"
 SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.force-ssl"
 
 
@@ -24,9 +22,6 @@ def main():
         sys.exit(__doc__)
     client_id, client_secret = sys.argv[1:]
     state = secrets.token_urlsafe(16)
-    url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
-        "client_id": client_id, "redirect_uri": REDIRECT, "response_type": "code", "scope": SCOPES,
-        "access_type": "offline", "prompt": "consent", "state": state})
     got = {}
 
     class Handler(http.server.BaseHTTPRequestHandler):
@@ -39,10 +34,15 @@ def main():
         def log_message(self, *a):
             pass
 
+    # Puerto 0: el sistema asigna uno libre (Google admite cualquier puerto local en clientes de escritorio).
+    srv = http.server.HTTPServer(("127.0.0.1", 0), Handler)
+    REDIRECT = f"http://127.0.0.1:{srv.server_address[1]}"
+    url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
+        "client_id": client_id, "redirect_uri": REDIRECT, "response_type": "code", "scope": SCOPES,
+        "access_type": "offline", "prompt": "consent", "state": state})
     print("Abriendo el navegador. Elige la cuenta de Google y EL CANAL que quieres autorizar.\n"
           "Si no se abre, copia esta direcci√≥n:\n\n" + url + "\n")
     webbrowser.open(url)
-    srv = http.server.HTTPServer(("127.0.0.1", PORT), Handler)
     while "code" not in got and "error" not in got:
         srv.handle_request()
     if got.get("error") or got.get("state") != state:
