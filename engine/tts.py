@@ -18,7 +18,23 @@ def norm(s):
     return re.sub(r"[^\wáéíóúüñ%]", "", s.lower())
 
 
-async def synth(text, voice, rate, pitch, mp3):
+async def synth(text, voice, rate, pitch, mp3, tries=5):
+    """Con reintentos: el servicio de voz a veces responde 'No audio received'."""
+    for i in range(tries):
+        try:
+            words = await _synth(text, voice, rate, pitch, mp3)
+            if words and os.path.getsize(mp3) > 0:
+                return words
+            raise RuntimeError("respuesta vacía")
+        except Exception as e:  # noqa: BLE001
+            if i == tries - 1:
+                raise
+            wait = 2 ** i
+            print(f"  voz: reintento {i + 1}/{tries - 1} en {wait}s ({e})")
+            await asyncio.sleep(wait)
+
+
+async def _synth(text, voice, rate, pitch, mp3):
     c = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch,
                              boundary="WordBoundary", proxy=PROXY)
     words = []

@@ -42,7 +42,8 @@ Se ejecuta lunes, miércoles, viernes y domingo a las 18:22 (hora de Madrid).
 | **dom 22 nov** | #07 Coste por resultado (adelantado desde el lun 23) | programado | cuando se conecten |
 | lun 23 nov | #08 El dron de los 79 minutos | programado | cuando se conecten |
 | mié 25 nov | #09 La IA frente a 44 profesiones | programado | cuando se conecten |
-| vie 27 nov → | #10 en adelante | los genera la tarea programada | |
+| vie 27 nov | #10 Un agente al mando de una máquina de vending | programado | cuando se conecten |
+| dom 29 nov → | #11 en adelante | los genera la tarea programada | |
 
 **Instagram y TikTok en español:** los vídeos ya publicados en YouTube (#01–#03) pueden estrenarse en esas redes los primeros días. Propuesta: conectar las cuentas y publicar #01, #02 y #03 en los tres primeros huecos libres, y seguir con el mismo calendario que YouTube.
 
@@ -61,6 +62,7 @@ Todos los episodios en inglés (#01–#09) estarán listos antes de conectar las
 | Fri 4 Dec | #07 The real cost of an agent |
 | Sun 6 Dec | #08 The 79-minute drone |
 | Mon 7 Dec | #09 AI vs 44 professions |
+| Wed 9 Dec | #10 The vending-machine agent |
 
 ## Plan de temas (siguientes)
 

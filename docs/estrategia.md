@@ -110,7 +110,7 @@ Variar de serie evita la penalización por plantilla repetitiva y crea citas fij
 | 07 ✅ | **¿Cuánto cuesta una tarea de IA?** | "De 3 céntimos a 87 $… por lo mismo" | Coste por tarea (Kapoor y Narayanan) |
 | 08 ✅ | **El dron que ahorró 79 minutos… o 19** | "¿79 minutos? Depende de con qué compares" | physicalai · Zipline Ruanda (evidencia A) |
 | 09 ✅ | **La IA frente a 44 profesiones** | "Gana o empata en el 41 % de las tareas" | GDPval en el tracker de benchmarks |
-| 10 | **Un agente al mando de una máquina de vending** | "Un humano gana 63 000 $. La IA, 11 000 $." | Vending-Bench 2 |
+| 10 ✅ | **Un agente al mando de una máquina de vending** | "Un humano gana 63 000 $. La IA, 11 000 $." | Vending-Bench 2 |
 
 Reserva: *Modelo, agente o arnés* (reto interactivo que lleva a labs), Figure 02 en BMW, ARC-AGI-3 (30 % frente a 100 % humano), "El examen que cambió sus preguntas" (auditoría ABC de Princeton).
 
