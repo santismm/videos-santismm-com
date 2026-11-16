@@ -1,7 +1,7 @@
 # EUREKA #10 (EN): An AI running a vending machine: how much does it make in a year? (Vending-Bench)
 
-- **Video:** `out/010-the-vending-machine-agent.mp4` (1080×1920, 30 fps, DURATION s, -14 LUFS)
-- **Cover:** `out/010-the-vending-machine-agent-portada.png` (frame at COVER s)
+- **Video:** `out/010-the-vending-machine-agent.mp4` (1080×1920, 30 fps, 59.1 s, -14 LUFS)
+- **Cover:** `out/010-the-vending-machine-agent-portada.png` (frame at 4.2 s)
 - **Subtitles:** `out/010-the-vending-machine-agent.srt`
 - **Spanish original:** `videos/010-el-agente-de-la-maquina-de-vending`
 
