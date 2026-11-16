@@ -36,7 +36,7 @@ Se ejecuta lunes, miércoles, viernes y domingo a las 18:22 (hora de Madrid).
 | lun 9 nov | #01 El arnés | ✅ publicado | — |
 | mié 11 nov | #02 Contaminación | ✅ publicado | — |
 | vie 13 nov | #03 pass^k | ✅ publicado | — |
-| lun 16 nov | #04 Horizonte de METR | programado | cuando se conecten |
+| lun 16 nov | #04 Horizonte de METR | ✅ [publicado](https://www.youtube.com/shorts/CkM4v7utkf8) | cuando se conecten |
 | mié 18 nov | #05 Email que secuestra | programado | cuando se conecten |
 | vie 20 nov | #06 4 formas de enfermar | programado | cuando se conecten |
 | **dom 22 nov** | #07 Coste por resultado (adelantado desde el lun 23) | programado | cuando se conecten |
