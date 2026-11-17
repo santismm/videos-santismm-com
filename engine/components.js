@@ -3,6 +3,7 @@
  */
 (function () {
   const { C, I, Ease, lerp, prog, spring, appear, add } = EUREKA;
+  const L = (es, en) => EUREKA.L(es, en);
 
   Object.assign(I, {
     bulb: `<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 44c-6-4-11-10-11-18a20 20 0 0 1 40 0c0 8-5 14-11 18v6H23z"/><path d="M25 57h14M32 20v10l-5 5M32 30l5 5"/></svg>`,
@@ -29,7 +30,7 @@
     const el = add(parent, `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;transform:rotate(${rot}deg);">
       <div class="abs" style="inset:0;border-radius:18px;background:#e9eef6;box-shadow:0 30px 70px rgba(0,0,0,.55);overflow:hidden">
         <div style="padding:${w * 0.07}px ${w * 0.08}px 0">
-          <div class="mono" style="font-size:${w * 0.06}px;font-weight:700;color:#5d6b85;letter-spacing:.14em">EXAMEN</div>
+          <div class="mono" style="font-size:${w * 0.06}px;font-weight:700;color:#5d6b85;letter-spacing:.14em">${L('EXAMEN', 'EXAM')}</div>
           <div class="display" style="font-size:${w * 0.085}px;font-weight:700;color:#0b0f19;line-height:1.1;margin-top:6px">${title}</div>
           ${sub ? `<div class="mono" style="font-size:${w * 0.048}px;font-weight:500;color:#5d6b85;margin-top:6px">${sub}</div>` : ''}
           <div class="ls" style="margin-top:${w * 0.06}px;display:flex;flex-direction:column;gap:${w * 0.045}px">
@@ -59,15 +60,15 @@
     const r = x.root;
     const logo = add(r, `<div class="abs display" style="left:0;right:0;top:340px;text-align:center;font-size:150px;font-weight:700;color:${C.ink};letter-spacing:.06em;display:flex;align-items:center;justify-content:center;gap:28px">
         <span style="width:44px;height:44px;border-radius:50%;background:${C.cyan};box-shadow:0 0 50px ${C.cyan}"></span>EUREKA</div>`);
-    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:530px;text-align:center;font-size:30px;font-weight:700;color:${C.muted};letter-spacing:.12em">IA COMPLEJA, EXPLICADA EN 60s</div>`);
+    const tag = add(r, `<div class="abs mono" style="left:0;right:0;top:530px;text-align:center;font-size:30px;font-weight:700;color:${C.muted};letter-spacing:.12em">${L('IA COMPLEJA, EXPLICADA EN 60s', 'COMPLEX AI, EXPLAINED IN 60s')}</div>`);
     const btn = (icon, label, color, left) => add(r, `<div class="abs" style="left:${left}px;top:640px;width:390px;height:140px;border-radius:34px;background:${C.surface2};border:4px solid ${color};display:flex;align-items:center;justify-content:center;gap:22px;box-shadow:0 0 50px ${color}44">
         <div style="width:64px;height:64px;color:${color}">${icon}</div><span class="display" style="font-size:44px;font-weight:700;color:${C.ink}">${label}</span></div>`);
-    const b1 = btn(I.bookmark, 'Guárdalo', C.amber, 125);
-    const b2 = btn(I.share, 'Compártelo', C.cyan, 565);
+    const b1 = btn(I.bookmark, L('Guárdalo', 'Save it'), C.amber, 125);
+    const b2 = btn(I.share, L('Compártelo', 'Share it'), C.cyan, 565);
     const site = add(r, `<div class="abs display" style="left:0;right:0;top:850px;text-align:center;font-size:${links[0].length > 16 ? 56 : 72}px;font-weight:700;color:${C.cyan}">${links[0]}</div>`);
     const subs = add(r, `<div class="abs mono" style="left:0;right:0;top:955px;text-align:center;font-size:27px;font-weight:500;color:${C.muted}">${sub}</div>`);
-    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1080px;text-align:center;font-size:21px;font-weight:500;color:${C.faint}">Basado en los artículos de Santi Santa María · voz y animación generadas con IA</div>`);
-    const tG = x.at('guárdalo'), tC = x.at('compártelo');
+    const disc = add(r, `<div class="abs mono" style="left:0;right:0;top:1080px;text-align:center;font-size:21px;font-weight:500;color:${C.faint}">${L('Basado en los artículos de Santi Santa María · voz y animación generadas con IA', 'Based on articles by Santi Santa María · AI-generated voice and animation')}</div>`);
+    const tG = x.at(L('guárdalo', 'save')), tC = x.at(L('compártelo', 'share'));
     x.cue(tG, 'pop', 0.8); x.cue(tC, 'pop', 0.8); x.cue(0.1, 'ding', 0.4);
     return (lt) => {
       const l = spring(lt, 0.05, 0.5); logo.style.opacity = l > 0 ? 1 : 0; logo.style.transform = `scale(${lerp(0.7, 1, l)})`;

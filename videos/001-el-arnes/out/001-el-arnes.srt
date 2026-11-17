@@ -7,7 +7,7 @@ Misma IA, mismo examen…
 y 24 puntos más de nota.
 
 3
-00:00:04,607 --> 00:00:06,528
+00:00:04,607 --> 00:00:06,329
 Pasó en WebArena, un test donde la
 
 4
@@ -15,7 +15,7 @@ Pasó en WebArena, un test donde la
 IA navega por webs reales.
 
 5
-00:00:08,592 --> 00:00:09,549
+00:00:08,592 --> 00:00:09,525
 Mismo modelo:
 
 6
@@ -31,7 +31,7 @@ No le cambiaron el cerebro.
 Le cambiaron el arnés.
 
 9
-00:00:16,999 --> 00:00:18,526
+00:00:16,999 --> 00:00:18,327
 El arnés es todo lo que rodea
 
 10
@@ -39,7 +39,7 @@ El arnés es todo lo que rodea
 al modelo:
 
 11
-00:00:19,016 --> 00:00:22,316
+00:00:19,016 --> 00:00:22,117
 herramientas, memoria, instrucciones, y un bucle para
 
 12
@@ -55,7 +55,7 @@ Piénsalo así:
 el modelo es el motor.
 
 15
-00:00:27,078 --> 00:00:29,526
+00:00:27,078 --> 00:00:29,327
 Pero sin ruedas, volante ni frenos, no
 
 16
@@ -67,19 +67,19 @@ gana ninguna carrera.
 El arnés es el coche.
 
 18
-00:00:33,402 --> 00:00:34,786
+00:00:33,402 --> 00:00:34,785
 Y no es un caso aislado:
 
 19
-00:00:34,795 --> 00:00:36,929
+00:00:34,795 --> 00:00:36,730
 en otro test de programación, el mismo
 
 20
-00:00:36,740 --> 00:00:38,903
+00:00:36,740 --> 00:00:38,704
 modelo saca un 80% con el arnés
 
 21
-00:00:38,714 --> 00:00:41,575
+00:00:38,714 --> 00:00:41,376
 de su fabricante, y un 59% con
 
 22
@@ -87,7 +87,7 @@ de su fabricante, y un 59% con
 uno neutral.
 
 23
-00:00:43,111 --> 00:00:45,186
+00:00:43,111 --> 00:00:44,987
 Así que, cuando veas un ranking de
 
 24
@@ -103,7 +103,7 @@ Pregunta:
 ¿con qué arnés?
 
 27
-00:00:50,183 --> 00:00:52,028
+00:00:50,183 --> 00:00:51,829
 Porque hoy, el cuello de botella no
 
 28
@@ -115,7 +115,7 @@ es el modelo.
 Es el arnés.
 
 30
-00:00:55,122 --> 00:00:57,438
+00:00:55,122 --> 00:00:57,239
 Guárdalo, y compártelo con quien elige la
 
 31

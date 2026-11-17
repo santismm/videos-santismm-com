@@ -1,5 +1,5 @@
 1
-00:00:00,247 --> 00:00:03,210
+00:00:00,247 --> 00:00:03,208
 Del 75% al 7,5%…
 
 2
@@ -15,11 +15,11 @@ en el mismo tipo de examen.
 Se llama contaminación:
 
 5
-00:00:08,435 --> 00:00:10,126
+00:00:08,435 --> 00:00:09,927
 las preguntas del examen se cuelan en
 
 6
-00:00:09,937 --> 00:00:11,277
+00:00:09,937 --> 00:00:11,078
 los datos con los que se entrena
 
 7
@@ -27,7 +27,7 @@ los datos con los que se entrena
 el modelo.
 
 8
-00:00:12,663 --> 00:00:13,959
+00:00:12,663 --> 00:00:13,760
 Es como el alumno que ya ha
 
 9
@@ -47,7 +47,7 @@ o si se sabe las respuestas.
 Y pasa más de lo que crees:
 
 13
-00:00:20,059 --> 00:00:22,792
+00:00:20,059 --> 00:00:22,593
 hay estudios que detectan hasta un 45%
 
 14
@@ -55,7 +55,7 @@ hay estudios que detectan hasta un 45%
 de material de examen filtrado.
 
 15
-00:00:25,106 --> 00:00:26,984
+00:00:25,106 --> 00:00:26,785
 Por eso el Premio Konwinski solo usa
 
 16
@@ -67,7 +67,7 @@ problemas de GitHub publicados después del entrenamiento.
 Imposible haberlos visto.
 
 18
-00:00:32,213 --> 00:00:32,983
+00:00:32,213 --> 00:00:32,927
 El ganador:
 
 19
@@ -79,7 +79,7 @@ un 7,5%.
 La lección:
 
 21
-00:00:36,253 --> 00:00:38,065
+00:00:36,253 --> 00:00:37,866
 un examen saturado se arregla con uno
 
 22
@@ -87,7 +87,7 @@ un examen saturado se arregla con uno
 más difícil.
 
 23
-00:00:39,328 --> 00:00:41,338
+00:00:39,328 --> 00:00:41,139
 Uno contaminado, solo con uno que el
 
 24
@@ -103,7 +103,7 @@ Así que, ante una nota espectacular, pregunta:
 ¿pudo estar este examen en su entrenamiento?
 
 27
-00:00:49,082 --> 00:00:50,817
+00:00:49,082 --> 00:00:50,618
 Porque una nota alta no siempre es
 
 28
@@ -115,7 +115,7 @@ inteligencia.
 A veces, es memoria.
 
 30
-00:00:54,543 --> 00:00:56,782
+00:00:54,543 --> 00:00:56,583
 Guárdalo, y compártelo con quien se cree
 
 31

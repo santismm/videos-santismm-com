@@ -18,7 +18,23 @@ def norm(s):
     return re.sub(r"[^\wáéíóúüñ%]", "", s.lower())
 
 
-async def synth(text, voice, rate, pitch, mp3):
+async def synth(text, voice, rate, pitch, mp3, tries=5):
+    """Con reintentos: el servicio de voz a veces responde 'No audio received'."""
+    for i in range(tries):
+        try:
+            words = await _synth(text, voice, rate, pitch, mp3)
+            if words and os.path.getsize(mp3) > 0:
+                return words
+            raise RuntimeError("respuesta vacía")
+        except Exception as e:  # noqa: BLE001
+            if i == tries - 1:
+                raise
+            wait = 2 ** i
+            print(f"  voz: reintento {i + 1}/{tries - 1} en {wait}s ({e})")
+            await asyncio.sleep(wait)
+
+
+async def _synth(text, voice, rate, pitch, mp3):
     c = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch,
                              boundary="WordBoundary", proxy=PROXY)
     words = []
@@ -89,9 +105,9 @@ async def main(vdir):
         f"amix=inputs={len(parts)}:normalize=0,atrim=0:{total}[out]"
     subprocess.check_call(["ffmpeg", "-y", "-v", "error", *inputs, "-filter_complex", filt,
                            "-map", "[out]", "-ac", "1", "-ar", str(SR), os.path.join(build, "voice.wav")])
-    tl = {"id": cfg["id"], "series": cfg["series"], "episode": cfg["episode"],
+    tl = {"id": cfg["id"], "lang": cfg.get("lang", "es"), "series": cfg["series"], "episode": cfg["episode"],
           "title": cfg["title"], "source": cfg.get("source", ""), "duration": total,
-          "brand": cfg.get("brand", "eureka"), "lang": cfg.get("lang", "es"), "music": cfg.get("music", "eureka"),
+          "brand": cfg.get("brand", "eureka"), "music": cfg.get("music", "eureka"),
           "scenes": scenes}
     json.dump(tl, open(os.path.join(build, "timeline.json"), "w"), ensure_ascii=False, indent=1)
     print(f"duración total: {total:.2f}s")

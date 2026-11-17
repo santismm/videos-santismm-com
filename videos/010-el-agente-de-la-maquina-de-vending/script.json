@@ -1,0 +1,51 @@
+{
+  "id": "010-el-agente-de-la-maquina-de-vending",
+  "series": "EUREKA · IA en 60s",
+  "episode": 10,
+  "title": "Un agente al mando de una máquina de vending: ¿cuánto gana en un año? (Vending-Bench)",
+  "cover": "500 $ y una IA<br><span style=\"color:#f59e0b\">¿cuánto gana?</span>",
+  "coverTime": 4.2,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "Andon Labs, Vending-Bench 2 (andonlabs.com/evals/vending-bench-2, leído el 16-11-2026) y Vending-Bench (arXiv 2502.15840) · articles.santismm.com/el-cronometro-y-el-examen",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "500 dólares, una máquina de vending y un año: ¿cuánto gana una IA?"
+    },
+    {
+      "id": "reglas",
+      "text": "Es Vending-Bench, de Andon Labs. La IA pide a proveedores por email, pone precios y paga 2 dólares al día. Gana quien acaba con más dinero."
+    },
+    {
+      "id": "resultado",
+      "text": "Hoy, el mejor modelo cierra el año con unos 16.500 dólares."
+    },
+    {
+      "id": "brecha",
+      "text": "Pero Andon calcula que una buena estrategia sacaría 63.000. Se queda en el 26%."
+    },
+    {
+      "id": "fbi",
+      "text": "A veces descarrila: en la primera versión, un Claude dio por llegado un pedido que no estaba, cerró el negocio… y escribió al FBI."
+    },
+    {
+      "id": "varianza",
+      "text": "Mismo modelo, misma tarea: de media, 2.218 dólares. En su peor intento, 476: menos que al empezar."
+    },
+    {
+      "id": "leccion",
+      "text": "La lección: no preguntes qué nota saca. Pregunta cuánto dinero deja en un año, y cuántas veces descarrila."
+    },
+    {
+      "id": "tesis",
+      "text": "Porque cuanto más real es el trabajo, mayor es la brecha."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien confiaría su negocio a un agente."
+    }
+  ]
+}

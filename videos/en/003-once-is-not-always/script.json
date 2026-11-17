@@ -1,0 +1,48 @@
+{
+  "id": "003-once-is-not-always",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 3,
+  "title": "Works once ≠ works always (pass^k)",
+  "cover": "Works once…<br><span style=\"color:#f59e0b\">but always?</span>",
+  "coverTime": 3.48,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/the-stopwatch-and-the-exam · arxiv.org/abs/2406.12045",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Your AI agent nailed the demo. Will it nail the next eight?"
+    },
+    {
+      "id": "metricas",
+      "text": "Most leaderboards measure whether it gets it right once. But in a business, what matters is something else: getting it right every time."
+    },
+    {
+      "id": "cuenta",
+      "text": "Do the math: an agent that's right 90% of the time, if it has to be right eight times in a row, drops to 43%."
+    },
+    {
+      "id": "taubench",
+      "text": "And this isn't theory. On tau-bench, a customer service test, the best agents of 2024 succeeded less than 50% of the time… and eight times in a row, less than 25%."
+    },
+    {
+      "id": "camino",
+      "text": "Why? Because an agent doesn't answer a question: it walks a path of many steps. A single error brings it all down."
+    },
+    {
+      "id": "compra",
+      "text": "So before you buy an agent, don't ask how often it's right. Ask how many times in a row it's right… and what happens when it fails."
+    },
+    {
+      "id": "tesis",
+      "text": "Because a demo is once. Production is always."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and share it with someone who's about to buy an agent."
+    }
+  ]
+}

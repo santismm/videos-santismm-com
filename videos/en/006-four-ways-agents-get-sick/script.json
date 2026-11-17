@@ -1,0 +1,24 @@
+{
+  "id": "006-four-ways-agents-get-sick",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 6,
+  "title": "4 ways an AI agent gets sick",
+  "cover": "4 ways an agent<br><span style=\"color:#fb2c36\">gets sick</span>",
+  "coverTime": 3.6,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/the-agentic-enterprise-needs-an-immune-system",
+  "scenes": [
+    { "id": "hook",       "text": "Your AI agent can get sick. And there are four different ways it happens." },
+    { "id": "entrada",    "text": "One: input. An email or a website carries hidden instructions, and the agent takes them as orders." },
+    { "id": "permisos",   "text": "Two: permission. It has more power than it needs. The model may fail, but the damage depends on how much you let it touch." },
+    { "id": "objetivo",   "text": "Three: objective. It meets the metric the wrong way: closing cases without solving them, or hiding exceptions." },
+    { "id": "red",        "text": "Four: the network. A contaminated result passes from one agent to another, enters its memory… and comes back looking trustworthy." },
+    { "id": "autoinmune", "text": "But watch out for an overreacting defense: it can take down healthy services too. That's digital autoimmunity." },
+    { "id": "tesis",      "text": "The cure is a cycle: validate, authorize, observe, contain, and learn." },
+    { "id": "cta",        "text": "Save it, and share it with anyone putting agents into production." }
+  ]
+}

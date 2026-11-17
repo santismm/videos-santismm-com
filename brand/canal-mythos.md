@@ -60,17 +60,17 @@ Se suben en YouTube Studio → Personalización → Imagen de marca. Para regene
 
 ## Conexión con Metricool (lo tienes que hacer tú)
 
-Ahora Metricool solo tiene la marca 7970471, conectada al canal de EUREKA. Por cada idioma:
+Metricool tiene ya la marca de EUREKA en español (7970471), y EUREKA en inglés tendrá la suya. Por cada idioma de MYTHOS:
 
 1. Crea el canal en YouTube con tu cuenta de Google: foto de perfil → «Crear un canal» → «Usar un nombre personalizado» (crea una cuenta de marca).
 2. En Metricool, «Añadir marca» → nombre «MYTHOS ES» (o «MYTHOS EN») → conectar YouTube → elegir ese canal.
 3. Avísame. Lo veo con `getBrandSettings` y programo los vídeos.
 
-Según tu plan de Metricool, puede que haga falta ampliarlo para tener tres marcas (EUREKA + MYTHOS ES + MYTHOS EN). Compruébalo en Metricool → Facturación.
+Según tu plan de Metricool, puede que haga falta ampliarlo para tener cuatro marcas (EUREKA ES, EUREKA EN, MYTHOS ES y MYTHOS EN). Compruébalo en Metricool → Facturación.
 
 ## Calendario propuesto
 
-Los días no coinciden con los de EUREKA (lunes, miércoles y viernes a las 13:00 de Madrid), para no solapar publicaciones ni cargar la tarea programada que ya existe.
+Los días no coinciden con los de EUREKA (lunes, miércoles, viernes y domingo: 13:00 en español y 18:00 en inglés, hora de Madrid), para no solapar publicaciones ni cargar la tarea programada que ya existe.
 
 | Canal | Días | Hora | Por qué |
 |---|---|---|---|
