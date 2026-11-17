@@ -1,0 +1,25 @@
+{
+  "id": "005-ocasion-manifiesta-roja",
+  "brand": "futbolatlas",
+  "series": "FÚTBOL EN 60s",
+  "episode": 5,
+  "title": "«Último hombre» no es una regla: cuándo es roja",
+  "cover": "Último hombre<br><span style=\"color:#caf300\">no es la regla</span>",
+  "coverTime": 4.0,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.24,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/dogso · futbolatlas.app/k/law-12-fouls-and-misconduct",
+  "scenes": [
+    { "id": "hook", "text": "«Era el último hombre: roja». La regla no dice eso." },
+    { "id": "regla", "text": "La Regla 12 castiga con roja evitar un gol o una ocasión manifiesta de gol. También con una mano voluntaria." },
+    { "id": "cuenta", "text": "Y desde esta edición, el árbitro valora dónde están y cuántos son los defensores y los atacantes." },
+    { "id": "area", "text": "Pero ojo dentro del área. Si pita penalti y el defensor intentaba jugar el balón, es solo amarilla." },
+    { "id": "resto", "text": "Si agarra, empuja, tira de él o no puede jugar el balón: roja y penalti." },
+    { "id": "ventaja", "text": "¿Y si el árbitro da ventaja y la jugada acaba en gol? Desde este año, sin tarjeta." },
+    { "id": "tesis", "text": "No importa quién es el último. Importa la ocasión que quitas." },
+    { "id": "cta", "text": "Guárdalo, y compártelo con quien pide roja en cada falta." }
+  ]
+}

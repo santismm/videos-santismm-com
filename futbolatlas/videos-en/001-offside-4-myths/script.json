@@ -1,0 +1,27 @@
+{
+  "id": "001-offside-4-myths",
+  "lang": "en",
+  "scenes_js": "../../videos/001-fuera-de-juego-4-mitos/scenes.js",
+  "brand": "futbolatlas",
+  "series": "FOOTBALL IN 60s",
+  "episode": 1,
+  "title": "4 offside myths (Law 11)",
+  "cover": "4 offside<br><span style=\"color:#caf300\">myths</span>",
+  "coverTime": 8.6,
+  "voice": "en-GB-RyanNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/offside-misconceptions · futbolatlas.app/k/how-offside-actually-works",
+  "scenes": [
+    { "id": "hook", "text": "You've spent years arguing about offside, with four rules that don't exist." },
+    { "id": "mito1", "text": "Myth one: he was level, so he's offside. False. Level with the second-last opponent is onside." },
+    { "id": "mito2", "text": "Myth two: his arm was past the defender. Still no. Hands and arms never count: only head, body and feet." },
+    { "id": "mito3", "text": "Myth three: he was all alone when he got the ball. So what? The snapshot is taken when his team-mate plays the ball, not when it arrives." },
+    { "id": "mito4", "text": "Myth four: standing in an offside position is already an offence. No. Position alone is never punished: he has to get involved in play." },
+    { "id": "bonus", "text": "And a bonus: if the ball comes to you straight from a throw-in, a goal kick or a corner, there's no offside." },
+    { "id": "tesis", "text": "Offside isn't just where you are. It's when, with what, and what you do." },
+    { "id": "cta", "text": "Save it, and share it with the friend who calls everything offside from the sofa." }
+  ]
+}

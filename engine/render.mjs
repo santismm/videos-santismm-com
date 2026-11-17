@@ -21,7 +21,8 @@ const workers = +opt('workers', 3);
 const stills = opt('stills', null);
 const build = path.join(vdir, 'build');
 const timeline = JSON.parse(fs.readFileSync(path.join(build, 'timeline.json'), 'utf8'));
-const scenesSrc = pathToFileURL(path.join(vdir, 'scenes.js')).href;
+// Un vídeo puede reutilizar las escenas de otro (p. ej., la versión en otro idioma) con "scenes_js" en script.json.
+const scenesSrc = pathToFileURL(path.resolve(vdir, timeline.scenes_js || 'scenes.js')).href;
 const pageUrl = pathToFileURL(path.join(here, 'page.html')).href;
 
 async function openPage(browser) {

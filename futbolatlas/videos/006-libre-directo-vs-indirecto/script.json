@@ -1,0 +1,24 @@
+{
+  "id": "006-libre-directo-vs-indirecto",
+  "brand": "futbolatlas",
+  "series": "FÚTBOL EN 60s",
+  "episode": 6,
+  "title": "Libre directo vs indirecto: el brazo del árbitro te lo dice",
+  "cover": "Directo vs<br><span style=\"color:#ffb627\">indirecto</span>",
+  "coverTime": 2.0,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/direct-vs-indirect-free-kick",
+  "scenes": [
+    { "id": "hook", "text": "Si el árbitro levanta el brazo, ese libre no puede entrar directo." },
+    { "id": "marcar", "text": "Diferencia uno: el gol. El directo puede ir derecho a la red. El indirecto necesita que otro jugador toque el balón." },
+    { "id": "saque", "text": "Y si un indirecto entra sin que nadie lo toque, no es gol: es saque de puerta." },
+    { "id": "faltas", "text": "Diferencia dos: la falta. Directo: contacto, como zancadillas, empujones o agarrones, y las manos. Indirecto: juego peligroso, fuera de juego o la cesión al portero." },
+    { "id": "area", "text": "Diferencia tres: el área. Una falta de directo dentro del área es penalti. Una de indirecto sigue siendo libre indirecto." },
+    { "id": "tesis", "text": "Así que mira el brazo del árbitro. Brazo arriba: indirecto." },
+    { "id": "cta", "text": "Guárdalo, y compártelo con quien dispara a puerta todos los libres." }
+  ]
+}

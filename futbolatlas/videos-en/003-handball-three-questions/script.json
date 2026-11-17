@@ -1,0 +1,27 @@
+{
+  "id": "003-handball-three-questions",
+  "lang": "en",
+  "scenes_js": "../../videos/003-mano-tres-preguntas/scenes.js",
+  "brand": "futbolatlas",
+  "series": "FOOTBALL IN 60s",
+  "episode": 3,
+  "title": "Is it handball? The 3 questions of Law 12",
+  "cover": "Handball?<br><span style=\"color:#caf300\">3 questions</span>",
+  "coverTime": 2.6,
+  "voice": "en-GB-RyanNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/how-handball-actually-works · futbolatlas.app/k/handball-misconceptions",
+  "scenes": [
+    { "id": "hook", "text": "“Handball is handball” isn't a thing. The law asks three questions." },
+    { "id": "zona", "text": "First of all: where did it hit? The arm starts below the armpit. The shoulder is not handball." },
+    { "id": "p1", "text": "Question one: was it deliberate? If you move your hand towards the ball, it's always a foul." },
+    { "id": "p2", "text": "Two: did the arm make the body unnaturally bigger? Then it's a foul, even if you didn't mean it." },
+    { "id": "p3", "text": "Three: do you score right after it touches your hand? Goal disallowed, even if it was accidental." },
+    { "id": "no", "text": "Three noes? Play on. And inside the box the law is the same: only the punishment changes." },
+    { "id": "portero", "text": "And the goalkeeper? Outside the penalty area, he's just another player." },
+    { "id": "cta", "text": "Save it, and share it with whoever shouts handball at every touch." }
+  ]
+}

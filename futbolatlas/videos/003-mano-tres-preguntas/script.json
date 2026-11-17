@@ -1,0 +1,25 @@
+{
+  "id": "003-mano-tres-preguntas",
+  "brand": "futbolatlas",
+  "series": "FÚTBOL EN 60s",
+  "episode": 3,
+  "title": "¿Es mano? Las 3 preguntas de la Regla 12",
+  "cover": "¿Es mano?<br><span style=\"color:#caf300\">3 preguntas</span>",
+  "coverTime": 2.6,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/how-handball-actually-works · futbolatlas.app/k/handball-misconceptions",
+  "scenes": [
+    { "id": "hook", "text": "Eso de «mano es mano» no existe. La regla hace tres preguntas." },
+    { "id": "zona", "text": "Antes de nada: ¿dónde tocó? El brazo empieza bajo la axila. El hombro no es mano." },
+    { "id": "p1", "text": "Pregunta uno: ¿fue voluntaria? Si llevas la mano hacia el balón, es falta siempre." },
+    { "id": "p2", "text": "Dos: ¿el brazo agrandaba el cuerpo de forma antinatural? Entonces es falta, aunque sea sin querer." },
+    { "id": "p3", "text": "Tres: ¿marcas justo después de que te toque en la mano? Gol anulado, aunque sea accidental." },
+    { "id": "no", "text": "¿Tres noes? Siga el juego. Y dentro del área la regla es la misma: solo cambia el castigo." },
+    { "id": "portero", "text": "¿Y el portero? Fuera de su área, es un jugador más." },
+    { "id": "cta", "text": "Guárdalo, y compártelo con quien grita mano en cada jugada." }
+  ]
+}

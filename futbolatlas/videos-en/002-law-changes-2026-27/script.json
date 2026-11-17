@@ -1,0 +1,27 @@
+{
+  "id": "002-law-changes-2026-27",
+  "lang": "en",
+  "scenes_js": "../../videos/002-cambios-reglas-2026-27/scenes.js",
+  "brand": "futbolatlas",
+  "series": "FOOTBALL IN 60s",
+  "episode": 2,
+  "title": "5 law changes for 2026/27",
+  "cover": "5 new laws<br><span style=\"color:#caf300\">2026/27</span>",
+  "coverTime": 2.4,
+  "voice": "en-GB-RyanNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "music": { "bpm": 112, "prog": "D-A-Bm-G" },
+  "source": "futbolatlas.app/k/what-changed-in-2026-27",
+  "scenes": [
+    { "id": "hook", "text": "Wasting time at a goal kick? Five seconds, or it's a corner to the other team." },
+    { "id": "saques", "text": "Change one: if you delay a goal kick or a throw-in, the referee whistles a five-second countdown. A late goal kick becomes a corner. A late throw-in goes to the opponents." },
+    { "id": "cambio", "text": "Two: the player coming off has ten seconds to leave the pitch. If not, the replacement waits outside for at least a minute." },
+    { "id": "dogso", "text": "Three: you're fouled on an obvious goal-scoring chance, the referee plays advantage and you score. No card any more." },
+    { "id": "penalti", "text": "Four: an accidental double touch at a penalty. If it goes in, it's retaken." },
+    { "id": "var", "text": "And five: VAR can now correct a clearly wrong second yellow card." },
+    { "id": "capitan", "text": "And heads up: from July 2027, only the captain may approach the referee." },
+    { "id": "cta", "text": "Save it, and share it with whoever still argues by the old rules." }
+  ]
+}

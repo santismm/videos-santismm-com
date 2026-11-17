@@ -5,6 +5,7 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 - 📈 Estrategia, análisis de la web, tendencias y los 10 primeros vídeos: [`docs/estrategia.md`](docs/estrategia.md)
 - 🗓️ Planificación (4 vídeos por semana por idioma): [`docs/planificacion.md`](docs/planificacion.md) · configuración: [`docs/publicacion.json`](docs/publicacion.json)
 - 📱 Kits de canal (YouTube, Instagram y TikTok, ES y EN): [`brand/canales.md`](brand/canales.md)
+- ⚽ Segundo canal con el mismo motor, **FÚTBOL EN 60s** (futbolatlas.app): [`futbolatlas/`](futbolatlas/README.md)
 
 ## Episodios
 

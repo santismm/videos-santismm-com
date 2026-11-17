@@ -107,6 +107,8 @@ async def main(vdir):
                            "-map", "[out]", "-ac", "1", "-ar", str(SR), os.path.join(build, "voice.wav")])
     tl = {"id": cfg["id"], "lang": cfg.get("lang", "es"), "series": cfg["series"], "episode": cfg["episode"],
           "title": cfg["title"], "source": cfg.get("source", ""), "duration": total,
+          "brand": cfg.get("brand"), "music": cfg.get("music"),
+          "scenes_js": cfg.get("scenes_js"),
           "scenes": scenes}
     json.dump(tl, open(os.path.join(build, "timeline.json"), "w"), ensure_ascii=False, indent=1)
     print(f"duración total: {total:.2f}s")
