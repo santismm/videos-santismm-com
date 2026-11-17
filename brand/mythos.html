@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MYTHOS brand assets</title>
+<!-- Recursos de canal de MYTHOS (ES y EN). Parámetros: ?mode=avatar|banner&lang=es|en&guides=1 -->
+<style>
+  @font-face { font-family: 'Cinzel'; src: url(../engine/fonts/Cinzel-latin.woff2) format('woff2'); font-weight: 400 900; }
+  @font-face { font-family: 'EB Garamond'; src: url(../engine/fonts/EBGaramond-italic-latin.woff2) format('woff2'); font-style: italic; font-weight: 400 800; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(../engine/fonts/JetBrainsMono-Bold.ttf); font-weight: 700; }
+  @font-face { font-family: 'Noto Hieroglyphs'; src: url(../engine/fonts/NotoSansEgyptianHieroglyphs.ttf); }
+  :root { --bg:#0f0b08; --surface:#1a140f; --ls:#4a3a29; --ink:#fbf8f1; --papyrus:#f2ecdd; --muted:#b3a48c; --faint:#7d6f5b;
+          --gold:#d9a94a; --red:#d0452c; --oxblood:#8a2d1c; --lapis:#2f5fa8; --turq:#3fb8a8; }
+  html, body { margin: 0; background: var(--bg); }
+  .art { position: relative; overflow: hidden; background: radial-gradient(120% 90% at 50% 45%, #2a1c12 0%, var(--bg) 62%); color: var(--ink); }
+  .abs { position: absolute; }
+  .display { font-family: 'Cinzel', serif; font-weight: 900; }
+  .serif { font-family: 'EB Garamond', serif; font-style: italic; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+  .glyphs { font-family: 'Noto Hieroglyphs'; }
+  .noise { position: absolute; inset: 0; opacity: .18; mix-blend-mode: overlay; }
+  [hidden] { display: none !important; }
+  #avatar { width: 800px; height: 800px; }
+  #banner { width: 2560px; height: 1440px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="eye" viewBox="0 0 200 130">
+      <path d="M22 30 Q100 -6 182 26" fill="none" stroke="#d9a94a" stroke-width="9" stroke-linecap="round"/>
+      <path d="M28 58 Q100 8 172 58 Q100 98 28 58 Z" fill="rgba(251,248,241,.10)" stroke="#d9a94a" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="100" cy="56" r="22" fill="#e3b75a"/><circle cx="100" cy="56" r="8" fill="#140d08"/>
+      <path d="M172 58 L198 60" stroke="#d9a94a" stroke-width="7" stroke-linecap="round"/>
+      <path d="M96 84 L88 126" stroke="#d9a94a" stroke-width="8" stroke-linecap="round"/>
+      <path d="M116 84 Q126 120 156 113 Q173 106 163 94 Q156 87 149 96" fill="none" stroke="#d9a94a" stroke-width="7" stroke-linecap="round"/>
+    </symbol>
+    <filter id="pap"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.09" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .95  0 0 0 0 .85  0 0 0 0 .65  0 0 0 1.2 -.2"/></filter>
+    <!-- Greca griega -->
+    <pattern id="meander" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 70 H70 V10 H20 V50 H50 V30 H35" fill="none" stroke="#d9a94a" stroke-width="7" stroke-linecap="square"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- AVATAR (se muestra en círculo; común a ES y EN) -->
+<div id="avatar" class="art" hidden>
+  <svg class="noise" width="800" height="800"><rect width="800" height="800" filter="url(#pap)"/></svg>
+  <div class="abs" style="left:110px;top:110px;width:580px;height:580px;border-radius:50%;background:radial-gradient(circle, rgba(217,169,74,.30), transparent 65%)"></div>
+  <svg class="abs" width="800" height="800" style="left:0;top:0">
+    <circle cx="400" cy="400" r="300" fill="none" stroke="#d9a94a" stroke-width="6" opacity=".55"/>
+    <circle cx="400" cy="400" r="282" fill="none" stroke="#d9a94a" stroke-width="2" stroke-dasharray="4 14" opacity=".6"/>
+  </svg>
+  <svg class="abs" style="left:150px;top:205px;filter:drop-shadow(0 0 30px rgba(217,169,74,.55))" width="500" height="325"><use href="#eye"/></svg>
+  <div class="abs display" style="left:0;right:0;top:545px;text-align:center;font-size:74px;letter-spacing:.14em;color:var(--ink)">MYTHOS</div>
+</div>
+
+<!-- BANNER 2560×1440 (zona segura central 1546×423: x 507–2053, y 508–931) -->
+<div id="banner" class="art" hidden>
+  <svg class="noise" width="2560" height="1440"><rect width="2560" height="1440" filter="url(#pap)"/></svg>
+  <div class="abs" style="left:420px;top:180px;width:1100px;height:1100px;border-radius:50%;background:radial-gradient(circle, rgba(217,169,74,.20), transparent 62%)"></div>
+  <div class="abs" style="left:1300px;top:240px;width:1100px;height:1100px;border-radius:50%;background:radial-gradient(circle, rgba(138,45,28,.28), transparent 62%)"></div>
+  <!-- Decoración fuera de la zona segura -->
+  <svg class="abs" width="2560" height="80" style="left:0;top:330px;opacity:.35"><rect width="2560" height="80" fill="url(#meander)"/></svg>
+  <svg class="abs" width="2560" height="80" style="left:0;top:1030px;opacity:.35"><rect width="2560" height="80" fill="url(#meander)"/></svg>
+  <div class="abs glyphs" style="left:0;right:0;top:170px;text-align:center;font-size:96px;letter-spacing:.5em;color:var(--gold);opacity:.22;white-space:nowrap">𓂀 𓆣 𓋹 𓇳 𓁹 𓃭 𓆓 𓂀 𓇋 𓋹 𓆣 𓇳</div>
+  <div class="abs glyphs" style="left:0;right:0;top:1160px;text-align:center;font-size:96px;letter-spacing:.5em;color:var(--gold);opacity:.22;white-space:nowrap">𓇳 𓋹 𓆣 𓂀 𓁹 𓇋 𓃭 𓆓 𓂀 𓋹 𓇳 𓆣</div>
+  <!-- Zona segura -->
+  <svg class="abs" style="left:560px;top:560px;filter:drop-shadow(0 0 30px rgba(217,169,74,.5))" width="440" height="286"><use href="#eye"/></svg>
+  <div class="abs display" style="left:1040px;top:540px;font-size:190px;line-height:1;letter-spacing:.08em;color:var(--ink)">MYTHOS</div>
+  <div class="abs mono" id="tag" style="left:1050px;top:745px;font-size:46px;letter-spacing:.2em;color:var(--gold)"></div>
+  <div class="abs serif" id="sub" style="left:1050px;top:808px;width:990px;font-size:44px;line-height:1.15;color:var(--papyrus)"></div>
+  <!-- Guías de zona segura -->
+  <div id="guides" hidden>
+    <div class="abs" style="left:507px;top:508px;width:1546px;height:423px;outline:6px dashed #3fb8a8"></div>
+    <div class="abs" style="left:0;top:509px;width:2560px;height:423px;outline:3px dashed #d0452c"></div>
+    <div class="abs mono" style="left:520px;top:940px;font-size:34px;color:#3fb8a8">zona segura en todos los dispositivos (1546×423)</div>
+  </div>
+</div>
+
+<script>
+  const q = new URLSearchParams(location.search);
+  const T = {
+    es: { tag: 'MITOS CON FUENTE', sub: 'Griegos · romanos · nórdicos · egipcios, contrastados con el texto original' },
+    en: { tag: 'MYTHS, SOURCED', sub: 'Greek · Roman · Norse · Egyptian myths, checked against the original texts' },
+  }[q.get('lang') || 'es'];
+  document.documentElement.lang = q.get('lang') || 'es';
+  document.getElementById('tag').textContent = T.tag;
+  document.getElementById('sub').textContent = T.sub;
+  document.getElementById(q.get('mode') || 'avatar').hidden = false;
+  if (q.get('guides')) document.getElementById('guides').hidden = false;
+</script>
+</body>
+</html>

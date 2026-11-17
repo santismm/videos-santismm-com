@@ -38,6 +38,28 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 009 | AI vs 44 professions: does it win or tie against an expert? (GDPval) | [mp4](videos/en/009-ai-vs-44-professions/out/009-ai-vs-44-professions.mp4) | [publicacion.md](videos/en/009-ai-vs-44-professions/publicacion.md) | pendiente de canal |
 | 010 | An AI running a vending machine: how much does it make in a year? (Vending-Bench) | [mp4](videos/en/010-the-vending-machine-agent/out/010-the-vending-machine-agent.mp4) | [publicacion.md](videos/en/010-the-vending-machine-agent/publicacion.md) | pendiente de canal |
 
+## Canal MYTHOS · Mitos con fuente (mythosdata.dev)
+
+Segundo canal producido con el mismo motor (`"brand": "mythos"` en `script.json`): mitología griega, romana, nórdica y egipcia contrastada con sus textos originales a partir de [mythosdata.dev](https://mythosdata.dev).
+
+- 📈 Estrategia, análisis de la web, tendencias y los 10 primeros vídeos: [`docs/mythos-estrategia.md`](docs/mythos-estrategia.md)
+- 📺 Dos canales de YouTube, uno en español y otro en inglés. Configuración, imágenes y conexión con Metricool: [`brand/canal-mythos.md`](brand/canal-mythos.md)
+
+| # | Título | Vídeo | Textos de publicación |
+|---|---|---|---|
+| 01 | La diosa que casi extermina a la humanidad… y la pararon con cerveza | [mp4](videos/mythos-001-hathor-cerveza/out/mythos-001-hathor-cerveza.mp4) | [publicacion.md](videos/mythos-001-hathor-cerveza/publicacion.md) |
+| 01 EN | The goddess who almost wiped out humanity… and they stopped her with beer | [mp4](videos/mythos-001-hathor-beer-en/out/mythos-001-hathor-beer-en.mp4) | [publicacion.md](videos/mythos-001-hathor-beer-en/publicacion.md) |
+| 02 | ¿Zeus y Júpiter son el mismo dios? En el mito, sí. En Roma, no. | [mp4](videos/mythos-002-zeus-jupiter/out/mythos-002-zeus-jupiter.mp4) | [publicacion.md](videos/mythos-002-zeus-jupiter/publicacion.md) |
+| 02 EN | Are Zeus and Jupiter the same god? In myth, yes. In Rome, no. | [mp4](videos/mythos-002-zeus-jupiter-en/out/mythos-002-zeus-jupiter-en.mp4) | [publicacion.md](videos/mythos-002-zeus-jupiter-en/publicacion.md) |
+| 03 | Solo una mitología cuenta el fin del mundo | [mp4](videos/mythos-003-fin-del-mundo/out/mythos-003-fin-del-mundo.mp4) | [publicacion.md](videos/mythos-003-fin-del-mundo/publicacion.md) |
+| 03 EN | Only one mythology tells how the world ends | [mp4](videos/mythos-003-fin-del-mundo-en/out/mythos-003-fin-del-mundo-en.mp4) | [publicacion.md](videos/mythos-003-fin-del-mundo-en/publicacion.md) |
+| 04 | El nombre secreto de Ra: cómo Isis robó el poder del dios del sol | [mp4](videos/mythos-004-nombre-secreto-ra/out/mythos-004-nombre-secreto-ra.mp4) | [publicacion.md](videos/mythos-004-nombre-secreto-ra/publicacion.md) |
+| 04 EN | Ra's secret name: how Isis stole the sun god's power | [mp4](videos/mythos-004-nombre-secreto-ra-en/out/mythos-004-nombre-secreto-ra-en.mp4) | [publicacion.md](videos/mythos-004-nombre-secreto-ra-en/publicacion.md) |
+| 05 | Hestia: la diosa sin historias que en Roma lo era todo | [mp4](videos/mythos-005-hestia-vesta/out/mythos-005-hestia-vesta.mp4) | [publicacion.md](videos/mythos-005-hestia-vesta/publicacion.md) |
+| 05 EN | Hestia: the goddess with no stories who was everything in Rome | [mp4](videos/mythos-005-hestia-vesta-en/out/mythos-005-hestia-vesta-en.mp4) | [publicacion.md](videos/mythos-005-hestia-vesta-en/publicacion.md) |
+| 06 | 4 dioses del sol… y solo 3 son el sol | [mp4](videos/mythos-006-dioses-del-sol/out/mythos-006-dioses-del-sol.mp4) | [publicacion.md](videos/mythos-006-dioses-del-sol/publicacion.md) |
+| 06 EN | 4 sun gods… and only 3 are the sun | [mp4](videos/mythos-006-dioses-del-sol-en/out/mythos-006-dioses-del-sol-en.mp4) | [publicacion.md](videos/mythos-006-dioses-del-sol-en/publicacion.md) |
+
 ## Publicación automática
 
 - **Cadencia:** 4 vídeos por semana y por idioma (lunes, miércoles, viernes y domingo), a las 13:00 en español y a las 18:00 en inglés (hora de Madrid).
@@ -70,7 +92,13 @@ Revisión rápida de fotogramas sueltos:
 node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 ```
 
-**Qué incluye `components.js`:** componentes reutilizables entre episodios, como la hoja de examen corregida a mano, la tarjeta final, la tipografía cinética y un generador aleatorio con semilla para partículas.
+**Qué incluye `components.js`:** componentes reutilizables entre episodios, como la hoja de examen corregida a mano, la tarjeta final, la tipografía cinética y un generador aleatorio con semilla para partículas. Para MYTHOS: Ojo de Ra con párpado, jeroglífico de persona, jarra con líquido, ficha de fuente primaria y tarjeta final.
+
+**Idiomas:** `"lang"` en `script.json` (`es` por defecto, `en`) se fija en `EUREKA.lang` antes de cargar las escenas, y `EUREKA.L('es', 'en')` elige el texto.
+- EUREKA en inglés tiene su propio `scenes.js` en `videos/en/<id>/`.
+- En MYTHOS, la versión en inglés usa `"scenesFile"` para reutilizar el `scenes.js` de la española, que guarda textos y palabras de sincronización en un diccionario por idioma.
+
+**Marcas:** `lib.js` define `eureka` (por defecto) y `mythos`. Cada marca fija su paleta, tipografías, cabecera, fondo y estilo de subtítulos. `audio.py` elige la música con `"music"` (`eureka` o `egypt`).
 
 **Qué incluye `lib.js`:**
 
@@ -89,7 +117,7 @@ node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 
 ## Licencias y transparencia
 
-- **Tipografías:** Space Grotesk, Inter y JetBrains Mono, todas con licencia SIL OFL.
+- **Tipografías:** Space Grotesk, Inter, JetBrains Mono, Cinzel, EB Garamond y Noto Sans Egyptian Hieroglyphs, todas con licencia SIL OFL.
 - **Música y efectos:** generados por código en este repositorio.
-- **Contenido:** basado en los artículos de santismm.com (CC BY 4.0).
+- **Contenido:** basado en los artículos de santismm.com y en mythosdata.dev (ambos CC BY 4.0).
 - **Etiquetado:** cada vídeo se marca como contenido generado con IA en las plataformas, y la tarjeta final también lo indica.

@@ -6,14 +6,20 @@
 <style>
   @font-face { font-family: 'Space Grotesk'; src: url(fonts/SpaceGrotesk-latin.woff2) format('woff2'); font-weight: 300 700; }
   @font-face { font-family: 'Inter'; src: url(fonts/Inter-latin.woff2) format('woff2'); font-weight: 100 900; }
+  @font-face { font-family: 'Cinzel'; src: url(fonts/Cinzel-latin.woff2) format('woff2'); font-weight: 400 900; }
+  @font-face { font-family: 'EB Garamond'; src: url(fonts/EBGaramond-latin.woff2) format('woff2'); font-weight: 400 800; }
+  @font-face { font-family: 'EB Garamond'; src: url(fonts/EBGaramond-italic-latin.woff2) format('woff2'); font-weight: 400 800; font-style: italic; }
+  @font-face { font-family: 'Noto Hieroglyphs'; src: url(fonts/NotoSansEgyptianHieroglyphs.ttf); }
   @font-face { font-family: 'JetBrains Mono'; src: url(fonts/JetBrainsMono-Medium.ttf); font-weight: 500; }
   @font-face { font-family: 'JetBrains Mono'; src: url(fonts/JetBrainsMono-Bold.ttf); font-weight: 700; }
   html, body { margin: 0; padding: 0; background: #070a13; }
   #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #070a13;
-           font-family: 'Inter', sans-serif; color: #dbe2ee; }
+           font-family: var(--f-body, 'Inter'), sans-serif; color: #dbe2ee; }
   .abs { position: absolute; }
   .layer { position: absolute; inset: 0; }
-  .display { font-family: 'Space Grotesk', sans-serif; }
+  .display { font-family: var(--f-display, 'Space Grotesk'), sans-serif; }
+  .serif { font-family: 'EB Garamond', serif; }
+  .glyphs { font-family: 'Noto Hieroglyphs'; }
   .mono { font-family: 'JetBrains Mono', monospace; }
   .scene { position: absolute; inset: 0; will-change: transform, opacity; }
   .center { left: 50%; transform: translateX(-50%); }
@@ -32,6 +38,9 @@
 <script>
   // El renderer inyecta el timeline y el script de escenas del vídeo.
   window.__boot = async function (timeline, scenesSrc) {
+    EUREKA.lang = timeline.lang || 'es';
+    document.documentElement.lang = EUREKA.lang;
+    EUREKA.setBrand(timeline.brand);
     await new Promise((res, rej) => {
       const s = document.createElement('script');
       s.src = scenesSrc; s.onload = res; s.onerror = () => rej(new Error('no se pudo cargar ' + scenesSrc));
@@ -41,6 +50,11 @@
     await document.fonts.load('500 30px "JetBrains Mono"');
     await document.fonts.load('700 30px "JetBrains Mono"');
     await document.fonts.load('600 30px "Inter"');
+    if (timeline.brand === 'mythos') {
+      await document.fonts.load('900 80px "Cinzel"'); await document.fonts.load('700 80px "Cinzel"');
+      await document.fonts.load('500 40px "EB Garamond"'); await document.fonts.load('italic 500 40px "EB Garamond"');
+      await document.fonts.load('40px "Noto Hieroglyphs"', '𓂀');
+    }
     await document.fonts.ready;
     return EUREKA.init(timeline);
   };

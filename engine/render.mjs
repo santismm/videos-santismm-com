@@ -21,7 +21,9 @@ const workers = +opt('workers', 3);
 const stills = opt('stills', null);
 const build = path.join(vdir, 'build');
 const timeline = JSON.parse(fs.readFileSync(path.join(build, 'timeline.json'), 'utf8'));
-const scenesSrc = pathToFileURL(path.join(vdir, 'scenes.js')).href;
+const meta0 = JSON.parse(fs.readFileSync(path.join(vdir, 'script.json'), 'utf8'));
+// "scenesFile" en script.json: ruta (relativa al vídeo) a un scenes.js compartido, p. ej. la versión en otro idioma.
+const scenesSrc = pathToFileURL(path.resolve(vdir, meta0.scenesFile || 'scenes.js')).href;
 const pageUrl = pathToFileURL(path.join(here, 'page.html')).href;
 
 async function openPage(browser) {

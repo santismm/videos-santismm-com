@@ -1,0 +1,59 @@
+{
+  "id": "mythos-006-dioses-del-sol-en",
+  "brand": "mythos",
+  "lang": "en",
+  "music": "greek",
+  "scenesFile": "../mythos-006-dioses-del-sol/scenes.js",
+  "series": "MYTHOS · Myth vs Text",
+  "episode": 6,
+  "title": "4 sun gods… and only 3 are the sun",
+  "cover": "<span style=\"font-size:80px;font-weight:900\">4 sun gods.<br><span style=\"color:#e3b75a\">Only 3 are the sun</span></span>",
+  "coverTime": 4.6,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/sun-gods-compared · /k/apollo · /k/helios · /k/sol · /k/ra",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Four sun gods. And according to the texts, only three of them are the sun."
+    },
+    {
+      "id": "quiz",
+      "text": "Ask who the Greek sun god is, and you will hear: Apollo."
+    },
+    {
+      "id": "apolo",
+      "text": "But in Homer and the Hymns, Apollo is the archer of Delos and the god of Delphi. He is not the sun."
+    },
+    {
+      "id": "helios",
+      "text": "The Greek sun is Helios, son of Hyperion: he crosses the sky in his chariot, and sees and hears all things."
+    },
+    {
+      "id": "vacas",
+      "text": "When the men of Odysseus eat his cattle, he threatens to go down and shine among the dead."
+    },
+    {
+      "id": "febo",
+      "text": "Sol is Helios in Latin. But Ovid calls the Sun Phoebus, the name Homer gives Apollo. That is where they blend."
+    },
+    {
+      "id": "ra",
+      "text": "Ra is the sun, and also king of the gods. And every night he crosses the underworld in his boat."
+    },
+    {
+      "id": "regla",
+      "text": "To remember it: who sees everything? Helios and Sol. Who rules everything? Ra. Apollo: neither."
+    },
+    {
+      "id": "moraleja",
+      "text": "Before you believe a myth, ask: which text says so?"
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and send it to anyone who says Apollo is the sun god."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mythos-004-nombre-secreto-ra-en",
+  "lang": "en",
+  "scenesFile": "../mythos-004-nombre-secreto-ra/scenes.js",
+  "brand": "mythos",
+  "music": "egypt",
+  "episode": 4,
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/ra · /k/isis",
+  "series": "MYTHOS · Myth vs Text",
+  "title": "Ra's secret name: how Isis stole the sun god's power",
+  "cover": "<span style=\"font-size:74px;font-weight:900\">Ra's secret name.<br><span style=\"color:#e3b75a\">Isis stole it</span></span>",
+  "coverTime": 4.2,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+8%",
+  "pitch": "-2Hz",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Egypt's mightiest god had one weak spot: his name. And a goddess stole it."
+    },
+    {
+      "id": "nombres",
+      "text": "Ra says it himself: I am Khepera in the morning, Ra at noon, and Temu in the evening."
+    },
+    {
+      "id": "oculto",
+      "text": "But his secret name was hidden inside his body by his father and mother, so that no spell could master him."
+    },
+    {
+      "id": "isis",
+      "text": "Isis knew words of power, and she wanted to be as great as Ra."
+    },
+    {
+      "id": "serpiente",
+      "text": "She takes the old god's spittle, kneads it with dust… and makes a serpent."
+    },
+    {
+      "id": "mordida",
+      "text": "She lays it on his path. It bites him, and the living fire leaves his body."
+    },
+    {
+      "id": "trato",
+      "text": "Isis only heals him once Ra lets his name pass from his body into hers."
+    },
+    {
+      "id": "hechizo",
+      "text": "Then she speaks the spell: flow, poison! Ra lives! The poison dies!"
+    },
+    {
+      "id": "reina",
+      "text": "Ever since, Isis is the Queen of the gods, who knows Ra by his own name."
+    },
+    {
+      "id": "fuente",
+      "text": "Which text says so? An Egyptian papyrus kept in Turin."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and send it to anyone who thinks Ra was invincible."
+    }
+  ]
+}

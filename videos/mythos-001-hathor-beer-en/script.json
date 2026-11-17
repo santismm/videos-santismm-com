@@ -1,0 +1,63 @@
+{
+  "id": "mythos-001-hathor-beer-en",
+  "brand": "mythos",
+  "lang": "en",
+  "music": "egypt",
+  "scenesFile": "../mythos-001-hathor-cerveza/scenes.js",
+  "series": "MYTHOS · Myth vs Text",
+  "episode": 1,
+  "title": "The goddess who almost wiped out humanity… and they stopped her with beer",
+  "cover": "<span style=\"font-size:74px;font-weight:900\">She almost wiped out humanity.<br><span style=\"color:#e3b75a\">They stopped her with beer</span></span>",
+  "coverTime": 4.4,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/hathor · /k/flood-myths-compared · /k/love-goddesses-compared · /k/ra",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "This goddess almost wiped out humanity. And they stopped her… with beer."
+    },
+    {
+      "id": "etiqueta",
+      "text": "Look up Hathor: goddess of love and music. But that label was stuck on her by the Greeks."
+    },
+    {
+      "id": "ra",
+      "text": "In the Egyptian text, carved in the tomb of Seti the First, Ra has grown old. And humans mock him: bones of silver, flesh of gold, hair of lapis lazuli."
+    },
+    {
+      "id": "ojo",
+      "text": "So Ra sends out his Eye: Hathor. She hunts the blasphemers through the mountains, and kills them all."
+    },
+    {
+      "id": "sangre",
+      "text": "For three nights, now as Hathor Sekhmet, she wades in the blood of men."
+    },
+    {
+      "id": "cerveza",
+      "text": "Ra regrets it, and sets a trap: seven thousand jars of beer, dyed red, poured out over the fields."
+    },
+    {
+      "id": "duerme",
+      "text": "Hathor drinks, gets very merry, falls asleep. And kills no more."
+    },
+    {
+      "id": "fiesta",
+      "text": "Ever after, at every festival of Hathor, they brewed sleepy beer."
+    },
+    {
+      "id": "diluvio",
+      "text": "Some call this a flood myth. But the only thing flooding the fields… is beer."
+    },
+    {
+      "id": "moraleja",
+      "text": "Before you believe a myth, always ask: which text says so?"
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and send it to anyone who thinks Hathor was just the goddess of love."
+    }
+  ]
+}

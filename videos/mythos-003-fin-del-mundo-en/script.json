@@ -1,0 +1,63 @@
+{
+  "id": "mythos-003-fin-del-mundo-en",
+  "brand": "mythos",
+  "lang": "en",
+  "music": "norse",
+  "scenesFile": "../mythos-003-fin-del-mundo/scenes.js",
+  "series": "MYTHOS · Myth vs Text",
+  "episode": 3,
+  "title": "Only one mythology tells how the world ends",
+  "cover": "<span style=\"font-size:58px;font-weight:900\">4 mythologies.<br><span style=\"color:#e3b75a\">Only one tells the end of the world</span></span>",
+  "coverTime": 4.2,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+16%",
+  "pitch": "-2Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/end-of-the-world-myths-compared · /k/ragnarok",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Four mythologies. Only one tells how the world ends."
+    },
+    {
+      "id": "grecia",
+      "text": "The Greeks have no apocalypse. Hesiod only foretells the end of a race of men: the gods and the world go on."
+    },
+    {
+      "id": "egipto",
+      "text": "The Egyptian texts read here have none either: the dead are promised millions of millions of years."
+    },
+    {
+      "id": "roma",
+      "text": "Ovid, the Roman poet, leaves a single sentence: one day, a fire will destroy the universe."
+    },
+    {
+      "id": "voluspa",
+      "text": "But the Norse poem Voluspa tells it stanza by stanza. The wolf breaks its fetters. Heimdall blows the horn."
+    },
+    {
+      "id": "muertes",
+      "text": "Odin falls to the wolf. Thor kills the serpent, walks nine paces… and dies."
+    },
+    {
+      "id": "final",
+      "text": "The sun turns black, the earth sinks into the sea, and the stars fall from the sky."
+    },
+    {
+      "id": "renace",
+      "text": "And the part people forget: the earth rises again from the waves, green. And Baldr comes back."
+    },
+    {
+      "id": "hermanos",
+      "text": "One detail: Hesiod and the Voluspa share a sign of the end. Brother against brother."
+    },
+    {
+      "id": "fuente",
+      "text": "Which text says so? The Voluspa, in the Poetic Edda."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and send it to anyone who thinks every mythology has its apocalypse."
+    }
+  ]
+}

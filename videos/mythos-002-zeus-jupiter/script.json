@@ -1,0 +1,62 @@
+{
+  "id": "mythos-002-zeus-jupiter",
+  "brand": "mythos",
+  "lang": "es",
+  "music": "greek",
+  "series": "MYTHOS · Mito vs Texto",
+  "episode": 2,
+  "title": "¿Zeus y Júpiter son el mismo dios? En el mito, sí. En Roma, no.",
+  "cover": "<span style=\"font-size:80px;font-weight:900\">¿Zeus = Júpiter?<br><span style=\"color:#e3b75a\">En el mito, sí.<br>En Roma, no.</span></span>",
+  "coverTime": 5.4,
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+22%",
+  "pitch": "-3Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/zeus-vs-jupiter · /k/jupiter · /k/zeus",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "¿Zeus y Júpiter son el mismo dios? En el mito, sí. En Roma, no."
+    },
+    {
+      "id": "mito",
+      "text": "Ovidio cuenta las historias de Zeus con nombres latinos: el hijo de Saturno, el que controla el rayo."
+    },
+    {
+      "id": "mismo",
+      "text": "Nacimiento, rayo, reinado, amores: son Hesíodo y Homero vestidos de romano."
+    },
+    {
+      "id": "nombre",
+      "text": "Y el nombre va en una sola dirección: los textos griegos nunca llaman Júpiter a Zeus."
+    },
+    {
+      "id": "templo",
+      "text": "Pero en el culto, es otro dios. El primer templo de Roma fue suyo: Júpiter Feretrio, donde Rómulo colgó el botín del rey que mató."
+    },
+    {
+      "id": "stator",
+      "text": "En plena huida, Rómulo le promete otro templo: Júpiter Stator, el que detiene."
+    },
+    {
+      "id": "imperio",
+      "text": "Y en Virgilio, Júpiter promete a Roma un imperio sin fin."
+    },
+    {
+      "id": "zeus",
+      "text": "El Zeus de Hesíodo reina porque los dioses se lo pidieron. Y no promete nada a ninguna ciudad."
+    },
+    {
+      "id": "regla",
+      "text": "Regla rápida: en las historias, Júpiter es el Zeus romano. En la religión, es el dios de Roma."
+    },
+    {
+      "id": "fuente",
+      "text": "¿Qué texto lo dice? Ovidio y Hesíodo para el mito; Livio y Virgilio para Roma."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien diga que Júpiter es solo Zeus con otro nombre."
+    }
+  ]
+}

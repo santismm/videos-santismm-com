@@ -1,0 +1,63 @@
+{
+  "id": "mythos-005-hestia-vesta-en",
+  "brand": "mythos",
+  "music": "greek",
+  "episode": 5,
+  "lang": "en",
+  "scenesFile": "../mythos-005-hestia-vesta/scenes.js",
+  "series": "MYTHOS · Myth vs Text",
+  "title": "Hestia: the goddess with no stories who was everything in Rome",
+  "cover": "<div style=\"font-size:62px;font-weight:900;line-height:1.12\">Hestia: almost no stories…<br><span style=\"color:#e3b75a\">and the fire of Troy</span></div>",
+  "coverTime": 5.3,
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/hestia-vs-vesta · /k/hestia · /k/vesta",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "A Greek goddess with almost no stories. And in Rome, keeper of the fire of Troy."
+    },
+    {
+      "id": "primera",
+      "text": "Hestia is the firstborn of Cronus: the first child he swallows… and the last he spits back out."
+    },
+    {
+      "id": "juramento",
+      "text": "Poseidon and Apollo both seek her hand. She touches the head of Zeus and swears to stay a maiden forever."
+    },
+    {
+      "id": "premio",
+      "text": "Her reward: the centre of the house. And at every banquet, wine is poured to her, first and last."
+    },
+    {
+      "id": "nada",
+      "text": "And that's nearly all. The Greek texts give her no more story. Not even priests."
+    },
+    {
+      "id": "roma",
+      "text": "Now, Rome. Vesta has the Vestal Virgins: Numa gives them a public salary and makes them untouchable."
+    },
+    {
+      "id": "troya",
+      "text": "Her fire comes from Troy: Hector's ghost hands it to Aeneas as the city burns."
+    },
+    {
+      "id": "romulo",
+      "text": "And the mother of Romulus, Rhea Silvia, was a Vestal."
+    },
+    {
+      "id": "venn",
+      "text": "So they're the same goddess by function: hearth and virginity. But they share not a single myth."
+    },
+    {
+      "id": "moraleja",
+      "text": "Before you call them the same goddess, ask: which text says so?"
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and send it to anyone who thinks Vesta is just the Roman Hestia."
+    }
+  ]
+}

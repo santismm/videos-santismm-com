@@ -1,0 +1,61 @@
+{
+  "id": "mythos-001-hathor-cerveza",
+  "brand": "mythos",
+  "music": "egypt",
+  "series": "MYTHOS · Mito vs Texto",
+  "episode": 1,
+  "title": "La diosa que casi extermina a la humanidad… y la pararon con cerveza",
+  "cover": "<span style=\"font-size:82px;font-weight:900\">Casi extermina a la humanidad.<br><span style=\"color:#e3b75a\">La pararon con cerveza</span></span>",
+  "coverTime": 4.6,
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+19%",
+  "pitch": "-3Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/hathor · /k/flood-myths-compared · /k/love-goddesses-compared · /k/ra",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Esta diosa casi extermina a la humanidad. Y la pararon… con cerveza."
+    },
+    {
+      "id": "etiqueta",
+      "text": "Busca Hathor: diosa del amor y de la música. Pero esa etiqueta se la pusieron los griegos."
+    },
+    {
+      "id": "ra",
+      "text": "En el texto egipcio, grabado en la tumba de Seti primero, Ra ya es viejo. Y los humanos se burlan: huesos de plata, carne de oro, pelo de lapislázuli."
+    },
+    {
+      "id": "ojo",
+      "text": "Ra envía a su Ojo: Hathor. Persigue a los blasfemos por las montañas, y los mata a todos."
+    },
+    {
+      "id": "sangre",
+      "text": "Durante tres noches, ya como Hathor Sekhmet, chapotea en la sangre de los hombres."
+    },
+    {
+      "id": "cerveza",
+      "text": "Ra se arrepiente y prepara un truco: siete mil jarras de cerveza, teñida de rojo, derramadas por los campos."
+    },
+    {
+      "id": "duerme",
+      "text": "Hathor bebe, se pone muy alegre, se queda dormida. Y no mata más."
+    },
+    {
+      "id": "fiesta",
+      "text": "Desde entonces, en cada fiesta de Hathor se hacía cerveza del sueño."
+    },
+    {
+      "id": "diluvio",
+      "text": "Hay quien lo llama mito del diluvio. Pero lo único que inunda los campos… es cerveza."
+    },
+    {
+      "id": "moraleja",
+      "text": "Antes de creerte un mito, pregunta siempre: ¿qué texto lo dice?"
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien diga que Hathor era solo la diosa del amor."
+    }
+  ]
+}

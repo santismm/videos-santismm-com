@@ -1,0 +1,62 @@
+{
+  "id": "mythos-003-fin-del-mundo",
+  "brand": "mythos",
+  "lang": "es",
+  "music": "norse",
+  "series": "MYTHOS · Mito vs Texto",
+  "episode": 3,
+  "title": "Solo una mitología cuenta el fin del mundo",
+  "cover": "<span style=\"font-size:58px;font-weight:900\">4 mitologías.<br><span style=\"color:#e3b75a\">Solo una cuenta el fin del mundo</span></span>",
+  "coverTime": 4.2,
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+24%",
+  "pitch": "-3Hz",
+  "gap": 0.14,
+  "source": "mythosdata.dev/k/end-of-the-world-myths-compared · /k/ragnarok",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Cuatro mitologías. Solo una cuenta cómo se acaba el mundo."
+    },
+    {
+      "id": "grecia",
+      "text": "Los griegos no tienen apocalipsis. Hesíodo solo anuncia el fin de una raza de hombres: los dioses y el mundo siguen."
+    },
+    {
+      "id": "egipto",
+      "text": "En los textos egipcios leídos aquí, tampoco: al muerto le prometen millones de millones de años."
+    },
+    {
+      "id": "roma",
+      "text": "Ovidio, el poeta romano, deja una sola frase: algún día, un fuego destruirá el universo."
+    },
+    {
+      "id": "voluspa",
+      "text": "Pero el poema nórdico Völuspá lo cuenta estrofa a estrofa. El lobo rompe sus cadenas. Heimdall sopla el cuerno."
+    },
+    {
+      "id": "muertes",
+      "text": "Odín cae ante el lobo. Thor mata a la serpiente, da nueve pasos… y muere."
+    },
+    {
+      "id": "final",
+      "text": "El sol se vuelve negro, la tierra se hunde en el mar y las estrellas caen del cielo."
+    },
+    {
+      "id": "renace",
+      "text": "Y lo que muchos olvidan: la tierra vuelve a surgir del mar, verde. Y Baldr regresa."
+    },
+    {
+      "id": "hermanos",
+      "text": "Y un detalle: Hesíodo y la Völuspá comparten la señal del final. Hermanos contra hermanos."
+    },
+    {
+      "id": "fuente",
+      "text": "¿Qué texto lo dice? La Völuspá, de la Edda poética."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien crea que todas las mitologías tienen su apocalipsis."
+    }
+  ]
+}
