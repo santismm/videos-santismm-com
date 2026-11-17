@@ -20,7 +20,7 @@ Fecha de arranque propuesta: lunes 23 de noviembre de 2026. Deja una semana para
 
 | Fecha | # | Vídeo | Serie | ES | EN |
 |---|---|---|---|---|---|
-| Lun 23 nov | 01 | El tornaviaje | La ruta | [mp4](../videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) | [mp4](../videos/001-el-tornaviaje/en/out/001-the-tornaviaje-en.mp4) |
+| Mié 18 nov (ES, [programado](https://www.youtube.com/shorts/WHxC01j2pl8)) · Lun 23 nov (EN) | 01 | El tornaviaje | La ruta | [mp4](../videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) | [mp4](../videos/001-el-tornaviaje/en/out/001-the-tornaviaje-en.mp4) |
 | Mié 25 nov | 02 | El vanadio se descubrió dos veces | Descubierto dos veces | [mp4](../videos/002-el-vanadio-dos-veces/out/002-el-vanadio-dos-veces.mp4) | [mp4](../videos/002-el-vanadio-dos-veces/en/out/002-vanadium-discovered-twice-en.mp4) |
 | Vie 27 nov | 03 | La epidural de Pagés | Descubierto dos veces | [mp4](../videos/003-la-epidural-de-pages/out/003-la-epidural-de-pages.mp4) | [mp4](../videos/003-la-epidural-de-pages/en/out/003-the-epidural-of-pages-en.mp4) |
 | Dom 29 nov | 04 | La dama del ajedrez | Mito o dato | [mp4](../videos/004-el-ajedrez-de-la-dama/out/004-el-ajedrez-de-la-dama.mp4) | [mp4](../videos/004-el-ajedrez-de-la-dama/en/out/004-the-queens-chess-en.mp4) |
