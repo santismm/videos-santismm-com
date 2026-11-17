@@ -1,0 +1,128 @@
+1
+00:00:00,268 --> 00:00:03,086
+From 75% to 7.5%…
+
+2
+00:00:03,192 --> 00:00:04,595
+on the same kind of exam.
+
+3
+00:00:04,784 --> 00:00:05,444
+What happened?
+
+4
+00:00:05,852 --> 00:00:07,243
+It's called contamination:
+
+5
+00:00:07,385 --> 00:00:09,333
+the exam questions leak into the data
+
+6
+00:00:09,343 --> 00:00:10,651
+used to train the model.
+
+7
+00:00:11,064 --> 00:00:12,717
+It's like a student who's already seen
+
+8
+00:00:12,727 --> 00:00:13,458
+the exam:
+
+9
+00:00:13,647 --> 00:00:14,934
+you can't tell if they understand the
+
+10
+00:00:14,944 --> 00:00:15,639
+subject…
+
+11
+00:00:15,734 --> 00:00:17,042
+or just know the answers.
+
+12
+00:00:17,452 --> 00:00:19,162
+And it happens more than you think:
+
+13
+00:00:19,386 --> 00:00:22,041
+surveys report up to 45% of test
+
+14
+00:00:22,051 --> 00:00:23,914
+material leaked into training data.
+
+15
+00:00:24,344 --> 00:00:26,421
+That's why the Konwinski Prize only uses
+
+16
+00:00:26,431 --> 00:00:29,120
+GitHub issues filed after the training cutoff.
+
+17
+00:00:29,309 --> 00:00:30,594
+Impossible to have seen them.
+
+18
+00:00:30,783 --> 00:00:31,360
+The winner:
+
+19
+00:00:31,420 --> 00:00:32,952
+7.5%.
+
+20
+00:00:33,384 --> 00:00:34,044
+The lesson:
+
+21
+00:00:34,233 --> 00:00:36,098
+a saturated exam is fixed with a
+
+22
+00:00:36,108 --> 00:00:36,898
+harder one.
+
+23
+00:00:37,087 --> 00:00:39,435
+A contaminated one, only with an exam
+
+24
+00:00:39,445 --> 00:00:40,907
+the model has never seen.
+
+25
+00:00:41,320 --> 00:00:43,218
+So when you see a spectacular score,
+
+26
+00:00:43,419 --> 00:00:43,997
+ask:
+
+27
+00:00:44,162 --> 00:00:45,402
+could this exam have been in its
+
+28
+00:00:45,412 --> 00:00:46,237
+training data?
+
+29
+00:00:46,664 --> 00:00:49,152
+Because a high score isn't always intelligence.
+
+30
+00:00:49,353 --> 00:00:50,661
+Sometimes, it's memory.
+
+31
+00:00:51,072 --> 00:00:52,631
+Save it, and share it with someone
+
+32
+00:00:52,641 --> 00:00:54,409
+who believes every leaderboard.
+

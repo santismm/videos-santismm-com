@@ -26,7 +26,10 @@ def main(vdir):
     with open(os.path.join(out, tl["id"] + ".srt"), "w") as f:
         for i, c in enumerate(cues, 1):
             text = " ".join(w.get("t", w["w"]) for w in c)
-            f.write(f"{i}\n{ts(c[0]['s'])} --> {ts(c[-1]['e'] + 0.2)}\n{text}\n\n")
+            end = c[-1]['e'] + 0.2
+            if i < len(cues):  # sin solapes: termina antes de que empiece el siguiente
+                end = min(end, cues[i][0]['s'] - 0.01)
+            f.write(f"{i}\n{ts(c[0]['s'])} --> {ts(max(end, c[0]['s'] + 0.2))}\n{text}\n\n")
     print("OK →", os.path.join(out, tl["id"] + ".srt"))
 
 

@@ -1,0 +1,116 @@
+1
+00:00:00,327 --> 00:00:03,322
+500 dollars, a vending machine, and one year:
+
+2
+00:00:03,558 --> 00:00:04,973
+how much can an AI make?
+
+3
+00:00:05,372 --> 00:00:07,801
+This is Vending-Bench, by Andon Labs.
+
+4
+00:00:07,990 --> 00:00:10,785
+The AI finds suppliers, orders by email,
+
+5
+00:00:10,844 --> 00:00:13,355
+sets prices, and pays 2 dollars a day.
+
+6
+00:00:13,556 --> 00:00:14,973
+Whoever ends up with the most money
+
+7
+00:00:14,983 --> 00:00:15,655
+wins.
+
+8
+00:00:16,068 --> 00:00:18,087
+Today, the best model ends the year
+
+9
+00:00:18,097 --> 00:00:20,726
+with about 16,500 dollars.
+
+10
+00:00:21,136 --> 00:00:23,037
+But Andon estimates a good strategy would
+
+11
+00:00:23,047 --> 00:00:24,638
+make 63,000.
+
+12
+00:00:24,827 --> 00:00:27,008
+The AI gets just 26%.
+
+13
+00:00:27,440 --> 00:00:28,867
+Sometimes it derails:
+
+14
+00:00:28,891 --> 00:00:30,673
+in the first version, a Claude assumed
+
+15
+00:00:30,683 --> 00:00:32,510
+an order had arrived when it hadn't,
+
+16
+00:00:32,652 --> 00:00:33,973
+shut down the business…
+
+17
+00:00:33,985 --> 00:00:35,329
+and emailed the FBI.
+
+18
+00:00:35,724 --> 00:00:37,481
+Same model, same task:
+
+19
+00:00:37,647 --> 00:00:40,535
+on average, 2,218 dollars.
+
+20
+00:00:40,724 --> 00:00:43,330
+In its worst run, 476:
+
+21
+00:00:43,496 --> 00:00:44,780
+less than it started with.
+
+22
+00:00:45,208 --> 00:00:45,833
+The lesson:
+
+23
+00:00:45,986 --> 00:00:47,448
+don't ask what score it gets.
+
+24
+00:00:47,637 --> 00:00:48,818
+Ask how much money it makes in
+
+25
+00:00:48,828 --> 00:00:51,068
+a year, and how often it derails.
+
+26
+00:00:51,476 --> 00:00:53,176
+Because the more real the work, the
+
+27
+00:00:53,186 --> 00:00:54,165
+wider the gap.
+
+28
+00:00:54,576 --> 00:00:56,347
+Save it, and share it with anyone
+
+29
+00:00:56,357 --> 00:00:58,220
+who'd trust their business to an agent.
+

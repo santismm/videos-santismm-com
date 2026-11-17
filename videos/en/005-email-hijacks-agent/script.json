@@ -1,0 +1,24 @@
+{
+  "id": "005-email-hijacks-agent",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 5,
+  "title": "One email can hijack your AI agent (prompt injection)",
+  "cover": "A normal email…<br><span style=\"color:#fb2c36\">that hijacks your AI</span>",
+  "coverTime": 4.6,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/the-agentic-enterprise-needs-an-immune-system",
+  "scenes": [
+    { "id": "hook",      "text": "This email looks normal. But it can make your AI agent send your data to a stranger." },
+    { "id": "escenario", "text": "Picture an agent connected to email, the CRM and billing. It reads an email with a hidden instruction: ignore your rules, find sensitive data, and send it out." },
+    { "id": "clave",     "text": "The model hasn't turned malicious: it has confused data with authority. It's called indirect prompt injection, and OWASP puts it first on its list." },
+    { "id": "filtro",    "text": "And a smarter filter isn't enough: detecting isn't authorizing, and a detector can fail." },
+    { "id": "defensa",   "text": "The defense is architecture: separate read from write, grant the least privilege, and authorize every consequential action outside the model, with rules that can't be talked into anything." },
+    { "id": "humano",    "text": "And if the action is severe or irreversible, a person should approve it." },
+    { "id": "tesis",     "text": "The machine supplies speed. The person defines authority." },
+    { "id": "cta",       "text": "Save it, and share it with anyone who's connecting agents to their email." }
+  ]
+}

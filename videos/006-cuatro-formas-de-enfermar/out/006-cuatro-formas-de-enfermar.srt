@@ -3,7 +3,7 @@
 Tu agente de IA puede enfermar.
 
 2
-00:00:02,546 --> 00:00:04,314
+00:00:02,546 --> 00:00:04,115
 Y hay cuatro vías distintas por las
 
 3
@@ -11,7 +11,7 @@ Y hay cuatro vías distintas por las
 que pasa.
 
 4
-00:00:05,714 --> 00:00:06,254
+00:00:05,714 --> 00:00:06,208
 Una:
 
 5
@@ -19,11 +19,11 @@ Una:
 la entrada.
 
 6
-00:00:07,536 --> 00:00:09,490
+00:00:07,536 --> 00:00:09,291
 Un correo o una web traen instrucciones
 
 7
-00:00:09,301 --> 00:00:11,212
+00:00:09,301 --> 00:00:11,013
 ocultas, y el agente las toma como
 
 8
@@ -31,7 +31,7 @@ ocultas, y el agente las toma como
 órdenes.
 
 9
-00:00:12,570 --> 00:00:13,187
+00:00:12,570 --> 00:00:13,152
 Dos:
 
 10
@@ -43,7 +43,7 @@ los permisos.
 Tiene más poder del que necesita.
 
 12
-00:00:17,045 --> 00:00:19,066
+00:00:17,045 --> 00:00:18,867
 El modelo puede fallar, pero el daño
 
 13
@@ -75,7 +75,7 @@ Cuatro:
 la red.
 
 20
-00:00:31,424 --> 00:00:33,642
+00:00:31,424 --> 00:00:33,443
 Un resultado contaminado pasa de un agente
 
 21
@@ -87,7 +87,7 @@ a otro, entra en su memoria…
 y vuelve como si fuera de fiar.
 
 23
-00:00:37,386 --> 00:00:39,340
+00:00:37,386 --> 00:00:39,328
 Pero ojo con la defensa sobreactuada:
 
 24
@@ -107,7 +107,7 @@ La cura es un ciclo:
 validar, autorizar, observar, contener y aprender.
 
 28
-00:00:49,655 --> 00:00:51,993
+00:00:49,655 --> 00:00:51,794
 Guárdalo, y compártelo con quien está poniendo
 
 29

@@ -1,0 +1,112 @@
+1
+00:00:00,244 --> 00:00:01,907
+Same AI, same exam…
+
+2
+00:00:02,001 --> 00:00:03,805
+and a score 24 points higher.
+
+3
+00:00:04,220 --> 00:00:06,357
+It happened on WebArena, a test where
+
+4
+00:00:06,367 --> 00:00:08,489
+AI navigates real websites.
+
+5
+00:00:08,690 --> 00:00:09,432
+Same model:
+
+6
+00:00:09,586 --> 00:00:11,802
+from 48 up to 72%.
+
+7
+00:00:12,216 --> 00:00:13,477
+They didn't change its brain.
+
+8
+00:00:13,678 --> 00:00:14,916
+They changed its harness.
+
+9
+00:00:15,328 --> 00:00:17,391
+The harness is everything around the model:
+
+10
+00:00:17,545 --> 00:00:20,542
+tools, memory, instructions, and a loop to
+
+11
+00:00:20,552 --> 00:00:22,038
+review and retry.
+
+12
+00:00:22,472 --> 00:00:23,556
+Think of it like this:
+
+13
+00:00:23,627 --> 00:00:24,983
+the model is the engine.
+
+14
+00:00:25,184 --> 00:00:27,544
+But without wheels, steering or brakes, it
+
+15
+00:00:27,554 --> 00:00:29,051
+won't win any race.
+
+16
+00:00:29,241 --> 00:00:30,502
+The harness is the car.
+
+17
+00:00:30,900 --> 00:00:32,150
+And it's not a one-off:
+
+18
+00:00:32,339 --> 00:00:34,381
+on another coding test, the same model
+
+19
+00:00:34,391 --> 00:00:36,928
+scores 80% with its vendor's harness, and
+
+20
+00:00:36,938 --> 00:00:38,860
+59% with a neutral one.
+
+21
+00:00:39,268 --> 00:00:41,013
+So when you see an AI leaderboard,
+
+22
+00:00:41,096 --> 00:00:42,959
+don't just ask which model it is.
+
+23
+00:00:43,148 --> 00:00:43,456
+Ask:
+
+24
+00:00:43,466 --> 00:00:44,303
+which harness?
+
+25
+00:00:44,708 --> 00:00:47,326
+Because today, the bottleneck isn't the model.
+
+26
+00:00:47,515 --> 00:00:48,375
+It's the harness.
+
+27
+00:00:48,792 --> 00:00:50,445
+Save it, and share it with whoever
+
+28
+00:00:50,455 --> 00:00:52,105
+picks the AI at your company.
+

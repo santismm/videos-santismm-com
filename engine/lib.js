@@ -14,7 +14,7 @@
   };
 
   // Marca del canal. Por defecto, EUREKA; otros canales la cambian con applyBrand() (ver brands.js).
-  const BRAND = { name: 'EUREKA', tag: 'IA EN 60s', glowA: '34,211,238', glowB: '59,130,246', bgHtml: null };
+  const BRAND = { name: 'EUREKA', tag: null, glowA: '34,211,238', glowB: '59,130,246', bgHtml: null };
   function applyBrand(b) {
     if (!b) return;
     Object.assign(C, b.colors || {});
@@ -72,7 +72,9 @@
   };
 
   // ---------- Estado global ----------
-  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {} };
+  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {}, lang: 'es' };
+  // Idioma del vídeo (script.json → "lang"): L('texto es', 'text en')
+  const L = (es, en) => (S.lang === 'en' && en != null ? en : es);
 
   function scene(id, build) { S.defs[id] = build; }
 
@@ -104,7 +106,7 @@
       <div class="abs mono" id="hdr" style="left:${SAFE.left + 6}px; top:196px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; letter-spacing:.14em;">
         <span style="display:flex;align-items:center;gap:12px;padding:12px 20px;border:2px solid ${C.lineStrong};border-radius:999px;background:rgba(11,15,25,.75);color:${C.ink}">
           <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>${BRAND.name}</span>
-        <span style="color:${C.muted}">${BRAND.tag} · #${String(tl.episode).padStart(2, '0')}</span>
+        <span style="color:${C.muted}">${BRAND.tag || L('IA EN 60s', 'AI IN 60s')} · #${String(tl.episode).padStart(2, '0')}</span>
       </div>
       <div class="abs" id="prog" style="left:${SAFE.left + 6}px; top:268px; width:${SAFE.right - SAFE.left - 6}px; height:6px; display:flex; gap:8px;"></div>`;
     if (S.video.footer) add(ch, `<div class="abs mono" style="left:${SAFE.left}px;width:${SAFE.right - SAFE.left}px;top:1452px;text-align:center;font-size:21px;font-weight:500;color:${C.faint}">${S.video.footer}</div>`);
@@ -228,6 +230,7 @@
 
   function init(timeline) {
     S.tl = timeline;
+    S.lang = timeline.lang || 'es';
     buildBg();
     buildScenes();
     buildChrome();
@@ -251,7 +254,8 @@
     render(t);
   }
 
-  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S, BRAND, applyBrand,
+  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S, L, BRAND, applyBrand,
+    get lang() { return S.lang; }, set lang(v) { S.lang = v; },
     set video(v) { S.video = v; }, get video() { return S.video; } };
   window.__render = render;
 })();

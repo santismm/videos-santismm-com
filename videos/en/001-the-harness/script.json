@@ -1,0 +1,52 @@
+{
+  "id": "001-the-harness",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 1,
+  "title": "Same model, 24 more points: the harness",
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "articles.santismm.com/the-stopwatch-and-the-exam",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Same AI, same exam… and a score 24 points higher."
+    },
+    {
+      "id": "webarena",
+      "text": "It happened on WebArena, a test where AI navigates real websites. Same model: from 48 up to 72%."
+    },
+    {
+      "id": "cerebro",
+      "text": "They didn't change its brain. They changed its harness."
+    },
+    {
+      "id": "piezas",
+      "text": "The harness is everything around the model: tools, memory, instructions, and a loop to review and retry."
+    },
+    {
+      "id": "motor",
+      "text": "Think of it like this: the model is the engine. But without wheels, steering or brakes, it won't win any race. The harness is the car."
+    },
+    {
+      "id": "swebench",
+      "text": "And it's not a one-off: on another coding test, the same model scores 80% with its vendor's harness, and 59% with a neutral one."
+    },
+    {
+      "id": "ranking",
+      "text": "So when you see an AI leaderboard, don't just ask which model it is. Ask: which harness?"
+    },
+    {
+      "id": "tesis",
+      "text": "Because today, the bottleneck isn't the model. It's the harness."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and share it with whoever picks the AI at your company."
+    }
+  ],
+  "cover": "Same model.<br><span style=\"color:#22d3ee\">Why +24 points?</span>",
+  "coverTime": 3.7
+}

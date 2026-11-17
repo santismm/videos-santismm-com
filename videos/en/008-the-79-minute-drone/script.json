@@ -1,0 +1,52 @@
+{
+  "id": "008-the-79-minute-drone",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 8,
+  "title": "The drone that saved 79 minutes… or 19 (compared to what?)",
+  "cover": "79 minutes…<br><span style=\"color:#f59e0b\">or just 19?</span>",
+  "coverTime": 3.0,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "physicalai.santismm.com/en/case-studies/zipline-rwanda-blood-delivery · The Lancet Global Health 2022",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "A blood-delivery drone saved 79 minutes. Or was it just 19? Both numbers come from the same study."
+    },
+    {
+      "id": "estudio",
+      "text": "In Rwanda, a peer-reviewed study covered 12,733 drone blood orders to 20 hospitals."
+    },
+    {
+      "id": "carrera",
+      "text": "The drone: a median of 41 minutes. The hospital's ambulance: 120, because it had to drive there and back. The gap: 79."
+    },
+    {
+      "id": "mejorcaso",
+      "text": "But against the best case, a car that only goes one way, about an hour, the gap shrinks to 19."
+    },
+    {
+      "id": "analogia",
+      "text": "It's like saying you're tall. Next to whom?"
+    },
+    {
+      "id": "caducada",
+      "text": "And 67% less expired blood at 12 months. The fine print: no control group, estimated road times, and no cost per delivery."
+    },
+    {
+      "id": "leccion",
+      "text": "So when you see a number, ask: compared to what? And check its evidence level, from A to D."
+    },
+    {
+      "id": "tesis",
+      "text": "A number without its comparison is half a number."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and share it with someone who believes any number."
+    }
+  ]
+}

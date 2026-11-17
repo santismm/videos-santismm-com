@@ -1,0 +1,29 @@
+{
+  "_comentario": "Configuración de publicación que lee la tarea programada. Editar aquí cuando cambien marcas, redes o cadencia.",
+  "cadencia": {
+    "dias": ["lunes", "miércoles", "viernes", "domingo"],
+    "zona": "Europe/Madrid",
+    "hora": { "es": "13:00", "en": "18:00" }
+  },
+  "buffer_por_idioma": 6,
+  "marcas": {
+    "es": {
+      "nombre": "EUREKA · IA en 60s",
+      "blogId": "7970471",
+      "redes_conectadas": ["youtube"],
+      "redes_previstas": ["youtube", "instagram", "tiktok"],
+      "youtube": "@eureka-ia60"
+    },
+    "en": {
+      "nombre": "EUREKA · AI in 60s",
+      "blogId": null,
+      "redes_conectadas": [],
+      "redes_previstas": ["youtube", "instagram", "tiktok"]
+    }
+  },
+  "ajustes_por_red": {
+    "youtube": { "type": "short", "privacy": "public", "madeForKids": false, "isAiGeneratedContent": true, "category": "SCIENCE_TECHNOLOGY" },
+    "instagram": { "type": "REEL", "showReelOnFeed": true, "isAiGenerated": true },
+    "tiktok": { "privacyOption": "PUBLIC_TO_EVERYONE", "isAigc": true, "autoAddMusic": false }
+  }
+}
