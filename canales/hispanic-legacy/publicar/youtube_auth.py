@@ -7,14 +7,32 @@ Uso:
 Al terminar imprime el nombre del canal autorizado y el refresh token. Guarda ese token como
 YT_REFRESH_TOKEN_ES o YT_REFRESH_TOKEN_EN (ver README.md). No lo pegues en ningún chat ni lo subas al repositorio.
 """
-import http.server, json, secrets, sys, urllib.parse, urllib.request, webbrowser
+import http.server, json, os, secrets, ssl, sys, urllib.parse, urllib.request, webbrowser
+
+
+def contexto_ssl():
+    """Contexto TLS con verificación. Algunos Python (p. ej. Homebrew en una ruta propia) no traen
+    certificados raíz: en ese caso se usan los de certifi o los del sistema. Nunca se desactiva la verificación."""
+    ctx = ssl.create_default_context()
+    if ctx.cert_store_stats()["x509_ca"] == 0 and not os.environ.get("SSL_CERT_FILE"):
+        try:
+            import certifi
+            return ssl.create_default_context(cafile=certifi.where())
+        except ImportError:
+            for ca in ("/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt"):
+                if os.path.exists(ca):
+                    return ssl.create_default_context(cafile=ca)
+    return ctx
+
+
+SSL = contexto_ssl()
 
 SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.force-ssl"
 
 
 def post(url, data):
     req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode())
-    return json.load(urllib.request.urlopen(req))
+    return json.load(urllib.request.urlopen(req, context=SSL))
 
 
 def main():
@@ -54,7 +72,7 @@ def main():
         sys.exit("Google no devolvió refresh token. Revoca el acceso en myaccount.google.com/permissions y repite.")
     req = urllib.request.Request("https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true",
                                  headers={"Authorization": "Bearer " + tok["access_token"]})
-    items = json.load(urllib.request.urlopen(req)).get("items", [])
+    items = json.load(urllib.request.urlopen(req, context=SSL)).get("items", [])
     print("Canal autorizado:", items[0]["snippet"]["title"] if items else "(no se encontró ningún canal en esta cuenta)")
     print("\nREFRESH TOKEN (guárdalo como YT_REFRESH_TOKEN_ES o YT_REFRESH_TOKEN_EN):\n\n" + tok["refresh_token"] + "\n")
 
