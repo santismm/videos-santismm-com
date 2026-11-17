@@ -23,7 +23,7 @@ Para regenerarlas: `node brand/render.mjs`.
 >
 > Basado en el trabajo de Santi Santa María (físico y Chief AI Officer): artículos, tracker de benchmarks, laboratorios interactivos y casos reales de IA física en santismm.com.
 >
-> 🎬 Nuevo vídeo lunes, miércoles y viernes.
+> 🎬 Nuevo vídeo lunes, miércoles, viernes y domingo.
 > 🤖 Transparencia: la voz y la animación de estos vídeos se generan con IA a partir de contenidos revisados por el autor.
 
 **Enlaces del canal:**

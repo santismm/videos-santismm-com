@@ -59,9 +59,11 @@
   };
 
   // ---------- Estado global ----------
-  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {},
+  const S = { tl: null, scenes: [], defs: {}, cues: [], shakes: [], chunks: [], video: {}, lang: 'es',
     // Tema del canal (engine/themes/<tema>.js): marca, fondo y fuentes propias. Por defecto, EUREKA.
-    theme: { brand: { name: 'EUREKA', tagline: 'IA EN 60s' } } };
+    theme: { brand: { name: 'EUREKA' } } };
+  // Idioma del vídeo (script.json → "lang"): L('texto es', 'text en')
+  const L = (es, en) => (S.lang === 'en' && en != null ? en : es);
 
   function scene(id, build) { S.defs[id] = build; }
 
@@ -95,7 +97,7 @@
       <div class="abs mono" id="hdr" style="left:${SAFE.left + 6}px; top:196px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; letter-spacing:.14em;">
         <span style="display:flex;align-items:center;gap:12px;padding:12px 20px;border:2px solid ${C.lineStrong};border-radius:999px;background:rgba(11,15,25,.75);color:${C.ink}">
           <span style="width:14px;height:14px;border-radius:50%;background:${C.cyan};box-shadow:0 0 18px ${C.cyan}"></span>${S.theme.brand.name}</span>
-        <span style="color:${C.muted}">${S.theme.brand.tagline} · #${String(tl.episode).padStart(2, '0')}</span>
+        <span style="color:${C.muted}">${S.theme.brand.tagline || L('IA EN 60s', 'AI IN 60s')} · #${String(tl.episode).padStart(2, '0')}</span>
       </div>
       <div class="abs" id="prog" style="left:${SAFE.left + 6}px; top:268px; width:${SAFE.right - SAFE.left - 6}px; height:6px; display:flex; gap:8px;"></div>`;
     const prog = document.getElementById('prog');
@@ -219,6 +221,7 @@
 
   function init(timeline) {
     S.tl = timeline;
+    S.lang = timeline.lang || 'es';
     buildBg();
     buildScenes();
     buildChrome();
@@ -242,7 +245,9 @@
     render(t);
   }
 
-  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S,
+  window.EUREKA = { W, H, C, SAFE, I, Ease, clamp01, lerp, prog, spring, appear, h, add, css, fmt, norm, scene, init, render, cover, S, L,
+    // El idioma se fija antes de cargar tema y escenas (page.html) y de nuevo en init().
+    get lang() { return S.lang; }, set lang(v) { S.lang = v || 'es'; },
     set video(v) { S.video = v; }, get video() { return S.video; },
     set theme(v) { S.theme = { ...S.theme, ...v }; }, get theme() { return S.theme; } };
   window.__render = render;

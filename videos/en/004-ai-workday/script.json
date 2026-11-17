@@ -1,0 +1,52 @@
+{
+  "id": "004-ai-workday",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 4,
+  "title": "AI's workday doubles every 7 months (METR time horizon)",
+  "cover": "From 3 seconds<br><span style=\"color:#22d3ee\">to 12 hours</span>",
+  "coverTime": 5.9,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "metr.org/time-horizons · articles.santismm.com/the-stopwatch-and-the-exam",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "In 2019, the best AI could handle three-second tasks. Today, twelve-hour ones."
+    },
+    {
+      "id": "definicion",
+      "text": "METR measures it: how long a human expert takes on the tasks the AI completes half the time."
+    },
+    {
+      "id": "curva",
+      "text": "That length doubles roughly every seven months. And since 2023, every four."
+    },
+    {
+      "id": "jornada",
+      "text": "Seconds with GPT-2, minutes with GPT-4, an hour in 2025… and twelve hours today."
+    },
+    {
+      "id": "letra",
+      "text": "But careful: that's succeeding half the time. Ask for 80%, and it drops to just over an hour."
+    },
+    {
+      "id": "margen",
+      "text": "And these are software tasks, cleaner than real work, with a huge margin of error: from 5 to 60 hours."
+    },
+    {
+      "id": "pregunta",
+      "text": "So don't ask whether AI can do your job. Ask which tasks, how many hours, and how reliably."
+    },
+    {
+      "id": "tesis",
+      "text": "The stopwatch is the right instrument. But it's not a verdict."
+    },
+    {
+      "id": "cta",
+      "text": "Save it, and share it with someone who thinks AI has stalled."
+    }
+  ]
+}

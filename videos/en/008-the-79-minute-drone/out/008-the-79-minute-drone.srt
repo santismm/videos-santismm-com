@@ -1,0 +1,120 @@
+1
+00:00:00,233 --> 00:00:03,062
+A blood-delivery drone saved 79 minutes.
+
+2
+00:00:03,251 --> 00:00:04,430
+Or was it just 19?
+
+3
+00:00:04,631 --> 00:00:06,376
+Both numbers come from the same study.
+
+4
+00:00:06,788 --> 00:00:11,389
+In Rwanda, a peer-reviewed study covered 12,733
+
+5
+00:00:11,399 --> 00:00:13,863
+drone blood orders to 20 hospitals.
+
+6
+00:00:14,280 --> 00:00:14,928
+The drone:
+
+7
+00:00:15,106 --> 00:00:16,933
+a median of 41 minutes.
+
+8
+00:00:17,134 --> 00:00:18,549
+The hospital's ambulance:
+
+9
+00:00:18,573 --> 00:00:20,791
+120, because it had to drive there
+
+10
+00:00:20,801 --> 00:00:21,532
+and back.
+
+11
+00:00:21,733 --> 00:00:22,322
+The gap:
+
+12
+00:00:22,358 --> 00:00:23,159
+79.
+
+13
+00:00:23,584 --> 00:00:25,355
+But against the best case, a car
+
+14
+00:00:25,365 --> 00:00:27,348
+that only goes one way, about an
+
+15
+00:00:27,358 --> 00:00:29,409
+hour, the gap shrinks to 19.
+
+16
+00:00:29,804 --> 00:00:30,960
+It's like saying you're tall.
+
+17
+00:00:31,149 --> 00:00:31,879
+Next to whom?
+
+18
+00:00:32,292 --> 00:00:35,030
+And 67% less expired blood at 12
+
+19
+00:00:35,040 --> 00:00:35,700
+months.
+
+20
+00:00:35,901 --> 00:00:36,761
+The fine print:
+
+21
+00:00:36,856 --> 00:00:39,688
+no control group, estimated road times, and
+
+22
+00:00:39,698 --> 00:00:41,018
+no cost per delivery.
+
+23
+00:00:41,428 --> 00:00:43,303
+So when you see a number, ask:
+
+24
+00:00:43,315 --> 00:00:44,187
+compared to what?
+
+25
+00:00:44,376 --> 00:00:46,277
+And check its evidence level, from A
+
+26
+00:00:46,287 --> 00:00:46,864
+to D.
+
+27
+00:00:47,265 --> 00:00:49,177
+A number without its comparison is half
+
+28
+00:00:49,187 --> 00:00:49,823
+a number.
+
+29
+00:00:50,220 --> 00:00:51,732
+Save it, and share it with someone
+
+30
+00:00:51,742 --> 00:00:53,262
+who believes any number.
+

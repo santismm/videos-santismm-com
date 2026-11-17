@@ -1,0 +1,25 @@
+CONTEXT
+Repo: /home/user/videos-santismm-com (git branch claude/social-media-educational-videos-eb9lwp). It produces ~55 s vertical (1080x1920) educational videos "EUREKA" from Santi Santa María's websites (santismm.com and subdomains). Read README.md first (pipeline overview), then engine/lib.js, engine/components.js (EUREKA.ui helpers: pill, examPaper, endCard, popText, popIn, rng) and one finished Spanish episode end to end (e.g. videos/004-la-jornada-de-la-ia/: script.json, scenes.js, publicacion.md) to learn the conventions.
+
+Pipeline per video directory V:
+  python3 engine/tts.py V                       # voice + word timings → V/build/timeline.json (prints scene durations and words)
+  node engine/render.mjs V --stills 0.4,5.2,... # PNG stills in V/build/stills/ for review; montage them into a contact sheet (ImageMagick `montage stills/t*.png -tile 5x2 -geometry 360x640+5+5 -background '#222' contact.png`) and LOOK at it with the Read tool
+  WORKERS=2 engine/make.sh V --skip-tts         # full render → V/out/<id>.mp4, <id>-portada.png, <id>.srt  (use WORKERS=2: other agents render in parallel)
+  ffmpeg -i V/out/<id>.mp4 -af ebur128 -f null - 2>&1 | grep -A3 Summary   # integrated loudness must be ≈ -14 LUFS
+  node engine/render.mjs V --cover <t>          # regenerates the cover (title from script.json "cover", frame at time t); then copy V/build/cover.png to V/out/<id>-portada.png
+Scenes call x.at('word') to sync animations to the narration (matches the start of a normalized word; a missing word throws an error — read the words printed by tts.py). Keep all content inside the safe zone (x 90–930, y 290–1150; captions live at y≈1210+).
+
+ENGLISH VERSIONS — conventions
+- Directory: videos/en/<NNN>-<english-slug>/ (e.g. videos/en/001-the-harness). Copy the Spanish scenes.js there and translate it.
+- script.json: same structure as the Spanish one plus "lang": "en", "series": "EUREKA · AI in 60s", "voice": "en-US-AndrewNeural", "rate": "+6%", "pitch": "-2Hz", same "episode" number, English "title" and "cover" (short, punchy, 2 lines max, same <br><span style="color:...">…</span> pattern), and "coverTime" at a frame where the key visual is complete.
+- Narration: an idiomatic, natural English ADAPTATION of the Spanish script (not a literal translation), same structure (hook in the first 3 s, payoff, analogy, takeaway, thesis, CTA "Save it, and share it with …" — the end card syncs on the words "save" and "share", so the CTA must contain both words), same facts, same caveats. Do NOT add any new fact or number. Use the facts and caveats documented in the Spanish publicacion.md ("Fuentes y matices"). English number formatting: 7.5%, 10,000, €133, 12 hours. Target total duration 50–60 s (tts.py prints it); trim words if longer.
+- scenes.js: translate EVERY on-screen string (labels, pills, chips, axis ticks, fake UI text, source lines, alt units like "min"/"h"/"día"→"day"), change x.at('…') keys to the English narration words, set EUREKA.video.keywords to English words of the narration, switch number formatting (toLocaleString('en-US'), decimal point). Keep the same visual design and metaphors; fix any layout that breaks because English text is longer/shorter. The end card (components.js endCard) and header switch to English automatically via "lang": "en".
+- publicacion.md in English with: files, "Sources and caveats" (translated from the Spanish one, same links), AI-disclosure reminder, and ready-to-paste copy for YouTube Shorts (title ≤ 90 chars incl. #shorts, description with links and the line "AI-generated voice and animation; script based on the work of Santi Santa María."), Instagram Reels, TikTok and LinkedIn, plus a pinned comment question. Hashtags in English (#AI #artificialintelligence #aiagents …).
+- Quality bar: review the stills contact sheet before the full render and fix overlaps/overflows; after the full render extract 3–4 frames + the cover into a contact sheet and check them again.
+
+RULES
+- Do NOT git commit, push, or edit README.md, docs/, brand/, engine/ or any other video directory than yours. If you find an engine bug, work around it in your scenes.js and mention it in your report.
+- Do not invent data. If something cannot be verified, leave it out.
+- Final report (concise): for each video — directory, English title, duration, LUFS, cover time, and anything the user should know (discrepancies, doubts).
+
+UPDATE (overrides the RULES above about git): the session container can restart and kill your work. As soon as each video is finished and verified, save it: `git add <your video directory>` (ONLY your own directories, never README/docs/brand/engine), `git commit -m "<short message>"`, then `git pull --rebase origin claude/social-media-educational-videos-eb9lwp && git push origin claude/social-media-educational-videos-eb9lwp` (retry the pull+push if rejected because another agent pushed). Before starting, check whether your directory already contains partial work from an interrupted previous attempt (script.json, scenes.js, build/): reuse what is good, verify it, and finish it.

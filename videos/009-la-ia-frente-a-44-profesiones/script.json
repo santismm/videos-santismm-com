@@ -1,0 +1,51 @@
+{
+  "id": "009-la-ia-frente-a-44-profesiones",
+  "series": "EUREKA · IA en 60s",
+  "episode": 9,
+  "title": "La IA frente a 44 profesiones: ¿gana o empata a un experto? (GDPval)",
+  "cover": "IA vs 44 profesiones<br><span style=\"color:#f59e0b\">¿quién gana?</span>",
+  "coverTime": 6.2,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "OpenAI, GDPval (arXiv 2510.04374; anuncios de GPT-5.2 y GPT-5.5) · articles.santismm.com/el-cronometro-y-el-examen",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "La IA contra 44 profesiones: abogados, enfermeras, contables. ¿Quién gana?"
+    },
+    {
+      "id": "tareas",
+      "text": "OpenAI lo midió con GDPval: 1.320 tareas reales, creadas por expertos con unos 14 años de oficio."
+    },
+    {
+      "id": "cata",
+      "text": "Otro experto compara dos entregables sin firma, el humano y el de la IA, y elige a ciegas."
+    },
+    {
+      "id": "marcador",
+      "text": "En 2025 el mejor modelo ganaba o empataba en casi el 48%. La paridad es el 50%."
+    },
+    {
+      "id": "salto",
+      "text": "Después, OpenAI anunció el 71%, y en 2026, casi el 85%: datos del fabricante, ojo."
+    },
+    {
+      "id": "puzle",
+      "text": "Pero son tareas bien definidas, con todo el contexto y de un solo intento. Un trabajo es mucho más."
+    },
+    {
+      "id": "leccion",
+      "text": "La lección: no preguntes si la IA aprueba un examen. Pregunta si gana o empata a un experto en tus tareas."
+    },
+    {
+      "id": "tesis",
+      "text": "Porque el benchmark más honesto es el trabajo por el que se paga a un profesional."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien aún mide la IA con exámenes."
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 videos/*/build/
+videos/**/build/
 canales/*/videos/*/build/
+canales/*/videos/*/en/build/
 node_modules/
 __pycache__/
-canales/*/videos/*/en/build/
 
 # credenciales locales de publicación
 canales/*/publicar/.env

@@ -1,0 +1,51 @@
+{
+  "id": "008-el-dron-de-los-79-minutos",
+  "series": "EUREKA · IA en 60s",
+  "episode": 8,
+  "title": "El dron que ahorró 79 minutos… o 19 (¿comparado con qué?)",
+  "cover": "79 minutos…<br><span style=\"color:#f59e0b\">¿o solo 19?</span>",
+  "coverTime": 3.0,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "physicalai.santismm.com/es/case-studies/zipline-rwanda-blood-delivery · The Lancet Global Health 2022",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Un dron con sangre ahorró 79 minutos. ¿O solo 19? Las dos cifras son del mismo estudio."
+    },
+    {
+      "id": "estudio",
+      "text": "En Ruanda, un estudio revisado por pares: 12.733 pedidos de sangre por dron a 20 hospitales."
+    },
+    {
+      "id": "carrera",
+      "text": "El dron: una mediana de 41 minutos. La ambulancia del hospital, 120, porque iba y volvía. Ventaja: 79."
+    },
+    {
+      "id": "mejorcaso",
+      "text": "Pero frente al mejor caso, un coche que solo hace la ida, una hora, la ventaja cae a 19."
+    },
+    {
+      "id": "analogia",
+      "text": "Es como decir que eres alto. ¿Al lado de quién?"
+    },
+    {
+      "id": "caducada",
+      "text": "Y un 67% menos de sangre caducada a los 12 meses. Letra pequeña: sin grupo de control, tiempos por carretera estimados y sin coste por entrega."
+    },
+    {
+      "id": "leccion",
+      "text": "Ante una cifra, pregunta: ¿comparado con qué? Y mira su nivel de evidencia, de la A a la D."
+    },
+    {
+      "id": "tesis",
+      "text": "Una cifra sin su comparación es media cifra."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien se cree cualquier cifra."
+    }
+  ]
+}
