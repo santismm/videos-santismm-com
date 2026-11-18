@@ -37,7 +37,7 @@ Se ejecuta lunes, miércoles, viernes y domingo a las 18:22 (hora de Madrid).
 | mié 11 nov | #02 Contaminación | ✅ publicado | — |
 | vie 13 nov | #03 pass^k | ✅ publicado | — |
 | lun 16 nov | #04 Horizonte de METR | ✅ [publicado](https://www.youtube.com/shorts/CkM4v7utkf8) | cuando se conecten |
-| mié 18 nov | #05 Email que secuestra | programado | cuando se conecten |
+| mié 18 nov | #05 Email que secuestra | ✅ [publicado](https://www.youtube.com/shorts/6o1ki_lqVe8) | cuando se conecten |
 | vie 20 nov | #06 4 formas de enfermar | programado | cuando se conecten |
 | **dom 22 nov** | #07 Coste por resultado (adelantado desde el lun 23) | programado | cuando se conecten |
 | lun 23 nov | #08 El dron de los 79 minutos | programado | cuando se conecten |
