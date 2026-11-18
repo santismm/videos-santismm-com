@@ -3,6 +3,8 @@
 Uso (desde la raíz del repositorio):
     python3 canales/hispanic-legacy/publicar/youtube.py --simular            # enseña qué haría, sin credenciales
     python3 canales/hispanic-legacy/publicar/youtube.py --calendario         # programa todo lo pendiente de calendario.json
+    python3 canales/hispanic-legacy/publicar/youtube.py --estado             # qué está subido y qué es ya público
+    python3 canales/hispanic-legacy/publicar/youtube.py --anadir 007-...     # añade un vídeo nuevo al siguiente hueco
     python3 canales/hispanic-legacy/publicar/youtube.py 001-el-tornaviaje --idioma es --cuando 2026-11-23T19:00
     python3 canales/hispanic-legacy/publicar/youtube.py 001-el-tornaviaje --idioma en --privado   # subida de prueba
 
@@ -122,6 +124,46 @@ def publicar(video, idioma, cuando_utc, privacidad, a):
         json.dump(prev, open(registro(f), "w"), ensure_ascii=False, indent=2)
 
 
+def es_publico(url):
+    """True si YouTube sirve el vídeo sin sesión (consulta pública oEmbed; no usa credenciales)."""
+    try:
+        return requests.get("https://www.youtube.com/oembed", params={"url": url, "format": "json"}, timeout=20).status_code == 200
+    except requests.RequestException:
+        return None
+
+
+def estado(cal):
+    """Resumen por vídeo e idioma: fecha prevista, si está subido y si ya es público. Devuelve el colchón por idioma."""
+    colchon = {"es": 0, "en": 0}
+    for p in cal["publicaciones"]:
+        for i in ("es", "en"):
+            f = ficha(p["video"], i)
+            prev = json.load(open(registro(f))).get("youtube") if os.path.exists(registro(f)) else None
+            if not prev:
+                marca = "SIN SUBIR"
+            else:
+                pub = es_publico(prev["url"])
+                marca = "PÚBLICO" if pub else ("programado/privado" if pub is False else "no se pudo comprobar")
+                marca += " " + prev["url"]
+            if not prev or "PÚBLICO" not in marca:
+                colchon[i] += 1
+            print(f"{p['fecha']} {cal['hora'][i]} [{i}] {p['video']:<32} {marca}")
+    print(f"colchón (vídeos hechos y aún no públicos): es={colchon['es']} en={colchon['en']}")
+    return colchon
+
+
+def siguiente_hueco(cal):
+    """Primera fecha libre, posterior a la última del calendario, que caiga en un día de publicación."""
+    dias = cal.get("dias", [0, 2, 4, 6])  # lunes, miércoles, viernes, domingo
+    d = max(datetime.date.fromisoformat(p["fecha"]) for p in cal["publicaciones"])
+    hoy = datetime.datetime.now(ZoneInfo(cal["zona"])).date()
+    d = max(d, hoy)
+    while True:
+        d += datetime.timedelta(days=1)
+        if d.weekday() in dias:
+            return d.isoformat()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("video", nargs="?", help="carpeta del vídeo, p. ej. 001-el-tornaviaje")
@@ -130,6 +172,8 @@ def main():
     ap.add_argument("--privado", action="store_true", help="sube como privado sin programar (prueba)")
     ap.add_argument("--publico", action="store_true", help="publica de inmediato")
     ap.add_argument("--calendario", action="store_true", help="programa todo lo pendiente de calendario.json")
+    ap.add_argument("--estado", action="store_true", help="lista qué está subido y qué es ya público (sin credenciales)")
+    ap.add_argument("--anadir", metavar="VIDEO", help="añade un vídeo al calendario en el siguiente hueco libre")
     ap.add_argument("--simular", action="store_true", help="no sube nada; enseña qué haría")
     ap.add_argument("--forzar", action="store_true", help="sube aunque ya exista publicado.json")
     a = ap.parse_args()
@@ -142,6 +186,19 @@ def main():
     def utc(local):
         return datetime.datetime.fromisoformat(local).replace(tzinfo=zona).astimezone(datetime.timezone.utc)
 
+    if a.estado:
+        estado(cal)
+        return
+    if a.anadir:
+        if any(p["video"] == a.anadir for p in cal["publicaciones"]):
+            raise SystemExit(a.anadir + " ya está en el calendario")
+        for i in ("es", "en"):
+            ficha(a.anadir, i)  # falla si falta algún archivo
+        fecha = siguiente_hueco(cal)
+        cal["publicaciones"].append({"fecha": fecha, "video": a.anadir})
+        json.dump(cal, open(os.path.join(AQUI, "calendario.json"), "w"), ensure_ascii=False, indent=2)
+        print(f"{a.anadir} → {fecha} (es {cal['hora']['es']}, en {cal['hora']['en']}, {cal['zona']})")
+        return
     if a.calendario or (a.simular and not a.video):
         for p in cal["publicaciones"]:
             for i in idiomas:
