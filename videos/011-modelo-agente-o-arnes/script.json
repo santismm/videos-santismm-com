@@ -1,0 +1,63 @@
+{
+  "id": "011-modelo-agente-o-arnes",
+  "series": "EUREKA · IA en 60s",
+  "episode": 11,
+  "title": "¿Modelo, agente o arnés? 3 casos para no llamarlo todo «la IA»",
+  "cover": "¿Modelo, agente<br><span style=\"color:#f59e0b\">o arnés?</span>",
+  "coverTime": 4.4,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "tail": 0.5,
+  "source": "SANTISMM Labs, «¿Modelo, agente o arnés?» (labs.santismm.com/model-agent-harness, leído el 18-11-2026) · santismm.com/es/harness-engineering",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Lo llamamos todo «la IA», pero son tres capas: ¿sabrías separarlas?"
+    },
+    {
+      "id": "capas",
+      "text": "El modelo, la capacidad que predice y genera; el agente, la entidad que percibe, decide y actúa; el arnés, el sistema que conecta contexto y herramientas."
+    },
+    {
+      "id": "q1",
+      "text": "Caso uno: Codex recibe una tarea, edita archivos y ejecuta pruebas hasta cerrarla.",
+      "pause": 0.68
+    },
+    {
+      "id": "a1",
+      "text": "Agente: hay objetivo, decisiones y acciones, y usa un modelo dentro de un arnés."
+    },
+    {
+      "id": "q2",
+      "text": "Una capa limita permisos, registra trazas y corta acciones de alto impacto.",
+      "pause": 0.68
+    },
+    {
+      "id": "a2",
+      "text": "Arnés: gobierna cómo se usa el modelo o el agente."
+    },
+    {
+      "id": "q3",
+      "text": "Claude Sonnet sin memoria, sin herramientas y sin bucle exterior.",
+      "pause": 0.68
+    },
+    {
+      "id": "a3",
+      "text": "Modelo: sin nada que le deje actuar, sigue siendo un modelo."
+    },
+    {
+      "id": "leccion",
+      "text": "Por eso, si algo falla o mejora, no culpes ni aplaudas a «la IA». Pregunta: ¿modelo, agente o arnés?"
+    },
+    {
+      "id": "tesis",
+      "text": "Tres capas, tres responsabilidades."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien lo llama todo «la IA»."
+    }
+  ]
+}

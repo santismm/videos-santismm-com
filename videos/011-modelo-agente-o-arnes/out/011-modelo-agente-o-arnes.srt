@@ -1,0 +1,120 @@
+1
+00:00:00,247 --> 00:00:02,397
+Lo llamamos todo «la IA», pero son
+
+2
+00:00:02,407 --> 00:00:03,154
+tres capas:
+
+3
+00:00:03,164 --> 00:00:04,405
+¿sabrías separarlas?
+
+4
+00:00:05,234 --> 00:00:07,198
+El modelo, la capacidad que predice y
+
+5
+00:00:07,208 --> 00:00:09,732
+genera; el agente, la entidad que percibe,
+
+6
+00:00:09,784 --> 00:00:12,109
+decide y actúa; el arnés, el sistema
+
+7
+00:00:12,119 --> 00:00:13,974
+que conecta contexto y herramientas.
+
+8
+00:00:14,799 --> 00:00:15,578
+Caso uno:
+
+9
+00:00:15,588 --> 00:00:17,793
+Codex recibe una tarea, edita archivos y
+
+10
+00:00:17,803 --> 00:00:19,516
+ejecuta pruebas hasta cerrarla.
+
+11
+00:00:20,855 --> 00:00:21,548
+Agente:
+
+12
+00:00:21,590 --> 00:00:24,047
+hay objetivo, decisiones y acciones, y usa
+
+13
+00:00:24,057 --> 00:00:25,562
+un modelo dentro de un arnés.
+
+14
+00:00:26,391 --> 00:00:28,662
+Una capa limita permisos, registra trazas y
+
+15
+00:00:28,672 --> 00:00:30,319
+corta acciones de alto impacto.
+
+16
+00:00:31,655 --> 00:00:32,314
+Arnés:
+
+17
+00:00:32,324 --> 00:00:33,816
+gobierna cómo se usa el modelo o
+
+18
+00:00:33,826 --> 00:00:34,607
+el agente.
+
+19
+00:00:35,418 --> 00:00:37,634
+Claude Sonnet sin memoria, sin herramientas y
+
+20
+00:00:37,644 --> 00:00:38,842
+sin bucle exterior.
+
+21
+00:00:40,178 --> 00:00:40,936
+Modelo:
+
+22
+00:00:40,946 --> 00:00:42,668
+sin nada que le deje actuar, sigue
+
+23
+00:00:42,678 --> 00:00:43,766
+siendo un modelo.
+
+24
+00:00:44,586 --> 00:00:46,529
+Por eso, si algo falla o mejora,
+
+25
+00:00:46,560 --> 00:00:48,492
+no culpes ni aplaudas a «la IA».
+
+26
+00:00:49,054 --> 00:00:49,756
+Pregunta:
+
+27
+00:00:49,766 --> 00:00:51,447
+¿modelo, agente o arnés?
+
+28
+00:00:52,282 --> 00:00:54,642
+Tres capas, tres responsabilidades.
+
+29
+00:00:55,466 --> 00:00:57,463
+Guárdalo, y compártelo con quien lo llama
+
+30
+00:00:57,473 --> 00:00:58,659
+todo «la IA».
+
