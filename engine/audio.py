@@ -189,6 +189,97 @@ def music(dur, accents):
     return out * gain
 
 
+# ───────────── Música "galeón" (Rem – Do – Sib – La, cadencia andaluza, 96 BPM) ─────────────
+def pluck(f, d, bright=0.5, decay=0.996):
+    """Cuerda pulsada (Karplus-Strong) con scipy.lfilter."""
+    from scipy.signal import lfilter
+    N = max(2, int(round(SR / f)))
+    n = int(d * SR)
+    exc = np.zeros(n)
+    burst = rng.uniform(-1, 1, N)
+    exc[:N] = lp(burst, 1500 + 6000 * bright, 1)
+    a = np.zeros(N + 2); a[0] = 1; a[N] = -0.5 * decay; a[N + 1] = -0.5 * decay
+    y = lfilter([1], a, exc)
+    return y * np.minimum(1, np.arange(n) / (0.003 * SR)) * np.minimum(1, (n - np.arange(n)) / (0.03 * SR))
+
+
+def music_galeon(dur, accents):
+    bpm = 96; beat = 60 / bpm; bar = 4 * beat
+    n = int(dur * SR); t = np.arange(n) / SR
+    prog = [(50, [62, 65, 69]), (48, [60, 64, 67]), (46, [58, 62, 65]), (45, [57, 61, 64])]  # raíz, acorde
+
+    def put(buf, sig, st, g=1.0):
+        a = int(st * SR)
+        if a >= n: return
+        L = min(len(sig), n - a)
+        buf[a:a + L] += sig[:L] * g
+
+    # Colchón de cuerdas: sierras desafinadas muy filtradas
+    pad = np.zeros(n)
+    for ci in range(int(dur / bar) + 1):
+        root, chord = prog[ci % 4]
+        a, b = int(ci * bar * SR), min(n, int((ci + 1) * bar * SR) + int(0.25 * SR))
+        if a >= n: break
+        tt = np.arange(b - a) / SR
+        seg = np.zeros(b - a)
+        for m in [root, root + 7] + chord:
+            for det in (-0.1, 0.1):
+                seg += 2 * ((midi(m + det) * tt) % 1) - 1
+        pad[a:b] += seg * np.minimum(1, tt / 0.5) * np.minimum(1, (tt[-1] - tt + 1e-3) / 0.25)
+    pad = lp(pad, 900, 2) * 0.03
+    # Guitarra: arpegio en corcheas con adornos en semicorcheas al final del compás
+    gtr = np.zeros(n)
+    pat = [0, 2, 1, 2, 3, 2, 1, 2]
+    eighth = beat / 2
+    cache = {}
+    def note(m, d=1.1, bright=0.55):
+        k = (m, d, bright)
+        if k not in cache: cache[k] = pluck(midi(m), d, bright)
+        return cache[k]
+    for k in range(int(dur / eighth)):
+        st = k * eighth
+        _, chord = prog[int(st / bar) % 4]
+        notes = chord + [chord[0] + 12]
+        put(gtr, note(notes[pat[k % 8]]), st, 0.9 if k % 4 == 0 else 0.6)
+        if k % 8 == 7:  # floreo
+            put(gtr, note(notes[3] + 2, 0.5), st + eighth / 2, 0.45)
+    # Rasgueo en el primer tiempo de cada compás
+    for ci in range(int(dur / bar) + 1):
+        _, chord = prog[ci % 4]
+        for j, m in enumerate([chord[0] - 12] + chord):
+            put(gtr, note(m, 1.6, 0.7), ci * bar + j * 0.018, 0.5)
+    gtr = hp(gtr, 90) * 0.085
+    # Bajo pulsado: tiempos 1 y 3 (+ anacrusa)
+    bass = np.zeros(n)
+    for k in range(int(dur / beat) + 1):
+        root, _ = prog[int(k * beat / bar) % 4]
+        if k % 2 == 0: put(bass, note(root - 12, 1.2, 0.2), k * beat, 1.0)
+        if k % 4 == 3: put(bass, note(root - 5, 0.5, 0.2), k * beat + beat / 2, 0.6)
+    bass = lp(bass, 500) * 0.2
+    # Percusión: cajón grave, palmas y shaker
+    drums = np.zeros(n)
+    kt = t_axis(0.3); kick = np.sin(2 * np.pi * np.cumsum(110 * np.exp(-kt * 28) + 52) / SR) * np.exp(-kt * 12)
+    cl = t_axis(0.12); clap = bp(rng.standard_normal(len(cl)), 1100, 4200) * np.exp(-cl * 38)
+    sh = t_axis(0.07); shak = hp(rng.standard_normal(len(sh)), 6000) * np.sin(np.pi * sh / 0.07) ** 2
+    for k in range(int(dur / beat) + 1):
+        st = k * beat
+        if k % 4 in (0, 2): put(drums, kick, st, 0.5 if k % 4 == 0 else 0.35)
+        if k % 4 == 2: put(drums, kick, st + beat * 0.75, 0.25)
+        if k % 2 == 1: put(drums, clap, st, 0.16); put(drums, clap, st + 0.012, 0.1)
+        for j in range(4): put(drums, shak, st + j * beat / 4, 0.045 if j % 2 == 0 else 0.025)
+    out = pad + gtr + bass + drums * 0.5
+    gain = np.ones(n)
+    for ta in accents:
+        a, b = int((ta - 0.45) * SR), int(ta * SR)
+        if 0 <= a < b <= n:
+            gain[a:b] = np.minimum(gain[a:b], np.linspace(1, 0.25, b - a))
+    gain *= np.minimum(1, t / 0.4) * np.minimum(1, (dur - t) / 1.5)
+    return out * gain
+
+
+MUSIC = {"eureka": music, "galeon": music_galeon}
+
+
 def main(vdir):
     build = os.path.join(vdir, "build")
     voice = read_wav(os.path.join(build, "voice.wav"))
@@ -199,7 +290,8 @@ def main(vdir):
     voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
     voice = voice / (np.abs(voice).max() + 1e-9) * 0.9
     accents = [c["t"] for c in cues if c["type"] == "boom"]
-    mus = music(dur, accents)
+    style = json.load(open(os.path.join(vdir, "script.json"))).get("music", "eureka")
+    mus = MUSIC[style](dur, accents)
     # Ducking: la música baja cuando habla la voz
     envv = np.abs(voice)
     envv = lp(envv, 6, 1)

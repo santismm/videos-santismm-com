@@ -1,0 +1,46 @@
+{
+  "id": "006-el-mayor-imperio",
+  "lang": "es",
+  "series": "Hispanic Legacy · Historia en 60s",
+  "episode": 6,
+  "title": "«El mayor imperio de la historia» es una frase sobre mapas",
+  "cover": "¿El mayor imperio?<br><span style=\"color:#f0b94a\">Depende del mapa.</span>",
+  "coverTime": 12,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+13%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/cartographic-extent-vs-effective-control",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "«El mayor imperio de la historia». Esa frase no habla de gobiernos. Habla de mapas."
+    },
+    {
+      "id": "atlas",
+      "text": "Las cifras de los rankings salen de atlas históricos: se mide la mancha de color que el atlas pinta para cada imperio."
+    },
+    {
+      "id": "cifras",
+      "text": "Así, el Imperio británico alcanza unos 35 millones de kilómetros cuadrados hacia 1920. El español, 13 o 14 millones hacia 1780."
+    },
+    {
+      "id": "problema",
+      "text": "Pero pintar un territorio no es gobernarlo. Bajo un mismo color caben colonias, protectorados y simples reclamaciones."
+    },
+    {
+      "id": "alternativas",
+      "text": "¿Y las cifras alternativas de control efectivo que circulan por ahí? Tampoco valen: no dicen qué año miden, ni con qué reglas."
+    },
+    {
+      "id": "leccion",
+      "text": "La pregunta útil no es cuál fue más grande, sino qué controlaba de verdad cada uno, dónde y cuándo."
+    },
+    {
+      "id": "cta",
+      "text": "Compártelo antes de la próxima discusión sobre imperios."
+    }
+  ]
+}

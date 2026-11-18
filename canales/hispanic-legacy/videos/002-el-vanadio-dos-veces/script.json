@@ -1,0 +1,23 @@
+{
+  "id": "002-el-vanadio-dos-veces",
+  "series": "Hispanic Legacy · Historia en 60s",
+  "episode": 2,
+  "title": "El vanadio se descubrió dos veces (y la primera fue en México)",
+  "cover": "Descubierto<br><span style=\"color:#f0b94a\">dos veces.</span>",
+  "coverTime": 3.6,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "voice": "es-ES-ElviraNeural",
+  "rate": "+13%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/andres-manuel-del-rio",
+  "scenes": [
+    { "id": "hook", "text": "El metal que endurece el acero de tus herramientas se descubrió dos veces. Y la primera fue en México." },
+    { "id": "mexico", "text": "Año 1801. Andrés Manuel del Río, profesor de mineralogía en Ciudad de México, analiza un mineral de plomo… y encuentra un elemento nuevo." },
+    { "id": "paris", "text": "Envía una muestra a París. Los químicos franceses responden: no es nuevo, es un mineral de cromo. Se equivocaban, pero el hallazgo quedó apartado." },
+    { "id": "suecia", "text": "Treinta años después, el sueco Sefström lo encuentra otra vez, en hierro fundido. Demuestra que es nuevo y lo bautiza: vanadio, por Vanadis, una diosa nórdica." },
+    { "id": "hoy", "text": "Por eso el nombre de Del Río no aparece en la tabla periódica. Pero la Royal Society of Chemistry lo deja escrito: descubierto en 1801 por Andrés Manuel del Río." },
+    { "id": "cta", "text": "Compártelo con quien crea que la ciencia siempre acierta a la primera." }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "003-the-epidural-of-pages-en",
+  "lang": "en",
+  "series": "Hispanic Legacy · History in 60s",
+  "episode": 3,
+  "title": "The epidural was first described by a Spanish surgeon in 1921",
+  "cover": "Who first described<br><span style=\"color:#f0b94a\">the epidural?</span>",
+  "coverTime": 2.6,
+  "theme": "hispanic-legacy",
+  "music": "galeon",
+  "animation": "../scenes.js",
+  "voice": "en-US-AvaNeural",
+  "rate": "+9%",
+  "pitch": "-2Hz",
+  "gap": 0.18,
+  "source": "hispanic-legacy.com/k/fidel-pages-epidural-anaesthesia-1921",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "The epidural, the anaesthesia we all associate with childbirth, was first described by a Spanish surgeon. And almost nobody knows his name."
+    },
+    {
+      "id": "pages",
+      "text": "Fidel Pagés, a military surgeon born in Huesca. In 1921 he publishes his technique in a Spanish journal: anatomy, method, cases and complications."
+    },
+    {
+      "id": "metamerica",
+      "text": "He called it metameric anaesthesia, because it numbs the body in bands. It's like switching off the lights on a single floor of a building, not on every floor below."
+    },
+    {
+      "id": "muerte",
+      "text": "Two years later, Pagés dies in a road accident. He was 37."
+    },
+    {
+      "id": "olvido",
+      "text": "In the 1930s, the Italian Dogliotti popularizes his own version without crediting him. Until an Argentinian surgeon, Alberto Gutiérrez, insists… and in 1939 Dogliotti acknowledges him."
+    },
+    {
+      "id": "hoy",
+      "text": "Today the medical literature is clear: the epidural was first described by Fidel Pagés in 1921."
+    },
+    {
+      "id": "cta",
+      "text": "Share it with someone who has had one."
+    }
+  ]
+}

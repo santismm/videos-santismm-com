@@ -3,7 +3,7 @@
 # Uso: engine/make.sh videos/<id> [--skip-tts]
 set -euo pipefail
 V="${1:?uso: engine/make.sh videos/<id>}"
-ID="$(basename "$V")"
+ID="$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]+'/script.json'))['id'])" "$V")"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p "$V/build" "$V/out"
 if [[ "${2:-}" != "--skip-tts" || ! -f "$V/build/timeline.json" ]]; then

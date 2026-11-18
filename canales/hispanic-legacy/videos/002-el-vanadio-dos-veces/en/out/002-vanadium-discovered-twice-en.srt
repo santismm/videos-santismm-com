@@ -1,0 +1,96 @@
+1
+00:00:00,250 --> 00:00:01,838
+The metal that hardens the steel in
+
+2
+00:00:01,649 --> 00:00:03,523
+your tools was discovered twice.
+
+3
+00:00:03,652 --> 00:00:05,469
+And the first time was in Mexico.
+
+4
+00:00:05,878 --> 00:00:07,500
+The year is 1801.
+
+5
+00:00:07,628 --> 00:00:11,395
+Andrés Manuel del Río, professor of mineralogy
+
+6
+00:00:11,206 --> 00:00:14,193
+in Mexico City, analyzes a lead mineral…
+
+7
+00:00:14,395 --> 00:00:16,074
+and finds a new element.
+
+8
+00:00:16,498 --> 00:00:18,349
+He sends a sample to Paris.
+
+9
+00:00:18,478 --> 00:00:20,134
+The French chemists reply:
+
+10
+00:00:20,152 --> 00:00:22,348
+it's not new, it's a chromium mineral.
+
+11
+00:00:22,480 --> 00:00:24,595
+They were wrong, but the discovery was
+
+12
+00:00:24,407 --> 00:00:25,318
+set aside.
+
+13
+00:00:25,750 --> 00:00:28,553
+Thirty years later, the Swede Sefström finds
+
+14
+00:00:28,365 --> 00:00:30,228
+it again, in cast iron.
+
+15
+00:00:30,356 --> 00:00:32,024
+He proves it is new and names
+
+16
+00:00:31,835 --> 00:00:32,207
+it:
+
+17
+00:00:32,294 --> 00:00:35,028
+vanadium, after Vanadis, a Norse goddess.
+
+18
+00:00:35,458 --> 00:00:37,321
+That is why Del Río's name is
+
+19
+00:00:37,132 --> 00:00:38,949
+nowhere on the periodic table.
+
+20
+00:00:39,078 --> 00:00:41,365
+But the Royal Society of Chemistry puts
+
+21
+00:00:41,176 --> 00:00:41,950
+it in writing:
+
+22
+00:00:41,968 --> 00:00:45,688
+discovered in 1801 by Andrés Manuel del Río.
+
+23
+00:00:46,102 --> 00:00:47,953
+Share it with someone who thinks science
+
+24
+00:00:47,902 --> 00:00:49,742
+always gets it right the first time.
+

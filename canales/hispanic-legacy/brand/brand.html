@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Hispanic Legacy · recursos de marca</title>
+<style>
+  @font-face { font-family: 'Fraunces'; src: url(../../../engine/fonts/Fraunces-latin.woff2) format('woff2'); font-weight: 100 900; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(../../../engine/fonts/JetBrainsMono-Bold.ttf); font-weight: 700; }
+  :root { --bg:#081310; --line:#1f3a30; --ink:#f8f0dc; --muted:#aab7a6; --gold:#f0b94a; --amber:#ff7d4d; --brand:#0b6e4f; --parch:#e2d1a6; --sea:#0c2a31; }
+  html, body { margin: 0; background: var(--bg); }
+  .art { position: relative; overflow: hidden; background: var(--bg); color: var(--ink); }
+  .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(226,209,166,.08) 2px, transparent 2px), linear-gradient(90deg, rgba(226,209,166,.08) 2px, transparent 2px); }
+  .glow { position: absolute; border-radius: 50%; }
+  .display { font-family: 'Fraunces', serif; font-weight: 900; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+  .abs { position: absolute; }
+  [hidden] { display: none !important; }
+  #avatar { width: 800px; height: 800px; }
+  #avatar .grid { background-size: 80px 80px; background-position: 40px 40px; -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 72%); }
+  #banner { width: 2560px; height: 1440px; }
+  #banner .grid { background-size: 96px 96px; background-position: 48px 48px; -webkit-mask-image: radial-gradient(1600px 900px at 50% 50%, #000 35%, transparent 90%); }
+</style>
+</head>
+<body>
+<!-- Rosa de los vientos reutilizable -->
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="rose">
+    <circle r="292" fill="none" stroke="#f0b94a" stroke-width="8"/>
+    <circle r="262" fill="none" stroke="#f0b94a" stroke-width="3" stroke-dasharray="4 18"/>
+    <path d="M0 -330 L26 -292 L-26 -292Z" fill="#ff7d4d"/>
+    <path d="M0 330 L18 292 L-18 292ZM330 0 L292 18 L292 -18ZM-330 0 L-292 18 L-292 -18Z" fill="#f0b94a"/>
+  </g>
+</defs></svg>
+
+<!-- AVATAR 800×800 (se muestra en círculo en las tres plataformas) -->
+<div id="avatar" class="art" hidden>
+  <div class="grid"></div>
+  <div class="glow" style="left:100px;top:60px;width:600px;height:600px;background:radial-gradient(circle, rgba(240,185,74,.22), transparent 65%)"></div>
+  <div class="glow" style="left:160px;top:240px;width:620px;height:620px;background:radial-gradient(circle, rgba(11,110,79,.55), transparent 65%)"></div>
+  <svg class="abs" width="800" height="800" viewBox="-400 -400 800 800" style="left:0;top:0"><use href="#rose"/></svg>
+  <div class="abs display" style="left:0;right:0;top:214px;text-align:center;font-size:300px;line-height:1;letter-spacing:-.03em">H<span style="color:var(--gold)">L</span></div>
+  <div class="abs mono" style="left:0;right:0;top:540px;text-align:center;font-size:36px;letter-spacing:.22em;color:var(--muted)">60s</div>
+</div>
+
+<!-- BANNER DE YOUTUBE 2560×1440 (zona segura central 1546×423) -->
+<div id="banner" class="art" hidden>
+  <div class="grid"></div>
+  <div class="glow" style="left:500px;top:200px;width:1200px;height:1200px;background:radial-gradient(circle, rgba(240,185,74,.16), transparent 62%)"></div>
+  <div class="glow" style="left:1150px;top:80px;width:1200px;height:1200px;background:radial-gradient(circle, rgba(11,110,79,.5), transparent 62%)"></div>
+  <svg class="abs" width="2560" height="1440" viewBox="0 0 2560 1440" style="left:0;top:0" opacity=".5">
+    <g transform="translate(260 720) scale(.75)"><use href="#rose"/></g>
+    <g transform="translate(2300 720) scale(.75)"><use href="#rose"/></g>
+    <path d="M0 1180 Q640 1080 1280 1180 T2560 1180" fill="none" stroke="#e2d1a6" stroke-width="5" stroke-dasharray="4 26" stroke-linecap="round"/>
+    <path d="M0 260 Q640 360 1280 260 T2560 260" fill="none" stroke="#e2d1a6" stroke-width="5" stroke-dasharray="4 26" stroke-linecap="round"/>
+  </svg>
+  <div class="abs" style="left:507px;top:508px;width:1546px;height:423px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px">
+    <div class="display" style="font-size:148px;line-height:.92;letter-spacing:.01em;white-space:nowrap">HISPANIC <span style="color:var(--gold)">LEGACY</span></div>
+    <div class="display" id="tag" style="font-size:66px;font-weight:600;color:var(--ink)"></div>
+    <div class="mono" id="sub" style="font-size:30px;letter-spacing:.14em;color:var(--muted);margin-top:4px"></div>
+  </div>
+  <div id="safe" class="abs" hidden style="left:507px;top:508px;width:1546px;height:423px;outline:4px dashed #ff7d4d"></div>
+</div>
+
+<script>
+  const p = new URLSearchParams(location.search), en = p.get('lang') === 'en';
+  document.getElementById(p.get('mode') || 'avatar').hidden = false;
+  if (p.get('guides')) document.getElementById('safe').hidden = false;
+  document.getElementById('tag').innerHTML = en ? 'History with sources, in <span style="color:var(--gold)">60 seconds</span>' : 'Historia con fuentes, en <span style="color:var(--gold)">60 segundos</span>';
+  document.getElementById('sub').textContent = en ? 'SCIENCE · EXPLORATION · CULTURE · HISPANIC-LEGACY.COM' : 'CIENCIA · EXPLORACIÓN · CULTURA · HISPANIC-LEGACY.COM';
+</script>
+</body>
+</html>

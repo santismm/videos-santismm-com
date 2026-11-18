@@ -38,6 +38,36 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 009 | AI vs 44 professions: does it win or tie against an expert? (GDPval) | [mp4](videos/en/009-ai-vs-44-professions/out/009-ai-vs-44-professions.mp4) | [publicacion.md](videos/en/009-ai-vs-44-professions/publicacion.md) | pendiente de canal |
 | 010 | An AI running a vending machine: how much does it make in a year? (Vending-Bench) | [mp4](videos/en/010-the-vending-machine-agent/out/010-the-vending-machine-agent.mp4) | [publicacion.md](videos/en/010-the-vending-machine-agent/publicacion.md) | pendiente de canal |
 
+## Segundo canal: Hispanic Legacy · Historia en 60s
+
+Canal de divulgación histórica basado en [hispanic-legacy.com](https://hispanic-legacy.com). Usa el mismo motor con un tema propio (`engine/themes/hispanic-legacy.js`: paleta, tipografía Fraunces, mapa del Pacífico con cámara) y música propia (`"music": "galeon"`).
+
+- Estrategia, tendencias y plan de vídeos: [`canales/hispanic-legacy/docs/estrategia.md`](canales/hispanic-legacy/docs/estrategia.md)
+- Alta de canales (nombres, biografías, imágenes, Metricool): [`canales/hispanic-legacy/brand/canales.md`](canales/hispanic-legacy/brand/canales.md)
+- Publicación directa con las APIs oficiales (YouTube listo): [`canales/hispanic-legacy/publicar/README.md`](canales/hispanic-legacy/publicar/README.md)
+- Calendario de publicación (4 por semana): [`canales/hispanic-legacy/docs/calendario.md`](canales/hispanic-legacy/docs/calendario.md)
+
+| # | Título | Español | English |
+|---|---|---|---|
+| 01 | El tornaviaje | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/out/001-el-tornaviaje.mp4) · [textos](canales/hispanic-legacy/videos/001-el-tornaviaje/publicacion.md) | [mp4](canales/hispanic-legacy/videos/001-el-tornaviaje/en/out/001-the-tornaviaje-en.mp4) · [texts](canales/hispanic-legacy/videos/001-el-tornaviaje/en/publicacion.md) |
+| 02 | El vanadio se descubrió dos veces | [mp4](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/out/002-el-vanadio-dos-veces.mp4) · [textos](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/publicacion.md) | [mp4](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/en/out/002-vanadium-discovered-twice-en.mp4) · [texts](canales/hispanic-legacy/videos/002-el-vanadio-dos-veces/en/publicacion.md) |
+| 03 | La epidural de Pagés | [mp4](canales/hispanic-legacy/videos/003-la-epidural-de-pages/out/003-la-epidural-de-pages.mp4) · [textos](canales/hispanic-legacy/videos/003-la-epidural-de-pages/publicacion.md) | [mp4](canales/hispanic-legacy/videos/003-la-epidural-de-pages/en/out/003-the-epidural-of-pages-en.mp4) · [texts](canales/hispanic-legacy/videos/003-la-epidural-de-pages/en/publicacion.md) |
+| 04 | La dama del ajedrez | [mp4](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/out/004-el-ajedrez-de-la-dama.mp4) · [textos](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/publicacion.md) | [mp4](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/en/out/004-the-queens-chess-en.mp4) · [texts](canales/hispanic-legacy/videos/004-el-ajedrez-de-la-dama/en/publicacion.md) |
+| 05 | La cadena de Balmis | [mp4](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/out/005-la-cadena-de-balmis.mp4) · [textos](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/publicacion.md) | [mp4](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/en/out/005-the-balmis-chain-en.mp4) · [texts](canales/hispanic-legacy/videos/005-la-cadena-de-balmis/en/publicacion.md) |
+| 06 | «El mayor imperio de la historia» | [mp4](canales/hispanic-legacy/videos/006-el-mayor-imperio/out/006-el-mayor-imperio.mp4) · [textos](canales/hispanic-legacy/videos/006-el-mayor-imperio/publicacion.md) | [mp4](canales/hispanic-legacy/videos/006-el-mayor-imperio/en/out/006-the-largest-empire-en.mp4) · [texts](canales/hispanic-legacy/videos/006-el-mayor-imperio/en/publicacion.md) |
+
+```bash
+engine/make.sh canales/hispanic-legacy/videos/001-el-tornaviaje
+```
+
+Un vídeo elige canal en su `script.json`: `"theme"` carga `engine/themes/<tema>.js`, `"music"` elige la banda sonora y `"assets"` carga recursos propios (por ejemplo, el mapa).
+
+**Dos idiomas, una animación.** La versión inglesa vive en `videos/<id>/en/script.json`, con `"lang": "en"` y `"animation": "../scenes.js"`. Las escenas eligen texto y palabra de sincronía con `L('español', 'english')`.
+
+```bash
+engine/make.sh canales/hispanic-legacy/videos/001-el-tornaviaje/en
+```
+
 ## Publicación automática
 
 - **Cadencia:** 4 vídeos por semana y por idioma (lunes, miércoles, viernes y domingo), a las 13:00 en español y a las 18:00 en inglés (hora de Madrid).
@@ -89,7 +119,8 @@ node engine/render.mjs videos/001-el-arnes --stills 0,4,12.5
 
 ## Licencias y transparencia
 
-- **Tipografías:** Space Grotesk, Inter y JetBrains Mono, todas con licencia SIL OFL.
+- **Tipografías:** Space Grotesk, Inter, JetBrains Mono y Fraunces, todas con licencia SIL OFL.
+- **Mapa:** Natural Earth (dominio público).
 - **Música y efectos:** generados por código en este repositorio.
 - **Contenido:** basado en los artículos de santismm.com (CC BY 4.0).
 - **Etiquetado:** cada vídeo se marca como contenido generado con IA en las plataformas, y la tarjeta final también lo indica.
