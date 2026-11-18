@@ -1,0 +1,28 @@
+{
+  "id": "011-model-agent-or-harness",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 11,
+  "title": "Model, agent or harness? 3 cases to stop calling it all “the AI”",
+  "cover": "Model, agent<br><span style=\"color:#f59e0b\">or harness?</span>",
+  "coverTime": 4.4,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "tail": 0.5,
+  "source": "SANTISMM Labs, “¿Modelo, agente o arnés?” (labs.santismm.com/model-agent-harness, read 18-11-2026) · santismm.com/en/harness-engineering",
+  "scenes": [
+    { "id": "hook", "text": "We call all of it “the AI,” but it's three layers: can you tell them apart?" },
+    { "id": "capas", "text": "The model, the capability that predicts and generates; the agent, the entity that perceives, decides and acts; the harness, the system that connects context and tools." },
+    { "id": "q1", "text": "Case one: Codex gets a task, edits files and runs tests until it's done.", "pause": 0.68 },
+    { "id": "a1", "text": "Agent: there's a goal, decisions and actions, and it uses a model inside a harness." },
+    { "id": "q2", "text": "A layer limits permissions, logs traces and cuts off high-impact actions.", "pause": 0.68 },
+    { "id": "a2", "text": "Harness: it governs how the model or the agent is used." },
+    { "id": "q3", "text": "Claude Sonnet with no memory, no tools and no outer loop.", "pause": 0.68 },
+    { "id": "a3", "text": "Model: with nothing that lets it act, it's still just a model." },
+    { "id": "leccion", "text": "So when something fails or improves, don't blame or praise “the AI.” Ask: model, agent or harness?" },
+    { "id": "tesis", "text": "Three layers, three responsibilities." },
+    { "id": "cta", "text": "Save it, and share it with someone who still calls it all “the AI.”" }
+  ]
+}
