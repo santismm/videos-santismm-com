@@ -78,6 +78,21 @@ python3 canales/hispanic-legacy/publicar/youtube.py --calendario
 - El segundo sube un vídeo como privado para comprobar que todo funciona. Bórralo después en YouTube Studio y elimina el `publicado.json` que deja junto al vídeo.
 - El tercero sube todo lo pendiente del calendario como privado con fecha de publicación; YouTube lo hace público a su hora.
 
+## Producción continua
+
+La regla «cada vez que se publica un vídeo, se genera el siguiente» la ejecuta una tarea programada. Su guía paso a paso está en [`../docs/RUTINA.md`](../docs/RUTINA.md). Dos órdenes la apoyan:
+
+```bash
+python3 canales/hispanic-legacy/publicar/youtube.py --estado
+```
+
+```bash
+python3 canales/hispanic-legacy/publicar/youtube.py --anadir 007-nombre-del-video
+```
+
+- `--estado` lista qué está subido, qué es ya público y cuántos vídeos quedan de colchón. No necesita credenciales.
+- `--anadir` coloca un vídeo nuevo en el siguiente hueco del calendario.
+
 ## Qué hace y qué no
 
 - Cada vídeo se sube marcado como "no creado para niños", con contenido sintético declarado y categoría Formación.
