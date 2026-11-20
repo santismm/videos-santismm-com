@@ -1,5 +1,11 @@
 # Calendario de publicación · 4 vídeos por semana
 
+## YouTube: publicación directa (decidido el 20-11-2026)
+
+YouTube se publica con la API oficial (`herramientas/youtube/`), no con Metricool. El calendario real está en [`../publicar/canal.json`](../publicar/canal.json): **lunes, miércoles y viernes, a las 18:00 en español y a las 20:00 en inglés** (hora de Madrid), desde el lunes 23 de noviembre de 2026.
+
+Lo que sigue es la propuesta anterior de 4 publicaciones semanales, que queda como referencia para Instagram y TikTok hasta que se decida su ritmo.
+
 ## Ritmo
 
 | Día | Hora (Madrid) | Serie |

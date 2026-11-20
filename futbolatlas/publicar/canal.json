@@ -1,0 +1,67 @@
+{
+  "nombre": "Fútbol en 60s / Football in 60s",
+  "zona": "Europe/Madrid",
+  "hora": {
+    "es": "18:00",
+    "en": "20:00"
+  },
+  "dias": [
+    0,
+    2,
+    4
+  ],
+  "videos": "..",
+  "carpeta": {
+    "es": "videos/{video}",
+    "en": "videos-en/{video}"
+  },
+  "tokens": {
+    "es": "YT_REFRESH_TOKEN_FUTBOL_ATLAS_ES",
+    "en": "YT_REFRESH_TOKEN_FUTBOL_ATLAS_EN"
+  },
+  "categoria": "17",
+  "publicaciones": [
+    {
+      "fecha": "2026-11-23",
+      "video": {
+        "es": "001-fuera-de-juego-4-mitos",
+        "en": "001-offside-4-myths"
+      }
+    },
+    {
+      "fecha": "2026-11-25",
+      "video": {
+        "es": "002-cambios-reglas-2026-27",
+        "en": "002-law-changes-2026-27"
+      }
+    },
+    {
+      "fecha": "2026-11-27",
+      "video": {
+        "es": "003-mano-tres-preguntas",
+        "en": "003-handball-three-questions"
+      }
+    },
+    {
+      "fecha": "2026-11-30",
+      "video": {
+        "es": "004-var-que-puede-revisar",
+        "en": "004-what-var-can-review"
+      }
+    },
+    {
+      "fecha": "2026-12-02",
+      "video": {
+        "es": "005-ocasion-manifiesta-roja",
+        "en": "005-dogso-red-card"
+      }
+    },
+    {
+      "fecha": "2026-12-04",
+      "video": {
+        "es": "006-libre-directo-vs-indirecto",
+        "en": "006-direct-vs-indirect-free-kick"
+      }
+    }
+  ]
+}
