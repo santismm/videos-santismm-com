@@ -1,0 +1,128 @@
+1
+00:00:00,244 --> 00:00:02,475
+A humanoid robot spent 11 months in
+
+2
+00:00:02,485 --> 00:00:03,994
+a BMW factory.
+
+3
+00:00:04,183 --> 00:00:05,114
+Was it profitable?
+
+4
+00:00:05,303 --> 00:00:06,647
+Nobody has published that.
+
+5
+00:00:07,052 --> 00:00:08,396
+It was Figure 02.
+
+6
+00:00:08,585 --> 00:00:10,580
+It picked sheet-metal parts and placed them
+
+7
+00:00:10,590 --> 00:00:13,101
+on a welding fixture, in 10-hour shifts.
+
+8
+00:00:13,512 --> 00:00:14,502
+According to Figure:
+
+9
+00:00:14,691 --> 00:00:19,280
+more than 1,250 hours, 90,000 parts and 30,000
+
+10
+00:00:19,290 --> 00:00:19,939
+cars.
+
+11
+00:00:20,368 --> 00:00:21,240
+Its targets:
+
+12
+00:00:21,441 --> 00:00:25,509
+84 seconds per cycle, over 99% correct cycles
+
+13
+00:00:25,521 --> 00:00:26,924
+and zero interventions.
+
+14
+00:00:27,125 --> 00:00:27,927
+The results?
+
+15
+00:00:28,116 --> 00:00:28,953
+Not published.
+
+16
+00:00:29,372 --> 00:00:31,685
+And in 2025, its founder talked about a
+
+17
+00:00:31,695 --> 00:00:32,308
+fleet.
+
+18
+00:00:32,497 --> 00:00:35,082
+BMW described a single robot, on a
+
+19
+00:00:35,092 --> 00:00:36,094
+single task.
+
+20
+00:00:36,492 --> 00:00:37,636
+It's like an odometer:
+
+21
+00:00:37,872 --> 00:00:39,499
+it tells you how far you've driven,
+
+22
+00:00:39,676 --> 00:00:41,270
+not whether you got there sooner or
+
+23
+00:00:41,280 --> 00:00:42,140
+what you spent.
+
+24
+00:00:42,556 --> 00:00:43,063
+Ask:
+
+25
+00:00:43,134 --> 00:00:45,223
+what was measured, by whom, and against
+
+26
+00:00:45,233 --> 00:00:45,716
+what?
+
+27
+00:00:45,941 --> 00:00:48,655
+Here, Figure gives the numbers and BMW
+
+28
+00:00:48,665 --> 00:00:49,513
+repeats them:
+
+29
+00:00:49,714 --> 00:00:52,155
+level B, no independent verification.
+
+30
+00:00:52,556 --> 00:00:54,761
+Counting parts is not measuring results.
+
+31
+00:00:55,164 --> 00:00:56,628
+Save it, and share it with someone
+
+32
+00:00:56,638 --> 00:00:58,077
+who trusts any demo.
+

@@ -1,0 +1,25 @@
+{
+  "id": "012-figure-02-at-bmw",
+  "lang": "en",
+  "series": "EUREKA · AI in 60s",
+  "episode": 12,
+  "title": "A humanoid robot spent 11 months at BMW: was it profitable? (what was measured, by whom, against what)",
+  "cover": "11 months, BMW:<br><span style=\"color:#f59e0b\">profitable?</span>",
+  "coverTime": 6.6,
+  "voice": "en-US-AndrewNeural",
+  "rate": "+6%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "physicalai.santismm.com/en/case-studies/bmw-spartanburg-figure-02 and /en/platforms/figure-02 · Figure AI (2025-11-19) · BMW Group (2024-08-06 and 2026-02-27) · Fortune (2025-04-06)",
+  "scenes": [
+    { "id": "hook", "text": "A humanoid robot spent 11 months in a BMW factory. Was it profitable? Nobody has published that." },
+    { "id": "tarea", "text": "It was Figure 02. It picked sheet-metal parts and placed them on a welding fixture, in 10-hour shifts." },
+    { "id": "cifras", "text": "According to Figure: more than 1,250 hours, 90,000 parts and 30,000 cars." },
+    { "id": "metas", "text": "Its targets: 84 seconds per cycle, over 99% correct cycles and zero interventions. The results? Not published." },
+    { "id": "flota", "text": "And in 2025, its founder talked about a fleet. BMW described a single robot, on a single task." },
+    { "id": "analogia", "text": "It's like an odometer: it tells you how far you've driven, not whether you got there sooner or what you spent." },
+    { "id": "leccion", "text": "Ask: what was measured, by whom, and against what? Here, Figure gives the numbers and BMW repeats them: level B, no independent verification." },
+    { "id": "tesis", "text": "Counting parts is not measuring results." },
+    { "id": "cta", "text": "Save it, and share it with someone who trusts any demo." }
+  ]
+}
