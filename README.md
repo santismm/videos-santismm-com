@@ -22,6 +22,7 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 08 | El dron que ahorró 79 minutos… o 19 (¿comparado con qué?) | [mp4](videos/008-el-dron-de-los-79-minutos/out/008-el-dron-de-los-79-minutos.mp4) | [publicacion.md](videos/008-el-dron-de-los-79-minutos/publicacion.md) | programado 23 nov |
 | 09 | La IA frente a 44 profesiones (GDPval) | [mp4](videos/009-la-ia-frente-a-44-profesiones/out/009-la-ia-frente-a-44-profesiones.mp4) | [publicacion.md](videos/009-la-ia-frente-a-44-profesiones/publicacion.md) | programado 25 nov |
 | 10 | Un agente al mando de una máquina de vending (Vending-Bench) | [mp4](videos/010-el-agente-de-la-maquina-de-vending/out/010-el-agente-de-la-maquina-de-vending.mp4) | [publicacion.md](videos/010-el-agente-de-la-maquina-de-vending/publicacion.md) | programado 27 nov |
+| 11 | ¿Modelo, agente o arnés? 3 casos del juego de labs | [mp4](videos/011-modelo-agente-o-arnes/out/011-modelo-agente-o-arnes.mp4) | [publicacion.md](videos/011-modelo-agente-o-arnes/publicacion.md) | programado 29 nov |
 
 ### English · EUREKA · AI in 60s
 
@@ -37,6 +38,7 @@ Canal de divulgación en vídeo corto (TikTok, Reels, Shorts y LinkedIn) que con
 | 008 | The drone that saved 79 minutes… or 19 (compared to what?) | [mp4](videos/en/008-the-79-minute-drone/out/008-the-79-minute-drone.mp4) | [publicacion.md](videos/en/008-the-79-minute-drone/publicacion.md) | pendiente de canal |
 | 009 | AI vs 44 professions: does it win or tie against an expert? (GDPval) | [mp4](videos/en/009-ai-vs-44-professions/out/009-ai-vs-44-professions.mp4) | [publicacion.md](videos/en/009-ai-vs-44-professions/publicacion.md) | pendiente de canal |
 | 010 | An AI running a vending machine: how much does it make in a year? (Vending-Bench) | [mp4](videos/en/010-the-vending-machine-agent/out/010-the-vending-machine-agent.mp4) | [publicacion.md](videos/en/010-the-vending-machine-agent/publicacion.md) | pendiente de canal |
+| 011 | Model, agent or harness? 3 cases to stop calling it all “the AI” | [mp4](videos/en/011-model-agent-or-harness/out/011-model-agent-or-harness.mp4) | [publicacion.md](videos/en/011-model-agent-or-harness/publicacion.md) | pendiente de canal |
 
 ## Segundo canal: Hispanic Legacy · Historia en 60s
 
