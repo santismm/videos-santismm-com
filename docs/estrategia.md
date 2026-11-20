@@ -112,7 +112,7 @@ Variar de serie evita la penalización por plantilla repetitiva y crea citas fij
 | 09 ✅ | **La IA frente a 44 profesiones** | "Gana o empata en el 41 % de las tareas" | GDPval en el tracker de benchmarks |
 | 10 ✅ | **Un agente al mando de una máquina de vending** | "Un humano gana 63 000 $. La IA, 11 000 $." | Vending-Bench 2 |
 
-Reserva: *Modelo, agente o arnés* ✅ #11 (reto interactivo que lleva a labs), Figure 02 en BMW, ARC-AGI-3 (30 % frente a 100 % humano), "El examen que cambió sus preguntas" (auditoría ABC de Princeton).
+Reserva: *Modelo, agente o arnés* ✅ #11 (reto interactivo que lleva a labs), Figure 02 en BMW ✅ #12, ARC-AGI-3 (30 % frente a 100 % humano), "El examen que cambió sus preguntas" (auditoría ABC de Princeton).
 
 ## 6. Ritmo de publicación y mejora continua
 
