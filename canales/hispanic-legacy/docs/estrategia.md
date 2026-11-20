@@ -70,7 +70,7 @@ Los datos sólidos son los de Metricool y prensa; el resto son guías de proveed
 ## 6. Decisiones
 
 - **Idioma:** español e inglés, con la misma animación (decidido el 14-11-2026; antes se había dicho solo español).
-- **Cadencia:** 4 vídeos por semana, con un buffer de 6. Ver [`calendario.md`](calendario.md).
+- **Cadencia:** lunes, miércoles y viernes (desde el 20-11-2026), produciendo un vídeo nuevo por cada uno publicado. Ver [`calendario.md`](calendario.md).
 - **Plataformas:** Instagram, YouTube y TikTok, publicando con sus APIs oficiales, sin Metricool (decidido el 15-11-2026). Ver [`../publicar/README.md`](../publicar/README.md).
 
 Pendientes:

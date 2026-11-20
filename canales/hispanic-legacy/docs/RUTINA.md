@@ -20,6 +20,7 @@ python3 canales/hispanic-legacy/publicar/youtube.py --estado
 - Si el colchón de **ambos** idiomas es 6 o más, no hay nada que hacer: termina con una línea.
 - Si es menor de 6, produce **un** episodio (el siguiente del plan). Como mucho uno por ejecución.
 - Si algún vídeo aparece como «SIN SUBIR», ejecuta primero `youtube.py --calendario` para programarlo.
+- Se publica lunes, miércoles y viernes. Con esa cadencia el colchón queda siempre por debajo de 6, así que lo normal es producir un episodio en cada ejecución: uno publicado, uno nuevo.
 
 ## 2. Qué episodio toca
 
@@ -81,7 +82,7 @@ python3 canales/hispanic-legacy/publicar/youtube.py --simular
 python3 canales/hispanic-legacy/publicar/youtube.py --calendario
 ```
 
-- `--anadir` coloca el vídeo en el siguiente hueco (lunes, miércoles, viernes o domingo; 19:00 en español y 21:00 en inglés, hora de Madrid).
+- `--anadir` coloca el vídeo en el siguiente hueco (lunes, miércoles o viernes; 19:00 en español y 21:00 en inglés, hora de Madrid).
 - `--calendario` sube lo pendiente como privado con fecha; YouTube lo publica a su hora. Usa un tiempo de espera largo (10 min).
 - Nunca uses `--forzar`, `--publico` ni borres vídeos. Si una subida falla, no la repitas a ciegas: informa.
 

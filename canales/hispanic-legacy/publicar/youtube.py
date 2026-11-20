@@ -3,6 +3,7 @@
 Uso (desde la raíz del repositorio):
     python3 canales/hispanic-legacy/publicar/youtube.py --simular            # enseña qué haría, sin credenciales
     python3 canales/hispanic-legacy/publicar/youtube.py --calendario         # programa todo lo pendiente de calendario.json
+    python3 canales/hispanic-legacy/publicar/youtube.py --reprogramar        # mueve los ya subidos a las fechas del calendario
     python3 canales/hispanic-legacy/publicar/youtube.py --estado             # qué está subido y qué es ya público
     python3 canales/hispanic-legacy/publicar/youtube.py --anadir 007-...     # añade un vídeo nuevo al siguiente hueco
     python3 canales/hispanic-legacy/publicar/youtube.py 001-el-tornaviaje --idioma es --cuando 2026-11-23T19:00
@@ -124,6 +125,41 @@ def publicar(video, idioma, cuando_utc, privacidad, a):
         json.dump(prev, open(registro(f), "w"), ensure_ascii=False, indent=2)
 
 
+def hora_de(cal, p, idioma):
+    """Hora local de una entrada del calendario: la general del idioma, salvo que la entrada traiga la suya."""
+    return (p.get("hora") or {}).get(idioma) or cal["hora"][idioma]
+
+
+def reprogramar(f, prev, cuando_utc, simular):
+    """Cambia la fecha de publicación de un vídeo ya subido que sigue en privado. Devuelve la nueva fecha o None."""
+    nuevo = cuando_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+    if prev.get("publishAt") == nuevo:
+        print(f"· {f['id']} [{f['idioma']}] ya está programado para {nuevo}")
+        return None
+    if simular:
+        print(f"— {f['id']} [{f['idioma']}] {prev.get('publishAt')} → {nuevo}")
+        return None
+    h = {"Authorization": "Bearer " + token(f["idioma"])}
+    r = requests.get(f"{API}/youtube/v3/videos", params={"part": "status", "id": prev["videoId"]}, headers=h, timeout=30)
+    items = r.json().get("items") or []
+    if not items:
+        print(f"✘ {f['id']} [{f['idioma']}] no se encuentra el vídeo {prev['videoId']}")
+        return None
+    actual = items[0]["status"]
+    if actual.get("privacyStatus") != "private":
+        print(f"· {f['id']} [{f['idioma']}] ya no está en privado ({actual.get('privacyStatus')}); no se toca")
+        return None
+    status = {"privacyStatus": "private", "publishAt": nuevo, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True,
+              "embeddable": actual.get("embeddable", True), "license": actual.get("license", "youtube"),
+              "publicStatsViewable": actual.get("publicStatsViewable", True)}
+    r = requests.put(f"{API}/youtube/v3/videos", params={"part": "status"}, headers=h, json={"id": prev["videoId"], "status": status}, timeout=60)
+    if r.status_code != 200 or r.json().get("status", {}).get("publishAt") != nuevo:
+        print(f"✘ {f['id']} [{f['idioma']}] YouTube no aceptó la fecha: {r.status_code} {r.text[:300]}")
+        return None
+    print(f"✔ {f['id']} [{f['idioma']}] {prev.get('publishAt')} → {nuevo}")
+    return nuevo
+
+
 def es_publico(url):
     """True si YouTube sirve el vídeo sin sesión (consulta pública oEmbed; no usa credenciales)."""
     try:
@@ -147,14 +183,14 @@ def estado(cal):
                 marca += " " + prev["url"]
             if not prev or "PÚBLICO" not in marca:
                 colchon[i] += 1
-            print(f"{p['fecha']} {cal['hora'][i]} [{i}] {p['video']:<32} {marca}")
+            print(f"{p['fecha']} {hora_de(cal, p, i)} [{i}] {p['video']:<32} {marca}")
     print(f"colchón (vídeos hechos y aún no públicos): es={colchon['es']} en={colchon['en']}")
     return colchon
 
 
 def siguiente_hueco(cal):
     """Primera fecha libre, posterior a la última del calendario, que caiga en un día de publicación."""
-    dias = cal.get("dias", [0, 2, 4, 6])  # lunes, miércoles, viernes, domingo
+    dias = cal.get("dias", [0, 2, 4])  # lunes, miércoles, viernes
     d = max(datetime.date.fromisoformat(p["fecha"]) for p in cal["publicaciones"])
     hoy = datetime.datetime.now(ZoneInfo(cal["zona"])).date()
     d = max(d, hoy)
@@ -172,6 +208,7 @@ def main():
     ap.add_argument("--privado", action="store_true", help="sube como privado sin programar (prueba)")
     ap.add_argument("--publico", action="store_true", help="publica de inmediato")
     ap.add_argument("--calendario", action="store_true", help="programa todo lo pendiente de calendario.json")
+    ap.add_argument("--reprogramar", action="store_true", help="ajusta la fecha de los vídeos ya subidos (aún privados) a la del calendario")
     ap.add_argument("--estado", action="store_true", help="lista qué está subido y qué es ya público (sin credenciales)")
     ap.add_argument("--anadir", metavar="VIDEO", help="añade un vídeo al calendario en el siguiente hueco libre")
     ap.add_argument("--simular", action="store_true", help="no sube nada; enseña qué haría")
@@ -199,10 +236,25 @@ def main():
         json.dump(cal, open(os.path.join(AQUI, "calendario.json"), "w"), ensure_ascii=False, indent=2)
         print(f"{a.anadir} → {fecha} (es {cal['hora']['es']}, en {cal['hora']['en']}, {cal['zona']})")
         return
+    if a.reprogramar:
+        for p in cal["publicaciones"]:
+            for i in idiomas:
+                f = ficha(p["video"], i)
+                if not os.path.exists(registro(f)):
+                    continue
+                reg = json.load(open(registro(f)))
+                t = utc(f"{p['fecha']}T{hora_de(cal, p, i)}")
+                if "youtube" not in reg or t <= ahora + datetime.timedelta(minutes=5):
+                    continue
+                nuevo = reprogramar(f, reg["youtube"], t, a.simular)
+                if nuevo:
+                    reg["youtube"]["publishAt"] = nuevo
+                    json.dump(reg, open(registro(f), "w"), ensure_ascii=False, indent=2)
+        return
     if a.calendario or (a.simular and not a.video):
         for p in cal["publicaciones"]:
             for i in idiomas:
-                t = utc(f"{p['fecha']}T{cal['hora'][i]}")
+                t = utc(f"{p['fecha']}T{hora_de(cal, p, i)}")
                 if t <= ahora and not a.simular:
                     print(f"· {p['video']} [{i}]: la fecha {p['fecha']} ya pasó; no se programa")
                     continue
