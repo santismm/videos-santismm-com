@@ -1,0 +1,51 @@
+{
+  "id": "012-figure-02-en-bmw",
+  "series": "EUREKA · IA en 60s",
+  "episode": 12,
+  "title": "Un humanoide 11 meses en BMW: ¿fue rentable? (qué se midió, quién y frente a qué)",
+  "cover": "11 meses en BMW<br><span style=\"color:#f59e0b\">¿fue rentable?</span>",
+  "coverTime": 6.6,
+  "voice": "es-ES-AlvaroNeural",
+  "rate": "+14%",
+  "pitch": "-2Hz",
+  "gap": 0.16,
+  "source": "physicalai.santismm.com/es/case-studies/bmw-spartanburg-figure-02 y /es/platforms/figure-02 · Figure AI (19-11-2025) · BMW Group (06-08-2024 y 27-02-2026) · Fortune (06-04-2025)",
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "Un humanoide pasó 11 meses en una fábrica de BMW. ¿Fue rentable? Nadie lo ha publicado."
+    },
+    {
+      "id": "tarea",
+      "text": "Era Figure 02: cogía piezas de chapa y las ponía en un utillaje de soldadura, en turnos de 10 horas."
+    },
+    {
+      "id": "cifras",
+      "text": "Según Figure: más de 1.250 horas, 90.000 piezas y 30.000 coches."
+    },
+    {
+      "id": "metas",
+      "text": "Sus metas: 84 segundos por ciclo, más del 99% de ciclos correctos y cero intervenciones. ¿Los resultados? Sin publicar."
+    },
+    {
+      "id": "flota",
+      "text": "Y en 2025, su fundador hablaba de una flota. BMW describía un solo robot, en una sola tarea."
+    },
+    {
+      "id": "analogia",
+      "text": "Es como un cuentakilómetros: dice cuánto has rodado, no si llegaste antes ni cuánto gastaste."
+    },
+    {
+      "id": "leccion",
+      "text": "Pregunta: ¿qué se midió, quién y frente a qué? Aquí, Figure da las cifras y BMW las repite: nivel B, sin verificación independiente."
+    },
+    {
+      "id": "tesis",
+      "text": "Contar piezas no es medir resultados."
+    },
+    {
+      "id": "cta",
+      "text": "Guárdalo, y compártelo con quien se fía de cualquier demo."
+    }
+  ]
+}

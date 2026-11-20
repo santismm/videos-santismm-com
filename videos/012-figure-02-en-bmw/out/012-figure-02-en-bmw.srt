@@ -1,0 +1,124 @@
+1
+00:00:00,247 --> 00:00:02,243
+Un humanoide pasó 11 meses en una fábrica
+
+2
+00:00:02,253 --> 00:00:03,177
+de BMW.
+
+3
+00:00:03,731 --> 00:00:04,698
+¿Fue rentable?
+
+4
+00:00:05,252 --> 00:00:06,669
+Nadie lo ha publicado.
+
+5
+00:00:07,487 --> 00:00:08,760
+Era Figure 02:
+
+6
+00:00:08,770 --> 00:00:10,240
+cogía piezas de chapa y las ponía
+
+7
+00:00:10,250 --> 00:00:12,082
+en un utillaje de soldadura, en turnos
+
+8
+00:00:12,092 --> 00:00:13,005
+de 10 horas.
+
+9
+00:00:13,818 --> 00:00:14,775
+Según Figure:
+
+10
+00:00:14,838 --> 00:00:18,733
+más de 1.250 horas, 90.000 piezas y 30.000 coches.
+
+11
+00:00:19,546 --> 00:00:20,413
+Sus metas:
+
+12
+00:00:20,423 --> 00:00:23,715
+84 segundos por ciclo, más del 99% de
+
+13
+00:00:23,725 --> 00:00:25,888
+ciclos correctos y cero intervenciones.
+
+14
+00:00:26,445 --> 00:00:27,577
+¿Los resultados?
+
+15
+00:00:28,133 --> 00:00:29,232
+Sin publicar.
+
+16
+00:00:30,047 --> 00:00:32,230
+Y en 2025, su fundador hablaba de
+
+17
+00:00:32,240 --> 00:00:33,087
+una flota.
+
+18
+00:00:33,640 --> 00:00:35,747
+BMW describía un solo robot, en una
+
+19
+00:00:35,757 --> 00:00:36,658
+sola tarea.
+
+20
+00:00:37,479 --> 00:00:38,973
+Es como un cuentakilómetros:
+
+21
+00:00:39,014 --> 00:00:40,813
+dice cuánto has rodado, no si llegaste
+
+22
+00:00:40,823 --> 00:00:42,240
+antes ni cuánto gastaste.
+
+23
+00:00:43,066 --> 00:00:43,802
+Pregunta:
+
+24
+00:00:43,812 --> 00:00:45,172
+¿qué se midió, quién y frente a
+
+25
+00:00:45,182 --> 00:00:45,645
+qué?
+
+26
+00:00:46,196 --> 00:00:48,335
+Aquí, Figure da las cifras y BMW
+
+27
+00:00:48,345 --> 00:00:49,038
+las repite:
+
+28
+00:00:49,145 --> 00:00:51,516
+nivel B, sin verificación independiente.
+
+29
+00:00:52,346 --> 00:00:54,520
+Contar piezas no es medir resultados.
+
+30
+00:00:55,335 --> 00:00:57,266
+Guárdalo, y compártelo con quien se fía
+
+31
+00:00:57,276 --> 00:00:58,287
+de cualquier demo.
+
