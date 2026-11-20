@@ -7,3 +7,6 @@ __pycache__/
 
 # credenciales locales de publicación
 canales/*/publicar/.env
+
+# credenciales locales de publicación (cualquier canal)
+**/.env

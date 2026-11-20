@@ -1,41 +1,63 @@
 {
+  "nombre": "Hispanic Legacy",
   "zona": "Europe/Madrid",
   "hora": {
     "es": "19:00",
     "en": "21:00"
   },
-  "publicaciones": [
-    {
-      "fecha": "2026-11-23",
-      "video": "001-el-tornaviaje",
-      "nota": "español publicado el 18-11-2026"
-    },
-    {
-      "fecha": "2026-11-25",
-      "video": "002-el-vanadio-dos-veces"
-    },
-    {
-      "fecha": "2026-11-27",
-      "video": "003-la-epidural-de-pages"
-    },
-    {
-      "fecha": "2026-11-29",
-      "video": "004-el-ajedrez-de-la-dama"
-    },
-    {
-      "fecha": "2026-11-30",
-      "video": "005-la-cadena-de-balmis"
-    },
-    {
-      "fecha": "2026-12-02",
-      "video": "006-el-mayor-imperio"
-    }
-  ],
   "dias": [
     0,
     2,
-    4,
-    6
+    4
   ],
-  "_dias": "0=lunes … 6=domingo"
+  "_dias": "0=lunes … 6=domingo. Cadencia: lunes, miércoles y viernes.",
+  "videos": "../videos",
+  "carpeta": {
+    "es": "{video}",
+    "en": "{video}/en"
+  },
+  "tokens": {
+    "es": "YT_REFRESH_TOKEN_ES",
+    "en": "YT_REFRESH_TOKEN_EN"
+  },
+  "categoria": "27",
+  "instagram": {
+    "tokens": {
+      "es": "IG_TOKEN_HL_ES",
+      "en": "IG_TOKEN_HL_EN"
+    },
+    "url_base": "https://raw.githubusercontent.com/santismm/videos-santismm-com/claude/tender-ride-qx083f",
+    "desde": "2026-11-23",
+    "portada_ms": 3000
+  },
+  "publicaciones": [
+    {
+      "fecha": "2026-11-20",
+      "video": "001-el-tornaviaje",
+      "hora": {
+        "en": "19:00"
+      },
+      "nota": "español publicado el 18-11-2026; el inglés sale a las 19:00 para no coincidir con el 002"
+    },
+    {
+      "fecha": "2026-11-20",
+      "video": "002-el-vanadio-dos-veces"
+    },
+    {
+      "fecha": "2026-11-23",
+      "video": "003-la-epidural-de-pages"
+    },
+    {
+      "fecha": "2026-11-25",
+      "video": "004-el-ajedrez-de-la-dama"
+    },
+    {
+      "fecha": "2026-11-27",
+      "video": "005-la-cadena-de-balmis"
+    },
+    {
+      "fecha": "2026-11-30",
+      "video": "006-el-mayor-imperio"
+    }
+  ]
 }

@@ -34,7 +34,7 @@ Para regenerarlas: `node canales/hispanic-legacy/brand/render.mjs`.
 >
 > Basado en hispanic-legacy.com: más de 900 fichas con afirmaciones verificadas y fuentes citadas.
 >
-> 🎬 Nuevo vídeo lunes, miércoles, viernes y domingo.
+> 🎬 Nuevo vídeo lunes, miércoles y viernes.
 > 🤖 Transparencia: la voz y la animación se generan con IA a partir de contenidos con fuentes.
 
 **Descripción (inglés):**
@@ -45,7 +45,7 @@ Para regenerarlas: `node canales/hispanic-legacy/brand/render.mjs`.
 >
 > Based on hispanic-legacy.com: 900+ entries with verified claims and cited sources.
 >
-> 🎬 New video every Monday, Wednesday, Friday and Sunday.
+> 🎬 New video every Monday, Wednesday and Friday.
 > 🤖 Transparency: voice and animation are AI-generated from sourced content.
 
 - **Enlace del canal:** https://hispanic-legacy.com
