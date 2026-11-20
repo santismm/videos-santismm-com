@@ -47,6 +47,7 @@ Canal de divulgación histórica basado en [hispanic-legacy.com](https://hispani
 - Estrategia, tendencias y plan de vídeos: [`canales/hispanic-legacy/docs/estrategia.md`](canales/hispanic-legacy/docs/estrategia.md)
 - Alta de canales (nombres, biografías, imágenes, Metricool): [`canales/hispanic-legacy/brand/canales.md`](canales/hispanic-legacy/brand/canales.md)
 - Publicar en YouTube desde cualquier canal (herramienta común y prompt para sesiones nuevas): [`herramientas/youtube/README.md`](herramientas/youtube/README.md)
+- Publicar Reels en Instagram (herramienta común, sin probar aún con una cuenta real): [`herramientas/instagram/README.md`](herramientas/instagram/README.md)
 - Publicación directa con las APIs oficiales (YouTube listo): [`canales/hispanic-legacy/publicar/README.md`](canales/hispanic-legacy/publicar/README.md)
 - Calendario de publicación (4 por semana): [`canales/hispanic-legacy/docs/calendario.md`](canales/hispanic-legacy/docs/calendario.md)
 

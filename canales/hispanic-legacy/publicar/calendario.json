@@ -21,6 +21,15 @@
     "en": "YT_REFRESH_TOKEN_EN"
   },
   "categoria": "27",
+  "instagram": {
+    "tokens": {
+      "es": "IG_TOKEN_HL_ES",
+      "en": "IG_TOKEN_HL_EN"
+    },
+    "url_base": "https://raw.githubusercontent.com/santismm/videos-santismm-com/claude/tender-ride-qx083f",
+    "desde": "2026-11-23",
+    "portada_ms": 3000
+  },
   "publicaciones": [
     {
       "fecha": "2026-11-20",
